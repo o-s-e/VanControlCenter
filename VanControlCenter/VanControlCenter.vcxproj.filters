@@ -13,13 +13,142 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\DataLogger">
+      <UniqueIdentifier>{78b6ac53-ea3b-44f7-9e5a-b79b61e5fe7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataLogger">
+      <UniqueIdentifier>{0f13ce0a-6bd7-4e25-a48a-3869be9bf2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Display">
+      <UniqueIdentifier>{7f73252c-12a3-4ff5-b2f6-24c36f705854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Display\Form">
+      <UniqueIdentifier>{aaa9d03a-608f-4f98-9a46-1b92f2db588b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Display\Widget">
+      <UniqueIdentifier>{a8960268-b2e8-48b0-bff3-563b8f38e272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Display">
+      <UniqueIdentifier>{48270899-f057-41a1-985f-10255b7c001f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Display\Form">
+      <UniqueIdentifier>{fb040259-06e4-4c52-94fa-417258e7df03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Display\Widget">
+      <UniqueIdentifier>{dc6bfedf-f03a-410d-8860-e2dc27fe3598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExternalInterfaces">
+      <UniqueIdentifier>{74ef8350-2274-4e29-ae69-35f1404af22c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{8a4140b1-f2d6-41d1-9250-09e70b9b6dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalInterfaces">
+      <UniqueIdentifier>{a205c17a-8ad5-4428-8f98-2f4f0dcd10bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{a48e67f6-2fd5-446d-b49f-29af8c3727a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExternalInterfaces\Sensors">
+      <UniqueIdentifier>{2571a383-c4ca-471d-8f1f-34028a755282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalInterfaces\Sensors">
+      <UniqueIdentifier>{33120c98-41e9-42e1-aad8-d5a5513c5546}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="VanControlCenter.ino" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\Channel.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsBuffer.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsConfig.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DataLogger.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDForm.h">
+      <Filter>Header Files\Display\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringList.h">
+      <Filter>Header Files\Display\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringMsg.h">
+      <Filter>Header Files\Display\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DebugForm.h">
+      <Filter>Header Files\Display\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ConsoleForm.h">
+      <Filter>Header Files\Display\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DisplayInterface.h">
+      <Filter>Header Files\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\CanInterface.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HeaterInterface.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\logger.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HWConfig.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="TempSensor.h">
+      <Filter>Header Files\ExternalInterfaces\Sensors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\Channel.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsBuffer.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsConfig.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DataLogger.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ConsoleForm.cpp">
+      <Filter>Source Files\Display\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DebugForm.cpp">
+      <Filter>Source Files\Display\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringList.cpp">
+      <Filter>Source Files\Display\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringMsg.cpp">
+      <Filter>Source Files\Display\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DisplayInterface.cpp">
+      <Filter>Source Files\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HeaterInterface.cpp">
+      <Filter>Source Files\ExternalInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\CanInterface.cpp">
+      <Filter>Source Files\ExternalInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\logger.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="TempSensor.cpp">
+      <Filter>Source Files\ExternalInterfaces\Sensors</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
