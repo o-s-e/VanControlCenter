@@ -37,10 +37,10 @@ public:
 		GPS_SPEED = 0x66,		//GPS valid flag
 
 		CALL_STATUS = 0x70,		//Voice call status		0 - no call		1 - in call
-		ACC_X = 0x71,			//Accelerometer x value
+		TEMP = 0x71,			//Accelerometer x value
 		ACC_Y = 0x72,			//Accelerometer y value
 		ACC_Z = 0x73,			//Accelerometer z value
-		ACC_STATUS = 0x74,		//Accelerometer values precision	
+		TEMP_STATUS = 0x74,		//Accelerometer values precision	
 
 		//Motor
 		DRIVER_SETTINGS_CMD = 0x80,	//Set/Get motor driver mapset/motor settings

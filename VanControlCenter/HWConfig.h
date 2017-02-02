@@ -18,9 +18,9 @@
 #define HT_STATE_LED 32
 
 // ESP8266
-#define ES_SERIAL Serial2
-#define ES_SERIAL_BAUD 115200
-#define ES_RESET_PIN 34
+#define WIFI_SERIAL Serial2
+#define WIFI_SERIAL_BAUD 115200
+#define WIFI_RST_PIN 34
 
 // WDT
 #define WDT_TIMEOUT 10000

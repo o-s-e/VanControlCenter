@@ -1,9 +1,16 @@
 #ifndef TempSensor_h
 #define TempSensor_h
 
-#include <arduino.h>
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "arduino.h"
+#else
+#include "WProgram.h"
+#endif
+
+
+#include "logger.h"
+
 #include <dht.h>
-#include <logger.h>
 
 // Logger tag
 #define T_SEN_TAG F("TempCSensor")

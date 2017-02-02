@@ -59,49 +59,16 @@
   <ItemGroup>
     <None Include="VanControlCenter.ino" />
     <None Include="ClassDiagram.cd" />
+    <None Include="CfgFiles\CHANNELS.CFG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CfgFiles\DATALOG.CFG">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\Channel.h">
-      <Filter>Header Files\DataLogger</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsBuffer.h">
-      <Filter>Header Files\DataLogger</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsConfig.h">
-      <Filter>Header Files\DataLogger</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DataLogger.h">
-      <Filter>Header Files\DataLogger</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDForm.h">
-      <Filter>Header Files\Display\Widget</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringList.h">
-      <Filter>Header Files\Display\Widget</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringMsg.h">
-      <Filter>Header Files\Display\Widget</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DebugForm.h">
-      <Filter>Header Files\Display\Form</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ConsoleForm.h">
-      <Filter>Header Files\Display\Form</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DisplayInterface.h">
-      <Filter>Header Files\Display</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\CanInterface.h">
-      <Filter>Header Files\ExternalInterfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HeaterInterface.h">
-      <Filter>Header Files\ExternalInterfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\logger.h">
-      <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HWConfig.h">
       <Filter>Header Files\ExternalInterfaces</Filter>
@@ -109,46 +76,100 @@
     <ClInclude Include="TempSensor.h">
       <Filter>Header Files\ExternalInterfaces\Sensors</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shell.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="WifiInterface.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CanInterface.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaterInterface.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Channel.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="ChannelsBuffer.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="ChannelsConfig.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="DataLogger.h">
+      <Filter>Header Files\DataLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleForm.h">
+      <Filter>Header Files\Display\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugForm.h">
+      <Filter>Header Files\Display\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="LCDForm.h">
+      <Filter>Header Files\Display\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="LCDStringList.h">
+      <Filter>Header Files\Display\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="LCDStringMsg.h">
+      <Filter>Header Files\Display\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayInterface.h">
+      <Filter>Header Files\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\Channel.cpp">
-      <Filter>Source Files\DataLogger</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsBuffer.cpp">
-      <Filter>Source Files\DataLogger</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsConfig.cpp">
-      <Filter>Source Files\DataLogger</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DataLogger.cpp">
-      <Filter>Source Files\DataLogger</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ConsoleForm.cpp">
-      <Filter>Source Files\Display\Form</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DebugForm.cpp">
-      <Filter>Source Files\Display\Form</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringList.cpp">
-      <Filter>Source Files\Display\Widget</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringMsg.cpp">
-      <Filter>Source Files\Display\Widget</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DisplayInterface.cpp">
-      <Filter>Source Files\Display</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HeaterInterface.cpp">
-      <Filter>Source Files\ExternalInterfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\CanInterface.cpp">
-      <Filter>Source Files\ExternalInterfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\logger.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
     <ClCompile Include="TempSensor.cpp">
       <Filter>Source Files\ExternalInterfaces\Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="Shell.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="WifiInterface.cpp">
+      <Filter>Source Files\ExternalInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="HeaterInterface.cpp">
+      <Filter>Source Files\ExternalInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="CanInterface.cpp">
+      <Filter>Source Files\ExternalInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Channel.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelsBuffer.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelsConfig.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="DataLogger.cpp">
+      <Filter>Source Files\DataLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleForm.cpp">
+      <Filter>Source Files\Display\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugForm.cpp">
+      <Filter>Source Files\Display\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="LCDStringList.cpp">
+      <Filter>Source Files\Display\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="LCDStringMsg.cpp">
+      <Filter>Source Files\Display\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayInterface.cpp">
+      <Filter>Source Files\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

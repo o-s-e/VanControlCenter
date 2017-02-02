@@ -18,6 +18,7 @@
 #include "DataLogger.h"
 #include "DisplayInterface.h"
 #include "HWConfig.h"
+#include "Shell.h"
 
 #include "LCDForm.h"
 #include "LCDStringList.h"
@@ -36,6 +37,8 @@
 #include <Vector.h>
 #include <due_can.h>
 #include <genieArduino.h>
+#include <dht.h>
+
 // TempCtrl interface instance
 
 void initPorts();
@@ -46,7 +49,7 @@ void onCanPacketReceived(CAN_FRAME &frame);
 #define WDT_ON
 #define LCD_ON
 #define DL_ON
-
+#define SHELL_ON
 #define LOOP_DEBUG
 
 // Log tag
@@ -138,6 +141,11 @@ void loop() {
 	displayInterface.update();
 #endif
 
+#ifdef SHELL_ON
+	//Shell update
+	shell.update();
+#endif
+
 	// loop
 	// Test execution time
 	avgExecutionTime += t.elapsedTime();
@@ -148,9 +156,9 @@ void loop() {
 		digitalWrite(RUN_LED, ledStatus);
 	}
 
-	Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
-		<< (float)avgExecutionTime / loops * 1000 << F(" us ")
-		<< F("\t freeMem: ") << freeMemory() << Endl;
+	//Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
+	//	<< (float)avgExecutionTime / loops * 1000 << F(" us ")
+	//	<< F("\t freeMem: ") << freeMemory() << Endl;
 	avgExecutionTime = 0;
 	loops = 0;
 	sec.start();
@@ -159,7 +167,7 @@ void loop() {
 // Inits functions
 void initPorts() {
 	INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
-	INIT_SERIAL(ES_SERIAL, ES_SERIAL_BAUD);
+	INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
 	// Heater Initialisation
 	Heater.init();
 
@@ -167,6 +175,10 @@ void initPorts() {
 	canInterface.setCanEventCallBack(&onCanPacketReceived);
 	// Utils
 	Log.init(&LOG_SERIAL);
+
+#ifdef SHELL_ON
+	shell.init(&LOG_SERIAL);
+#endif
 }
 
 bool initDataLogger() {

@@ -14,6 +14,7 @@
     <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
     <RootNamespace>VanControlCenter</RootNamespace>
     <ProjectName>VanControlCenter</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -47,7 +48,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Arduino\libraries\BitArray;$(ProjectDir)..\..\..\..\Arduino\libraries\Button;$(ProjectDir)..\..\..\..\Arduino\libraries\ByteBuffer;$(ProjectDir)..\..\..\..\Arduino\libraries\CAN_Due;$(ProjectDir)..\..\..\..\Arduino\libraries\Configuration;$(ProjectDir)..\..\..\..\Arduino\libraries\genieArduino;$(ProjectDir)..\..\..\..\Arduino\libraries\helper;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\SD\src;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\SD\src\utility;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\SPI\src;$(ProjectDir)..\..\..\..\Arduino\libraries\Timer;$(ProjectDir)..\..\..\..\Arduino\libraries\TimerInt_Due;$(ProjectDir)..\..\..\..\Arduino\libraries\Vector;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries;$(ProjectDir)..\..\..\..\Arduino\libraries;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino\avr;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino\USB;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x;$(ProjectDir)..\VanControlCenter;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3\arm-none-eabi\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\arm-none-eabi\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\arm_none_eabi\include\;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include\pio;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Arduino\libraries\Timer;$(ProjectDir)..\..\..\..\Arduino\libraries\ByteBuffer;$(ProjectDir)..\..\..\..\Arduino\libraries\helper;$(ProjectDir)..\..\..\..\Arduino\libraries\CAN_Due;$(ProjectDir)..\..\..\..\Arduino\libraries\BitArray;$(ProjectDir)..\..\..\..\Arduino\libraries\Vector;$(ProjectDir)..\..\..\..\Arduino\libraries\Configuration;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\SD\src;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\SPI\src;$(ProjectDir)..\..\..\..\Arduino\libraries\Button;$(ProjectDir)..\..\..\..\Arduino\libraries\genieArduino;$(ProjectDir)..\..\..\..\Arduino\libraries\TimerInt_Due;$(ProjectDir)..\..\..\..\Arduino\libraries\DHT;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\SD\src\utility;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries;$(ProjectDir)..\..\..\..\Arduino\libraries;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino\avr;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino\USB;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x;$(ProjectDir)..\VanControlCenter;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3\arm-none-eabi\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\arm-none-eabi\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\arm_none_eabi\include\;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include\pio;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.VanControlCenter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>_VMDEBUG=1;printf=iprintf;F_CPU=84000000L;ARDUINO=10800;ARDUINO_SAM_DUE;ARDUINO_ARCH_SAM;__SAM3X8E__;USB_VID=0x2341;USB_PID=0x003e;USBCON;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -59,10 +60,14 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Arduino\libraries\BitArray;$(ProjectDir)..\..\..\..\Arduino\libraries\Button;$(ProjectDir)..\..\..\..\Arduino\libraries\ByteBuffer;$(ProjectDir)..\..\..\..\Arduino\libraries\CAN_Due;$(ProjectDir)..\..\..\..\Arduino\libraries\Configuration;$(ProjectDir)..\..\..\..\Arduino\libraries\DHT;$(ProjectDir)..\..\..\..\Arduino\libraries\genieArduino;$(ProjectDir)..\..\..\..\Arduino\libraries\helper;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\SD\src;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\SD\src\utility;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\SPI\src;$(ProjectDir)..\..\..\..\Arduino\libraries\Timer;$(ProjectDir)..\..\..\..\Arduino\libraries\TimerInt_Due;$(ProjectDir)..\..\..\..\Arduino\libraries\Vector;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries;$(ProjectDir)..\..\..\..\Arduino\libraries;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino\avr;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino\USB;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x;$(ProjectDir)..\VanControlCenter;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3\arm-none-eabi\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\arm-none-eabi\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\arm_none_eabi\include\;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include\pio;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\CMSIS\CMSIS\Include\;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\libsam;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL;$(ProjectDir)..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system\CMSIS\Device\ATMEL\sam3xa\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.VanControlCenter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>printf=iprintf;F_CPU=84000000L;ARDUINO=10800;ARDUINO_SAM_DUE;ARDUINO_ARCH_SAM;__SAM3X8E__;USB_VID=0x2341;USB_PID=0x003e;USBCON;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -77,45 +82,57 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="CfgFiles\CHANNELS.CFG" />
+    <None Include="CfgFiles\DATALOG.CFG" />
     <None Include="ClassDiagram.cd" />
     <None Include="VanControlCenter.ino">
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\CanInterface.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\Channel.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsBuffer.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsConfig.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ConsoleForm.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DataLogger.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DebugForm.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DisplayInterface.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HeaterInterface.h" />
     <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HWConfig.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDForm.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringList.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringMsg.h" />
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\logger.h" />
+    <ClInclude Include="CanInterface.h" />
+    <ClInclude Include="Channel.h" />
+    <ClInclude Include="ChannelsBuffer.h" />
+    <ClInclude Include="ChannelsConfig.h" />
+    <ClInclude Include="ConsoleForm.h" />
+    <ClInclude Include="DataLogger.h" />
+    <ClInclude Include="DebugForm.h" />
+    <ClInclude Include="DisplayInterface.h" />
+    <ClInclude Include="HeaterInterface.h" />
+    <ClInclude Include="LCDForm.h" />
+    <ClInclude Include="LCDStringList.h" />
+    <ClInclude Include="LCDStringMsg.h" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Shell.h" />
     <ClInclude Include="TempSensor.h" />
+    <ClInclude Include="WifiInterface.h" />
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\CanInterface.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\Channel.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsBuffer.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ChannelsConfig.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\ConsoleForm.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DataLogger.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DebugForm.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\DisplayInterface.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HeaterInterface.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringList.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\LCDStringMsg.cpp" />
-    <ClCompile Include="..\..\..\..\SRC\arduino\VanControlCenter\src\logger.cpp" />
+    <ClCompile Include="CanInterface.cpp" />
+    <ClCompile Include="Channel.cpp" />
+    <ClCompile Include="ChannelsBuffer.cpp" />
+    <ClCompile Include="ChannelsConfig.cpp" />
+    <ClCompile Include="ConsoleForm.cpp" />
+    <ClCompile Include="DataLogger.cpp" />
+    <ClCompile Include="DebugForm.cpp" />
+    <ClCompile Include="DisplayInterface.cpp" />
+    <ClCompile Include="HeaterInterface.cpp" />
+    <ClCompile Include="LCDStringList.cpp" />
+    <ClCompile Include="LCDStringMsg.cpp" />
+    <ClCompile Include="logger.cpp" />
+    <ClCompile Include="Shell.cpp" />
     <ClCompile Include="TempSensor.cpp" />
+    <ClCompile Include="WifiInterface.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties VM.DebugExt.AGaugeExample.Visible="0" VM.DebugTextMessages.MessageWindow="1" VM.DebugTextMessages.SerialWindow="1" VM.DebugExt.AGaugeExample.Enabled="0" arduino.upload.port="COM14" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
