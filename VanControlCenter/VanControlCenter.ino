@@ -1,3 +1,4 @@
+#include "HWConfig.h"
 #include <Arduino.h>
 //
 //    FILE: VanCenter.c
@@ -17,6 +18,7 @@
 #include "ConsoleForm.h"
 #include "DataLogger.h"
 #include "DisplayInterface.h"
+#include "WifiInterface.h"
 #include "HWConfig.h"
 #include "Shell.h"
 
@@ -45,17 +47,19 @@ void initPorts();
 bool initDataLogger();
 void onCanPacketReceived(CAN_FRAME &frame);
 
+
 // Code flag
 #define WDT_ON
 #define LCD_ON
 #define DL_ON
+#define WIFI_ON
 #define SHELL_ON
 #define LOOP_DEBUG
 
 // Log tag
 #define INIT_TAG F("INIT")
 #define LOOP_TAG F("LOOP")
-
+#define LOOP_TAG F("WIFI")
 // SW info
 #define SW_REV F("1")
 #define SW_INFO                                                                \
@@ -97,6 +101,13 @@ void setup() {
 	}
 #endif
 
+	//Wifi
+#ifdef WIFI_ON
+	wifiInterface.init();
+	consoleForm.println(F("Wifi OK"));
+	Log.i(WIFI_TAG) << F("Wifi OK ") << t.elapsedTime() << Endl;
+#endif
+
 	// Notify init completed
 	Log.i(INIT_TAG) << F("VanControlCenter init OK ") << t.elapsedTime() << Endl;
 
@@ -129,7 +140,7 @@ void loop() {
 	canInterface.update();
 
 	// Update Heater
-	Heater.update();
+	heater.update();
 
 #ifdef DL_ON
 	// Log data on SD
@@ -169,7 +180,7 @@ void initPorts() {
 	INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
 	INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
 	// Heater Initialisation
-	Heater.init();
+	heater.init();
 
 	canInterface.init(CAN_SPEED);
 	canInterface.setCanEventCallBack(&onCanPacketReceived);
@@ -199,3 +210,4 @@ void onCanPacketReceived(CAN_FRAME &frame) {
 
 	channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
 }
+

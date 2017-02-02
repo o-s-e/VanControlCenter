@@ -58,6 +58,8 @@ private:
   Timer ledTimer;
 };
 
-HeaterInterface Heater;
+extern HeaterInterface heater;
+
+
 
 #endif
