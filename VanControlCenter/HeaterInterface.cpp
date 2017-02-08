@@ -3,13 +3,12 @@
 void HeaterInterface::init() {
   pinMode(HT_GAS_PIN, OUTPUT);
   pinMode(HT_VENT_PIN, OUTPUT);
-  pinMode(HT_STATE_PIN, OUTPUT);
+  pinMode(HT_STATE_LED, OUTPUT);
   pinMode(HT_INPUT_PIN, INPUT);
-  pinMode(HT_INPUT_PIN, OUTPUT);
 
   digitalWrite(HT_GAS_PIN, LOW);
   digitalWrite(HT_VENT_PIN, LOW);
-  digitalWrite(HT_STATE_PIN, LOW);
+  digitalWrite(HT_STATE_LED, LOW);
   state = Off;
 
   lastStateUpdate.setDuration(HT_STATE_TTL).start();
@@ -84,4 +83,4 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
   lastStateUpdate.start();
 }
 
-HeaterInterface heater
+HeaterInterface heater;

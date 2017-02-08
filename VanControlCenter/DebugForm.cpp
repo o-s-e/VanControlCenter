@@ -37,6 +37,7 @@ void DebugFormClass::update(Genie &genie) {
           else{
                   Log.e(MAPSEL_TAG) << F("Current map is invalid") << Endl;
           }
+		  */
   }
 
   void DebugFormClass::onEvent(Genie& genie, genieFrame& evt){
@@ -51,28 +52,16 @@ void DebugFormClass::update(Genie &genie) {
 
                   //Enable can analyzer via bluetooth
                   case CAN_ON_BLUETOOTH_BUTTON:
-                          INIT_SERIAL(BL_SERIAL, CAN_SERIAL_BAUD);
-                          canInterface.setCanDebugSerial(&BL_SERIAL);
-                          telemetryInterface.setLogSerial(NULL);
+                          INIT_SERIAL(WIFI_SERIAL, CAN_SERIAL_BAUD);
+                          canInterface.setCanDebugSerial(&WIFI_SERIAL);
+                        //  telemetryInterface.setLogSerial(NULL);
                           break;
 
-                  case CAN_STOP_BUTTON:
-                          INIT_SERIAL(BL_SERIAL, BL_SERIAL_BAUD);
-                          canInterface.setCanDebugSerial(NULL);
-                          telemetryInterface.setLogSerial(&BL_SERIAL);
-                          break;
 
-                  //Switch to the maps form
-                  case DRIVER_SETTING_BUTTON:
-                          displayInterface.setCurrentForm(&mapsForm);
-                          break;
 
-                  //Enable BMS debug mode
-                  case BMS_DEBUG_BUTTON:
-                          BMS.setDebugMode();
-                          break;
+            
           }
-  */
+  
 }
 
 DebugFormClass debugForm;

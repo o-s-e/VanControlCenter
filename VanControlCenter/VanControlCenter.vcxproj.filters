@@ -70,12 +70,6 @@
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\SRC\arduino\VanControlCenter\src\HWConfig.h">
-      <Filter>Header Files\ExternalInterfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="TempSensor.h">
-      <Filter>Header Files\ExternalInterfaces\Sensors</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -124,11 +118,11 @@
     <ClInclude Include="logger.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="HWConfig.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TempSensor.cpp">
-      <Filter>Source Files\ExternalInterfaces\Sensors</Filter>
-    </ClCompile>
     <ClCompile Include="Shell.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>

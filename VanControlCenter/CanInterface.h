@@ -27,7 +27,7 @@ public:
 		//BMS
 		BMS_CMD = 0x40,			//BMS command
 
-		//Phone
+		//Wifi
 		DATE = 0x60,			//Date dd/mm/yy
 		TIME = 0x61,			//Time hh:MM:ss
 		GPS_LATITUDE = 0x62,	//Latitude
@@ -40,51 +40,9 @@ public:
 		TEMP = 0x71,			//Accelerometer x value
 		ACC_Y = 0x72,			//Accelerometer y value
 		ACC_Z = 0x73,			//Accelerometer z value
-		TEMP_STATUS = 0x74,		//Accelerometer values precision	
+		TEMP_STATUS = 0x74		//Accelerometer values precision	
 
-		//Motor
-		DRIVER_SETTINGS_CMD = 0x80,	//Set/Get motor driver mapset/motor settings
-		DRIVER_SET_MAP_CMD =  0x81,	//Set motor current map
 
-		MOTOR_MAP = 0x91,			//Current selected map
-
-		//MOTOR_CURRENT = 0xA0,		//Current
-		//MOTOR_VOLTAGE = 0xA1,		//Voltage
-		MOTOR_POWER = 0xA2,			//Power
-		//MOTOR_TORQUE = 0xA3,		//Torque
-		//MOTOR_RPM = 0xA4,			//RPM
-		MOTOR_DUTY_CICLE = 0xA5,	//Duty cicle
-
-		//Strategy
-		IST_VEL = 0x200,
-		AVG_VEL = 0x201,
-		DISTANCE = 0x202,
-		LEFT_TIME = 0x203,
-		LAP = 0x204,
-		GPS_WAYPOINT = 0x205,
-		REL_SPACE = 0x206,
-		REL_TIME = 0x207,
-		LAST_TIME = 0x208,
-		GAP = 0x209,
-		ENERGY = 0x20A,
-		GAS = 0x20B,
-		TIME_MILLIS = 0x20C,
-
-		//Bms
-		BMS_STATUS = 0x400,			//BMS status
-		BATTERY_CELL_0 = 0x401,		//Battery cell 0 voltage. Other cells' ids are next this
-		//...
-		PACK_VOLTAGE = 0x410,		
-		//CHG_VOLTAGE = 0x411,
-		//LOAD_VOLTAGE = 0x412,
-		//PACK_CURRENT = 0x413,
-		//TEMP_1 = 0x414,
-		//TEMP_2 = 0x415,
-
-		STEER_SNS = 0x501,
-		STEER_ANGLE = 0x502,
-		STEER_RADINV = 0x503,
-		DIST_SNS = 0x504
 
 	};
 };

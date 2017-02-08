@@ -39,7 +39,6 @@
 #include <Vector.h>
 #include <due_can.h>
 #include <genieArduino.h>
-#include <dht.h>
 
 // TempCtrl interface instance
 
@@ -179,6 +178,8 @@ void loop() {
 void initPorts() {
 	INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
 	INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
+	INIT_SD(SD, SD_SS_PIN);
+
 	// Heater Initialisation
 	heater.init();
 

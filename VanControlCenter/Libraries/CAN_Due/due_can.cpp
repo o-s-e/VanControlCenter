@@ -672,7 +672,7 @@ bool CANRaw::sendFrame(CAN_FRAME& txFrame)
 				mailbox_set_datalen(i, txFrame.length);
 				mailbox_set_priority(i, txFrame.priority);
 				for (uint8_t cnt = 0; cnt < 8; cnt++)
-				{    
+				{   txFrame.data.bytes
 					mailbox_set_databyte(i, cnt, txFrame.data.bytes[cnt]);
 				}       
 				enable_interrupt(0x01u << i); //enable the TX interrupt for this box
