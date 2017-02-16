@@ -29,7 +29,6 @@ void HeaterInterface::update() {
       digitalWrite(HT_STATE_LED, ledStatus < 5 ? HIGH : LOW);
       digitalWrite(HT_GAS_PIN, HIGH);
       digitalWrite(HT_VENT_PIN, HIGH);
-      Log.i(HT_TAG) << F("On state") << Endl;
       break;
 
     case Off:
@@ -37,7 +36,6 @@ void HeaterInterface::update() {
       digitalWrite(HT_STATE_LED, LOW);
       digitalWrite(HT_GAS_PIN, LOW);
       digitalWrite(HT_VENT_PIN, LOW);
-      Log.i(HT_TAG) << F("Off state") << Endl;
       break;
 
     case VentOnly:
@@ -45,7 +43,6 @@ void HeaterInterface::update() {
       digitalWrite(HT_STATE_LED, ledStatus < 20 ? HIGH : LOW);
       digitalWrite(HT_GAS_PIN, LOW);
       digitalWrite(HT_VENT_PIN, HIGH);
-      Log.i(HT_TAG) << F("VentOnly state") << Endl;
       break;
 
     default:
@@ -53,12 +50,13 @@ void HeaterInterface::update() {
       digitalWrite(HT_STATE_LED, ledStatus < 1 ? HIGH : LOW);
       digitalWrite(HT_GAS_PIN, LOW);
       digitalWrite(HT_VENT_PIN, LOW);
-      Log.w(HT_TAG) << F("Unknown state") << Endl;
       break;
     }
 
     ledTimer.start();
   }
+  Log.i(HT_TAG) << F("State: ") << state << Endl;
+
 }
 
 void HeaterInterface::onStateChanged(const char *newStateString) {

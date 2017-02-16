@@ -178,15 +178,18 @@ void loop() {
 void initPorts() {
 	INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
 	INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
+	canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);
+
 	INIT_SD(SD, SD_SS_PIN);
+	// Utils
+	Log.init(&LOG_SERIAL);
 
 	// Heater Initialisation
 	heater.init();
 
 	canInterface.init(CAN_SPEED);
 	canInterface.setCanEventCallBack(&onCanPacketReceived);
-	// Utils
-	Log.init(&LOG_SERIAL);
+
 
 #ifdef SHELL_ON
 	shell.init(&LOG_SERIAL);
@@ -206,8 +209,7 @@ bool initDataLogger() {
 }
 
 void onCanPacketReceived(CAN_FRAME &frame) {
-	// Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << "
-	// " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
+	 Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
 
 	channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
 }

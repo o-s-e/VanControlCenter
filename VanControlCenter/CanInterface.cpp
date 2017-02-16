@@ -14,12 +14,15 @@ void CanInterfaceClass::init(int canSpeed, unsigned short minID, unsigned short 
 void CanInterfaceClass::update(){
 	//If a frame is available
 	if (Can0.available()){
+		Log.i(CAN_TAG) << F("Can0 available");
 		//Read
 		Can0.read(frame);
 
 		//If the callback is set 
 		if (canEvent != NULL){
 			//Invoke the callback
+			Log.i(CAN_TAG) << F("Can0 callback is set");
+
 			canEvent(frame);
 		}
 
