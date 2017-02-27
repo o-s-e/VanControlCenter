@@ -1,3 +1,4 @@
+#include "RGBInterface.h"
 #include "HWConfig.h"
 #include <Arduino.h>
 //
@@ -187,6 +188,10 @@ void initPorts() {
 	// Heater Initialisation
 	heater.init();
 
+	//Lights Initialisation
+
+	LightInterface.init();
+
 	canInterface.init(CAN_SPEED);
 	canInterface.setCanEventCallBack(&onCanPacketReceived);
 
@@ -209,8 +214,14 @@ bool initDataLogger() {
 }
 
 void onCanPacketReceived(CAN_FRAME &frame) {
-	 Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
+	Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
 
 	channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
+
+	switch (frame.id) {
+		case CanID::TEMP:
+			heater.onStateChanged(channelsBuffer.getValueAs<float>(CanID::TEMP));
+			//TODO Need to implement a temp controller wo set the Heater state based on the temp reported over CAnBus.
+	}
 }
 

@@ -105,6 +105,7 @@
     <ClInclude Include="LCDStringMsg.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="LightInterface.h" />
     <ClInclude Include="Shell.h" />
     <ClInclude Include="WifiInterface.h" />
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h" />
@@ -122,6 +123,7 @@
     <ClCompile Include="LCDStringList.cpp" />
     <ClCompile Include="LCDStringMsg.cpp" />
     <ClCompile Include="logger.cpp" />
+    <ClCompile Include="LightInterface.cpp" />
     <ClCompile Include="Shell.cpp" />
     <ClCompile Include="WifiInterface.cpp" />
   </ItemGroup>

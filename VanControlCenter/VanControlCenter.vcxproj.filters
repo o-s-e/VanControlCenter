@@ -121,6 +121,9 @@
     <ClInclude Include="HWConfig.h">
       <Filter>Header Files\ExternalInterfaces</Filter>
     </ClInclude>
+    <ClInclude Include="LightInterface.h">
+      <Filter>Header Files\ExternalInterfaces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Shell.cpp">
@@ -164,6 +167,9 @@
     </ClCompile>
     <ClCompile Include="logger.cpp">
       <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="LightInterface.cpp">
+      <Filter>Source Files\ExternalInterfaces</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

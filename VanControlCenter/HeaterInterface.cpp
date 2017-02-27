@@ -10,7 +10,7 @@ void HeaterInterface::init() {
   digitalWrite(HT_VENT_PIN, LOW);
   digitalWrite(HT_STATE_LED, LOW);
   state = Off;
-
+  lastStateUpdate.setDuration(HT_STATE_LED_DUR).start();
   lastStateUpdate.setDuration(HT_STATE_TTL).start();
 }
 
