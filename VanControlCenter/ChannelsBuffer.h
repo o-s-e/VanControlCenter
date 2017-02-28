@@ -24,6 +24,8 @@
 //Logger tag
 #define CHBUF_TAG F("CHBUF")
 
+
+
 class ChannelsBufferClass
 {
 

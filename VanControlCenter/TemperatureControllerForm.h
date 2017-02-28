@@ -27,6 +27,9 @@
 //Logger Tag
 #define TEMPC_TAG F("TEMPC")
 
+#define TEMP_GAUGE_DISP 0
+#define TEMP_GAUGE_SET 1
+
 
 class TemperatureControllerForm : public LCDForm{
 
@@ -44,7 +47,7 @@ private:
 
 	//Update all the widgets values
 	void updateWidgetsValues(Genie& genie);
-	
+	Timer lastStateChange;
 	float setTemp;
 
 
