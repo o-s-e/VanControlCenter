@@ -21,8 +21,10 @@
 
 #include "ConsoleForm.h"
 #include "DebugForm.h"
+#include "TemperatureControllerForm.h"
 #include "HWConfig.h"
 #include "LCDForm.h"
+
 // Logger tag
 #define LCD_TAG F("LCD")
 

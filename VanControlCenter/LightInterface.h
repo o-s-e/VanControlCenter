@@ -56,8 +56,6 @@ public:
 	void setBrightness(int h);
 
 	
-
-
 private:
 
 
@@ -66,11 +64,9 @@ private:
 
 	// LightCtrl state LED timer
 	Timer ledTimer;
-
-
-
+ 
 };
 
-extern LightInterfaceClass LightInterface;
+extern LightInterfaceClass lightInterface;
 
 #endif

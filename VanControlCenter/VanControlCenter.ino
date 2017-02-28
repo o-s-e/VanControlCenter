@@ -1,6 +1,4 @@
-#include "RGBInterface.h"
-#include "HWConfig.h"
-#include <Arduino.h>
+
 //
 //    FILE: VanCenter.c
 //  AUTHOR: Olivier Van Steenberghe
@@ -10,8 +8,11 @@
 //
 // Released to the public domain
 //
-#include "HeaterInterface.h"
 
+
+#include "HeaterInterface.h"
+#include "TemperatureController.h"
+#include "LightInterface.h"
 #include "CanInterface.h"
 #include "Channel.h"
 #include "ChannelsBuffer.h"
@@ -22,12 +23,12 @@
 #include "WifiInterface.h"
 #include "HWConfig.h"
 #include "Shell.h"
-
 #include "LCDForm.h"
 #include "LCDStringList.h"
 #include "LCDStringMsg.h"
 #include "Logger.h"
 
+#include <Arduino.h>
 #include <BitArray.h>
 #include <Button.h>
 #include <ByteBuffer.h>
@@ -190,7 +191,7 @@ void initPorts() {
 
 	//Lights Initialisation
 
-	LightInterface.init();
+	lightInterface.init();
 
 	canInterface.init(CAN_SPEED);
 	canInterface.setCanEventCallBack(&onCanPacketReceived);
@@ -219,9 +220,7 @@ void onCanPacketReceived(CAN_FRAME &frame) {
 	channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
 
 	switch (frame.id) {
-		case CanID::TEMP:
-			heater.onStateChanged(channelsBuffer.getValueAs<float>(CanID::TEMP));
-			//TODO Need to implement a temp controller wo set the Heater state based on the temp reported over CAnBus.
+		
 	}
 }
 

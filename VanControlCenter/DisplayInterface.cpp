@@ -32,10 +32,10 @@ void DisplayInterfaceClass::init() {
   consoleForm.init(genie);
   // mainForm.init(genie);
   debugForm.init(genie);
-  // mapsForm.init(genie);
+  temperatureControllerForm.init(genie);
   currentForm = &consoleForm;
 
-  // Refresh rateo for the update method
+  // Refresh rate for the update method
   refreshTimer.setDuration(1000 / REFRESH_RATEO).start();
 
   enabled = true;

@@ -41,7 +41,6 @@ void LightInterfaceClass::update() {
 		analogWrite(RGB_BLUE, light.g);
 		analogWrite(RGB_GREEN, light.b);
 		analogWrite(WHITE_LED, light.w);
-
 	}
 
 	ledTimer.start();
@@ -122,4 +121,4 @@ void LightInterfaceClass::setBrightness(int h) {
 }
 
 
-LightInterfaceClass LightInterface;
+LightInterfaceClass lightInterface;
