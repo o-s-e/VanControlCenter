@@ -16,7 +16,6 @@ void LightInterfaceClass::init() {
 	hsv.v = 0;
 
 
-
 	pinMode(RGB_RED, OUTPUT);
 	pinMode(RGB_BLUE, OUTPUT);
 	pinMode(RGB_GREEN, OUTPUT);
@@ -28,7 +27,6 @@ void LightInterfaceClass::init() {
 	analogWrite(WHITE_LED, 0);
 
 	ledTimer.setDuration(RGB_STATE_LED_DUR).start();
-
 
 }
 
@@ -88,7 +86,6 @@ void LightInterfaceClass::setColor(double h) {
 				g = hsv.v;
 				b = t;
 				break;
-
 			case 3:
 				r = p;
 				g = q;
@@ -117,7 +114,6 @@ void LightInterfaceClass::setBrightness(int h) {
 	if (light.w != h) {
 		light.w = h;
 	}
-
 }
 
 

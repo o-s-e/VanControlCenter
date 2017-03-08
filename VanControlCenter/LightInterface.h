@@ -10,10 +10,8 @@
 #endif
 
 
-
 #include "HWConfig.h"
 #include <Timer.h>
-
 
 /**
 * Class to interface the RGB cabin lightning
@@ -25,9 +23,9 @@
 #define RGB_STATE_LED_DUR 500
 
 typedef struct LIGHT {
-	double r;       
-	double g;       
-	double b;
+	int r;       
+	int g;       
+	int b;
 	int w;
 }LIGHT;
 
@@ -36,9 +34,6 @@ typedef struct HSV {
 	double s;       // a fraction between 0 and 1 we use a static 0.5
 	double v;       // a fraction between 0 and 1 we use a static 0.5
 } HSV;
-
-
-
 
 
 class LightInterfaceClass {
@@ -58,8 +53,8 @@ public:
 	
 private:
 
-
 	LIGHT light;
+
 	HSV hsv;
 
 	// LightCtrl state LED timer

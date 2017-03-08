@@ -9,9 +9,9 @@
 // Released to the public domain
 //
 
-
+#include "LightControllerForm.h"
 #include "HeaterInterface.h"
-#include "TemperatureController.h"
+#include "TemperatureControllerForm.h"
 #include "LightInterface.h"
 #include "CanInterface.h"
 #include "Channel.h"
@@ -60,7 +60,7 @@ void onCanPacketReceived(CAN_FRAME &frame);
 // Log tag
 #define INIT_TAG F("INIT")
 #define LOOP_TAG F("LOOP")
-#define LOOP_TAG F("WIFI")
+#define WIFI_TAG F("WIFI")
 // SW info
 #define SW_REV F("1")
 #define SW_INFO                                                                \

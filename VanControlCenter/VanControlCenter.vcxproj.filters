@@ -124,6 +124,12 @@
     <ClInclude Include="LightInterface.h">
       <Filter>Header Files\ExternalInterfaces</Filter>
     </ClInclude>
+    <ClInclude Include="TemperatureControllerForm.h">
+      <Filter>Header Files\Display\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="LightControllerForm.h">
+      <Filter>Header Files\Display\Form</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Shell.cpp">
@@ -170,6 +176,12 @@
     </ClCompile>
     <ClCompile Include="LightInterface.cpp">
       <Filter>Source Files\ExternalInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="TemperatureControllerForm.cpp">
+      <Filter>Source Files\Display\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="LightControllerForm.cpp">
+      <Filter>Source Files\Display\Form</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@ void LCDStringMsg::init(byte widgetIndex, Genie* parent){
 
 void LCDStringMsg::clear(){
 	//Replace all char except \n with with space
-	for (int i = 0; i < buffer.length(); i++){
+	for (uint16_t i = 0; i < buffer.length(); i++){
 		if (buffer.charAt(i) != '\n'){
 			buffer.setCharAt(i, ' ');
 		}

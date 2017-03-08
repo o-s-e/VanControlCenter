@@ -9,7 +9,7 @@ void ChannelsBufferClass::init(){
 
 	bufferSize = 0;
 	//Create the "matrix" to cointain byte-array data
-	for (int i = 0; i < size; i++){
+	for (uint16_t i = 0; i < size; i++){
 		c = channelsConfig.getChannelByIndex(i);
 		buffer[i].resize(c->getSize());
 		buffer[i].clear();
@@ -136,11 +136,11 @@ String ChannelsBufferClass::uintToString(Channel* channel, byte* data){
 	String value;
 
 
-	for (int i = 0; i < channel->getSize(); i++){
+	for (uint64_t i = 0; i < channel->getSize(); i++){
 		mem[i] = data[i];
 	}
 
-	for (int i = channel->getSize(); i < sizeof(long long int); i++){
+	for (uint64_t i = channel->getSize(); i < sizeof(long long int); i++){
 		mem[i] = 0x00;
 	}
 
@@ -155,17 +155,17 @@ String ChannelsBufferClass::intToString(Channel* channel, byte* data){
 	char temp[21]; //64 bit signed integer max digit number + \0
 	String value;
 
-	for (int i = 0; i < channel->getSize(); i++){
+	for (uint64_t i = 0; i < channel->getSize(); i++){
 		mem[i] = data[i];
 	}
 
 	if (mem[channel->getSize() - 1] & (1 << 7)){
-		for (int i = channel->getSize(); i < sizeof(long long int); i++){
+		for (uint64_t i = channel->getSize(); i < sizeof(long long int); i++){
 			mem[i] = 0xFF;
 		}
 	}
 	else{
-		for (int i = channel->getSize(); i < sizeof(long long int); i++){
+		for (uint64_t i = channel->getSize(); i < sizeof(long long int); i++){
 			mem[i] = 0x00;
 		}
 	}
@@ -179,7 +179,7 @@ String ChannelsBufferClass::intToString(Channel* channel, byte* data){
 void ChannelsBufferClass::sendOnStream(UARTClass* stream){
 	unsigned short ID;
 	Channel* c;
-	for (int i = 0; i < channelsConfig.getChannelCount(); i++){
+	for (uint16_t i = 0; i < channelsConfig.getChannelCount(); i++){
 		//Get the i-nth channel
 		c = channelsConfig.getChannelByIndex(i);
 		ID = c->getID();

@@ -41,13 +41,16 @@ public:
 
 	void onEvent(Genie& genie, genieFrame& evt);
 
+	//TODO index needs to be adapted when the UI was build
 	int getFormIndex() { return 3; }
 	
 private:
 
 	//Update all the widgets values
 	void updateWidgetsValues(Genie& genie);
+
 	Timer lastStateChange;
+
 	float setTemp;
 
 
