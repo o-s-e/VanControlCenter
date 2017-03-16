@@ -29,7 +29,7 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 		}
 	}
 }
-		
+
 
 void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
 
@@ -38,7 +38,7 @@ void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
 	if (temp >= setTemp) {
 		heater.onStateChanged("OFF");
 	}
-	else if(temp < setTemp) {
+	else if (temp < setTemp) {
 		heater.onStateChanged("ON");
 	}
 	else {

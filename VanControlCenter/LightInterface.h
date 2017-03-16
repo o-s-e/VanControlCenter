@@ -23,8 +23,8 @@
 #define RGB_STATE_LED_DUR 500
 
 typedef struct LIGHT {
-	int r;       
-	int g;       
+	int r;
+	int g;
 	int b;
 	int w;
 }LIGHT;
@@ -50,7 +50,7 @@ public:
 
 	void setBrightness(int h);
 
-	
+
 private:
 
 	LIGHT light;
@@ -59,7 +59,7 @@ private:
 
 	// LightCtrl state LED timer
 	Timer ledTimer;
- 
+
 };
 
 extern LightInterfaceClass lightInterface;

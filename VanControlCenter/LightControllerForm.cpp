@@ -26,7 +26,6 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 					color = genie.GetEventData(&evt);
 					lightInterface.setColor(color);
 
-
 				case LIGHT_BRIGHTNESS:
 					brightness = genie.GetEventData(&evt);
 					lightInterface.setBrightness(brightness);
@@ -39,9 +38,7 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 void LightControllerForm::updateWidgetsValues(Genie& genie) {
 
 	updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_WHEEL, color);
-	updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_BRIGHTNESS, color);
-
-
+	updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_BRIGHTNESS, brightness);
 
 }
 

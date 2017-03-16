@@ -76,6 +76,7 @@ void LightInterfaceClass::setColor(double h) {
 				g = t;
 				b = p;
 				break;
+
 			case 1:
 				r = q;
 				g = hsv.v;

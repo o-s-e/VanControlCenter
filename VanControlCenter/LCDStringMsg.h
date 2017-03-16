@@ -4,13 +4,13 @@
 #define _LCDSTRINGMSG_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
-	#include "WProgram.h"
+#include "WProgram.h"
 #endif
 
 /**
-* Class to use a string widget to show simpre message
+* Class to use a string widget to show simple message
 */
 
 #include <genieArduino.h>
