@@ -18,8 +18,10 @@
 #include "ChannelsBuffer.h"
 
 #define LIGHT_WHEEL 0
-#define LIGHT_BRIGHTNESS 1
-
+#define ROOM_LIGHT 1
+#define AWNING_LIGHT 2
+#define WORKTOP_LIGHT 3
+#define OFFSWITCH 4
 
 class LightControllerForm : public LCDForm {
 
@@ -38,7 +40,9 @@ private:
 
 	double color;
 
-	int brightness;
+	int roomBrightness;
+	int awningBrightness;
+	int worktopBrightness;
 
 	void updateWidgetsValues(Genie& genie);
 

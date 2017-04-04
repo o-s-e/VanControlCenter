@@ -41,40 +41,40 @@ class ChannelsBufferClass
     template <typename T>
     T getValueAs(unsigned short id, T defaultValue)
     {
-	//If CFG file was loaded
-	if (channelsConfig.isValid())
-	{
-	    //Search the channel
-	    int index = channelsConfig.getChannelIndex(id);
-	    //If channel exists and its TTL is still valid
-	    if (index != -1 && !channelsConfig.getChannelByIndex(index)->hasTTLFinished())
-	    {
-		//Return the converted value
-		return buffer[index].as<T>();
-	    }
-	}
-	//Else return the default value
-	return defaultValue;
+    //If CFG file was loaded
+    if (channelsConfig.isValid())
+    {
+        //Search the channel
+        int index = channelsConfig.getChannelIndex(id);
+        //If channel exists and its TTL is still valid
+        if (index != -1 && !channelsConfig.getChannelByIndex(index)->hasTTLFinished())
+        {
+        //Return the converted value
+        return buffer[index].as<T>();
+        }
+    }
+    //Else return the default value
+    return defaultValue;
     }
 
     //Template function which return the lastest channel values
     template <typename T>
     T getValueAs(unsigned short id)
     {
-	//If CFG file was loaded
-	if (channelsConfig.isValid())
-	{
-	    //Search the channel
-	    int index = channelsConfig.getChannelIndex(id);
-	    //If channel exists
-	    if (index != -1)
-	    {
-		//Return the converted value
-		return buffer[index].as<T>();
-	    }
-	}
-	//Else return NAN
-	return NAN;
+    //If CFG file was loaded
+    if (channelsConfig.isValid())
+    {
+        //Search the channel
+        int index = channelsConfig.getChannelIndex(id);
+        //If channel exists
+        if (index != -1)
+        {
+        //Return the converted value
+        return buffer[index].as<T>();
+        }
+    }
+    //Else return NAN
+    return NAN;
     }
 
     //Return a ByteBuffer copy associated to the channel
@@ -94,7 +94,7 @@ class ChannelsBufferClass
     template <typename T>
     T setValue(unsigned short id, T value)
     {
-	setValue(id, (byte *)&value, sizeof(T));
+    setValue(id, (byte *)&value, sizeof(T));
     }
 
     //Send all buffer data on a serial port in the format	ID(2 byte) Data(n byte)

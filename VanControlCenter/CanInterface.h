@@ -4,9 +4,9 @@
 #define _CANINTERFACE_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
-	#include "WProgram.h"
+#include "WProgram.h"
 #endif
 
 /**
@@ -21,11 +21,11 @@
 #include "Utils.h"
 
 //Class containing an enum with all the CanID constants hard-coded
-class CanID{
+class CanID {
 public:
 	enum IDs : unsigned short {
 		//BMS
-		BMS_CMD = 0x40,			//BMS command
+		BMS_CMD = 0x40,			//Heater Control
 
 		//Wifi
 		DATE = 0x60,			//Date dd/mm/yy
@@ -37,16 +37,13 @@ public:
 		GPS_SPEED = 0x66,		//GPS valid flag
 
 		CALL_STATUS = 0x70,		//Voice call status		0 - no call		1 - in call
-		TEMP = 0x71,			//Accelerometer x value
-		ACC_Y = 0x72,			//Accelerometer y value
-		ACC_Z = 0x73,			//Accelerometer z value
-		TEMP_STATUS = 0x74		//Accelerometer values precision	
-
-
+		TEMP = 0x71,			//Temperature Sensor Temp
+		HUM = 0x72,			//Temperature Sensor Humidity
+		HEATER_STATUS = 0x73, // Heater state
 
 	};
 };
-	
+
 //Logget tag
 #define CAN_TAG		F("CAN")
 
@@ -75,7 +72,7 @@ public:
 #define OK_CMD			"OK"
 
 //Enum containing the possible results of a can stream
-enum CanStreamResult{
+enum CanStreamResult {
 	SUCCES,
 	ERROR,
 	TIMEOUT,

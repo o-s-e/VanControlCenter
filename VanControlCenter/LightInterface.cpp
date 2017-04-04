@@ -7,9 +7,14 @@
 
 void LightInterfaceClass::init() {
 
-	light.r = 0;
-	light.g = 0;
-	light.b = 0;
+	roomLight.r = 0;
+	roomLight.g = 0;
+	roomLight.b = 0;
+	roomLight.w = 0;
+
+	awningLight.w = 0;
+
+	worktopLight.w = 0;
 
 	hsv.h = 0;
 	hsv.s = 0;
@@ -20,11 +25,15 @@ void LightInterfaceClass::init() {
 	pinMode(RGB_BLUE, OUTPUT);
 	pinMode(RGB_GREEN, OUTPUT);
 	pinMode(WHITE_LED, OUTPUT);
+	pinMode(AWNING_LED, OUTPUT);
+	pinMode(WORKTOP_LED, OUTPUT);
 
 	analogWrite(RGB_RED, 0);
 	analogWrite(RGB_BLUE, 0);
 	analogWrite(RGB_GREEN, 0);
 	analogWrite(WHITE_LED, 0);
+	analogWrite(AWNING_LED, 0);
+	analogWrite(WORKTOP_LED, 0);
 
 	ledTimer.setDuration(RGB_STATE_LED_DUR).start();
 
@@ -35,10 +44,12 @@ void LightInterfaceClass::update() {
 	if (ledTimer.hasFinished()) {
 
 		// Set the color on each cycle
-		analogWrite(RGB_RED, light.r);
-		analogWrite(RGB_BLUE, light.g);
-		analogWrite(RGB_GREEN, light.b);
-		analogWrite(WHITE_LED, light.w);
+		analogWrite(RGB_RED, roomLight.r);
+		analogWrite(RGB_BLUE, roomLight.g);
+		analogWrite(RGB_GREEN, roomLight.b);
+		analogWrite(WHITE_LED, roomLight.w);
+		analogWrite(AWNING_LED, awningLight.w);
+		analogWrite(WORKTOP_LED, worktopLight.w);
 	}
 
 	ledTimer.start();
@@ -106,14 +117,54 @@ void LightInterfaceClass::setColor(double h) {
 		}
 	}
 	// map the values from a 0-1 fraction to a byte
-	light.r = map(r, 0, 1, 0, 255);
-	light.g = map(g, 0, 1, 0, 255);
-	light.b = map(b, 0, 1, 0, 255);
+	roomLight.r = map(r, 0, 1, 0, 255);
+	roomLight.g = map(g, 0, 1, 0, 255);
+	roomLight.b = map(b, 0, 1, 0, 255);
 }
 
-void LightInterfaceClass::setBrightness(int h) {
-	if (light.w != h) {
-		light.w = h;
+void LightInterfaceClass::setBrightness(int brightness, int lightIndex) {
+	switch (lightIndex) {
+		case 1:
+			if (roomLight.w != brightness) {
+				roomLight.w = brightness;
+			}
+		case 2:
+			if (awningLight.w != brightness) {
+				awningLight.w = brightness;
+			}
+		case 3:
+			if (worktopLight.w != brightness) {
+				worktopLight.w = brightness;
+			}
+
+	}
+}
+
+void LightInterfaceClass::allOff() {
+	fadeAmount = 5;
+	fadeTimer.setDuration(500).start();
+	if (ledTimer.hasFinished()) {
+
+
+		roomLight.r = -fadeAmount;
+		roomLight.g = -fadeAmount;
+		roomLight.b = -fadeAmount;
+		roomLight.w = -fadeAmount;
+		awningLight.w = -fadeAmount;
+		worktopLight.w = -fadeAmount;
+		if (roomLight.r <= 0 &&
+			roomLight.g <= 0 &&
+			roomLight.b <= 0 &&
+			roomLight.w <= 0 &&
+			awningLight.w <= 0 &&
+			worktopLight.w <= 0) {
+			Log.i(RGB_TAG) << F("all light are off");
+		}
+		else
+		{
+			fadeTimer.start();
+
+		}
 	}
 }
 

@@ -12,6 +12,8 @@
 
 #include "HWConfig.h"
 #include <Timer.h>
+#include "Logger.h"
+
 
 /**
 * Class to interface the RGB cabin lightning
@@ -48,17 +50,25 @@ public:
 	// Sets the Hue(value between 0 and 360) 
 	void setColor(double h);
 
-	void setBrightness(int h);
+	void setBrightness(int brightness, int lightIndex);
+
+	void allOff();
 
 
 private:
 
-	LIGHT light;
+	LIGHT roomLight;
+	LIGHT awningLight;
+	LIGHT worktopLight;
+
 
 	HSV hsv;
 
-	// LightCtrl state LED timer
+	uint8_t fadeAmount;
+
+	// LightCtrl refresh LED timer
 	Timer ledTimer;
+	Timer fadeTimer;
 
 };
 

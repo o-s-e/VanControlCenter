@@ -25,6 +25,8 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 					// Get the temp from the slider
 					setTemp = genie.GetEventData(&evt);
 					break;
+
+
 			}
 		}
 	}

@@ -48,6 +48,9 @@
 #define RGB_GREEN 5
 #define RGB_BLUE 6
 #define WHITE_LED 8
+#define AWNING_LED 10
+#define WORKTOP_LED 11
+
 
 
 #endif

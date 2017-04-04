@@ -7,7 +7,9 @@
 void LightControllerForm::init(Genie& genie) {
 
 	color = 255;
-	brightness = 0;
+	roomBrightness = 0;
+	awningBrightness = 0;
+	worktopBrightness = 0;
 
 }
 
@@ -26,10 +28,20 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 					color = genie.GetEventData(&evt);
 					lightInterface.setColor(color);
 
-				case LIGHT_BRIGHTNESS:
-					brightness = genie.GetEventData(&evt);
-					lightInterface.setBrightness(brightness);
+				case ROOM_LIGHT:
+					roomBrightness = genie.GetEventData(&evt);
+					lightInterface.setBrightness(roomBrightness, ROOM_LIGHT);
 
+				case AWNING_LIGHT:
+					awningBrightness = genie.GetEventData(&evt);
+					lightInterface.setBrightness(awningBrightness, AWNING_LIGHT);
+
+				case WORKTOP_LIGHT:
+					worktopBrightness = genie.GetEventData(&evt);
+					lightInterface.setBrightness(worktopBrightness, WORKTOP_LIGHT);
+
+				case OFFSWITCH:
+					lightInterface.allOff();
 			}
 		}
 	}
@@ -38,7 +50,10 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 void LightControllerForm::updateWidgetsValues(Genie& genie) {
 
 	updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_WHEEL, color);
-	updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_BRIGHTNESS, brightness);
+	updateWidget(genie, GENIE_OBJ_USERIMAGES, ROOM_LIGHT, roomBrightness);
+	updateWidget(genie, GENIE_OBJ_USERIMAGES, AWNING_LIGHT, awningBrightness);
+	updateWidget(genie, GENIE_OBJ_USERIMAGES, WORKTOP_LIGHT, worktopBrightness);
+
 
 }
 

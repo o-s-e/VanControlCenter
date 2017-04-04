@@ -25,32 +25,32 @@ const PROGMEM ShellCommand cmdsList[] = {
 };
 
 
-void ShellClass::init(Stream* serialPort){
+void ShellClass::init(Stream* serialPort) {
 	this->serialPort = serialPort;
 	this->rxBuffer.resize(SHELL_RX_BUFFER);
 }
 
-void ShellClass::update(){
+void ShellClass::update() {
 	int index;
 	String line;
 	ShellCommand cmd;
 
-	if (serialPort->available()){
+	if (serialPort->available()) {
 
-		while (serialPort->available() && rxBuffer.getSize() < rxBuffer.getCapacity()){
+		while (serialPort->available() && rxBuffer.getSize() < rxBuffer.getCapacity()) {
 			rxBuffer.append(serialPort->read());
 		}
 
 		index = rxBuffer.indexOf('\n');
-		if (index != -1){
+		if (index != -1) {
 			line = rxBuffer.toString(0, index);
 			line.trim();
 
-			if (findCmd(line, &cmd) != -1){
+			if (findCmd(line, &cmd) != -1) {
 				(this->*cmd.cmdFun)(line);
 				//Log.e(SHELL_TAG) << ("Cmd executed") << Endl;
 			}
-			else{
+			else {
 				Log.e(SHELL_TAG) << F("Command not found") << Endl;
 			}
 
@@ -63,29 +63,29 @@ void ShellClass::update(){
 
 //Cmds
 //A
-void ShellClass::analogReadCmd(String& params){
+void ShellClass::analogReadCmd(String& params) {
 	int pin = A0 + nextParam(params).toInt();
 	uint32_t attr = g_APinDescription[pin].ulPinAttribute;
 
-	if ((attr & PIN_ATTR_ANALOG) != PIN_ATTR_ANALOG){
+	if ((attr & PIN_ATTR_ANALOG) != PIN_ATTR_ANALOG) {
 		Log.e(SHELL_TAG) << F("Pin number A") << pin << F(" is not a valid analog I/O pin for this board") << Endl;
 	}
-	else{
+	else {
 		pinMode(pin, INPUT);
 		Log.i(SHELL_TAG) << F("Readed ") << analogRead(pin) << Endl;
 	}
 }
 
-void ShellClass::analogWriteCmd(String& params){
+void ShellClass::analogWriteCmd(String& params) {
 	int pin = A0 + nextParam(params).toInt();
 	int value = nextParam(params).toInt();
 
 	uint32_t attr = g_APinDescription[pin].ulPinAttribute;
 
-	if ((attr & PIN_ATTR_ANALOG) != PIN_ATTR_ANALOG && (attr & PIN_ATTR_PWM) != PIN_ATTR_PWM){
+	if ((attr & PIN_ATTR_ANALOG) != PIN_ATTR_ANALOG && (attr & PIN_ATTR_PWM) != PIN_ATTR_PWM) {
 		Log.e(SHELL_TAG) << F("Pin number A") << pin << F(" is not a valid analog I/O pin for this board") << Endl;
 	}
-	else{
+	else {
 		pinMode(pin, OUTPUT);
 		analogWrite(pin, value);
 		Log.i(SHELL_TAG) << F("OK") << Endl;
@@ -93,55 +93,55 @@ void ShellClass::analogWriteCmd(String& params){
 }
 
 //C
-void ShellClass::channelListCmd(String& params){
+void ShellClass::channelListCmd(String& params) {
 	Channel* c;
 
 	Log.i(SHELL_TAG) << F("Channel number: ") << channelsConfig.getChannelCount() << Endl;
 	Log.i(SHELL_TAG) << F("ID\tName\tSize\tType") << Endl;
 
-	for (int i = 0; i < channelsConfig.getChannelCount(); i++){
+	for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
 		c = channelsConfig.getChannelByIndex(i);
 		Log.i(SHELL_TAG) << F("0x") << Hex << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << (char)c->getDataType() << Endl;
 	}
 }
 
-void ShellClass::channelValueCmd(String& params){
+void ShellClass::channelValueCmd(String& params) {
 	int id = nextParam(params).toInt();
 	Channel* c = channelsConfig.getChannelByID(id);
 
-	if (c == NULL){
+	if (c == NULL) {
 		Log.e(SHELL_TAG) << F("Channel not found") << Endl;
 	}
-	else{
+	else {
 		Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.getValueAsByteArray(id).toHexString() << Endl;
 	}
 }
 
-void ShellClass::channelsValuesCmd(String& params){
+void ShellClass::channelsValuesCmd(String& params) {
 
 }
 
 //D
-void ShellClass::digitalReadCmd(String& params){
+void ShellClass::digitalReadCmd(String& params) {
 	int pin = nextParam(params).toInt();
 
-	if (g_APinDescription[pin].ulPinType == PIO_NOT_A_PIN){
+	if (g_APinDescription[pin].ulPinType == PIO_NOT_A_PIN) {
 		Log.e(SHELL_TAG) << F("Pin number ") << pin << F(" is not a valid digital I/O pin for this board") << Endl;
 	}
-	else{
+	else {
 		pinMode(pin, INPUT);
 		Log.i(SHELL_TAG) << F("Readed ") << digitalRead(pin) << Endl;
 	}
 }
 
-void ShellClass::digitalWriteCmd(String& params){
+void ShellClass::digitalWriteCmd(String& params) {
 	int pin = nextParam(params).toInt();
 	int level = nextParam(params).toInt();
 
-	if (g_APinDescription[pin].ulPinType == PIO_NOT_A_PIN){
+	if (g_APinDescription[pin].ulPinType == PIO_NOT_A_PIN) {
 		Log.e(SHELL_TAG) << F("Pin number ") << pin << F(" is not a valid digital I/O pin for this board") << Endl;
 	}
-	else{
+	else {
 		pinMode(pin, OUTPUT);
 		digitalWrite(pin, level);
 		Log.i(SHELL_TAG) << F("OK") << Endl;
@@ -149,84 +149,84 @@ void ShellClass::digitalWriteCmd(String& params){
 }
 
 //S
-void ShellClass::SDMkDirCmd(String& params){
+void ShellClass::SDMkDirCmd(String& params) {
 	String path = nextParam(params);
 
-	if (SD.mkdir(path)){
+	if (SD.mkdir(path)) {
 		Log.i(SHELL_TAG) << F("OK") << Endl;
 	}
-	else{
+	else {
 		Log.e(SHELL_TAG) << F("Error creating new directory: is SD inserted?") << Endl;
 	}
 }
 
-void ShellClass::SDOpenCmd(String& params){
+void ShellClass::SDOpenCmd(String& params) {
 	String path = nextParam(params);
 
-	if (SD.exists(path)){
+	if (SD.exists(path)) {
 		File f = SD.open(path);
 		f.setTimeout(100);
-		if (f){
-			while (f.available()){
+		if (f) {
+			while (f.available()) {
 				Log.i(SHELL_TAG) << f.readStringUntil('\n') << Endl;
 			}
 			f.close();
 		}
-		else{
+		else {
 			Log.e(SHELL_TAG) << F("Error opening file") << Endl;
 		}
 	}
-	else{
+	else {
 		Log.e(SHELL_TAG) << F("File not found") << Endl;
 	}
 }
 
-void ShellClass::SDRmCmd(String& params){
+void ShellClass::SDRmCmd(String& params) {
 	String path = nextParam(params);
 
-	if (SD.exists(path)){
-		if (SD.remove(path)){
+	if (SD.exists(path)) {
+		if (SD.remove(path)) {
 			Log.i(SHELL_TAG) << F("OK") << Endl;
 		}
-		else{
+		else {
 			Log.e(SHELL_TAG) << F("Error deleting file") << Endl;
 		}
 	}
-	else{
+	else {
 		Log.e(SHELL_TAG) << F("File not found") << Endl;
 	}
 }
 
-void ShellClass::SDRmDirCmd(String& params){
+void ShellClass::SDRmDirCmd(String& params) {
 	String path = nextParam(params);
 
-	if (SD.exists(path)){
-		if (SD.rmdir(path)){
+	if (SD.exists(path)) {
+		if (SD.rmdir(path)) {
 			Log.i(SHELL_TAG) << F("OK") << Endl;
 		}
-		else{
+		else {
 			Log.e(SHELL_TAG) << F("Error deleting directory") << Endl;
 		}
 	}
-	else{
+	else {
 		Log.e(SHELL_TAG) << F("Directory not found") << Endl;
 	}
 
 }
 
-void ShellClass::SDTreeCmd(String&){
+void ShellClass::SDTreeCmd(String&) {
 	File root = SD.open("/");
 	root.rewindDirectory();
 
-	if (!root){
+	if (!root) {
 		Log.e(SHELL_TAG) << F("Error opening SD root: is SD inserted?") << Endl;
 	}
-	else{
+	else {
 		printSDTree(root, 0);
 	}
 }
 
-void ShellClass::printSDTree(File dir, int indent){
+void ShellClass::printSDTree(File dir, int indent) {
 	File entry = dir.openNextFile();
 
 	while (entry) {
@@ -249,7 +249,7 @@ void ShellClass::printSDTree(File dir, int indent){
 
 //Cmd utils
 
-int ShellClass::findCmd(String& line, ShellCommand* cmd){
+int ShellClass::findCmd(String& line, ShellCommand* cmd) {
 	//Binary search channel's index by canID
 	int s = 0, d = CMDS_NUM - 1;
 	int p, cmp;
@@ -268,7 +268,7 @@ int ShellClass::findCmd(String& line, ShellCommand* cmd){
 	line.remove(0, index + 1);
 
 
-	while (s <= d){
+	while (s <= d) {
 		p = (s + d) / 2;
 
 		//Load cmd from flash
@@ -276,28 +276,28 @@ int ShellClass::findCmd(String& line, ShellCommand* cmd){
 		//Compare loaded cmd string and searched cmd line
 		cmp = strcmp(cmd->cmdString, cmdLine.c_str());
 
-		if (cmp == 0){
+		if (cmp == 0) {
 			//Log << Hex << Log.array<byte>((byte*)line.c_str(), line.length()) << Endl;
 
 			return p;
 		}
-		else if (cmp < 0){
+		else if (cmp < 0) {
 			s = p + 1;
 		}
-		else{
+		else {
 			d = p - 1;
 		}
 	}
-	
+
 	cmd = NULL;
 	return -1;
 }
 
-String ShellClass::nextParam(String& params){
+String ShellClass::nextParam(String& params) {
 	int index = params.indexOf(' ');
 	String p;
 
-	if (index != -1){
+	if (index != -1) {
 		p = params.substring(0, index);
 		params.remove(0, index + 1);
 		return p;
