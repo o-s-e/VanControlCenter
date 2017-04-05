@@ -13,7 +13,6 @@
 * Class to use a string widget as a list of selectable item
 */
 
-
 #include <genieArduino.h>
 
 #include "Utils.h"
@@ -22,7 +21,6 @@
 #define SELECT_LINE_CHAR	'>'
 
 class LCDStringList {
-
 public:
 	//Function to init the StringList
 	//Index is the widget index in ViSi
@@ -73,6 +71,4 @@ private:
 	Genie* parent;
 };
 
-
 #endif
-

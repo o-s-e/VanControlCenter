@@ -4,9 +4,9 @@
 #define _CHANNELSCONFIG_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
-	#include "WProgram.h"
+#include "WProgram.h"
 #endif
 
 /**
@@ -21,7 +21,6 @@
 #define CHANNELS_CFG_FILE	"CHANNELS.CFG"
 
 class ChannelsConfigClass {
-
 public:
 	//Init function to call in the setup
 	boolean init();
@@ -39,10 +38,10 @@ public:
 	int getChannelIndex(unsigned short id);
 
 	//Get the channels count
-	int getChannelCount(){ return channels.getSize(); }
+	int getChannelCount() { return channels.getSize(); }
 
 	//Return true if the cfg parsing was successful else return false
-	boolean isValid(){ return valid; }
+	boolean isValid() { return valid; }
 
 private:
 	//True if the cfg parsing was successful else false
@@ -50,11 +49,9 @@ private:
 
 	//Vector containing all the loaded channells
 	Vector<Channel*> channels;
-
 };
 
 //Channels config instance
 extern ChannelsConfigClass channelsConfig;
 
 #endif
-

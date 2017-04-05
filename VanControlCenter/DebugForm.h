@@ -36,20 +36,19 @@
 #define BMS_DEBUG_BUTTON 14
 
 class DebugFormClass : public LCDForm {
-
 public:
-  // LCDForm abstract method implementation
-  void init(Genie &genie);
+	// LCDForm abstract method implementation
+	void init(Genie &genie);
 
-  // LCDForm abstract method implementation
-  void update(Genie &genie);
+	// LCDForm abstract method implementation
+	void update(Genie &genie);
 
-  // LCDForm abstract method implementation
-  // Handle the press of the touch screen
-  void onEvent(Genie &genie, genieFrame &evt);
+	// LCDForm abstract method implementation
+	// Handle the press of the touch screen
+	void onEvent(Genie &genie, genieFrame &evt);
 
-  // LCDForm abstract method implementation
-  int getFormIndex() { return 2; }
+	// LCDForm abstract method implementation
+	int getFormIndex() { return 2; }
 
 private:
 };

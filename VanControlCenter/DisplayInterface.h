@@ -35,38 +35,37 @@
 #define MAX_UPDATE_TIME 1500
 
 class DisplayInterfaceClass {
-
 public:
-  // Init function to call inside the setup
-  void init();
+	// Init function to call inside the setup
+	void init();
 
-  // Update function to call inside the loop
-  void update();
+	// Update function to call inside the loop
+	void update();
 
-  // Change the current form
-  void setCurrentForm(LCDForm *currentForm);
+	// Change the current form
+	void setCurrentForm(LCDForm *currentForm);
 
-  // Return the current form
-  const LCDForm *getCurrentForm() { return currentForm; }
+	// Return the current form
+	const LCDForm *getCurrentForm() { return currentForm; }
 
-  // Function to handle the physical button to change the form
-  friend void onChangeFormButtonPress(void *data = NULL);
+	// Function to handle the physical button to change the form
+	friend void onChangeFormButtonPress(void *data = NULL);
 
-  // Function to handle the incoming event from the lcd
-  friend void onEvent();
+	// Function to handle the incoming event from the lcd
+	friend void onEvent();
 
 private:
-  // Indicates if the form refresh is enabled
-  boolean enabled;
+	// Indicates if the form refresh is enabled
+	boolean enabled;
 
-  // Genie library instance
-  Genie genie;
+	// Genie library instance
+	Genie genie;
 
-  // Refresh form timer
-  Timer refreshTimer;
+	// Refresh form timer
+	Timer refreshTimer;
 
-  // Current form instance pointer
-  LCDForm *currentForm;
+	// Current form instance pointer
+	LCDForm *currentForm;
 };
 
 // Display interface instance

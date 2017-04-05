@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="VanControlCenter.ino" />
-    <None Include="ClassDiagram.cd" />
     <None Include="CfgFiles\CHANNELS.CFG">
       <Filter>Resource Files</Filter>
     </None>

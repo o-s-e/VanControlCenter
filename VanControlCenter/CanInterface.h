@@ -40,7 +40,6 @@ public:
 		TEMP = 0x71,			//Temperature Sensor Temp
 		HUM = 0x72,			//Temperature Sensor Humidity
 		HEATER_STATUS = 0x73, // Heater state
-
 	};
 };
 
@@ -83,9 +82,7 @@ enum CanStreamResult {
 //Received can packet callback typedef
 typedef void(*CanEventHandler)(CAN_FRAME&);
 
-
 class CanInterfaceClass {
-
 public:
 	//Function to call in the setup
 	void init(int canSpeed, unsigned short minID = 0, unsigned short maxID = 2048);
@@ -118,7 +115,6 @@ public:
 	//Set the debug serial port for the can analyzer
 	void setCanDebugSerial(Stream* debugSerial);
 
-
 private:
 	//Debug serial pointer
 	Stream* debugSerial;
@@ -146,6 +142,4 @@ private:
 //Can bus interface instance
 extern CanInterfaceClass canInterface;
 
-
 #endif
-

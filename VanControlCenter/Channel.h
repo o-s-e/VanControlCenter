@@ -19,55 +19,54 @@
 #define CH_BUFFER_TTL 1500
 
 class Channel {
-
 public:
-  // Data type enum
-  enum DataTypes : char {
-    BIT_FLAG = 'B',
-    U_INTEGER = 'U',
-    INTEGER = 'I',
-    DECIMAL = 'D',
-    STRING = 'S'
-  };
+	// Data type enum
+	enum DataTypes : char {
+		BIT_FLAG = 'B',
+		U_INTEGER = 'U',
+		INTEGER = 'I',
+		DECIMAL = 'D',
+		STRING = 'S'
+	};
 
-  // CFG file attributes
-  enum Attr : byte { CanID, Name, Size, Type, ATTR_COUNT };
+	// CFG file attributes
+	enum Attr : byte { CanID, Name, Size, Type, ATTR_COUNT };
 
-  Channel();
+	Channel();
 
-  // Setters
-  void setSize(byte size);
-  void setID(unsigned short ID);
-  void setDataType(DataTypes type);
-  void setName(String name);
+	// Setters
+	void setSize(byte size);
+	void setID(unsigned short ID);
+	void setDataType(DataTypes type);
+	void setName(String name);
 
-  // Getters
-  byte getSize();
-  unsigned short getID();
-  DataTypes getDataType();
-  String getName();
+	// Getters
+	byte getSize();
+	unsigned short getID();
+	DataTypes getDataType();
+	String getName();
 
-  // Reset TTL timer
-  void resetTTLTimer();
-  // Check if the TTL timer has finished
-  bool hasTTLFinished();
+	// Reset TTL timer
+	void resetTTLTimer();
+	// Check if the TTL timer has finished
+	bool hasTTLFinished();
 
 private:
-  // CAN packet size
-  byte size;
+	// CAN packet size
+	byte size;
 
-  // CAN packet ID
-  unsigned short ID;
+	// CAN packet ID
+	unsigned short ID;
 
-  // CAN packet data type
-  DataTypes type;
+	// CAN packet data type
+	DataTypes type;
 
-  // Associated channel name
-  String name;
+	// Associated channel name
+	String name;
 
-  // TTL timer (time-to-live), if has not finished the last channel value is
-  // still valid
-  Timer ttlTimer;
+	// TTL timer (time-to-live), if has not finished the last channel value is
+	// still valid
+	Timer ttlTimer;
 };
 
 #endif

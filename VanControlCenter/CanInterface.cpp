@@ -1,6 +1,4 @@
-
 #include "CanInterface.h"
-
 
 void CanInterfaceClass::init(int canSpeed, unsigned short minID, unsigned short maxID) {
 	Can0.begin(canSpeed);
@@ -18,7 +16,7 @@ void CanInterfaceClass::update() {
 		//Read
 		Can0.read(frame);
 
-		//If the callback is set 
+		//If the callback is set
 		if (canEvent != NULL) {
 			//Invoke the callback
 			Log.i(CAN_TAG) << F("Can0 callback is set");
@@ -36,7 +34,6 @@ void CanInterfaceClass::update() {
 		parseSerialDebugCmd();
 	}
 }
-
 
 //R/W
 int CanInterfaceClass::available() {
@@ -70,7 +67,6 @@ void CanInterfaceClass::send(CanID::IDs id, byte* data, byte size) {
 	writePacketOnDebugSerial(frame);
 }
 
-
 //Event
 void CanInterfaceClass::setCanEventCallBack(CanEventHandler cb) {
 	this->canEvent = cb;
@@ -79,7 +75,6 @@ void CanInterfaceClass::setCanEventCallBack(CanEventHandler cb) {
 void CanInterfaceClass::removeCanEventCallBack() {
 	this->canEvent = NULL;
 }
-
 
 //Debug
 void CanInterfaceClass::setCanDebugSerial(Stream* debugSerial) {
@@ -135,7 +130,6 @@ void CanInterfaceClass::parseSerialDebugCmd() {
 		}
 	}
 }
-
 
 //Stream
 CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size) {
@@ -214,7 +208,7 @@ CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const 
 			if (strcmp((const char*)frame.data.bytes, ERROR_CMD) == 0) {
 				return ERROR;
 			}
-			//Save data in the buffer 
+			//Save data in the buffer
 			memcpy(
 				buffer + memIndex,
 				frame.data.bytes,
@@ -245,7 +239,4 @@ CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const 
 	return TIMEOUT;
 }
 
-
-
 CanInterfaceClass canInterface;
-

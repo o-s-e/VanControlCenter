@@ -17,8 +17,6 @@
 #include "DisplayInterface.h"
 #include "ChannelsBuffer.h"
 
-
-
 /**
 * Class to control the temperature and sets the state of the HeaterInterface,
 * according to the values from can and user input over the diplayController
@@ -30,9 +28,7 @@
 #define TEMP_GAUGE_DISP 0
 #define TEMP_GAUGE_SET 1
 
-
 class TemperatureControllerForm : public LCDForm {
-
 public:
 
 	void init(Genie& genie);
@@ -52,8 +48,6 @@ private:
 	Timer lastStateChange;
 
 	float setTemp;
-
-
 };
 
 extern TemperatureControllerForm temperatureControllerForm;

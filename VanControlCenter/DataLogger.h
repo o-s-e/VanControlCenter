@@ -4,9 +4,9 @@
 #define _DATALOGGER_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
-	#include "WProgram.h"
+#include "WProgram.h"
 #endif
 
 /**
@@ -38,7 +38,6 @@
 #define DEFAULT_SAMPLE_PER_S	2
 
 class DataLoggerClass {
-
 public:
 	//Init function to call in the setup
 	void init();
@@ -51,8 +50,8 @@ private:
 	enum Attr : byte {
 		SAMPLE_PER_SECOND,
 		LOG_FILE_NAME,
-		LOG_FILE_FORMAT,		
-		LOG_FILE_NUM	
+		LOG_FILE_FORMAT,
+		LOG_FILE_NUM
 	};
 
 	//Current log file name
@@ -71,4 +70,3 @@ private:
 //Datalogger instance
 extern DataLoggerClass dataLogger;
 #endif
-

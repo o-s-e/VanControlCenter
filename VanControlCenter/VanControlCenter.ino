@@ -1,4 +1,3 @@
-
 //
 //    FILE: VanCenter.c
 //  AUTHOR: Olivier Van Steenberghe
@@ -47,7 +46,6 @@
 void initPorts();
 bool initDataLogger();
 void onCanPacketReceived(CAN_FRAME &frame);
-
 
 // Code flag
 #define WDT_ON
@@ -143,6 +141,10 @@ void loop() {
 	// Update Heater
 	heater.update();
 
+	//Update LightInterface
+
+	lightInterface.update();
+
 #ifdef DL_ON
 	// Log data on SD
 	dataLogger.update();
@@ -196,7 +198,6 @@ void initPorts() {
 	canInterface.init(CAN_SPEED);
 	canInterface.setCanEventCallBack(&onCanPacketReceived);
 
-
 #ifdef SHELL_ON
 	shell.init(&LOG_SERIAL);
 #endif
@@ -220,7 +221,5 @@ void onCanPacketReceived(CAN_FRAME &frame) {
 	channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
 
 	switch (frame.id) {
-		
 	}
 }
-

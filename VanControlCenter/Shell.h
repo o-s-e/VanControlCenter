@@ -4,9 +4,9 @@
 #define _SHELL_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
-	#include "WProgram.h"
+#include "WProgram.h"
 #endif
 
 #include "ByteBuffer.h"
@@ -21,7 +21,7 @@
 
 class ShellClass;
 
-struct ShellCommand{
+struct ShellCommand {
 	char cmdString[10];
 	void(ShellClass::*cmdFun)(String&);
 };
@@ -30,9 +30,7 @@ extern const PROGMEM ShellCommand cmdsList[];
 
 #define CMDS_NUM	(sizeof(cmdsList) / sizeof(ShellCommand))
 
-
 class ShellClass {
-
 public:
 	void init(Stream* serialPort);
 	void update();
@@ -54,7 +52,6 @@ public:
 	void SDRmDirCmd(String&);
 	void SDTreeCmd(String&);
 
-
 private:
 	ByteBuffer rxBuffer;
 	Stream* serialPort;
@@ -63,10 +60,8 @@ private:
 	String nextParam(String& params);
 
 	void printSDTree(File dir, int indent);
-
 };
 
 extern ShellClass shell;
 
 #endif
-

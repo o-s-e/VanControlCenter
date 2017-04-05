@@ -9,11 +9,9 @@
 #include "WProgram.h"
 #endif
 
-
 #include "HWConfig.h"
 #include <Timer.h>
 #include "Logger.h"
-
 
 /**
 * Class to interface the RGB cabin lightning
@@ -25,10 +23,10 @@
 #define RGB_STATE_LED_DUR 500
 
 typedef struct LIGHT {
-	int r;
-	int g;
-	int b;
-	int w;
+	uint8_t r;
+	uint8_t g;
+	uint8_t b;
+	uint8_t w;
 }LIGHT;
 
 typedef struct HSV {
@@ -37,9 +35,7 @@ typedef struct HSV {
 	double v;       // a fraction between 0 and 1 we use a static 0.5
 } HSV;
 
-
 class LightInterfaceClass {
-
 public:
 	//Function to call in the setup
 	void init();
@@ -47,20 +43,18 @@ public:
 	//Function to call in the loop
 	void update();
 
-	// Sets the Hue(value between 0 and 360) 
+	// Sets the Hue(value between 0 and 360)
 	void setColor(double h);
 
-	void setBrightness(int brightness, int lightIndex);
+	void setBrightness(uint8_t brightness, uint8_t lightIndex);
 
 	void allOff();
-
 
 private:
 
 	LIGHT roomLight;
 	LIGHT awningLight;
 	LIGHT worktopLight;
-
 
 	HSV hsv;
 
@@ -69,7 +63,6 @@ private:
 	// LightCtrl refresh LED timer
 	Timer ledTimer;
 	Timer fadeTimer;
-
 };
 
 extern LightInterfaceClass lightInterface;

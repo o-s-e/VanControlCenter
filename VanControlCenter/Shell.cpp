@@ -1,4 +1,3 @@
-
 #include "Shell.h"
 
 //MUST be in alphabetical order
@@ -24,7 +23,6 @@ const PROGMEM ShellCommand cmdsList[] = {
 	{ "sdtree",		&ShellClass::SDTreeCmd			}	//print all files and dirs				sdtree
 };
 
-
 void ShellClass::init(Stream* serialPort) {
 	this->serialPort = serialPort;
 	this->rxBuffer.resize(SHELL_RX_BUFFER);
@@ -36,7 +34,6 @@ void ShellClass::update() {
 	ShellCommand cmd;
 
 	if (serialPort->available()) {
-
 		while (serialPort->available() && rxBuffer.getSize() < rxBuffer.getCapacity()) {
 			rxBuffer.append(serialPort->read());
 		}
@@ -56,10 +53,8 @@ void ShellClass::update() {
 
 			rxBuffer.clear();
 		}
-
 	}
 }
-
 
 //Cmds
 //A
@@ -118,7 +113,6 @@ void ShellClass::channelValueCmd(String& params) {
 }
 
 void ShellClass::channelsValuesCmd(String& params) {
-
 }
 
 //D
@@ -211,7 +205,6 @@ void ShellClass::SDRmDirCmd(String& params) {
 	else {
 		Log.e(SHELL_TAG) << F("Directory not found") << Endl;
 	}
-
 }
 
 void ShellClass::SDTreeCmd(String&) {
@@ -230,7 +223,6 @@ void ShellClass::printSDTree(File dir, int indent) {
 	File entry = dir.openNextFile();
 
 	while (entry) {
-
 		Log.i(SHELL_TAG) << Log.repeat('\t', indent) << entry.name();
 
 		if (entry.isDirectory()) {
@@ -245,7 +237,6 @@ void ShellClass::printSDTree(File dir, int indent) {
 		entry = dir.openNextFile();
 	}
 }
-
 
 //Cmd utils
 
@@ -266,7 +257,6 @@ int ShellClass::findCmd(String& line, ShellCommand* cmd) {
 
 	//Remove cmd string and leave only the params
 	line.remove(0, index + 1);
-
 
 	while (s <= d) {
 		p = (s + d) / 2;
@@ -307,4 +297,3 @@ String ShellClass::nextParam(String& params) {
 }
 
 ShellClass shell;
-

@@ -1,12 +1,10 @@
-// 
-// 
-// 
+//
+//
+//
 
 #include "LightInterface.h"
 
-
 void LightInterfaceClass::init() {
-
 	roomLight.r = 0;
 	roomLight.g = 0;
 	roomLight.b = 0;
@@ -19,7 +17,6 @@ void LightInterfaceClass::init() {
 	hsv.h = 0;
 	hsv.s = 0;
 	hsv.v = 0;
-
 
 	pinMode(RGB_RED, OUTPUT);
 	pinMode(RGB_BLUE, OUTPUT);
@@ -36,13 +33,10 @@ void LightInterfaceClass::init() {
 	analogWrite(WORKTOP_LED, 0);
 
 	ledTimer.setDuration(RGB_STATE_LED_DUR).start();
-
 }
 
 void LightInterfaceClass::update() {
-
 	if (ledTimer.hasFinished()) {
-
 		// Set the color on each cycle
 		analogWrite(RGB_RED, roomLight.r);
 		analogWrite(RGB_BLUE, roomLight.g);
@@ -53,7 +47,6 @@ void LightInterfaceClass::update() {
 	}
 
 	ledTimer.start();
-
 }
 
 void LightInterfaceClass::setColor(double h) {
@@ -71,7 +64,6 @@ void LightInterfaceClass::setColor(double h) {
 	}
 	else
 	{
-
 		hh = hsv.h;
 		if (hh >= 360.0) hh = 0.0;
 		hh /= 60.0;
@@ -120,9 +112,10 @@ void LightInterfaceClass::setColor(double h) {
 	roomLight.r = map(r, 0, 1, 0, 255);
 	roomLight.g = map(g, 0, 1, 0, 255);
 	roomLight.b = map(b, 0, 1, 0, 255);
+	Log.i(RGB_TAG) << F("rgb: ") << roomLight.r << F("|") << roomLight.g << F("|") << roomLight.b << Endl;
 }
 
-void LightInterfaceClass::setBrightness(int brightness, int lightIndex) {
+void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) {
 	switch (lightIndex) {
 		case 1:
 			if (roomLight.w != brightness) {
@@ -136,7 +129,6 @@ void LightInterfaceClass::setBrightness(int brightness, int lightIndex) {
 			if (worktopLight.w != brightness) {
 				worktopLight.w = brightness;
 			}
-
 	}
 }
 
@@ -144,8 +136,6 @@ void LightInterfaceClass::allOff() {
 	fadeAmount = 5;
 	fadeTimer.setDuration(500).start();
 	if (ledTimer.hasFinished()) {
-
-
 		roomLight.r = -fadeAmount;
 		roomLight.g = -fadeAmount;
 		roomLight.b = -fadeAmount;
@@ -163,10 +153,8 @@ void LightInterfaceClass::allOff() {
 		else
 		{
 			fadeTimer.start();
-
 		}
 	}
 }
-
 
 LightInterfaceClass lightInterface;

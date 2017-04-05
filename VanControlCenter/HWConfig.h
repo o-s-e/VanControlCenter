@@ -41,7 +41,6 @@
 //SD
 #define SD_SS_PIN					23
 
-
 //Light
 
 #define RGB_RED 3
@@ -50,7 +49,5 @@
 #define WHITE_LED 8
 #define AWNING_LED 10
 #define WORKTOP_LED 11
-
-
 
 #endif

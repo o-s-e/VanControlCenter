@@ -29,35 +29,34 @@
 #define CONSOLE_STR 0
 
 class ConsoleFormClass : public LCDForm {
-
 public:
-  // LCDForm abstract method implementation
-  void init(Genie &genie);
+	// LCDForm abstract method implementation
+	void init(Genie &genie);
 
-  // LCDForm abstract method implementation
-  void update(Genie &genie);
+	// LCDForm abstract method implementation
+	void update(Genie &genie);
 
-  // Function to print on the console text widget
-  void print(String str);
+	// Function to print on the console text widget
+	void print(String str);
 
-  // Function to print on the console text widget
-  void println(String str);
+	// Function to print on the console text widget
+	void println(String str);
 
-  // Function to clear the console text widget
-  void clear();
+	// Function to clear the console text widget
+	void clear();
 
-  // LCDForm abstract method implementation
-  int getFormIndex() { return 0; }
+	// LCDForm abstract method implementation
+	int getFormIndex() { return 0; }
 
 private:
-  // Genie instance pointer
-  Genie *genie;
+	// Genie instance pointer
+	Genie *genie;
 
-  // Text buffer
-  String text;
+	// Text buffer
+	String text;
 
-  // Function to add text to the buffer
-  void addText(String str);
+	// Function to add text to the buffer
+	void addText(String str);
 };
 
 // Console form instance

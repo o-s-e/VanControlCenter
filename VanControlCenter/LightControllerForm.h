@@ -24,7 +24,6 @@
 #define OFFSWITCH 4
 
 class LightControllerForm : public LCDForm {
-
 public:
 
 	void init(Genie& genie);
@@ -40,9 +39,9 @@ private:
 
 	double color;
 
-	int roomBrightness;
-	int awningBrightness;
-	int worktopBrightness;
+	uint8_t roomBrightness;
+	uint8_t awningBrightness;
+	uint8_t worktopBrightness;
 
 	void updateWidgetsValues(Genie& genie);
 
@@ -52,4 +51,3 @@ private:
 extern LightControllerForm lightControllerForm;
 
 #endif
-

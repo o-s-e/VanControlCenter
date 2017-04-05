@@ -18,9 +18,8 @@
 #include "Utils.h"
 
 class LCDStringMsg {
-
 public:
-	//Function to init. 
+	//Function to init.
 	//Index is the ViSi editor string widget index
 	void init(byte index, Genie* parent);
 
@@ -49,4 +48,3 @@ private:
 };
 
 #endif
-
