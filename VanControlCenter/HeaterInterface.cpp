@@ -40,6 +40,8 @@ void HeaterInterface::update() {
 				digitalWrite(HT_STATE_LED, ledStatus < 20 ? HIGH : LOW);
 				digitalWrite(HT_GAS_PIN, LOW);
 				digitalWrite(HT_VENT_PIN, HIGH);
+				// not the good way, but it works
+				heaterInterface.cooldown();
 				break;
 
 			default:
@@ -79,6 +81,25 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
 		state = newState;
 	}
 	lastStateUpdate.start();
+}
+
+void HeaterInterface::cooldown() {
+	cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
+
+	if (state == VentOnly && cooldownTimer.isRunning()) {
+		Log.i(HT_TAG) << F("State: ") << state << Endl;
+		Log.i(HT_TAG) << F("CoolDown") << Endl;
+
+	}
+	else if (state == VentOnly && cooldownTimer.hasFinished()) {
+		Log.i(HT_TAG) << F("State: ") << state << Endl;
+		Log.i(HT_TAG) << F("Stopping Heater") << Endl;
+		state = Off;
+	}
+	else {
+		Log.i(HT_TAG) << F("State: ") << state << Endl;
+		Log.e(HT_TAG) << F("Undefined State") << Endl;
+	}
 }
 
 HeaterInterface heaterInterface;

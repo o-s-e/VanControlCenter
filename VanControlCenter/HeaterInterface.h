@@ -26,6 +26,7 @@
 
 #define HT_STATE_TTL 50000
 #define HT_STATE_LED_DUR 1000
+#define HT_COOLDOWN_DUR 300000
 
 class HeaterInterface {
 public:
@@ -45,6 +46,10 @@ public:
 	HeaterState getState() { return state; }
 
 private:
+
+	void cooldown();
+
+
 	// Heater led status
 	byte ledStatus;
 
@@ -56,6 +61,8 @@ private:
 
 	// TempCtrl state LED timer
 	Timer ledTimer;
+
+	Timer cooldownTimer;
 };
 
 extern HeaterInterface heaterInterface;

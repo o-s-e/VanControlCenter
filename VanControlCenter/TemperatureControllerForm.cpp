@@ -28,7 +28,7 @@ void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
 	float temp = channelsBuffer.getValueAs<float>(CanID::TEMP);
 	//TODO add timer to avoid flicker
 	if (temp >= setTemp) {
-		heaterInterface.onStateChanged("OFF");
+		heaterInterface.onStateChanged("VENT");
 	}
 	else if (temp < setTemp) {
 		heaterInterface.onStateChanged("ON");

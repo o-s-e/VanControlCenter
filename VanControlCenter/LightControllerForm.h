@@ -13,9 +13,10 @@
 #include "LightInterface.h"
 #include "LCDStringList.h"
 #include "LCDStringMsg.h"
-#include "Timer.h"
 #include "DisplayInterface.h"
 #include "ChannelsBuffer.h"
+#include "Timer.h"
+
 
 #define LIGHT_WHEEL 0
 #define ROOM_LIGHT 1
