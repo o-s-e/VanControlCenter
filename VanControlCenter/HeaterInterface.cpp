@@ -81,4 +81,4 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
 	lastStateUpdate.start();
 }
 
-HeaterInterface heater;
+HeaterInterface heaterInterface;

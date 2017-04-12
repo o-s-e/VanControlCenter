@@ -139,7 +139,7 @@ void loop() {
 	canInterface.update();
 
 	// Update Heater
-	heater.update();
+	heaterInterface.update();
 
 	//Update LightInterface
 
@@ -189,7 +189,7 @@ void initPorts() {
 	Log.init(&LOG_SERIAL);
 
 	// Heater Initialisation
-	heater.init();
+	heaterInterface.init();
 
 	//Lights Initialisation
 
@@ -206,7 +206,8 @@ void initPorts() {
 bool initDataLogger() {
 	// Datalogger
 	if (channelsConfig.init()) {
-		// channelsConfig.debug();
+		//Channeldebug enabled
+		channelsConfig.debug();
 		channelsBuffer.init();
 		dataLogger.init();
 		return true;
