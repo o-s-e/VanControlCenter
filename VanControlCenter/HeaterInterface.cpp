@@ -4,7 +4,6 @@ void HeaterInterface::init() {
 	pinMode(HT_GAS_PIN, OUTPUT);
 	pinMode(HT_VENT_PIN, OUTPUT);
 	pinMode(HT_STATE_LED, OUTPUT);
-	pinMode(HT_INPUT_PIN, INPUT);
 
 	digitalWrite(HT_GAS_PIN, LOW);
 	digitalWrite(HT_VENT_PIN, LOW);
@@ -12,6 +11,8 @@ void HeaterInterface::init() {
 	state = Off;
 	lastStateUpdate.setDuration(HT_STATE_LED_DUR).start();
 	lastStateUpdate.setDuration(HT_STATE_TTL).start();
+
+	heaterFaultCode = 1;
 }
 
 void HeaterInterface::update() {
@@ -83,6 +84,8 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
 	lastStateUpdate.start();
 }
 
+
+
 void HeaterInterface::cooldown() {
 	cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
 
@@ -101,5 +104,17 @@ void HeaterInterface::cooldown() {
 		Log.e(HT_TAG) << F("Undefined State") << Endl;
 	}
 }
+
+
+
+//TODO: One must adapt the timer, so that the interuppts are only counted from one cycle
+void HeaterInterface::heaterFaultCodeCallback() {
+	if (heaterFaultCode > 0 && heaterFaultCode < 12)
+		heaterFaultCode += 1;
+	else if (heaterFaultCode == 12)
+		heaterFaultCode = 12;
+}
+
+
 
 HeaterInterface heaterInterface;

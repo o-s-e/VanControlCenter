@@ -89,9 +89,10 @@ public:
 	//Template function which template set the lastest value associated to a channel
 	//Example:		channelBuffer.setValue<int>(0x60, 10);
 	template <typename T>
-	T setValue(unsigned short id, T value)
+	//T setValue. Changed to return void.
+	void setValue(unsigned short id, T value)
 	{
-		setValue(id, (byte *)&value, sizeof(T));
+		 setValue(id, (byte *)&value, sizeof(T));
 	}
 
 	//Send all buffer data on a serial port in the format	ID(2 byte) Data(n byte)

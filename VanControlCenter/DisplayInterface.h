@@ -7,6 +7,7 @@
 #include "arduino.h"
 #else
 #include "WProgram.h"
+#include "logger.h"
 #endif
 
 /**

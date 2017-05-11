@@ -47,6 +47,8 @@ void initPorts();
 bool initDataLogger();
 void onCanPacketReceived(CAN_FRAME &frame);
 
+void heaterCallback();
+
 // Code flag
 #define WDT_ON
 #define LCD_ON
@@ -188,6 +190,10 @@ void initPorts() {
 	// Utils
 	Log.init(&LOG_SERIAL);
 
+	//Canbus Initialisation
+	canInterface.init(CAN_SPEED);
+	canInterface.setCanEventCallBack(&onCanPacketReceived);
+
 	// Heater Initialisation
 	heaterInterface.init();
 
@@ -195,8 +201,8 @@ void initPorts() {
 
 	lightInterface.init();
 
-	canInterface.init(CAN_SPEED);
-	canInterface.setCanEventCallBack(&onCanPacketReceived);
+	//Heater input pin interrupt Initialisation
+	attachInterrupt(digitalPinToInterrupt(HT_INPUT_PIN), heaterCallback, HIGH);
 
 #ifdef SHELL_ON
 	shell.init(&LOG_SERIAL);
@@ -214,6 +220,12 @@ bool initDataLogger() {
 	}
 
 	return false;
+}
+
+
+//Callback to count the High on the heater led pin to get the fault codes
+void heaterCallback() {
+	heaterInterface.heaterFaultCodeCallback();
 }
 
 void onCanPacketReceived(CAN_FRAME &frame) {

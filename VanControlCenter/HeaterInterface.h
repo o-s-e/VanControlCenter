@@ -8,6 +8,8 @@
 #endif
 
 #include <Timer.h>
+
+
 /**
 * Class containing the external interface to the heater relaisState
 */
@@ -45,13 +47,19 @@ public:
 	// Return the current state
 	HeaterState getState() { return state; }
 
+	void heaterFaultCodeCallback();
+
 private:
 
 	void cooldown();
 
+	
+
+	uint8_t heaterFaultCode;
 
 	// Heater led status
 	byte ledStatus;
+
 
 	// Current Temperature Controller state
 	HeaterState state;

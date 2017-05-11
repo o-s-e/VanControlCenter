@@ -135,17 +135,17 @@ void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) 
 void LightInterfaceClass::allOff() {
 	fadeAmount = 5;
 	fadeTimer.setDuration(500).start();
-	if (ledTimer.hasFinished()) {
+	if (fadeTimer.hasFinished()) {
 		roomLight.r = -fadeAmount;
 		roomLight.g = -fadeAmount;
 		roomLight.b = -fadeAmount;
 		roomLight.w = -fadeAmount;
 		awningLight.w = -fadeAmount;
 		worktopLight.w = -fadeAmount;
-		if (roomLight.r <= 0 &&
+		if (roomLight.w <= 0 &&
+			roomLight.r <= 0 &&
 			roomLight.g <= 0 &&
 			roomLight.b <= 0 &&
-			roomLight.w <= 0 &&
 			awningLight.w <= 0 &&
 			worktopLight.w <= 0) {
 			Log.i(RGB_TAG) << F("all light are off");
