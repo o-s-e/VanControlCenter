@@ -84,8 +84,6 @@
   <ItemGroup>
     <None Include="CfgFiles\CHANNELS.CFG" />
     <None Include="CfgFiles\DATALOG.CFG" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram11.cd" />
     <None Include="VanControlCenter.ino">
       <FileType>CppCode</FileType>
     </None>

@@ -1,10 +1,10 @@
-/* 
+/*
 	Editor: http://www.visualmicro.com
 			visual micro and the arduino ide ignore this code during compilation. this code is automatically maintained by visualmicro, manual changes to this file will be overwritten
 			the contents of the Visual Micro sketch sub folder can be deleted prior to publishing a project
 			all non-arduino files created by visual micro and all visual studio project or solution files can be freely deleted and are not required to compile a sketch (do not delete your own code!).
 			note: debugger breakpoints are stored in '.sln' or '.asln' files, knowledge of last uploaded breakpoints is stored in the upload.vmps.xml file. Both files are required to continue a previous debug session without needing to compile and upload again
-	
+
 	Hardware: Arduino Due (Programming Port), Platform=sam, Package=arduino
 */
 
@@ -40,7 +40,7 @@
 #define __attribute__(noinline)
 
 typedef unsigned char byte;
-extern "C" void __cxa_pure_virtual() {;}
+extern "C" void __cxa_pure_virtual() { ; }
 
 #define __INTPTR_TYPE__ long
 #define __INT32_TYPE__ long
@@ -48,9 +48,9 @@ extern "C" void __cxa_pure_virtual() {;}
 
 #include "sam3xa.h"
 #include <arduino.h>
-#include <pins_arduino.h> 
-#include <variant.h> 
-#include <variant.cpp> 
+#include <pins_arduino.h>
+#include <variant.h>
+#include <variant.cpp>
 # define cli()  __asm__ __volatile__ ("cli" ::: "memory")
 # define sei()  __asm__ __volatile__ ("sei" ::: "memory")
 
@@ -65,7 +65,6 @@ __attribute__((always_inline)) static __INLINE void __enable_irq(void)
 	__ASM volatile ("cpsie i");
 }
 
-
 /** \brief  Disable IRQ Interrupts
 
 This function disables IRQ interrupts by setting the I-bit in the CPSR.
@@ -75,7 +74,6 @@ __attribute__((always_inline)) static __INLINE void __disable_irq(void)
 {
 	__ASM volatile ("cpsid i");
 }
-
 
 /** \brief  Get Control Register
 
@@ -91,7 +89,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_CONTROL(void)
 	return(result);
 }
 
-
 /** \brief  Set Control Register
 
 This function writes the given value to the Control Register.
@@ -102,7 +99,6 @@ __attribute__((always_inline)) static __INLINE void __set_CONTROL(uint32_t contr
 {
 	__ASM volatile ("MSR control, %0" : : "r" (control));
 }
-
 
 /** \brief  Get ISPR Register
 
@@ -118,7 +114,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_IPSR(void)
 	return(result);
 }
 
-
 /** \brief  Get APSR Register
 
 This function returns the content of the APSR Register.
@@ -132,7 +127,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_APSR(void)
 	__ASM volatile ("MRS %0, apsr" : "=r" (result));
 	return(result);
 }
-
 
 /** \brief  Get xPSR Register
 
@@ -148,7 +142,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_xPSR(void)
 	return(result);
 }
 
-
 /** \brief  Get Process Stack Pointer
 
 This function returns the current value of the Process Stack Pointer (PSP).
@@ -163,7 +156,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_PSP(void)
 	return(result);
 }
 
-
 /** \brief  Set Process Stack Pointer
 
 This function assigns the given value to the Process Stack Pointer (PSP).
@@ -174,7 +166,6 @@ __attribute__((always_inline)) static __INLINE void __set_PSP(uint32_t topOfProc
 {
 	__ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack));
 }
-
 
 /** \brief  Get Main Stack Pointer
 
@@ -190,7 +181,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_MSP(void)
 	return(result);
 }
 
-
 /** \brief  Set Main Stack Pointer
 
 This function assigns the given value to the Main Stack Pointer (MSP).
@@ -201,7 +191,6 @@ __attribute__((always_inline)) static __INLINE void __set_MSP(uint32_t topOfMain
 {
 	__ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack));
 }
-
 
 /** \brief  Get Priority Mask
 
@@ -217,7 +206,6 @@ __attribute__((always_inline)) static __INLINE uint32_t __get_PRIMASK(void)
 	return(result);
 }
 
-
 /** \brief  Set Priority Mask
 
 This function assigns the given value to the Priority Mask Register.
@@ -228,7 +216,6 @@ __attribute__((always_inline)) static __INLINE void __set_PRIMASK(uint32_t priMa
 {
 	__ASM volatile ("MSR primask, %0" : : "r" (priMask));
 }
-
 
 #include "VanControlCenter.ino"
 #endif

@@ -64,7 +64,6 @@ private:
 	DataTypes type;
 
 	// Associated channel name
-	
 
 	// TTL timer (time-to-live), if has not finished the last channel value is
 	// still valid

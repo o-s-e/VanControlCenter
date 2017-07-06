@@ -35,8 +35,6 @@
 #define TEMP_PACKET		"TEM"
 #define LIGHT_PACKET	"LIG"
 
-
-
 //Struct containing the infos sent by the esp8266
 #pragma pack(push, 1)
 typedef struct InfoData {
@@ -91,7 +89,6 @@ public:
 
 	//Set the callback to invoke when a gps packet arrived
 	void setGpsDataHandler(GpsDataHandler);
-
 
 private:
 	//Cfg file properties

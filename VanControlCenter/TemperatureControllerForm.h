@@ -47,8 +47,6 @@ private:
 	void updateWidgetsValues(Genie& genie);
 
 	Timer lastStateChange;
-
-
 };
 
 extern TemperatureControllerForm temperatureControllerForm;

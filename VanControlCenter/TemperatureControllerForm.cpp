@@ -29,7 +29,6 @@ void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
 	double temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
 	//TODO move the set to the heatercontroller. Fetch here only the value from the channelsbuffer
 
-
 	//if (temp >= setTemp) {
 	//	heaterInterface.onStateChanged("VENT");
 	//}
@@ -41,8 +40,6 @@ void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
 	//	Log.e(HT_TAG) << F("Could not set the temp") << Endl;
 	//}
 
-
-	
 	updateWidget(genie, GENIE_OBJ_GAUGE, TEMP_GAUGE_DISP, temp);
 }
 

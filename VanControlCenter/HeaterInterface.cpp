@@ -23,16 +23,14 @@ void HeaterInterface::update() {
 
 		if (temp >= setTemp) {
 			state = Off;
-			}
-			else if (temp < setTemp) {
-				state = On;
-			}
-			else {
+		}
+		else if (temp < setTemp) {
+			state = On;
+		}
+		else {
 			//Error
-				Log.e(HT_TAG) << F("Could not set the temp") << Endl;
-			}
-		
-		
+			Log.e(HT_TAG) << F("Could not set the temp") << Endl;
+		}
 
 		lastStateUpdate.start();
 	}
@@ -117,8 +115,6 @@ void HeaterInterface::cooldown() {
 		Log.e(HT_TAG) << F("Undefined State") << Endl;
 	}
 	Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
-
-
 }
 
 //TODO: One must adapt the timer, so that the interuppts are only counted from one cycle

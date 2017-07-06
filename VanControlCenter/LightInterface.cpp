@@ -46,7 +46,6 @@ void LightInterfaceClass::update() {
 		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_5);
 		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_6);
 
-
 		// Set the color on each cycle
 		analogWrite(RGB_RED, roomLight.r);
 		analogWrite(RGB_BLUE, roomLight.g);
