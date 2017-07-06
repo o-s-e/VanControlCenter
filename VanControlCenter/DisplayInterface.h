@@ -23,6 +23,7 @@
 #include "ConsoleForm.h"
 #include "DebugForm.h"
 #include "TemperatureControllerForm.h"
+#include "LightControllerForm.h"
 #include "HWConfig.h"
 #include "LCDForm.h"
 

@@ -8,6 +8,7 @@
 // Released to the public domain
 //
 
+
 #include "LightControllerForm.h"
 #include "HeaterInterface.h"
 #include "TemperatureControllerForm.h"
@@ -172,9 +173,9 @@ void loop() {
 		digitalWrite(RUN_LED, ledStatus);
 	}
 
-	//Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
-	//	<< (float)avgExecutionTime / loops * 1000 << F(" us ")
-	//	<< F("\t freeMem: ") << freeMemory() << Endl;
+	Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
+		<< (float)avgExecutionTime / loops * 1000 << F(" us ")
+		<< F("\t freeMem: ") << freeMemory() << Endl;
 	avgExecutionTime = 0;
 	loops = 0;
 	sec.start();

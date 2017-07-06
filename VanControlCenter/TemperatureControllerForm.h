@@ -44,12 +44,10 @@ private:
 
 	//Update all the widgets values
 
-
 	void updateWidgetsValues(Genie& genie);
 
 	Timer lastStateChange;
 
-	float setTemp;
 
 };
 

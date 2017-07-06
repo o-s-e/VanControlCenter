@@ -51,6 +51,8 @@ public:
 	// Check if the TTL timer has finished
 	bool hasTTLFinished();
 
+	String name;
+
 private:
 	// CAN packet size
 	byte size;
@@ -62,7 +64,7 @@ private:
 	DataTypes type;
 
 	// Associated channel name
-	String name;
+	
 
 	// TTL timer (time-to-live), if has not finished the last channel value is
 	// still valid

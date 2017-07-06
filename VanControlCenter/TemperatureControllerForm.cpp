@@ -3,8 +3,6 @@
 void TemperatureControllerForm::init(Genie& genie)
 {
 	//Initialize the temperature quiete high, so that the heater does not start by accident
-	setTemp = 25;
-
 }
 
 void TemperatureControllerForm::update(Genie& genie)
@@ -18,33 +16,34 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 			switch (evt.reportObject.index) {
 				case TEMP_GAUGE_SET:
 					// Get the temp from the slider, but only store it in an instace variable, so we can set it later on the update function run
-					setTemp = genie.GetEventData(&evt);
+
+					channelsBuffer.setValue<double>(CanID::SET_TEMP, genie.GetEventData(&evt));
 					break;
 			}
 		}
 	}
 }
 
-
 void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
 	//First we get the latest temp fronm the canbus buffer, then we call the heaterinterface on the value and update the view.
-	float temp = channelsBuffer.getValueAs<float>(CanID::TEMP);
-	//TODO add timer to avoid flicker
-	if (temp >= setTemp) {
-		heaterInterface.onStateChanged("VENT");
-	}
-	else if (temp < setTemp) {
-		heaterInterface.onStateChanged("ON");
-	}
-	else {
-		//Error
-		Log.e(HT_TAG) << F("Could not set the temp") << Endl;
-	}
+	double temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
+	//TODO move the set to the heatercontroller. Fetch here only the value from the channelsbuffer
 
+
+	//if (temp >= setTemp) {
+	//	heaterInterface.onStateChanged("VENT");
+	//}
+	//else if (temp < setTemp) {
+	//	heaterInterface.onStateChanged("ON");
+	//}
+	//else {
+		//Error
+	//	Log.e(HT_TAG) << F("Could not set the temp") << Endl;
+	//}
+
+
+	
 	updateWidget(genie, GENIE_OBJ_GAUGE, TEMP_GAUGE_DISP, temp);
 }
-
-
-
 
 TemperatureControllerForm temperatureControllerForm;

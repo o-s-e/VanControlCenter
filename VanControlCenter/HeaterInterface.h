@@ -9,13 +9,14 @@
 
 #include <Timer.h>
 
-
 /**
 * Class containing the external interface to the heater relaisState
 */
 
 #include "HWConfig.h"
 #include "Logger.h"
+#include "ChannelsBuffer.h"
+#include "CanInterface.h"
 
 // Logger tag
 #define HT_TAG F("Heater")
@@ -53,13 +54,10 @@ private:
 
 	void cooldown();
 
-	
-
 	uint8_t heaterFaultCode;
 
 	// Heater led status
 	byte ledStatus;
-
 
 	// Current Temperature Controller state
 	HeaterState state;

@@ -17,7 +17,6 @@
 #include "ChannelsBuffer.h"
 #include "Timer.h"
 
-
 #define LIGHT_WHEEL 0
 #define ROOM_LIGHT 1
 #define AWNING_LIGHT 2

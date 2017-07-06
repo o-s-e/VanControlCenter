@@ -6,14 +6,6 @@ void WifiInterfaceClass::init() {
 
 	//Load cfg
 	Configuration cfg;
-	if (cfg.loadFromFile(WIFI_CFG_FILE) == FILE_VALID) {
-		phoneToCall = cfg.getProperty(PHONE_NUM).asString();
-	}
-	else {
-		phoneToCall = DEFAULT_PHONE_NUM;
-		consoleForm.println(cfg.getErrorMsg());
-		Log.e(WIFI_TAG) << cfg.getErrorMsg() << Endl;
-	}
 
 	//No handler
 	gpsHandler = NULL;
@@ -37,17 +29,17 @@ void WifiInterfaceClass::update() {
 			rxBuffer.append(WIFI_SERIAL.read());
 		}
 
-		//Log << "buffer size: " << rxBuffer.getSize() << Endl;
-		//Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
+		Log << "buffer size: " << rxBuffer.getSize() << Endl;
+		Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
 
 		if (parsePacket(INFO_PACKET, (byte*)&info, sizeof(InfoData))) {
 			if (info.ack == getAck((byte*)&info, sizeof(InfoData) - 1)) {
 				channelsBuffer.setValue(CanID::DATE, (byte*)info.date, sizeof(info.date));
 				channelsBuffer.setValue(CanID::TIME, (byte*)info.time, sizeof(info.time));
 
-				//Log << "parsed info" << Endl;
-				//Log << "buffer size: " << rxBuffer.getSize() << Endl;
-				//Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
+				Log << "parsed info" << Endl;
+				Log << "buffer size: " << rxBuffer.getSize() << Endl;
+				Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
 			}
 			else {
 				Log.e(WIFI_TAG) << F("INVALID INFO DATA") << Endl;
@@ -68,9 +60,9 @@ void WifiInterfaceClass::update() {
 					gpsHandler(gps);
 				}
 
-				//Log << "parsed gps" << Endl;
-				//Log << "buffer size: " << rxBuffer.getSize() << Endl;
-				//Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
+				Log << "parsed gps" << Endl;
+				Log << "buffer size: " << rxBuffer.getSize() << Endl;
+				Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
 			}
 			else {
 				Log.e(WIFI_TAG) << F("INVALID GPS DATA") << Endl;
@@ -83,30 +75,38 @@ void WifiInterfaceClass::update() {
 				channelsBuffer.setValue<double>(CanID::TEMP, temp.temp);
 				channelsBuffer.setValue<byte>(CanID::HEATER_STATUS, temp.status);
 
-				//Log << "parsed acc" << Endl;
-				//Log << "buffer size: " << rxBuffer.getSize() << Endl;
-				//Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
+				Log << "parsed temp" << Endl;
+				Log << "buffer size: " << rxBuffer.getSize() << Endl;
+				Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
 			}
 			else {
-				Log.e(WIFI_TAG) << F("INVALID ACC DATA") << Endl;
+				Log.e(WIFI_TAG) << F("INVALID TEMP DATA") << Endl;
 				Log.e(WIFI_TAG) << Hex << Log.array<byte>((byte*)&temp, sizeof(TempData)) << Endl;
 			}
 		}
 
-		if (parsePacket(CALL_PACKET, (byte*)&call, sizeof(CallData))) {
-			channelsBuffer.setValue<boolean>(CanID::CALL_STATUS, call.status);
+		if (parsePacket(LIGHT_PACKET, (byte*)&light, sizeof(LightData))) {
+			if (light.ack == getAck((byte*)&light, sizeof(LightData) - 1)) {
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_1, light.light1);
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_2, light.light2);
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_3, light.light3);
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_4, light.light4);
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_5, light.light5);
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_6, light.light6);
+
+				Log << "parsed light" << Endl;
+				Log << "buffer size: " << rxBuffer.getSize() << Endl;
+				Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
+			}
+			else {
+				Log.e(WIFI_TAG) << F("INVALID TEMP DATA") << Endl;
+				Log.e(WIFI_TAG) << Hex << Log.array<byte>((byte*)&temp, sizeof(TempData)) << Endl;
+			}
 		}
 
-		//Log << "buffer size: " << rxBuffer.getSize() << Endl;
-		//Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
+		Log << "buffer size: " << rxBuffer.getSize() << Endl;
+		Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
 	}
-}
-
-void WifiInterfaceClass::startCall() {
-	WIFI_SERIAL.print('\n');
-	WIFI_SERIAL.print(CALL_CMD);
-	WIFI_SERIAL.print(phoneToCall);
-	WIFI_SERIAL.print('\n');
 }
 
 boolean WifiInterfaceClass::parsePacket(const char* header, byte* buffer, int size) {

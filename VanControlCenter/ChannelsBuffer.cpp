@@ -18,7 +18,7 @@ void ChannelsBufferClass::init() {
 }
 
 void ChannelsBufferClass::debug() {
-	/*
+	
 	LOGLN(F("=========== Channels data buffer: ==========="));
 	for (int i = 0; i < buffer.getCapacity(); i++){
 		LOG(channelsConfig.getChannelByIndex(i)->name);
@@ -26,7 +26,7 @@ void ChannelsBufferClass::debug() {
 		buffer[i].debug();
 	}
 	LOGLN(F("========================================"));
-	*/
+	
 }
 
 String ChannelsBufferClass::getValueAsString(unsigned short id) {

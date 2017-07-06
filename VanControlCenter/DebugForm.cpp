@@ -5,7 +5,6 @@ void DebugFormClass::init(Genie &genie) {
 }
 
 void DebugFormClass::update(Genie &genie) {
-
 	if (channelsBuffer.isValueUpdated(CanID::HEATER_STATUS)) {
 		updateString(genie, HEATER_STATUS_STRING,
 					 channelsBuffer.getValueAsString(CanID::HEATER_STATUS));
@@ -13,8 +12,6 @@ void DebugFormClass::update(Genie &genie) {
 	else {
 		updateString(genie, HEATER_STATUS_STRING, F("---"));
 	}
-
-
 }
 
 void DebugFormClass::onEvent(Genie& genie, genieFrame& evt) {

@@ -32,14 +32,10 @@
 //Phone packets header
 #define INFO_PACKET		"INF"
 #define GPS_PACKET		"GPS"
-#define TEMP_PACKET		"ACC"
-#define CALL_PACKET		"CALL"
+#define TEMP_PACKET		"TEM"
+#define LIGHT_PACKET	"LIG"
 
-//Phone commands header
-#define CALL_CMD			"TEL:"
 
-//Default phone number to call if the cfg file parse failed
-#define DEFAULT_PHONE_NUM	F("+111111111")
 
 //Struct containing the infos sent by the esp8266
 #pragma pack(push, 1)
@@ -65,20 +61,25 @@ typedef struct GpsData {
 typedef struct TempData {
 	byte status;
 	double temp;
+	double hum;
 	byte ack;
 }TempData;
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct CallData {
-	boolean status;
+typedef struct LightData {
+	uint8_t light1;
+	uint8_t light2;
+	uint8_t light3;
+	uint8_t light4;
+	uint8_t light5;
+	uint8_t light6;
 	byte ack;
-}CallData;
+}LightData;
 #pragma pack(pop)
 
 //Events handler
 typedef void(*GpsDataHandler)(const GpsData&);
-//typedef void(*AccelerometerDataHandler)(AccData&);
 
 class WifiInterfaceClass {
 public:
@@ -88,17 +89,9 @@ public:
 	//Function to call in the loop
 	void update();
 
-	//Request the phone to make a phone call
-	void startCall();
-
 	//Set the callback to invoke when a gps packet arrived
 	void setGpsDataHandler(GpsDataHandler);
 
-	//Check if there is an active phone call
-	boolean isCallActive() { return call.status; }
-
-	//Start phone call button handler
-	friend void onCallButtonPress(void* data);
 
 private:
 	//Cfg file properties
@@ -106,14 +99,11 @@ private:
 		PHONE_NUM
 	};
 
-	//Phone number to call
-	String phoneToCall;
-
 	//Last received packets
 	InfoData info;
 	GpsData gps;
 	TempData temp;
-	CallData call;
+	LightData light;
 
 	//RX byte buffer
 	ByteBuffer rxBuffer;

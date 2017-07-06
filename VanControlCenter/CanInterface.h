@@ -25,7 +25,6 @@ class CanID {
 public:
 	enum IDs : unsigned short {
 		//BMS
-		BMS_CMD = 0x40,			//Heater Control
 
 		//Wifi
 		DATE = 0x60,			//Date dd/mm/yy
@@ -36,10 +35,16 @@ public:
 		GPS_ACCURACY = 0x65,	//Accuracy radius
 		GPS_SPEED = 0x66,		//GPS valid flag
 
-		CALL_STATUS = 0x70,		//Voice call status		0 - no call		1 - in call
 		TEMP = 0x71,			//Temperature Sensor Temp
 		HUM = 0x72,			//Temperature Sensor Humidity
 		HEATER_STATUS = 0x73, // Heater state
+		LIGHT_1 = 0x74,
+		LIGHT_2 = 0x75,
+		LIGHT_3 = 0x76,
+		LIGHT_4 = 0x77,
+		LIGHT_5 = 0x78,
+		LIGHT_6 = 0x79,
+		SET_TEMP = 0x80
 	};
 };
 
@@ -105,7 +110,6 @@ public:
 	//Send a packet through the can bus
 	void send(CanID::IDs id, byte* data, byte size);
 
-	//Stream
 	//Stream a byte array over can
 	CanStreamResult streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size);
 

@@ -17,7 +17,23 @@ void HeaterInterface::init() {
 
 void HeaterInterface::update() {
 	if (lastStateUpdate.hasFinished()) {
-		state = Unknown;
+		double temp, setTemp;
+		temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
+		setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
+
+		if (temp >= setTemp) {
+			state = Off;
+			}
+			else if (temp < setTemp) {
+				state = On;
+			}
+			else {
+			//Error
+				Log.e(HT_TAG) << F("Could not set the temp") << Endl;
+			}
+		
+		
+
 		lastStateUpdate.start();
 	}
 	if (ledTimer.hasFinished()) {
@@ -84,15 +100,12 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
 	lastStateUpdate.start();
 }
 
-
-
 void HeaterInterface::cooldown() {
 	cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
 
 	if (state == VentOnly && cooldownTimer.isRunning()) {
 		Log.i(HT_TAG) << F("State: ") << state << Endl;
 		Log.i(HT_TAG) << F("CoolDown") << Endl;
-
 	}
 	else if (state == VentOnly && cooldownTimer.hasFinished()) {
 		Log.i(HT_TAG) << F("State: ") << state << Endl;
@@ -103,9 +116,10 @@ void HeaterInterface::cooldown() {
 		Log.i(HT_TAG) << F("State: ") << state << Endl;
 		Log.e(HT_TAG) << F("Undefined State") << Endl;
 	}
+	Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
+
+
 }
-
-
 
 //TODO: One must adapt the timer, so that the interuppts are only counted from one cycle
 void HeaterInterface::heaterFaultCodeCallback() {
@@ -114,7 +128,5 @@ void HeaterInterface::heaterFaultCodeCallback() {
 	else if (heaterFaultCode == 12)
 		heaterFaultCode = 12;
 }
-
-
 
 HeaterInterface heaterInterface;

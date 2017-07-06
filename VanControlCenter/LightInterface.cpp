@@ -37,6 +37,10 @@ void LightInterfaceClass::init() {
 
 void LightInterfaceClass::update() {
 	if (ledTimer.hasFinished()) {
+		//TODO Implement sync with channelbuffer
+
+
+
 		// Set the color on each cycle
 		analogWrite(RGB_RED, roomLight.r);
 		analogWrite(RGB_BLUE, roomLight.g);
