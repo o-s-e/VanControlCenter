@@ -39,6 +39,12 @@ void LightInterfaceClass::update() {
 	if (ledTimer.hasFinished()) {
 		//TODO Implement sync with channelbuffer
 
+		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_1);
+		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_2);
+		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_3);
+		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_4);
+		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_5);
+		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_6);
 
 
 		// Set the color on each cycle
@@ -113,25 +119,27 @@ void LightInterfaceClass::setColor(double h) {
 		}
 	}
 	// map the values from a 0-1 fraction to a byte
-	roomLight.r = map(r, 0, 1, 0, 255);
-	roomLight.g = map(g, 0, 1, 0, 255);
-	roomLight.b = map(b, 0, 1, 0, 255);
-	Log.i(RGB_TAG) << F("rgb: ") << roomLight.r << F("|") << roomLight.g << F("|") << roomLight.b << Endl;
+	channelsBuffer.setValue<uint8_t>(CanID::LIGHT_1, map(r, 0, 1, 0, 255));
+	channelsBuffer.setValue<uint8_t>(CanID::LIGHT_2, map(g, 0, 1, 0, 255));
+	channelsBuffer.setValue<uint8_t>(CanID::LIGHT_3, map(b, 0, 1, 0, 255));
+
+	Log.i(RGB_TAG) << F("rgb: ") << channelsBuffer.getValueAsString(CanID::LIGHT_1) << F("|") << channelsBuffer.getValueAsString(CanID::LIGHT_2) << F("|") << channelsBuffer.getValueAsString(CanID::LIGHT_3) << Endl;
 }
 
 void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) {
 	switch (lightIndex) {
+		//TODO Check if roomlight needs to be replaced with the channelbuffer equivalent
 		case 1:
 			if (roomLight.w != brightness) {
-				roomLight.w = brightness;
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_4, brightness);;
 			}
 		case 2:
 			if (awningLight.w != brightness) {
-				awningLight.w = brightness;
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_5, brightness);;;
 			}
 		case 3:
 			if (worktopLight.w != brightness) {
-				worktopLight.w = brightness;
+				channelsBuffer.setValue<uint8_t>(CanID::LIGHT_6, brightness);;;
 			}
 	}
 }

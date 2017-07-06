@@ -12,6 +12,8 @@
 #include "HWConfig.h"
 #include <Timer.h>
 #include "Logger.h"
+#include "ChannelsBuffer.h"
+#include "CanInterface.h"
 
 /**
 * Class to interface the RGB cabin lightning

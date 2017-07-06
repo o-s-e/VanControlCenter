@@ -5,6 +5,7 @@
 #include "LightControllerForm.h"
 
 void LightControllerForm::init(Genie& genie) {
+	//TODO compare with channelbuffer
 	color = 0; // 0-360
 	roomBrightness = 0; // 0-255
 	awningBrightness = 0;
