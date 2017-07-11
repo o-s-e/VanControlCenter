@@ -40,11 +40,11 @@ void LightInterfaceClass::update() {
 		//TODO Implement sync with channelbuffer
 
 		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_1);
-		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_2);
-		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_3);
-		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_4);
-		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_5);
-		roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_6);
+		roomLight.g = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_2);
+		roomLight.b = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_3);
+		roomLight.w = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_4);
+		awningLight.w = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_5);
+		worktopLight.w = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_6);
 
 		// Set the color on each cycle
 		analogWrite(RGB_RED, roomLight.r);
