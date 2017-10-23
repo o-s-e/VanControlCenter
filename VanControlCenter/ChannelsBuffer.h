@@ -49,6 +49,8 @@ public:
 				//Return the converted value
 				return buffer[index].as<T>();
 			}
+
+
 		}
 		//Else return the default value
 		return defaultValue;

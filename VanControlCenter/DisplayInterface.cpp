@@ -32,6 +32,7 @@ void DisplayInterfaceClass::init() {
 	debugForm.init(genie);
 	temperatureControllerForm.init(genie);
 	lightControllerForm.init(genie);
+	generalSwitchForm.init(genie);
 	currentForm = &consoleForm;
 
 	// Refresh rate for the update method

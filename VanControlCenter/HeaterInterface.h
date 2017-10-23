@@ -28,15 +28,17 @@
 #define ERROR_STATE "ERROR"
 
 #define HT_STATE_TTL 50000
-#define HT_STATE_LED_DUR 1000
+#define HT_STATE_LED_DUR 100000
 #define HT_COOLDOWN_DUR 300000
+
+
 
 class HeaterInterface {
 public:
 	// constructor
 
 	// Enum containing the Heater state
-	enum HeaterState : byte { On, Off, VentOnly, Unknown, Error };
+	enum HeaterState : byte {On, Off, VentOnly, Unknown, Error};
 
 	void init();
 

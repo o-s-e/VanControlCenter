@@ -9,9 +9,11 @@
 //
 
 
+#include "GeneralSwitchForm.h"
 #include "LightControllerForm.h"
 #include "TemperatureControllerForm.h"
 #include "ConsoleForm.h"
+#include "GeneralSwitchForm.h"
 #include "LCDForm.h"
 #include "LCDStringList.h"
 #include "LCDStringMsg.h"

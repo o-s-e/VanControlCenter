@@ -35,7 +35,12 @@ void DataLoggerClass::init() {
 			logTimer.setDuration(1000 / DEFAULT_SAMPLE_PER_S).start();
 		}
 	}
+	
+
 }
+
+
+
 
 void DataLoggerClass::update() {
 	//If it's time to log!

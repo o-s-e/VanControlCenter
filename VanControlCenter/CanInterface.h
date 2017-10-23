@@ -44,7 +44,9 @@ public:
 		LIGHT_4 = 0x77,
 		LIGHT_5 = 0x78,
 		LIGHT_6 = 0x79,
-		SET_TEMP = 0x80
+		SET_TEMP = 0x80,
+		SW_WATER = 0x81,
+		SW_1 = 0x82
 	};
 };
 

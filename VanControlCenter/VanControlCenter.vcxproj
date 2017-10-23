@@ -97,6 +97,7 @@
     <ClInclude Include="DataLogger.h" />
     <ClInclude Include="DebugForm.h" />
     <ClInclude Include="DisplayInterface.h" />
+    <ClInclude Include="GeneralSwitchForm.h" />
     <ClInclude Include="HeaterInterface.h" />
     <ClInclude Include="HWConfig.h" />
     <ClInclude Include="LCDForm.h" />
@@ -120,6 +121,7 @@
     <ClCompile Include="DataLogger.cpp" />
     <ClCompile Include="DebugForm.cpp" />
     <ClCompile Include="DisplayInterface.cpp" />
+    <ClCompile Include="GeneralSwitchForm.cpp" />
     <ClCompile Include="HeaterInterface.cpp" />
     <ClCompile Include="LCDStringList.cpp" />
     <ClCompile Include="LCDStringMsg.cpp" />

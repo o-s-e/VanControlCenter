@@ -24,6 +24,7 @@
 #include "DebugForm.h"
 #include "TemperatureControllerForm.h"
 #include "LightControllerForm.h"
+#include "GeneralSwitchForm.h"
 #include "HWConfig.h"
 #include "LCDForm.h"
 
