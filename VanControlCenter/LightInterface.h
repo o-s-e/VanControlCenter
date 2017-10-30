@@ -22,7 +22,7 @@
 //Logger Tag
 #define RGB_TAG F("RGB")
 
-#define RGB_STATE_LED_DUR 500
+#define RGB_STATE_LED_DUR 1000
 
 typedef struct LIGHT {
 	uint8_t r;

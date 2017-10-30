@@ -7,7 +7,7 @@ void ChannelsBufferClass::init() {
 	buffer.resize(size);
 
 	bufferSize = 0;
-	//Create the "matrix" to cointain byte-array data
+	//Create the "matrix" to contain byte-array data
 	for (uint16_t i = 0; i < size; i++) {
 		c = channelsConfig.getChannelByIndex(i);
 		buffer[i].resize(c->getSize());

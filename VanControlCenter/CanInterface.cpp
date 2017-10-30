@@ -7,6 +7,7 @@ void CanInterfaceClass::init(int canSpeed, unsigned short minID, unsigned short 
 	debugSerial = NULL;
 	canEvent = NULL;
 	rxBuffer.resize(DEBUG_RX_BUFFER_SIZE);
+    Log.i(CAN_TAG) << F("Can0 interface initialized") << Endl;
 }
 
 void CanInterfaceClass::update() {

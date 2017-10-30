@@ -143,6 +143,11 @@ void loop() {
 	// Read all packets and update debug if necessary
 	canInterface.update();
 
+#ifdef SHELL_ON
+    //Shell update
+    shell.update();
+#endif
+
 	// Update Heater
 	heaterInterface.update();
 
@@ -160,10 +165,7 @@ void loop() {
 	displayInterface.update();
 #endif
 
-#ifdef SHELL_ON
-	//Shell update
-	shell.update();
-#endif
+
 
 	// loop
 	// Test execution time
@@ -175,9 +177,10 @@ void loop() {
 		digitalWrite(RUN_LED, ledStatus);
 	}
 
-	Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
-		<< (float)avgExecutionTime / loops * 1000 << F(" us ")
-		<< F("\t freeMem: ") << freeMemory() << Endl;
+	//Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
+	//	<< (float)avgExecutionTime / loops * 1000 << F(" us ")
+	//	<< F("\t freeMem: ") << freeMemory() << Endl;
+        
 	avgExecutionTime = 0;
 	loops = 0;
 	sec.start();
@@ -188,6 +191,7 @@ void initPorts() {
 	INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
 	INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
 	canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);
+
 
 	INIT_SD(SD, SD_SS_PIN);
 	// Utils
@@ -205,7 +209,7 @@ void initPorts() {
 	lightInterface.init();
 
 	//Heater input pin interrupt Initialisation
-	attachInterrupt(digitalPinToInterrupt(HT_INPUT_PIN), heaterCallback, HIGH);
+	//attachInterrupt(digitalPinToInterrupt(HT_INPUT_PIN), heaterCallback, HIGH);
 
 #ifdef SHELL_ON
 	shell.init(&LOG_SERIAL);
@@ -228,7 +232,7 @@ bool initDataLogger() {
 
 //Callback to count the High on the heater led pin to get the fault codes
 void heaterCallback() {
-	heaterInterface.heaterFaultCodeCallback();
+	//heaterInterface.heaterFaultCodeCallback();
 }
 
 void onCanPacketReceived(CAN_FRAME &frame) {

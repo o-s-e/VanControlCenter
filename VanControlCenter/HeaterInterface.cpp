@@ -1,128 +1,142 @@
 #include "HeaterInterface.h"
 
 void HeaterInterface::init() {
-	pinMode(HT_GAS_PIN, OUTPUT);
-	pinMode(HT_VENT_PIN, OUTPUT);
-	pinMode(HT_STATE_LED, OUTPUT);
+    pinMode(HT_GAS_PIN, OUTPUT);
+    pinMode(HT_VENT_PIN, OUTPUT);
+    pinMode(HT_STATE_LED, OUTPUT);
 
-	digitalWrite(HT_GAS_PIN, LOW);
-	digitalWrite(HT_VENT_PIN, LOW);
-	digitalWrite(HT_STATE_LED, LOW);
-	state = Off;
-	lastStateUpdate.setDuration(HT_STATE_LED_DUR).start();
-	lastStateUpdate.setDuration(HT_STATE_TTL).start();
+    digitalWrite(HT_GAS_PIN, LOW);
+    digitalWrite(HT_VENT_PIN, LOW);
+    digitalWrite(HT_STATE_LED, LOW);
+    state = Off;
+    ledTimer.setDuration(HT_STATE_LED_DUR).start();
+    lastStateUpdate.setDuration(HT_STATE_TTL).start();
 
-	heaterFaultCode = 1;
+    heaterFaultCode = 1;
+
+    Log.i(HT_TAG) << F("Heater Interface initialized") << Endl;
 }
 
 void HeaterInterface::update() {
-	if (lastStateUpdate.hasFinished()) {
-		double temp, setTemp;
-		temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
-		setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
+    if (lastStateUpdate.hasFinished()) {
+        double temp, setTemp;
 
-		if (temp >= setTemp) {
-			state = Off;
-		}
-		else if (temp < setTemp) {
-			state = On;
-		}
-		else {
-			//Error
-			Log.e(HT_TAG) << F("Could not set the temp") << Endl;
-		}
+#ifdef DEBUGVAL
+        Log.i(HT_TAG) << F("Debug Values set") << Endl;
+        temp = 20;
+        setTemp = 23;
+#endif
+        //temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
+       // setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
 
-		lastStateUpdate.start();
-	}
-	if (ledTimer.hasFinished()) {
-		switch (state) {
-			case On:
-				ledStatus = (ledStatus + 1) % 10;
-				digitalWrite(HT_STATE_LED, ledStatus < 5 ? HIGH : LOW);
-				digitalWrite(HT_GAS_PIN, HIGH);
-				digitalWrite(HT_VENT_PIN, HIGH);
-				break;
+        if (temp >= setTemp) {
+            state = Off;
+            Log.i(HT_TAG) << F("State: Off: ") << state << Endl;
 
-			case Off:
-				ledStatus = !ledStatus;
-				digitalWrite(HT_STATE_LED, LOW);
-				digitalWrite(HT_GAS_PIN, LOW);
-				digitalWrite(HT_VENT_PIN, LOW);
-				break;
+        }
+        else if (temp < setTemp) {
 
-			case VentOnly:
-				ledStatus = (ledStatus + 1) % 10;
-				digitalWrite(HT_STATE_LED, ledStatus < 20 ? HIGH : LOW);
-				digitalWrite(HT_GAS_PIN, LOW);
-				digitalWrite(HT_VENT_PIN, HIGH);
-				// not the good way, but it works
-				heaterInterface.cooldown();
-				break;
+            state = On;
+            Log.i(HT_TAG) << F("State: On: ") << state << Endl;
 
-			default:
-				ledStatus = (ledStatus + 1) % 10;
-				digitalWrite(HT_STATE_LED, ledStatus < 1 ? HIGH : LOW);
-				digitalWrite(HT_GAS_PIN, LOW);
-				digitalWrite(HT_VENT_PIN, LOW);
-				break;
-		}
+        }
+        else {
+            //Error
+            Log.e(HT_TAG) << F("Could not set the temp") << Endl;
+        }
 
-		ledTimer.start();
-	}
-	Log.i(HT_TAG) << F("State: ") << state << Endl;
+        lastStateUpdate.start();
+    }
+    if (ledTimer.hasFinished()) {
+        switch (state) {
+        case On:
+            ledStatus = (ledStatus + 1) % 10;
+            digitalWrite(HT_STATE_LED, ledStatus < 5 ? HIGH : LOW);
+            digitalWrite(HT_GAS_PIN, HIGH);
+            digitalWrite(HT_VENT_PIN, HIGH);
+            break;
+
+        case Off:
+            ledStatus = !ledStatus;
+            digitalWrite(HT_STATE_LED, LOW);
+            digitalWrite(HT_GAS_PIN, LOW);
+            digitalWrite(HT_VENT_PIN, LOW);
+            break;
+
+        case VentOnly:
+            ledStatus = (ledStatus + 1) % 10;
+            digitalWrite(HT_STATE_LED, ledStatus < 20 ? HIGH : LOW);
+            digitalWrite(HT_GAS_PIN, LOW);
+            digitalWrite(HT_VENT_PIN, HIGH);
+            // not the good way, but it works
+            heaterInterface.cooldown();
+            break;
+
+        default:
+            ledStatus = (ledStatus + 1) % 10;
+            digitalWrite(HT_STATE_LED, ledStatus < 1 ? HIGH : LOW);
+            digitalWrite(HT_GAS_PIN, LOW);
+            digitalWrite(HT_VENT_PIN, LOW);
+            break;
+        }
+
+        ledTimer.start();
+
+    }
+
 }
 
 void HeaterInterface::onStateChanged(const char *newStateString) {
-	HeaterState newState;
+    HeaterState newState;
 
-	if (strcmp(newStateString, ON_STATE) == 0) {
-		newState = On;
-	}
-	else if (strcmp(newStateString, OFF_STATE) == 0) {
-		newState = Off;
-	}
-	else if (strcmp(newStateString, VENT_STATE) == 0) {
-		newState = VentOnly;
-	}
-	else if (strcmp(newStateString, ERROR_STATE) == 0) {
-		newState = Error;
-	}
-	else {
-		newState = Unknown;
-	}
+    if (strcmp(newStateString, ON_STATE) == 0) {
+        newState = On;
+    }
+    else if (strcmp(newStateString, OFF_STATE) == 0) {
+        newState = Off;
+    }
+    else if (strcmp(newStateString, VENT_STATE) == 0) {
+        newState = VentOnly;
+    }
+    else if (strcmp(newStateString, ERROR_STATE) == 0) {
+        newState = Error;
+    }
+    else {
+        newState = Unknown;
+    }
 
-	if (newState != state) {
-		ledStatus = 0;
-		state = newState;
-	}
-	lastStateUpdate.start();
+    if (newState != state) {
+        ledStatus = 0;
+        state = newState;
+    }
+    lastStateUpdate.start();
 }
 
 void HeaterInterface::cooldown() {
-	cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
+    cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
 
-	if (state == VentOnly && cooldownTimer.isRunning()) {
-		Log.i(HT_TAG) << F("State: ") << state << Endl;
-		Log.i(HT_TAG) << F("CoolDown") << Endl;
-	}
-	else if (state == VentOnly && cooldownTimer.hasFinished()) {
-		Log.i(HT_TAG) << F("State: ") << state << Endl;
-		Log.i(HT_TAG) << F("Stopping Heater") << Endl;
-		state = Off;
-	}
-	else {
-		Log.i(HT_TAG) << F("State: ") << state << Endl;
-		Log.e(HT_TAG) << F("Undefined State") << Endl;
-	}
-	Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
+    if (state == VentOnly && cooldownTimer.isRunning()) {
+        Log.i(HT_TAG) << F("State: ") << state << Endl;
+        Log.i(HT_TAG) << F("CoolDown") << Endl;
+    }
+    else if (state == VentOnly && cooldownTimer.hasFinished()) {
+        Log.i(HT_TAG) << F("State: ") << state << Endl;
+        Log.i(HT_TAG) << F("Stopping Heater") << Endl;
+        state = Off;
+    }
+    else {
+        Log.i(HT_TAG) << F("State: ") << state << Endl;
+        Log.e(HT_TAG) << F("Undefined State") << Endl;
+    }
+    Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
 }
 
 //TODO: One must adapt the timer, so that the interuppts are only counted from one cycle
 void HeaterInterface::heaterFaultCodeCallback() {
-	if (heaterFaultCode > 0 && heaterFaultCode < 12)
-		heaterFaultCode += 1;
-	else if (heaterFaultCode == 12)
-		heaterFaultCode = 12;
+    if (heaterFaultCode > 0 && heaterFaultCode < 12)
+        heaterFaultCode += 1;
+    else if (heaterFaultCode == 12)
+        heaterFaultCode = 12;
 }
 
 HeaterInterface heaterInterface;

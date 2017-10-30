@@ -51,6 +51,7 @@ public:
 	void SDRmCmd(String&);
 	void SDRmDirCmd(String&);
 	void SDTreeCmd(String&);
+    void CHbufferSet(String&);
 
 private:
 	ByteBuffer rxBuffer;

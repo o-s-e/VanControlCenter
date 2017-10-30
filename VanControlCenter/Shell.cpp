@@ -2,33 +2,38 @@
 
 //MUST be in alphabetical order
 const PROGMEM ShellCommand cmdsList[] = {
-	//analog pins cmds
-	{ "ar",			&ShellClass::analogReadCmd		},	//analogRead							ar	<pin>
-	{ "aw",			&ShellClass::analogWriteCmd		},	//analogWrite							aw	<pin>	<value>
+    //analog pins cmds
+    { "ar",			&ShellClass::analogReadCmd		},	//analogRead							ar	<pin>
+    { "aw",			&ShellClass::analogWriteCmd		},	//analogWrite							aw	<pin>	<value>
 
-	//channels cmds
-	{ "chlist",		&ShellClass::channelListCmd		},	//list all loaded channels				chlist
-	{ "chvalue",	&ShellClass::channelValueCmd	},	//list a specific channel last value	chvalue <id>
-	{ "chvalues",	&ShellClass::channelsValuesCmd	},	//list all last channel values			chvalues
+    //channels cmds
+    { "chbset",     &ShellClass::CHbufferSet        }, // set channelbuffer value                       chbset <type> <channel> <value>
+    { "chlist",		&ShellClass::channelListCmd		},	//list all loaded channels				chlist
+    { "chvalue",	&ShellClass::channelValueCmd	},	//list a specific channel last value	chvalue <id>
+    { "chvalues",	&ShellClass::channelsValuesCmd	},	//list all last channel values			chvalues
 
-	//digital pins cmds
-	{ "dr",			&ShellClass::digitalReadCmd		},	//digitalRead							dr	<pin>
-	{ "dw",			&ShellClass::digitalWriteCmd	},	//digitalWrite							dw	<pin>	<value>
+    //digital pins cmds
+    { "dr",			&ShellClass::digitalReadCmd		},	//digitalRead							dr	<pin>
+    { "dw",			&ShellClass::digitalWriteCmd	},	//digitalWrite							dw	<pin>	<value>
 
-	//SD cmds
-	{ "sdmkdir",	&ShellClass::SDMkDirCmd			},	//make a dir							sdmkdir <path>
-	{ "sdopen",		&ShellClass::SDOpenCmd			},	//read all file's content				sdopen	<path>
-	{ "sdrm",		&ShellClass::SDRmCmd			},	//remove a file							sdrm	<path>
-	{ "sdrmdir",	&ShellClass::SDRmDirCmd			},	//remove a dir							sdrmdir	<path>
-	{ "sdtree",		&ShellClass::SDTreeCmd			}	//print all files and dirs				sdtree
+    //SD cmds
+    { "sdmkdir",	&ShellClass::SDMkDirCmd			},	//make a dir							sdmkdir <path>
+    { "sdopen",		&ShellClass::SDOpenCmd			},	//read all file's content				sdopen	<path>
+    { "sdrm",		&ShellClass::SDRmCmd			},	//remove a file							sdrm	<path>
+    { "sdrmdir",	&ShellClass::SDRmDirCmd			},	//remove a dir							sdrmdir	<path>
+    { "sdtree",		&ShellClass::SDTreeCmd			}	//print all files and dirs				sdtree
+
+   
 };
 
 void ShellClass::init(Stream* serialPort) {
 	this->serialPort = serialPort;
 	this->rxBuffer.resize(SHELL_RX_BUFFER);
+    Log.i(SHELL_TAG) << F("Shell initialized") << Endl;
 }
 
 void ShellClass::update() {
+
 	int index;
 	String line;
 	ShellCommand cmd;
@@ -45,7 +50,7 @@ void ShellClass::update() {
 
 			if (findCmd(line, &cmd) != -1) {
 				(this->*cmd.cmdFun)(line);
-				//Log.e(SHELL_TAG) << ("Cmd executed") << Endl;
+				Log.e(SHELL_TAG) << ("Cmd executed") << Endl;
 			}
 			else {
 				Log.e(SHELL_TAG) << F("Command not found") << Endl;
@@ -219,6 +224,26 @@ void ShellClass::SDTreeCmd(String&) {
 	}
 }
 
+void ShellClass::CHbufferSet(String& params) {
+    String type = nextParam(params);
+    int channel = nextParam(params).toInt();
+
+    if (type == "i") {
+
+        uint8_t value = nextParam(params).toInt();
+        channelsBuffer.setValue<uint8_t>(channel, value);
+    }
+    else if(type == "d"){
+     
+        double value = nextParam(params).toDouble();
+        channelsBuffer.setValue<double>(channel, value);
+    }
+    else {
+        Log.e(SHELL_TAG) << F("Set first param to 0 for int or 1 for double") << Endl;
+    }
+
+}
+
 void ShellClass::printSDTree(File dir, int indent) {
 	File entry = dir.openNextFile();
 
@@ -295,5 +320,7 @@ String ShellClass::nextParam(String& params) {
 	//if not found the params string is empty or contains the last param
 	return params;
 }
+
+
 
 ShellClass shell;

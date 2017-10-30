@@ -7,6 +7,10 @@
 * Contain all the hardware definitions
 */
 
+#define DEBUGVAL
+
+
+
 // loop
 #define RUN_LED 6
 

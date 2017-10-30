@@ -73,7 +73,9 @@ public:
 			}
 		}
 		//Else return NAN
+        Log.e(CHBUF_TAG) << F("could not get value for channel: ") << id << Endl;
 		return NAN;
+        
 	}
 
 	//Return a ByteBuffer copy associated to the channel
