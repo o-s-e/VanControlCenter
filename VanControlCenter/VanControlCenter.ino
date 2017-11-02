@@ -49,8 +49,7 @@
 void initPorts();
 bool initDataLogger();
 void onCanPacketReceived(CAN_FRAME &frame);
-
-void heaterCallback();
+//void heaterCallback();
 
 // Code flag
 #define WDT_ON
@@ -231,9 +230,9 @@ bool initDataLogger() {
 
 
 //Callback to count the High on the heater led pin to get the fault codes
-void heaterCallback() {
-	//heaterInterface.heaterFaultCodeCallback();
-}
+//void heaterCallback() {
+//	heaterInterface.heaterFaultCodeCallback();
+//}
 
 void onCanPacketReceived(CAN_FRAME &frame) {
 	Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;

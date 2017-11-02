@@ -41,13 +41,12 @@
 #define CAN_DEBUG_SERIAL SerialUSB
 #define CAN_SERIAL_BAUD 115200
 #define CAN_SPEED CAN_BPS_125K
-
-//SD
+ //SD
 #define SD_SS_PIN					23
 
 //Light
 
-#define RGB_RED 3
+#define RGB_RED 13
 #define RGB_GREEN 5
 #define RGB_BLUE 6
 #define WHITE_LED 8

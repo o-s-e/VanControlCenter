@@ -21,21 +21,16 @@ void HeaterInterface::update() {
     if (lastStateUpdate.hasFinished()) {
         double temp, setTemp;
 
-#ifdef DEBUGVAL
-        Log.i(HT_TAG) << F("Debug Values set") << Endl;
-        temp = 20;
-        setTemp = 23;
-#endif
-        //temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
-       // setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
+
+        temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
+        setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
 
         if (temp >= setTemp) {
-            state = Off;
-            Log.i(HT_TAG) << F("State: Off: ") << state << Endl;
-
+            if (state == On) {
+                cooldown();
+            }
         }
         else if (temp < setTemp) {
-
             state = On;
             Log.i(HT_TAG) << F("State: On: ") << state << Endl;
 
@@ -113,9 +108,15 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
 }
 
 void HeaterInterface::cooldown() {
-    cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
+    Log.i(HT_TAG) << F("CooldownTimer elapsed time: ") << cooldownTimer.elapsedTime() << Endl;
+    Log.i(HT_TAG) << F("CooldownTimer has finished?: ") << cooldownTimer.hasFinished() << Endl;
+    if (state == On) {
+        Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
+        cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
+        state = VentOnly;
+    }
+    else if (state == VentOnly && cooldownTimer.isRunning()) {
 
-    if (state == VentOnly && cooldownTimer.isRunning()) {
         Log.i(HT_TAG) << F("State: ") << state << Endl;
         Log.i(HT_TAG) << F("CoolDown") << Endl;
     }
@@ -128,7 +129,7 @@ void HeaterInterface::cooldown() {
         Log.i(HT_TAG) << F("State: ") << state << Endl;
         Log.e(HT_TAG) << F("Undefined State") << Endl;
     }
-    Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
+
 }
 
 //TODO: One must adapt the timer, so that the interuppts are only counted from one cycle
