@@ -239,7 +239,7 @@ void ShellClass::CHbufferSet(String& params) {
         channelsBuffer.setValue<double>(channel, value);
     }
     else {
-        Log.e(SHELL_TAG) << F("Set first param to 0 for int or 1 for double") << Endl;
+        Log.e(SHELL_TAG) << F("Set first param to i for int or d for double") << Endl;
     }
 
 }

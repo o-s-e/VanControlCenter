@@ -38,7 +38,7 @@ public:
 	// constructor
 
 	// Enum containing the Heater state
-	enum HeaterState : byte {On, Off, VentOnly, Unknown, Error};
+	enum HeaterState : byte {Off, On, VentOnly, Unknown, Error};
 
 	void init();
 

@@ -16,7 +16,7 @@
 */
 
 // TTL timer duration
-#define CH_BUFFER_TTL 1500
+#define CH_BUFFER_TTL 5000
 
 class Channel {
 public:

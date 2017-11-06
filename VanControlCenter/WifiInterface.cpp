@@ -73,7 +73,7 @@ void WifiInterfaceClass::update() {
 		if (parsePacket(TEMP_PACKET, (byte*)&temp, sizeof(TempData))) {
 			if (temp.ack == getAck((byte*)&temp, sizeof(TempData) - 1)) {
 				channelsBuffer.setValue<double>(CanID::TEMP, temp.temp);
-				channelsBuffer.setValue<byte>(CanID::HEATER_STATUS, temp.status);
+				channelsBuffer.setValue<uint8_t>(CanID::HEATER_STATUS, temp.status);
 
 				Log << "parsed temp" << Endl;
 				Log << "buffer size: " << rxBuffer.getSize() << Endl;

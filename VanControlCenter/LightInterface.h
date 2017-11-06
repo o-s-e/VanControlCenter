@@ -20,7 +20,7 @@
 */
 
 //Logger Tag
-#define RGB_TAG F("RGB")
+#define RGB_TAG F("Lightning")
 
 #define RGB_STATE_LED_DUR 1000
 
@@ -53,6 +53,8 @@ public:
 	void allOff();
 
 private:
+
+    double mapf(double x, double in_min, double in_max, double out_min, double out_max);
 
 	LIGHT roomLight;
 	LIGHT awningLight;

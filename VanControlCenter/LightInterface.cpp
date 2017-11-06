@@ -14,6 +14,15 @@ void LightInterfaceClass::init() {
 
     worktopLight.w = 0;
 
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_1, 0);
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_2, 0);
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_3, 0);
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_4, 0);
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_5, 0);
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_6, 0);
+
+    channelsBuffer.setValue<uint8_t>(CanID::HSV, 0);
+
     hsv.h = 0;
     hsv.s = 0;
     hsv.v = 0;
@@ -39,6 +48,15 @@ void LightInterfaceClass::init() {
 
 void LightInterfaceClass::update() {
     if (ledTimer.hasFinished()) {
+
+        //debug hook
+
+        if (channelsBuffer.getValueAs<double>(CanID::HSV) > 0) {
+            Log.i(RGB_TAG) << F("hsv debug value set: ") << Endl;
+            setColor(channelsBuffer.getValueAs<double>(CanID::HSV));
+        }
+
+
         roomLight.r = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_1);
         roomLight.g = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_2);
         roomLight.b = channelsBuffer.getValueAs<uint8_t>(CanID::LIGHT_3);
@@ -54,6 +72,10 @@ void LightInterfaceClass::update() {
         analogWrite(AWNING_LED, awningLight.w);
         analogWrite(WORKTOP_LED, worktopLight.w);
 
+
+
+
+
         ledTimer.start();
     }
 }
@@ -62,6 +84,7 @@ void LightInterfaceClass::setColor(double h) {
     hsv.h = h;
     hsv.s = 0.5;
     hsv.v = 0.5;
+    Log.i(RGB_TAG) << F("hsv: ") << hsv.h << F("|0.5|0.5") << Endl;
 
     double      hh, p, q, t, ff, r, g, b;
     long        i;
@@ -117,10 +140,12 @@ void LightInterfaceClass::setColor(double h) {
             break;
         }
     }
+    Log.i(RGB_TAG) << F("tiny rgb: ") << r << F("|") << g << F("|") << b << Endl;
+
     // map the values from a 0-1 fraction to a byte
-    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_1, map(r, 0, 1, 0, 255));
-    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_2, map(g, 0, 1, 0, 255));
-    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_3, map(b, 0, 1, 0, 255));
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_1, mapf(r, 0, 1, 0, 255));
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_2, mapf(g, 0, 1, 0, 255));
+    channelsBuffer.setValue<uint8_t>(CanID::LIGHT_3, mapf(b, 0, 1, 0, 255));
 
     Log.i(RGB_TAG) << F("rgb: ") << channelsBuffer.getValueAsString(CanID::LIGHT_1) << F("|") << channelsBuffer.getValueAsString(CanID::LIGHT_2) << F("|") << channelsBuffer.getValueAsString(CanID::LIGHT_3) << Endl;
 }
@@ -166,6 +191,10 @@ void LightInterfaceClass::allOff() {
             fadeTimer.start();
         }
     }
+}
+
+double LightInterfaceClass::mapf(double x, double in_min, double in_max, double out_min, double out_max) {
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 LightInterfaceClass lightInterface;

@@ -46,7 +46,8 @@ public:
 		LIGHT_6 = 0x79,
 		SET_TEMP = 0x80,
 		SW_WATER = 0x81,
-		SW_1 = 0x82
+		SW_1 = 0x82,
+        HSV = 0x83
 	};
 };
 
