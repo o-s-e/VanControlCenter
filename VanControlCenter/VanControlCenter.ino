@@ -60,6 +60,7 @@ void onCanPacketReceived(CAN_FRAME &frame);
 #define WIFI_ON
 #define SHELL_ON
 #define LOOP_DEBUG
+#define DEBUG_ON
 
 // Log tag
 #define INIT_TAG F("INIT")
@@ -83,151 +84,151 @@ void watchdogSetup() {}
 #endif
 
 void setup() {
-	// Serial, digital pin, Heater, WLan, Web, Sensors
-	initPorts();
+    // Serial, digital pin, Heater, WLan, Web, Sensors
+    initPorts();
 
-	// Start timer to count init time
-	t.start();
+    // Start timer to count init time
+    t.start();
 
 #ifdef LCD_ON
-	displayInterface.init();
-	consoleForm.println(SW_INFO);
-	Log.i(INIT_TAG) << SW_INFO << Endl;
+    displayInterface.init();
+    consoleForm.println(SW_INFO);
+    Log.i(INIT_TAG) << SW_INFO << Endl;
 #endif
 
 #ifdef DL_ON
-	if (initDataLogger()) {
-		consoleForm.println(F("Datalogger OK"));
-		Log.i(DL_TAG) << F("Datalogger OK ") << t.elapsedTime() << Endl;
-	}
-	else {
-		consoleForm.println(F("Datalogger FAIL"));
-		Log.e(DL_TAG) << F("Datalogger FAIL") << Endl;
-	}
+    if (initDataLogger()) {
+        consoleForm.println(F("Datalogger OK"));
+        Log.i(DL_TAG) << F("Datalogger OK ") << t.elapsedTime() << Endl;
+    }
+    else {
+        consoleForm.println(F("Datalogger FAIL"));
+        Log.e(DL_TAG) << F("Datalogger FAIL") << Endl;
+    }
 #endif
 
-	//Wifi
+    //Wifi
 #ifdef WIFI_ON
-	wifiInterface.init();
-	consoleForm.println(F("Wifi OK"));
-	Log.i(WIFI_TAG) << F("Wifi OK ") << t.elapsedTime() << Endl;
+    wifiInterface.init();
+    consoleForm.println(F("Wifi OK"));
+    Log.i(WIFI_TAG) << F("Wifi OK ") << t.elapsedTime() << Endl;
 #endif
 
-	// Notify init completed
-	Log.i(INIT_TAG) << F("VanControlCenter init OK ") << t.elapsedTime() << Endl;
+    // Notify init completed
+    Log.i(INIT_TAG) << F("VanControlCenter init OK ") << t.elapsedTime() << Endl;
 
-	// Init time
-	Log.i(INIT_TAG) << F("Time needed to init: ") << t.elapsedTime() << Endl;
+    // Init time
+    Log.i(INIT_TAG) << F("Time needed to init: ") << t.elapsedTime() << Endl;
 
-	// Init test stuff
-	ledStatus = LOW;
-	sec.setDuration(1000).start();
-	avgExecutionTime = 0;
-	loops = 0;
-	// Enable WDT
+    // Init test stuff
+    ledStatus = LOW;
+    sec.setDuration(1000).start();
+    avgExecutionTime = 0;
+    loops = 0;
+    // Enable WDT
 #ifdef WDT_ON
-	watchdogEnable(WDT_TIMEOUT);
+    watchdogEnable(WDT_TIMEOUT);
 #else
-	watchdogDisable();
+    watchdogDisable();
 #endif
 }
 
 void loop() {
-	// Reset Watchdog
+    // Reset Watchdog
 #ifdef WDT_ON
-	watchdogReset();
+    watchdogReset();
 #endif
 
-	// Test execution time
-	t.start();
+    // Test execution time
+    t.start();
 
-	// Read all packets and update debug if necessary
-	canInterface.update();
+    // Read all packets and update debug if necessary
+    canInterface.update();
 
 #ifdef SHELL_ON
     //Shell update
     shell.update();
 #endif
 
-	// Update Heater
-	heaterInterface.update();
+    // Update Heater
+    heaterInterface.update();
 
-	//Update LightInterface
+    //Update LightInterface
 
-	lightInterface.update();
+    lightInterface.update();
 
 #ifdef DL_ON
-	// Log data on SD
-	dataLogger.update();
+    // Log data on SD
+    dataLogger.update();
 #endif
 
 #ifdef LCD_ON
-	// Display update
-	displayInterface.update();
+    // Display update
+    displayInterface.update();
 #endif
 
 
 
-	// loop
-	// Test execution time
-	avgExecutionTime += t.elapsedTime();
-	loops++;
+    // loop
+    // Test execution time
+    avgExecutionTime += t.elapsedTime();
+    loops++;
 
-	if (sec.hasFinished()) {
-		ledStatus = !ledStatus;
-		digitalWrite(RUN_LED, ledStatus);
-	}
+    if (sec.hasFinished()) {
+        ledStatus = !ledStatus;
+        digitalWrite(RUN_LED, ledStatus);
+    }
 
-	//Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
-	//	<< (float)avgExecutionTime / loops * 1000 << F(" us ")
-	//	<< F("\t freeMem: ") << freeMemory() << Endl;
-        
-	avgExecutionTime = 0;
-	loops = 0;
-	sec.start();
+    //Log.i(LOOP_TAG) << F("Loop calls: ") << loops << F("\t avgExecTime: ")
+    //	<< (float)avgExecutionTime / loops * 1000 << F(" us ")
+    //	<< F("\t freeMem: ") << freeMemory() << Endl;
+
+    avgExecutionTime = 0;
+    loops = 0;
+    sec.start();
 }
 
 // Inits functions
 void initPorts() {
-	INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
-	INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
-	canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);
+    INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
+    INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
+    canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);
 
 
-	INIT_SD(SD, SD_SS_PIN);
-	// Utils
-	Log.init(&LOG_SERIAL);
+    INIT_SD(SD, SD_SS_PIN);
+    // Utils
+    Log.init(&LOG_SERIAL);
 
-	//Canbus Initialisation
-	canInterface.init(CAN_SPEED);
-	canInterface.setCanEventCallBack(&onCanPacketReceived);
+    //Canbus Initialisation
+    canInterface.init(CAN_SPEED);
+    canInterface.setCanEventCallBack(&onCanPacketReceived);
 
-	// Heater Initialisation
-	heaterInterface.init();
+    // Heater Initialisation
+    heaterInterface.init();
 
-	//Lights Initialisation
+    //Lights Initialisation
 
-	lightInterface.init();
+    lightInterface.init();
 
-	//Heater input pin interrupt Initialisation
-	//attachInterrupt(digitalPinToInterrupt(HT_INPUT_PIN), heaterCallback, HIGH);
+    //Heater input pin interrupt Initialisation
+    //attachInterrupt(digitalPinToInterrupt(HT_INPUT_PIN), heaterCallback, HIGH);
 
 #ifdef SHELL_ON
-	shell.init(&LOG_SERIAL);
+    shell.init(&LOG_SERIAL);
 #endif
 }
 
 bool initDataLogger() {
-	// Datalogger
-	if (channelsConfig.init()) {
-		//Channeldebug enabled
-		channelsConfig.debug();
-		channelsBuffer.init();
-		dataLogger.init();
-		return true;
-	}
+    // Datalogger
+    if (channelsConfig.init()) {
+        //Channeldebug enabled
+        channelsConfig.debug();
+        channelsBuffer.init();
+        dataLogger.init();
+        return true;
+    }
 
-	return false;
+    return false;
 }
 
 
@@ -237,10 +238,10 @@ bool initDataLogger() {
 //}
 
 void onCanPacketReceived(CAN_FRAME &frame) {
-	Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
+    Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
 
-	channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
+    channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
 
-	switch (frame.id) {
-	}
+    switch (frame.id) {
+    }
 }

@@ -22,33 +22,33 @@
 
 class ChannelsConfigClass {
 public:
-	//Init function to call in the setup
-	boolean init();
+    //Init function to call in the setup
+    boolean init();
 
-	//Debug function to check if the parsing was successful
-	void debug();
+    //Debug function to check if the parsing was successful
+    void debug();
 
-	//Get the channel by its id. Return NULL if a channel with can id equals to id is not present
-	Channel* getChannelByID(unsigned short id);
+    //Get the channel by its id. Return NULL if a channel with can id equals to id is not present
+    Channel* getChannelByID(unsigned short id);
 
-	//Get the channel by its array index
-	Channel* getChannelByIndex(int index);
+    //Get the channel by its array index
+    Channel* getChannelByIndex(int index);
 
-	//Find the channel array index with can id equals to id
-	int getChannelIndex(unsigned short id);
+    //Find the channel array index with can id equals to id
+    int getChannelIndex(unsigned short id);
 
-	//Get the channels count
-	int getChannelCount() { return channels.getSize(); }
+    //Get the channels count
+    int getChannelCount() { return channels.getSize(); }
 
-	//Return true if the cfg parsing was successful else return false
-	boolean isValid() { return valid; }
+    //Return true if the cfg parsing was successful else return false
+    boolean isValid() { return valid; }
 
 private:
-	//True if the cfg parsing was successful else false
-	boolean valid;
+    //True if the cfg parsing was successful else false
+    boolean valid;
 
-	//Vector containing all the loaded channells
-	Vector<Channel*> channels;
+    //Vector containing all the loaded channells
+    Vector<Channel*> channels;
 };
 
 //Channels config instance

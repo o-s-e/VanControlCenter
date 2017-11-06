@@ -22,8 +22,8 @@
 class ShellClass;
 
 struct ShellCommand {
-	char cmdString[10];
-	void(ShellClass::*cmdFun)(String&);
+    char cmdString[10];
+    void(ShellClass::*cmdFun)(String&);
 };
 
 extern const PROGMEM ShellCommand cmdsList[];
@@ -32,35 +32,35 @@ extern const PROGMEM ShellCommand cmdsList[];
 
 class ShellClass {
 public:
-	void init(Stream* serialPort);
-	void update();
+    void init(Stream* serialPort);
+    void update();
 
-	//Cmds function
-	void analogReadCmd(String&);
-	void analogWriteCmd(String&);
+    //Cmds function
+    void analogReadCmd(String&);
+    void analogWriteCmd(String&);
 
-	void channelListCmd(String&);
-	void channelValueCmd(String&);
-	void channelsValuesCmd(String&);
+    void channelListCmd(String&);
+    void channelValueCmd(String&);
+    void channelsValuesCmd(String&);
 
-	void digitalReadCmd(String&);
-	void digitalWriteCmd(String&);
+    void digitalReadCmd(String&);
+    void digitalWriteCmd(String&);
 
-	void SDMkDirCmd(String&);
-	void SDOpenCmd(String&);
-	void SDRmCmd(String&);
-	void SDRmDirCmd(String&);
-	void SDTreeCmd(String&);
+    void SDMkDirCmd(String&);
+    void SDOpenCmd(String&);
+    void SDRmCmd(String&);
+    void SDRmDirCmd(String&);
+    void SDTreeCmd(String&);
     void CHbufferSet(String&);
 
 private:
-	ByteBuffer rxBuffer;
-	Stream* serialPort;
+    ByteBuffer rxBuffer;
+    Stream* serialPort;
 
-	int findCmd(String& line, ShellCommand* cmd);
-	String nextParam(String& params);
+    int findCmd(String& line, ShellCommand* cmd);
+    String nextParam(String& params);
 
-	void printSDTree(File dir, int indent);
+    void printSDTree(File dir, int indent);
 };
 
 extern ShellClass shell;

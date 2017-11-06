@@ -23,32 +23,32 @@
 //Class containing an enum with all the CanID constants hard-coded
 class CanID {
 public:
-	enum IDs : unsigned short {
-		//BMS
+    enum IDs : unsigned short {
+        //BMS
 
-		//Wifi
-		DATE = 0x60,			//Date dd/mm/yy
-		TIME = 0x61,			//Time hh:MM:ss
-		GPS_LATITUDE = 0x62,	//Latitude
-		GPS_LONGITUDE = 0x63,	//Longitude
-		GPS_ALTITUDE = 0x64,	//Altitude
-		GPS_ACCURACY = 0x65,	//Accuracy radius
-		GPS_SPEED = 0x66,		//GPS valid flag
+        //Wifi
+        DATE = 0x60,			//Date dd/mm/yy
+        TIME = 0x61,			//Time hh:MM:ss
+        GPS_LATITUDE = 0x62,	//Latitude
+        GPS_LONGITUDE = 0x63,	//Longitude
+        GPS_ALTITUDE = 0x64,	//Altitude
+        GPS_ACCURACY = 0x65,	//Accuracy radius
+        GPS_SPEED = 0x66,		//GPS valid flag
 
-		TEMP = 0x71,			//Temperature Sensor Temp
-		HUM = 0x72,			//Temperature Sensor Humidity
-		HEATER_STATUS = 0x73, // Heater state
-		LIGHT_1 = 0x74,
-		LIGHT_2 = 0x75,
-		LIGHT_3 = 0x76,
-		LIGHT_4 = 0x77,
-		LIGHT_5 = 0x78,
-		LIGHT_6 = 0x79,
-		SET_TEMP = 0x80,
-		SW_WATER = 0x81,
-		SW_1 = 0x82,
+        TEMP = 0x71,			//Temperature Sensor Temp
+        HUM = 0x72,			//Temperature Sensor Humidity
+        HEATER_STATUS = 0x73, // Heater state
+        LIGHT_1 = 0x74,
+        LIGHT_2 = 0x75,
+        LIGHT_3 = 0x76,
+        LIGHT_4 = 0x77,
+        LIGHT_5 = 0x78,
+        LIGHT_6 = 0x79,
+        SET_TEMP = 0x80,
+        SW_WATER = 0x81,
+        SW_1 = 0x82,
         HSV = 0x83
-	};
+    };
 };
 
 //Logget tag
@@ -80,11 +80,11 @@ public:
 
 //Enum containing the possible results of a can stream
 enum CanStreamResult {
-	SUCCES,
-	ERROR,
-	TIMEOUT,
-	WRONG_ACK,
-	ABORT
+    SUCCES,
+    ERROR,
+    TIMEOUT,
+    WRONG_ACK,
+    ABORT
 };
 
 //Received can packet callback typedef
@@ -92,58 +92,58 @@ typedef void(*CanEventHandler)(CAN_FRAME&);
 
 class CanInterfaceClass {
 public:
-	//Function to call in the setup
-	void init(int canSpeed, unsigned short minID = 0, unsigned short maxID = 2048);
+    //Function to call in the setup
+    void init(int canSpeed, unsigned short minID = 0, unsigned short maxID = 2048);
 
-	//Fucntion to call in the loop
-	void update();
+    //Fucntion to call in the loop
+    void update();
 
-	//Set the function to call when a new packet is received
-	void setCanEventCallBack(CanEventHandler);
+    //Set the function to call when a new packet is received
+    void setCanEventCallBack(CanEventHandler);
 
-	//Remove the callback
-	void removeCanEventCallBack();
+    //Remove the callback
+    void removeCanEventCallBack();
 
-	//Return the number of packets to read
-	int available();
+    //Return the number of packets to read
+    int available();
 
-	//Return the next received packet
-	CAN_FRAME& read();
+    //Return the next received packet
+    CAN_FRAME& read();
 
-	//Send a packet through the can bus
-	void send(CanID::IDs id, byte* data, byte size);
+    //Send a packet through the can bus
+    void send(CanID::IDs id, byte* data, byte size);
 
-	//Stream a byte array over can
-	CanStreamResult streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size);
+    //Stream a byte array over can
+    CanStreamResult streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size);
 
-	//Wait for a byte array stream over can
-	CanStreamResult waitForStreamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int expectedBytes);
+    //Wait for a byte array stream over can
+    CanStreamResult waitForStreamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int expectedBytes);
 
-	//Set the debug serial port for the can analyzer
-	void setCanDebugSerial(Stream* debugSerial);
+    //Set the debug serial port for the can analyzer
+    void setCanDebugSerial(Stream* debugSerial);
 
 private:
-	//Debug serial pointer
-	Stream* debugSerial;
+    //Debug serial pointer
+    Stream* debugSerial;
 
-	//Can packet
-	CAN_FRAME frame;
+    //Can packet
+    CAN_FRAME frame;
 
-	//Can analyzer receive buffer
-	ByteBuffer rxBuffer;
+    //Can analyzer receive buffer
+    ByteBuffer rxBuffer;
 
-	//Packet received callback
-	CanEventHandler canEvent;
+    //Packet received callback
+    CanEventHandler canEvent;
 
-	//Debug
-	//Send a packet to the can analyzer
-	void writePacketOnDebugSerial(CAN_FRAME& packet);
+    //Debug
+    //Send a packet to the can analyzer
+    void writePacketOnDebugSerial(CAN_FRAME& packet);
 
-	//Read all the incoming packets from the can analyzer
-	void readFromDebugSerial();
+    //Read all the incoming packets from the can analyzer
+    void readFromDebugSerial();
 
-	//Parse the incoming packets from the can analyzer
-	void parseSerialDebugCmd();
+    //Parse the incoming packets from the can analyzer
+    void parseSerialDebugCmd();
 };
 
 //Can bus interface instance

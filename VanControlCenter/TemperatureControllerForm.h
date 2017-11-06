@@ -31,22 +31,22 @@
 class TemperatureControllerForm : public LCDForm {
 public:
 
-	void init(Genie& genie);
+    void init(Genie& genie);
 
-	void update(Genie& genie);
+    void update(Genie& genie);
 
-	void onEvent(Genie& genie, genieFrame& evt);
+    void onEvent(Genie& genie, genieFrame& evt);
 
-	//TODO index needs to be adapted when the UI was build
-	int getFormIndex() { return 3; }
+    //TODO index needs to be adapted when the UI was build
+    int getFormIndex() { return 3; }
 
 private:
 
-	//Update all the widgets values
+    //Update all the widgets values
 
-	void updateWidgetsValues(Genie& genie);
+    void updateWidgetsValues(Genie& genie);
 
-	Timer lastStateChange;
+    Timer lastStateChange;
 };
 
 extern TemperatureControllerForm temperatureControllerForm;

@@ -25,48 +25,48 @@
 #define RGB_STATE_LED_DUR 1000
 
 typedef struct LIGHT {
-	uint8_t r;
-	uint8_t g;
-	uint8_t b;
-	uint8_t w;
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+    uint8_t w;
 }LIGHT;
 
 typedef struct HSV {
-	double h;       // angle in degrees
-	double s;       // a fraction between 0 and 1 we use a static 0.5
-	double v;       // a fraction between 0 and 1 we use a static 0.5
+    double h;       // angle in degrees
+    double s;       // a fraction between 0 and 1 we use a static 0.5
+    double v;       // a fraction between 0 and 1 we use a static 0.5
 } HSV;
 
 class LightInterfaceClass {
 public:
-	//Function to call in the setup
-	void init();
+    //Function to call in the setup
+    void init();
 
-	//Function to call in the loop
-	void update();
+    //Function to call in the loop
+    void update();
 
-	// Sets the Hue(value between 0 and 360)
-	void setColor(double h);
+    // Sets the Hue(value between 0 and 360)
+    void setColor(double h);
 
-	void setBrightness(uint8_t brightness, uint8_t lightIndex);
+    void setBrightness(uint8_t brightness, uint8_t lightIndex);
 
-	void allOff();
+    void allOff();
 
 private:
 
     double mapf(double x, double in_min, double in_max, double out_min, double out_max);
 
-	LIGHT roomLight;
-	LIGHT awningLight;
-	LIGHT worktopLight;
+    LIGHT roomLight;
+    LIGHT awningLight;
+    LIGHT worktopLight;
 
-	HSV hsv;
+    HSV hsv;
 
-	uint8_t fadeAmount;
+    uint8_t fadeAmount;
 
-	// LightCtrl refresh LED timer
-	Timer ledTimer;
-	Timer fadeTimer;
+    // LightCtrl refresh LED timer
+    Timer ledTimer;
+    Timer fadeTimer;
 };
 
 extern LightInterfaceClass lightInterface;

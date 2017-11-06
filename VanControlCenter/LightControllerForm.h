@@ -26,26 +26,26 @@
 class LightControllerForm : public LCDForm {
 public:
 
-	void init(Genie& genie);
+    void init(Genie& genie);
 
-	void update(Genie& genie);
+    void update(Genie& genie);
 
-	void onEvent(Genie& genie, genieFrame& evt);
+    void onEvent(Genie& genie, genieFrame& evt);
 
-	//TODO index needs to be adapted when the UI was build
-	int getFormIndex() { return 4; }
+    //TODO index needs to be adapted when the UI was build
+    int getFormIndex() { return 4; }
 
 private:
 
-	double color;
+    double color;
 
-	uint8_t roomBrightness;
-	uint8_t awningBrightness;
-	uint8_t worktopBrightness;
+    uint8_t roomBrightness;
+    uint8_t awningBrightness;
+    uint8_t worktopBrightness;
 
-	void updateWidgetsValues(Genie& genie);
+    void updateWidgetsValues(Genie& genie);
 
-	Timer lastStateChange;
+    Timer lastStateChange;
 };
 
 extern LightControllerForm lightControllerForm;

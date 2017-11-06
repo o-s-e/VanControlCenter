@@ -22,53 +22,53 @@
 
 class LCDStringList {
 public:
-	//Function to init the StringList
-	//Index is the widget index in ViSi
-	//MaxSize is the max number of chars
-	void init(byte index, int maxSize, Genie* parent);
+    //Function to init the StringList
+    //Index is the widget index in ViSi
+    //MaxSize is the max number of chars
+    void init(byte index, int maxSize, Genie* parent);
 
-	//Move the selector up of one position
-	void up();
+    //Move the selector up of one position
+    void up();
 
-	//Move the selector down of one position
-	void down();
+    //Move the selector down of one position
+    void down();
 
-	//Remove all the items
-	void clear();
+    //Remove all the items
+    void clear();
 
-	//Add new string item
-	void addElement(String elem);
+    //Add new string item
+    void addElement(String elem);
 
-	//Remove an item by the index
-	void removeElement(int index);
+    //Remove an item by the index
+    void removeElement(int index);
 
-	//Get the current element index
-	int getCurrentElement();
+    //Get the current element index
+    int getCurrentElement();
 
-	//Get the string widget index
-	int getWidgetIndex();
+    //Get the string widget index
+    int getWidgetIndex();
 
-	//Get the items count
-	int getElementCount();
+    //Get the items count
+    int getElementCount();
 
-	//Repaint the list
-	void repaint();
+    //Repaint the list
+    void repaint();
 
 private:
-	//Current item index
-	char currentElement;
+    //Current item index
+    char currentElement;
 
-	//Widget index in ViSi
-	byte widgetIndex;
+    //Widget index in ViSi
+    byte widgetIndex;
 
-	//Items count
-	byte elementCount;
+    //Items count
+    byte elementCount;
 
-	//String buffer
-	String buffer;
+    //String buffer
+    String buffer;
 
-	//Genie instance pointer
-	Genie* parent;
+    //Genie instance pointer
+    Genie* parent;
 };
 
 #endif

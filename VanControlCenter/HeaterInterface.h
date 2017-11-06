@@ -35,42 +35,42 @@
 
 class HeaterInterface {
 public:
-	// constructor
+    // constructor
 
-	// Enum containing the Heater state
-	enum HeaterState : byte {Off, On, VentOnly, Unknown, Error};
+    // Enum containing the Heater state
+    enum HeaterState : byte { Off, On, VentOnly, Unknown, Error };
 
-	void init();
+    void init();
 
-	// Function to call in the loop
-	void update();
-	// function to call when we set a new state by LCD or Web
-	void onStateChanged(const char *state);
+    // Function to call in the loop
+    void update();
+    // function to call when we set a new state by LCD or Web
+    void onStateChanged(const char *state);
 
-	// Return the current state
-	HeaterState getState() { return state; }
+    // Return the current state
+    HeaterState getState() { return state; }
 
-	void heaterFaultCodeCallback();
+    void heaterFaultCodeCallback();
 
 private:
 
-	void cooldown();
+    void cooldown();
 
-	uint8_t heaterFaultCode;
+    uint8_t heaterFaultCode;
 
-	// Heater led status
-	byte ledStatus;
+    // Heater led status
+    byte ledStatus;
 
-	// Current Temperature Controller state
-	HeaterState state;
+    // Current Temperature Controller state
+    HeaterState state;
 
-	// TempCtrl state TTL timer
-	Timer lastStateUpdate;
+    // TempCtrl state TTL timer
+    Timer lastStateUpdate;
 
-	// TempCtrl state LED timer
-	Timer ledTimer;
+    // TempCtrl state LED timer
+    Timer ledTimer;
 
-	Timer cooldownTimer;
+    Timer cooldownTimer;
 };
 
 extern HeaterInterface heaterInterface;

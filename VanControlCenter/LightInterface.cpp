@@ -72,10 +72,6 @@ void LightInterfaceClass::update() {
         analogWrite(AWNING_LED, awningLight.w);
         analogWrite(WORKTOP_LED, worktopLight.w);
 
-
-
-
-
         ledTimer.start();
     }
 }

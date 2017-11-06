@@ -19,32 +19,32 @@
 
 class LCDStringMsg {
 public:
-	//Function to init.
-	//Index is the ViSi editor string widget index
-	void init(byte index, Genie* parent);
+    //Function to init.
+    //Index is the ViSi editor string widget index
+    void init(byte index, Genie* parent);
 
-	//Clear the message
-	void clear();
+    //Clear the message
+    void clear();
 
-	//Get the string message
-	const String& getMessage();
+    //Get the string message
+    const String& getMessage();
 
-	//Repaint the message
-	void repaint();
+    //Repaint the message
+    void repaint();
 
-	//Set the message
-	void setMessage(String str);
-	void setMessage(const char* str);
+    //Set the message
+    void setMessage(String str);
+    void setMessage(const char* str);
 
 private:
-	//Widget ViSi index
-	byte widgetIndex;
+    //Widget ViSi index
+    byte widgetIndex;
 
-	//String message
-	String buffer;
+    //String message
+    String buffer;
 
-	//Genie instance pointer
-	Genie* parent;
+    //Genie instance pointer
+    Genie* parent;
 };
 
 #endif

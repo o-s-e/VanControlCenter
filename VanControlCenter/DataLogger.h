@@ -39,32 +39,32 @@
 
 class DataLoggerClass {
 public:
-	//Init function to call in the setup
-	void init();
+    //Init function to call in the setup
+    void init();
 
-	//Update function to call in the loop
-	void update();
+    //Update function to call in the loop
+    void update();
 
 private:
-	//Enum rapresenting the configuration inside the datalogger cfg file
-	enum Attr : byte {
-		SAMPLE_PER_SECOND,
-		LOG_FILE_NAME,
-		LOG_FILE_FORMAT,
-		LOG_FILE_NUM
-	};
+    //Enum rapresenting the configuration inside the datalogger cfg file
+    enum Attr : byte {
+        SAMPLE_PER_SECOND,
+        LOG_FILE_NAME,
+        LOG_FILE_FORMAT,
+        LOG_FILE_NUM
+    };
 
-	//Current log file name
-	String logFileName;
+    //Current log file name
+    String logFileName;
 
-	//When the timer has finished it time to log
-	Timer logTimer;
+    //When the timer has finished it time to log
+    Timer logTimer;
 
-	//Function to update the cfg file with the next log file to create
-	void updateCfg(Configuration& cfg);
+    //Function to update the cfg file with the next log file to create
+    void updateCfg(Configuration& cfg);
 
-	//Function to create the new log file to use
-	void createNewLogFile();
+    //Function to create the new log file to use
+    void createNewLogFile();
 };
 
 //Datalogger instance

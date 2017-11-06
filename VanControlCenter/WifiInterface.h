@@ -38,41 +38,41 @@
 //Struct containing the infos sent by the esp8266
 #pragma pack(push, 1)
 typedef struct InfoData {
-	char date[8];
-	char time[8];
-	byte ack;
+    char date[8];
+    char time[8];
+    byte ack;
 }InfoData;
 #pragma pack(pop)
 
 #pragma pack(push, 1)
 typedef struct GpsData {
-	double latitude;
-	double longitude;
-	double altitude;
-	double accuracy;
-	double speed;
-	byte ack;
+    double latitude;
+    double longitude;
+    double altitude;
+    double accuracy;
+    double speed;
+    byte ack;
 }GpsData;
 #pragma pack(pop)
 
 #pragma pack(push, 1)
 typedef struct TempData {
-	byte status;
-	double temp;
-	double hum;
-	byte ack;
+    byte status;
+    double temp;
+    double hum;
+    byte ack;
 }TempData;
 #pragma pack(pop)
 
 #pragma pack(push, 1)
 typedef struct LightData {
-	uint8_t light1;
-	uint8_t light2;
-	uint8_t light3;
-	uint8_t light4;
-	uint8_t light5;
-	uint8_t light6;
-	byte ack;
+    uint8_t light1;
+    uint8_t light2;
+    uint8_t light3;
+    uint8_t light4;
+    uint8_t light5;
+    uint8_t light6;
+    byte ack;
 }LightData;
 #pragma pack(pop)
 
@@ -81,35 +81,35 @@ typedef void(*GpsDataHandler)(const GpsData&);
 
 class WifiInterfaceClass {
 public:
-	//Function to call in the setup
-	void init();
+    //Function to call in the setup
+    void init();
 
-	//Function to call in the loop
-	void update();
+    //Function to call in the loop
+    void update();
 
-	//Set the callback to invoke when a gps packet arrived
-	void setGpsDataHandler(GpsDataHandler);
+    //Set the callback to invoke when a gps packet arrived
+    void setGpsDataHandler(GpsDataHandler);
 
 private:
-	//Cfg file properties
-	enum Attr : byte {
-		PHONE_NUM
-	};
+    //Cfg file properties
+    enum Attr : byte {
+        PHONE_NUM
+    };
 
-	//Last received packets
-	InfoData info;
-	GpsData gps;
-	TempData temp;
-	LightData light;
+    //Last received packets
+    InfoData info;
+    GpsData gps;
+    TempData temp;
+    LightData light;
 
-	//RX byte buffer
-	ByteBuffer rxBuffer;
+    //RX byte buffer
+    ByteBuffer rxBuffer;
 
-	//Gps callback
-	GpsDataHandler gpsHandler;
+    //Gps callback
+    GpsDataHandler gpsHandler;
 
-	//Parse incoming packets
-	boolean parsePacket(const char* header, byte* buffer, int size);
+    //Parse incoming packets
+    boolean parsePacket(const char* header, byte* buffer, int size);
 };
 
 //Wifi interface instance
