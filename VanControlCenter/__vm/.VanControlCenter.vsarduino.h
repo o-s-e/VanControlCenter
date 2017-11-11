@@ -1,11 +1,11 @@
-/*
-    Editor: http://www.visualmicro.com
-            visual micro and the arduino ide ignore this code during compilation. this code is automatically maintained by visualmicro, manual changes to this file will be overwritten
-            the contents of the Visual Micro sketch sub folder can be deleted prior to publishing a project
-            all non-arduino files created by visual micro and all visual studio project or solution files can be freely deleted and are not required to compile a sketch (do not delete your own code!).
-            note: debugger breakpoints are stored in '.sln' or '.asln' files, knowledge of last uploaded breakpoints is stored in the upload.vmps.xml file. Both files are required to continue a previous debug session without needing to compile and upload again
-
-    Hardware: Arduino Due (Programming Port), Platform=sam, Package=arduino
+/* 
+	Editor: http://www.visualmicro.com
+			visual micro and the arduino ide ignore this code during compilation. this code is automatically maintained by visualmicro, manual changes to this file will be overwritten
+			the contents of the Visual Micro sketch sub folder can be deleted prior to publishing a project
+			all non-arduino files created by visual micro and all visual studio project or solution files can be freely deleted and are not required to compile a sketch (do not delete your own code!).
+			note: debugger breakpoints are stored in '.sln' or '.asln' files, knowledge of last uploaded breakpoints is stored in the upload.vmps.xml file. Both files are required to continue a previous debug session without needing to compile and upload again
+	
+	Hardware: Arduino Due (Programming Port), Platform=sam, Package=arduino
 */
 
 #if defined(_VMICRO_INTELLISENSE)
@@ -40,7 +40,7 @@
 #define __attribute__(noinline)
 
 typedef unsigned char byte;
-extern "C" void __cxa_pure_virtual() { ; }
+extern "C" void __cxa_pure_virtual() {;}
 
 #define __INTPTR_TYPE__ long
 #define __INT32_TYPE__ long
@@ -48,7 +48,7 @@ extern "C" void __cxa_pure_virtual() { ; }
 
 
 #if (defined(ARDUINO_SAM_DUE))
-#include "sam3xa.h"
+	#include "sam3xa.h"
 #endif
 
 #include <Arduino.h>
@@ -66,7 +66,7 @@ Can only be executed in Privileged modes.
 */
 __attribute__((always_inline)) static __INLINE void __enable_irq(void)
 {
-    __ASM volatile ("cpsie i");
+	__ASM volatile ("cpsie i");
 }
 
 
@@ -77,7 +77,7 @@ Can only be executed in Privileged modes.
 */
 __attribute__((always_inline)) static __INLINE void __disable_irq(void)
 {
-    __ASM volatile ("cpsid i");
+	__ASM volatile ("cpsid i");
 }
 
 
@@ -89,10 +89,10 @@ This function returns the content of the Control Register.
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_CONTROL(void)
 {
-    uint32_t result;
+	uint32_t result;
 
-    __ASM volatile ("MRS %0, control" : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, control" : "=r" (result));
+	return(result);
 }
 
 
@@ -104,7 +104,7 @@ This function writes the given value to the Control Register.
 */
 __attribute__((always_inline)) static __INLINE void __set_CONTROL(uint32_t control)
 {
-    __ASM volatile ("MSR control, %0" : : "r" (control));
+	__ASM volatile ("MSR control, %0" : : "r" (control));
 }
 
 
@@ -116,10 +116,10 @@ This function returns the content of the ISPR Register.
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_IPSR(void)
 {
-    uint32_t result;
+	uint32_t result;
 
-    __ASM volatile ("MRS %0, ipsr" : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, ipsr" : "=r" (result));
+	return(result);
 }
 
 
@@ -131,10 +131,10 @@ This function returns the content of the APSR Register.
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_APSR(void)
 {
-    uint32_t result;
+	uint32_t result;
 
-    __ASM volatile ("MRS %0, apsr" : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, apsr" : "=r" (result));
+	return(result);
 }
 
 
@@ -146,10 +146,10 @@ This function returns the content of the xPSR Register.
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_xPSR(void)
 {
-    uint32_t result;
+	uint32_t result;
 
-    __ASM volatile ("MRS %0, xpsr" : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, xpsr" : "=r" (result));
+	return(result);
 }
 
 
@@ -161,10 +161,10 @@ This function returns the current value of the Process Stack Pointer (PSP).
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_PSP(void)
 {
-    register uint32_t result;
+	register uint32_t result;
 
-    __ASM volatile ("MRS %0, psp\n"  : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, psp\n"  : "=r" (result));
+	return(result);
 }
 
 
@@ -176,7 +176,7 @@ This function assigns the given value to the Process Stack Pointer (PSP).
 */
 __attribute__((always_inline)) static __INLINE void __set_PSP(uint32_t topOfProcStack)
 {
-    __ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack));
+	__ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack));
 }
 
 
@@ -188,10 +188,10 @@ This function returns the current value of the Main Stack Pointer (MSP).
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_MSP(void)
 {
-    register uint32_t result;
+	register uint32_t result;
 
-    __ASM volatile ("MRS %0, msp\n" : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, msp\n" : "=r" (result));
+	return(result);
 }
 
 
@@ -203,7 +203,7 @@ This function assigns the given value to the Main Stack Pointer (MSP).
 */
 __attribute__((always_inline)) static __INLINE void __set_MSP(uint32_t topOfMainStack)
 {
-    __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack));
+	__ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack));
 }
 
 
@@ -215,10 +215,10 @@ This function returns the current state of the priority mask bit from the Priori
 */
 __attribute__((always_inline)) static __INLINE uint32_t __get_PRIMASK(void)
 {
-    uint32_t result;
+	uint32_t result;
 
-    __ASM volatile ("MRS %0, primask" : "=r" (result));
-    return(result);
+	__ASM volatile ("MRS %0, primask" : "=r" (result));
+	return(result);
 }
 
 
@@ -230,7 +230,7 @@ This function assigns the given value to the Priority Mask Register.
 */
 __attribute__((always_inline)) static __INLINE void __set_PRIMASK(uint32_t priMask)
 {
-    __ASM volatile ("MSR primask, %0" : : "r" (priMask));
+	__ASM volatile ("MSR primask, %0" : : "r" (priMask));
 }
 
 

@@ -48,7 +48,7 @@ public:
     void onEvent(Genie &genie, genieFrame &evt);
 
     // LCDForm abstract method implementation
-    int getFormIndex() { return 2; }
+    int getFormIndex() { return 4; }
 
 private:
 };

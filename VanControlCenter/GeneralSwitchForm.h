@@ -33,7 +33,7 @@ public:
     void onEvent(Genie& genie, genieFrame& evt);
 
     //TODO index needs to be adapted when the UI was build
-    int getFormIndex() { return 5; }
+    int getFormIndex() { return 2; }
 
 private:
 
