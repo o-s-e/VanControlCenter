@@ -55,7 +55,6 @@ public:
 
     String name;
 
-
 private:
     // CAN packet size
     byte size;
@@ -65,8 +64,6 @@ private:
 
     // CAN packet data type
     DataTypes type;
-
-
 
     // TTL timer (time-to-live), if has not finished the last channel value is
     // still valid

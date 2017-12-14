@@ -32,10 +32,10 @@ void WifiInterfaceClass::update() {
         Log << "buffer size: " << rxBuffer.getSize() << Endl;
         Log << "buffer: " << Hex << Log.array<byte>(rxBuffer.data(), rxBuffer.getSize()) << Endl;
 
-        if (parsePacket(INFO_PACKET, (byte*)&info, sizeof(InfoData))) {
-            if (info.ack == getAck((byte*)&info, sizeof(InfoData) - 1)) {
-                channelsBuffer.setValue(CanID::DATE, (byte*)info.date, sizeof(info.date));
-                channelsBuffer.setValue(CanID::TIME, (byte*)info.time, sizeof(info.time));
+        if (parsePacket(INFO_PACKET, reinterpret_cast<byte*>(&info), sizeof(InfoData))) {
+            if (info.ack == getAck(reinterpret_cast<byte*>(&info), sizeof(InfoData) - 1)) {
+                channelsBuffer.setValue(CanID::DATE, reinterpret_cast<byte*>(info.date), sizeof(info.date));
+                channelsBuffer.setValue(CanID::TIME, reinterpret_cast<byte*>(info.time), sizeof(info.time));
 
                 Log << "parsed info" << Endl;
                 Log << "buffer size: " << rxBuffer.getSize() << Endl;
@@ -43,12 +43,12 @@ void WifiInterfaceClass::update() {
             }
             else {
                 Log.e(WIFI_TAG) << F("INVALID INFO DATA") << Endl;
-                Log.e(WIFI_TAG) << Hex << Log.array<byte>((byte*)&info, sizeof(InfoData)) << Endl;
+                Log.e(WIFI_TAG) << Hex << Log.array<byte>(reinterpret_cast<byte*>(&info), sizeof(InfoData)) << Endl;
             }
         }
 
-        if (parsePacket(GPS_PACKET, (byte*)&gps, sizeof(GpsData))) {
-            if (gps.ack == getAck((byte*)&gps, sizeof(GpsData) - 1)) {
+        if (parsePacket(GPS_PACKET, reinterpret_cast<byte*>(&gps), sizeof(GpsData))) {
+            if (gps.ack == getAck(reinterpret_cast<byte*>(&gps), sizeof(GpsData) - 1)) {
                 channelsBuffer.setValue<double>(CanID::GPS_LATITUDE, gps.latitude);
                 channelsBuffer.setValue<double>(CanID::GPS_LONGITUDE, gps.longitude);
                 channelsBuffer.setValue<double>(CanID::GPS_ALTITUDE, gps.altitude);
@@ -66,12 +66,12 @@ void WifiInterfaceClass::update() {
             }
             else {
                 Log.e(WIFI_TAG) << F("INVALID GPS DATA") << Endl;
-                Log.e(WIFI_TAG) << Hex << Log.array<byte>((byte*)&gps, sizeof(GpsData)) << Endl;
+                Log.e(WIFI_TAG) << Hex << Log.array<byte>(reinterpret_cast<byte*>(&gps), sizeof(GpsData)) << Endl;
             }
         }
 
-        if (parsePacket(TEMP_PACKET, (byte*)&temp, sizeof(TempData))) {
-            if (temp.ack == getAck((byte*)&temp, sizeof(TempData) - 1)) {
+        if (parsePacket(TEMP_PACKET, reinterpret_cast<byte*>(&temp), sizeof(TempData))) {
+            if (temp.ack == getAck(reinterpret_cast<byte*>(&temp), sizeof(TempData) - 1)) {
                 channelsBuffer.setValue<double>(CanID::TEMP, temp.temp);
                 channelsBuffer.setValue<uint8_t>(CanID::HEATER_STATUS, temp.status);
 
@@ -81,12 +81,12 @@ void WifiInterfaceClass::update() {
             }
             else {
                 Log.e(WIFI_TAG) << F("INVALID TEMP DATA") << Endl;
-                Log.e(WIFI_TAG) << Hex << Log.array<byte>((byte*)&temp, sizeof(TempData)) << Endl;
+                Log.e(WIFI_TAG) << Hex << Log.array<byte>(reinterpret_cast<byte*>(&temp), sizeof(TempData)) << Endl;
             }
         }
 
-        if (parsePacket(LIGHT_PACKET, (byte*)&light, sizeof(LightData))) {
-            if (light.ack == getAck((byte*)&light, sizeof(LightData) - 1)) {
+        if (parsePacket(LIGHT_PACKET, reinterpret_cast<byte*>(&light), sizeof(LightData))) {
+            if (light.ack == getAck(reinterpret_cast<byte*>(&light), sizeof(LightData) - 1)) {
                 channelsBuffer.setValue<uint8_t>(CanID::LIGHT_1, light.light1);
                 channelsBuffer.setValue<uint8_t>(CanID::LIGHT_2, light.light2);
                 channelsBuffer.setValue<uint8_t>(CanID::LIGHT_3, light.light3);
@@ -100,7 +100,7 @@ void WifiInterfaceClass::update() {
             }
             else {
                 Log.e(WIFI_TAG) << F("INVALID TEMP DATA") << Endl;
-                Log.e(WIFI_TAG) << Hex << Log.array<byte>((byte*)&temp, sizeof(TempData)) << Endl;
+                Log.e(WIFI_TAG) << Hex << Log.array<byte>(reinterpret_cast<byte*>(&temp), sizeof(TempData)) << Endl;
             }
         }
 
@@ -110,11 +110,10 @@ void WifiInterfaceClass::update() {
 }
 
 boolean WifiInterfaceClass::parsePacket(const char* header, byte* buffer, int size) {
-    int index;
     int headerSize = strlen(header);
 
     if (rxBuffer.getSize() >= size + headerSize) {
-        index = rxBuffer.indexOf(header);
+        int index = rxBuffer.indexOf(header);
         if (index != -1) {
             index += headerSize;
             if (rxBuffer.getSize() - index >= size) {

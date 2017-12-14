@@ -1,15 +1,17 @@
 #include "ChannelsBuffer.h"
 
 void ChannelsBufferClass::init() {
-    Channel* c;
     //Resize the buffer
     int size = channelsConfig.getChannelCount();
     buffer.resize(size);
 
+
     bufferSize = 0;
     //Create the "matrix" to contain byte-array data
+
     for (uint16_t i = 0; i < size; i++) {
-        c = channelsConfig.getChannelByIndex(i);
+
+        Channel * c = channelsConfig.getChannelByIndex(i);
         buffer[i].resize(c->getSize());
         buffer[i].clear();
 
@@ -27,7 +29,7 @@ void ChannelsBufferClass::debug() {
     LOGLN(F("========================================"));
 }
 
-String ChannelsBufferClass::getValueAsString(unsigned short id) {
+String ChannelsBufferClass::getValueAsString(const unsigned short id) {
     //If CFG file was loaded
     if (channelsConfig.isValid()) {
         //Search the channel
@@ -47,7 +49,6 @@ String ChannelsBufferClass::getValueAsString(unsigned short id) {
                 if (c->getSize() <= 4) {
                     return String(buffer[index].as<float>(), 6);
                 }
-
                 return String(buffer[index].as<double>(), 10);
 
             case Channel::INTEGER:
@@ -177,7 +178,7 @@ void ChannelsBufferClass::sendOnStream(UARTClass* stream) {
         c = channelsConfig.getChannelByIndex(i);
         ID = c->getID();
         //Send the can id
-        stream->write((byte*)&ID, sizeof(ID));
+        stream->write(reinterpret_cast<byte*>(&ID), sizeof(ID));
         //Send the data
         stream->write(buffer[i].data(), buffer[i].getCapacity());
     }

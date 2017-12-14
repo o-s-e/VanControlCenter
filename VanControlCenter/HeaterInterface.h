@@ -32,7 +32,6 @@
 #define HT_COOLDOWN_DUR 30000
 
 
-
 class HeaterInterface {
 public:
     // constructor
@@ -63,6 +62,7 @@ private:
 
     // Current Temperature Controller state
     HeaterState state;
+
 
     // TempCtrl state TTL timer
     Timer lastStateUpdate;

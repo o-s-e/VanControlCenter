@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_can_interface_8h" kind="file">
+    <compoundname>CanInterface.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="no">due_can.h</includes>
+    <includes local="no">Timer.h</includes>
+    <includes refid="_channels_buffer_8h" local="yes">ChannelsBuffer.h</includes>
+    <includes refid="_h_w_config_8h" local="yes">HWConfig.h</includes>
+    <includes local="yes">Utils.h</includes>
+    <includedby refid="_can_interface_8cpp" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.cpp</includedby>
+    <includedby refid="_debug_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</includedby>
+    <includedby refid="_heater_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.h</includedby>
+    <includedby refid="_light_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h</includedby>
+    <includedby refid="_data_logger_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.h</includedby>
+    <incdepgraph>
+      <node id="22">
+        <label>Timer.h</label>
+      </node>
+      <node id="19">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h</label>
+        <link refid="CanInterface.h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>BitArray.h</label>
+      </node>
+      <node id="21">
+        <label>due_can.h</label>
+      </node>
+      <node id="31">
+        <label>HWConfig.h</label>
+        <link refid="_h_w_config_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="23">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>WProgram.h</label>
+      </node>
+      <node id="28">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>arduino.h</label>
+      </node>
+      <node id="26">
+        <label>Vector.h</label>
+      </node>
+      <node id="27">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Utils.h</label>
+      </node>
+      <node id="29">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="42">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.cpp</label>
+        <link refid="_data_logger_8cpp"/>
+      </node>
+      <node id="39">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsConfig.cpp</label>
+        <link refid="_channels_config_8cpp"/>
+      </node>
+      <node id="55">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h</label>
+        <link refid="_light_interface_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.cpp</label>
+        <link refid="_debug_form_8cpp"/>
+      </node>
+      <node id="54">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.cpp</label>
+        <link refid="_heater_interface_8cpp"/>
+      </node>
+      <node id="49">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp</label>
+        <link refid="_console_form_8cpp"/>
+      </node>
+      <node id="34">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h</label>
+        <link refid="CanInterface.h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp</label>
+        <link refid="_temperature_controller_form_8cpp"/>
+      </node>
+      <node id="43">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h</label>
+        <link refid="_wifi_interface_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.h</label>
+        <link refid="_data_logger_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp</label>
+        <link refid="_light_interface_8cpp"/>
+      </node>
+      <node id="53">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.h</label>
+        <link refid="_heater_interface_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.cpp</label>
+        <link refid="_can_interface_8cpp"/>
+      </node>
+      <node id="36">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.cpp</label>
+        <link refid="_wifi_interface_8cpp"/>
+      </node>
+      <node id="38">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h</label>
+        <link refid="_console_form_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.cpp</label>
+        <link refid="_display_interface_8cpp"/>
+      </node>
+      <node id="48">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp</label>
+        <link refid="_light_controller_form_8cpp"/>
+      </node>
+      <node id="50">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp</label>
+        <link refid="_general_switch_form_8cpp"/>
+      </node>
+      <node id="37">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</label>
+        <link refid="_display_interface_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_can_i_d" prot="public">CanID</innerclass>
+    <innerclass refid="class_can_interface_class" prot="public">CanInterfaceClass</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_can_interface_8h_1a4791c142b857f44449cc8ad8d22ef045" prot="public" static="no">
+        <name>CAN_TAG</name>
+        <initializer>F(&quot;CAN&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="55" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1aeec96952fcedda6c0489e650cfda3b23" compoundref="_can_interface_8cpp" startline="3" endline="11">CanInterfaceClass::init</referencedby>
+        <referencedby refid="class_can_interface_class_1ad2b930d86db497f5f18003ef43693c79" compoundref="_can_interface_8cpp" startline="13" endline="37">CanInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1a4173ee09cd4742cb333a1439c452c80e" prot="public" static="no">
+        <name>CAD_MSG_HEADER</name>
+        <initializer>&quot;CAD&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="60" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1a2a90f838958a2537f1ce31b8db1a1e84" compoundref="_can_interface_8cpp" startline="86" endline="94">CanInterfaceClass::writePacketOnDebugSerial</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1a2ab392c10e3d12dbbebf941cd7d34b8e" prot="public" static="no">
+        <name>CAN_MSG_HEADER</name>
+        <initializer>&quot;CAN&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="63" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1a8672ec381d05c3bd5a929a14b89fab8e" compoundref="_can_interface_8cpp" startline="105" endline="133">CanInterfaceClass::parseSerialDebugCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1a600f52ce657fa6599dcf3c34780ce02a" prot="public" static="no">
+        <name>DEBUG_RX_BUFFER_SIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="66" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1aeec96952fcedda6c0489e650cfda3b23" compoundref="_can_interface_8cpp" startline="3" endline="11">CanInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1a22b8360628a7f40d45da8c983b3e04c1" prot="public" static="no">
+        <name>PACKET_DELAY</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="70" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1a133730c2c7b0f1817ec1b87b4b5eef36" compoundref="_can_interface_8cpp" startline="136" endline="188">CanInterfaceClass::streamOverCan</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1ab968c2a7a3938ef37739457da7d32a43" prot="public" static="no">
+        <name>CMD_TIMEOUT</name>
+        <initializer>3000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="73" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1a133730c2c7b0f1817ec1b87b4b5eef36" compoundref="_can_interface_8cpp" startline="136" endline="188">CanInterfaceClass::streamOverCan</referencedby>
+        <referencedby refid="class_can_interface_class_1aa3ea6188d1c5fe0d6a6008a4040a5bb7" compoundref="_can_interface_8cpp" startline="190" endline="241">CanInterfaceClass::waitForStreamOverCan</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1aa47312688066211e9db14aa29b0dd6db" prot="public" static="no">
+        <name>ERROR_CMD</name>
+        <initializer>&quot;ERR&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="76" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1a133730c2c7b0f1817ec1b87b4b5eef36" compoundref="_can_interface_8cpp" startline="136" endline="188">CanInterfaceClass::streamOverCan</referencedby>
+        <referencedby refid="class_can_interface_class_1aa3ea6188d1c5fe0d6a6008a4040a5bb7" compoundref="_can_interface_8cpp" startline="190" endline="241">CanInterfaceClass::waitForStreamOverCan</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_can_interface_8h_1a31755b1af9a4edbf33591950818b98e9" prot="public" static="no">
+        <name>OK_CMD</name>
+        <initializer>&quot;OK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="79" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_can_interface_class_1a133730c2c7b0f1817ec1b87b4b5eef36" compoundref="_can_interface_8cpp" startline="136" endline="188">CanInterfaceClass::streamOverCan</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_can_interface_8h_1a2e305d18f97737591dafd994465d803a" prot="public" static="no">
+        <name>CanStreamResult</name>
+        <enumvalue id="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa1230137cb1670af41522e68d576326d9" prot="public">
+          <name>SUCCES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa2fd6f336d08340583bd620a7f5694c90" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_can_interface_8h_1a2e305d18f97737591dafd994465d803aaad9dee005a3d0f9137b2ac1e0869f89b" prot="public">
+          <name>TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa7b319bfadf737063395ca93ea2c0671f" prot="public">
+          <name>WRONG_ACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa781ad2788df9e25c59a70894c7832096" prot="public">
+          <name>ABORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="82" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="82" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_can_interface_8h_1ab755a81c4dee837a651cbf4c979788a3" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* CanEventHandler)(CAN_FRAME &amp;)</definition>
+        <argsstring>)(CAN_FRAME &amp;)</argsstring>
+        <name>CanEventHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="91" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_can_interface_8h_1a5b68dbdb3873451ccc4f317e655e074c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_can_interface_class" kindref="compound">CanInterfaceClass</ref></type>
+        <definition>CanInterfaceClass canInterface</definition>
+        <argsstring></argsstring>
+        <name>canInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="150" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.cpp" bodystart="243" bodyend="-1"/>
+        <referencedby refid="class_debug_form_class_1a87c5b140a08a08ee3d338a6cfad1c1f8" compoundref="_debug_form_8cpp" startline="17" endline="33">DebugFormClass::onEvent</referencedby>
+        <referencedby refid="class_can_interface_class_1a133730c2c7b0f1817ec1b87b4b5eef36" compoundref="_can_interface_8cpp" startline="136" endline="188">CanInterfaceClass::streamOverCan</referencedby>
+        <referencedby refid="class_can_interface_class_1aa3ea6188d1c5fe0d6a6008a4040a5bb7" compoundref="_can_interface_8cpp" startline="190" endline="241">CanInterfaceClass::waitForStreamOverCan</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>CanInterface.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CANINTERFACE_h</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_CANINTERFACE_h</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ARDUINO)<sp/>&amp;&amp;<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#include<sp/>&lt;due_can.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Timer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_channels_buffer_8h" kindref="compound">ChannelsBuffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_h_w_config_8h" kindref="compound">HWConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//Class<sp/>containing<sp/>an<sp/>enum<sp/>with<sp/>all<sp/>the<sp/>CanID<sp/>constants<sp/>hard-coded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_can_i_d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_can_i_d" kindref="compound">CanID</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" kindref="member">IDs</ref><sp/>:<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//BMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Wifi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ad733f52e6e19dc27be87f8a276ecb04a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ad733f52e6e19dc27be87f8a276ecb04a" kindref="member">DATE</ref><sp/>=<sp/>0x60,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Date<sp/>dd/mm/yy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab4e2f4aa84bfbc1145753095bd64bb9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab4e2f4aa84bfbc1145753095bd64bb9e" kindref="member">TIME</ref><sp/>=<sp/>0x61,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Time<sp/>hh:MM:ss</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab7872da7394170724a174551c368e926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab7872da7394170724a174551c368e926" kindref="member">GPS_LATITUDE</ref><sp/>=<sp/>0x62,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Latitude</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aca65144fefa5cc38d1f4f8dba2aa202d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aca65144fefa5cc38d1f4f8dba2aa202d" kindref="member">GPS_LONGITUDE</ref><sp/>=<sp/>0x63,<sp/><sp/><sp/></highlight><highlight class="comment">//Longitude</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab6bfc090c0532522be5fff43d67e55e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab6bfc090c0532522be5fff43d67e55e2" kindref="member">GPS_ALTITUDE</ref><sp/>=<sp/>0x64,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Altitude</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a99cb4f113fc0e7ea94851e3eec5f0e13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a99cb4f113fc0e7ea94851e3eec5f0e13" kindref="member">GPS_ACCURACY</ref><sp/>=<sp/>0x65,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Accuracy<sp/>radius</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7bf72b6a674ebc5826e8a506d4641d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7bf72b6a674ebc5826e8a506d4641d5c" kindref="member">GPS_SPEED</ref><sp/>=<sp/>0x66,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//GPS<sp/>valid<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae7e0399b8efb7d0a5ed5fb9b8a13e6e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae7e0399b8efb7d0a5ed5fb9b8a13e6e7" kindref="member">TEMP</ref><sp/>=<sp/>0x71,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Temperature<sp/>Sensor<sp/>Temp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae4d83643bb8127a9a3e0e038abea1c3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae4d83643bb8127a9a3e0e038abea1c3a" kindref="member">HUM</ref><sp/>=<sp/>0x72,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Temperature<sp/>Sensor<sp/>Humidity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4194466e2d3e64363ac275c97ebda06d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4194466e2d3e64363ac275c97ebda06d" kindref="member">HEATER_STATUS</ref><sp/>=<sp/>0x73,<sp/></highlight><highlight class="comment">//<sp/>Heater<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" kindref="member">LIGHT_1</ref><sp/>=<sp/>0x74,</highlight></codeline>
+<codeline lineno="42" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" kindref="member">LIGHT_2</ref><sp/>=<sp/>0x75,</highlight></codeline>
+<codeline lineno="43" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" kindref="member">LIGHT_3</ref><sp/>=<sp/>0x76,</highlight></codeline>
+<codeline lineno="44" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" kindref="member">LIGHT_4</ref><sp/>=<sp/>0x77,</highlight></codeline>
+<codeline lineno="45" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" kindref="member">LIGHT_5</ref><sp/>=<sp/>0x78,</highlight></codeline>
+<codeline lineno="46" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" kindref="member">LIGHT_6</ref><sp/>=<sp/>0x79,</highlight></codeline>
+<codeline lineno="47" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a477caa65da8810f5a3c641f3911ec107" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a477caa65da8810f5a3c641f3911ec107" kindref="member">SET_TEMP</ref><sp/>=<sp/>0x80,</highlight></codeline>
+<codeline lineno="48" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4cc82feb98bc458617fc2220b4254477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4cc82feb98bc458617fc2220b4254477" kindref="member">SW_WATER</ref><sp/>=<sp/>0x81,</highlight></codeline>
+<codeline lineno="49" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a25166c12ebab7350508337700fcd0ded" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a25166c12ebab7350508337700fcd0ded" kindref="member">SW_1</ref><sp/>=<sp/>0x82,</highlight></codeline>
+<codeline lineno="50" refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a95e5613c7c02bb49ee05f56536694baa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_h_s_v" kindref="compound">HSV</ref><sp/>=<sp/>0x83</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//Logget<sp/>tag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_can_interface_8h_1a4791c142b857f44449cc8ad8d22ef045" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_TAG<sp/><sp/><sp/><sp/><sp/>F(&quot;CAN&quot;)</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>CAN_SERIAL_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>analyzer<sp/>send<sp/>packet<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_can_interface_8h_1a4173ee09cd4742cb333a1439c452c80e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAD_MSG_HEADER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;CAD&quot;<sp/><sp/><sp/>//CAN<sp/>Analyzer<sp/>Data</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>analyzer<sp/>received<sp/>packet<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_can_interface_8h_1a2ab392c10e3d12dbbebf941cd7d34b8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_MSG_HEADER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;CAN&quot;<sp/><sp/><sp/>//SEND<sp/>+<sp/>CHANNEL<sp/>+<sp/>SIZE<sp/>+<sp/>DATA</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//RX<sp/>buffer<sp/>size<sp/>for<sp/>incoming<sp/>can<sp/>analyzer<sp/>packets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="_can_interface_8h_1a600f52ce657fa6599dcf3c34780ce02a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEBUG_RX_BUFFER_SIZE<sp/><sp/><sp/><sp/>32</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>stream<sp/>packet<sp/>delay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_can_interface_8h_1a22b8360628a7f40d45da8c983b3e04c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PACKET_DELAY<sp/><sp/><sp/><sp/>50</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>stream<sp/>wait<sp/>for<sp/>a<sp/>response<sp/>timeout</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="_can_interface_8h_1ab968c2a7a3938ef37739457da7d32a43" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_TIMEOUT<sp/><sp/><sp/><sp/><sp/>3000</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>stream<sp/>error<sp/>msg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="_can_interface_8h_1aa47312688066211e9db14aa29b0dd6db" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CMD<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ERR&quot;</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>stream<sp/>successful<sp/>msg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_can_interface_8h_1a31755b1af9a4edbf33591950818b98e9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OK_CMD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;OK&quot;</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//Enum<sp/>containing<sp/>the<sp/>possible<sp/>results<sp/>of<sp/>a<sp/>can<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803a" kindref="member">CanStreamResult</ref><sp/>{</highlight></codeline>
+<codeline lineno="83" refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa1230137cb1670af41522e68d576326d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa1230137cb1670af41522e68d576326d9" kindref="member">SUCCES</ref>,</highlight></codeline>
+<codeline lineno="84" refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa2fd6f336d08340583bd620a7f5694c90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref>,</highlight></codeline>
+<codeline lineno="85" refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aaad9dee005a3d0f9137b2ac1e0869f89b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aaad9dee005a3d0f9137b2ac1e0869f89b" kindref="member">TIMEOUT</ref>,</highlight></codeline>
+<codeline lineno="86" refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa7b319bfadf737063395ca93ea2c0671f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa7b319bfadf737063395ca93ea2c0671f" kindref="member">WRONG_ACK</ref>,</highlight></codeline>
+<codeline lineno="87" refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa781ad2788df9e25c59a70894c7832096" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803aa781ad2788df9e25c59a70894c7832096" kindref="member">ABORT</ref></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//Received<sp/>can<sp/>packet<sp/>callback<sp/>typedef</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="_can_interface_8h_1ab755a81c4dee837a651cbf4c979788a3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*<ref refid="_can_interface_8h_1ab755a81c4dee837a651cbf4c979788a3" kindref="member">CanEventHandler</ref>)(CAN_FRAME&amp;);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_can_interface_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_can_interface_class" kindref="compound">CanInterfaceClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Function<sp/>to<sp/>call<sp/>in<sp/>the<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1aeec96952fcedda6c0489e650cfda3b23" kindref="member">init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>canSpeed,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>minID<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>maxID<sp/>=<sp/>2048);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Fucntion<sp/>to<sp/>call<sp/>in<sp/>the<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1ad2b930d86db497f5f18003ef43693c79" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>function<sp/>to<sp/>call<sp/>when<sp/>a<sp/>new<sp/>packet<sp/>is<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1a8842091ea8a0c7c218d12e58e79e5795" kindref="member">setCanEventCallBack</ref>(<ref refid="_can_interface_8h_1ab755a81c4dee837a651cbf4c979788a3" kindref="member">CanEventHandler</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Remove<sp/>the<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1acce9206ac1d4435ce38e51ffce325804" kindref="member">removeCanEventCallBack</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>the<sp/>number<sp/>of<sp/>packets<sp/>to<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1ad5d32042f9b0d138f0375ef26c6df5ad" kindref="member">available</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>the<sp/>next<sp/>received<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>CAN_FRAME&amp;<sp/><ref refid="class_can_interface_class_1a6123b970f66a6682cc99ad0a7d35f764" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Send<sp/>a<sp/>packet<sp/>through<sp/>the<sp/>can<sp/>bus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1ab15e3824e27c9402e63754d0c94f04ff" kindref="member">send</ref>(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" kindref="member">CanID::IDs</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>byte*<sp/>data,<sp/>byte<sp/>size);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Stream<sp/>a<sp/>byte<sp/>array<sp/>over<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803a" kindref="member">CanStreamResult</ref><sp/><ref refid="class_can_interface_class_1a133730c2c7b0f1817ec1b87b4b5eef36" kindref="member">streamOverCan</ref>(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" kindref="member">CanID::IDs</ref><sp/>canID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>openStreamCmd,<sp/>byte*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Wait<sp/>for<sp/>a<sp/>byte<sp/>array<sp/>stream<sp/>over<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1a2e305d18f97737591dafd994465d803a" kindref="member">CanStreamResult</ref><sp/><ref refid="class_can_interface_class_1aa3ea6188d1c5fe0d6a6008a4040a5bb7" kindref="member">waitForStreamOverCan</ref>(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" kindref="member">CanID::IDs</ref><sp/>canID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>openStreamCmd,<sp/>byte*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>expectedBytes);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>debug<sp/>serial<sp/>port<sp/>for<sp/>the<sp/>can<sp/>analyzer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1a0322209e5fcb05c254dd0227cf2336ab" kindref="member">setCanDebugSerial</ref>(Stream*<sp/><ref refid="class_can_interface_class_1af5e839d4d2b629d3cb8cc2d140be5a2a" kindref="member">debugSerial</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug<sp/>serial<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_can_interface_class_1af5e839d4d2b629d3cb8cc2d140be5a2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Stream*<sp/><ref refid="class_can_interface_class_1af5e839d4d2b629d3cb8cc2d140be5a2a" kindref="member">debugSerial</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Can<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_can_interface_class_1a6e9543c67a5fda47e80ae7de45b24378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CAN_FRAME<sp/><ref refid="class_can_interface_class_1a6e9543c67a5fda47e80ae7de45b24378" kindref="member">frame</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Can<sp/>analyzer<sp/>receive<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_can_interface_class_1a9f2ad4e36dddd34c4f38ea820fb2ec97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ByteBuffer<sp/><ref refid="class_can_interface_class_1a9f2ad4e36dddd34c4f38ea820fb2ec97" kindref="member">rxBuffer</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Packet<sp/>received<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_can_interface_class_1a682801fe676f0aa2c73d324c89379ae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_interface_8h_1ab755a81c4dee837a651cbf4c979788a3" kindref="member">CanEventHandler</ref><sp/><ref refid="class_can_interface_class_1a682801fe676f0aa2c73d324c89379ae8" kindref="member">canEvent</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Send<sp/>a<sp/>packet<sp/>to<sp/>the<sp/>can<sp/>analyzer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1a2a90f838958a2537f1ce31b8db1a1e84" kindref="member">writePacketOnDebugSerial</ref>(CAN_FRAME&amp;<sp/>packet);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Read<sp/>all<sp/>the<sp/>incoming<sp/>packets<sp/>from<sp/>the<sp/>can<sp/>analyzer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1a705cac6a31802cd70c8b4e700d873bd1" kindref="member">readFromDebugSerial</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Parse<sp/>the<sp/>incoming<sp/>packets<sp/>from<sp/>the<sp/>can<sp/>analyzer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class_1a8672ec381d05c3bd5a929a14b89fab8e" kindref="member">parseSerialDebugCmd</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//Can<sp/>bus<sp/>interface<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_can_interface_class" kindref="compound">CanInterfaceClass</ref><sp/><ref refid="_can_interface_8h_1a5b68dbdb3873451ccc4f317e655e074c" kindref="member">canInterface</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h"/>
+  </compounddef>
+</doxygen>

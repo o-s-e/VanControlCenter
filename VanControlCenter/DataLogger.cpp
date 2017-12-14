@@ -1,12 +1,12 @@
 #include "DataLogger.h"
 
 void DataLoggerClass::init() {
+
     Configuration cfg;
     //Load cfg file
+
     if (cfg.loadFromFile(DL_CFG_FILE) == FILE_VALID) {
-        //Update cfg
         updateCfg(cfg);
-        //Create new log file
         createNewLogFile();
     }
     else {
@@ -15,9 +15,7 @@ void DataLoggerClass::init() {
         Log.e(DL_TAG) << F("No valid Datalogger cfg file found") << Endl;
 
         if (cfg.loadFromBackup() == FILE_VALID) {
-            //Update cfg
             updateCfg(cfg);
-            //Create new log file
             createNewLogFile();
         }
         else {
@@ -35,24 +33,19 @@ void DataLoggerClass::init() {
             logTimer.setDuration(1000 / DEFAULT_SAMPLE_PER_S).start();
         }
     }
-
-
 }
-
-
 
 
 void DataLoggerClass::update() {
     //If it's time to log!
     if (channelsConfig.isValid() && logTimer.hasFinished()) {
         if (SD.exists(logFileName)) {
-            Channel* channel;
             //Open file
             File logFile = SD.open(logFileName, O_WRITE);
             //Print them all
             if (logFile) {
                 for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
-                    channel = channelsConfig.getChannelByIndex(i);
+                    Channel * channel = channelsConfig.getChannelByIndex(i);
                     if (channelsBuffer.isValueUpdated(channel->getID())) {
                         logFile.print(
                             channelsBuffer.getValueAsString(channel->getID())
@@ -67,7 +60,7 @@ void DataLoggerClass::update() {
                 logFile.println();
                 logFile.close();
 
-                Log.i(DL_TAG) << F("Logged") << Endl;
+                //Log.i(DL_TAG) << F("Logged") << Endl;
             }
             else {
                 Log.e(DL_TAG) << F("Error opening log file!") << Endl;
@@ -96,11 +89,11 @@ void DataLoggerClass::updateCfg(Configuration& cfg) {
 }
 
 void DataLoggerClass::createNewLogFile() {
-    //Print data header on the file
-    Channel* c;
     File logFile = SD.open(logFileName, O_WRITE | O_CREAT);
+
     //Check if the file is opened correctly
     while (!logFile) {
+
         consoleForm.println(F("Error creating log file! Trying again..."));
         Log.e(DL_TAG) << F("Error creating log file! Trying again...") << Endl;
 
@@ -109,7 +102,7 @@ void DataLoggerClass::createNewLogFile() {
     }
 
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
-        c = channelsConfig.getChannelByIndex(i);
+        Channel * c = channelsConfig.getChannelByIndex(i);
         logFile.print(c->getName());
         logFile.print(F(" (0x"));
         logFile.print(c->getID(), HEX);

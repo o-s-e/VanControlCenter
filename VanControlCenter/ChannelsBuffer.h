@@ -96,7 +96,7 @@ public:
     //T setValue. Changed to return void.
     void setValue(unsigned short id, T value)
     {
-        setValue(id, (byte *)&value, sizeof(T));
+        setValue(id, reinterpret_cast<byte *>(&value), sizeof(T));
     }
 
     //Send all buffer data on a serial port in the format	ID(2 byte) Data(n byte)

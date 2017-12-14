@@ -31,10 +31,10 @@
 class ConsoleFormClass : public LCDForm {
 public:
     // LCDForm abstract method implementation
-    void init(Genie &genie);
+    void init(Genie &genie) override;
 
     // LCDForm abstract method implementation
-    void update(Genie &genie);
+    void update(Genie &genie) override;
 
     // Function to print on the console text widget
     void print(String str);
@@ -46,7 +46,7 @@ public:
     void clear();
 
     // LCDForm abstract method implementation
-    int getFormIndex() { return 0; }
+    int getFormIndex() override { return 0; }
 
 private:
     // Genie instance pointer

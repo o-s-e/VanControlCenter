@@ -101,7 +101,7 @@ void ShellClass::channelListCmd(String& params) {
 
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
         c = channelsConfig.getChannelByIndex(i);
-        Log.i(SHELL_TAG) << F("0x") << Hex << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << (char)c->getDataType() << Endl;
+        Log.i(SHELL_TAG) << F("0x") << Hex << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << static_cast<char>(c->getDataType()) << Endl;
     }
 }
 

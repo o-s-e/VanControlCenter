@@ -2,10 +2,12 @@
 #include "ConsoleForm.h"
 
 boolean ChannelsConfigClass::init() {
+    Log << F("Load channels.cfg") << Endl;
     Channel *c;
     Configuration cfg;
     // Load cfg file
     if (cfg.loadFromFile(CHANNELS_CFG_FILE) == FILE_VALID) {
+        Log << F("Channels.cfg is valid") << Endl;
         // Resize channel vector
         channels.resize(cfg.getPropertyCount() / Channel::ATTR_COUNT);
         // Load cfg data

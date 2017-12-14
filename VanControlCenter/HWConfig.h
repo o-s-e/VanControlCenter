@@ -9,8 +9,6 @@
 
 #define DEBUGVAL
 
-
-
 // loop
 #define RUN_LED 6
 
@@ -26,7 +24,7 @@
 #define WIFI_RST_PIN 34
 
 // WDT
-#define WDT_TIMEOUT 10000
+#define WDT_TIMEOUT 30000
 
 // Log
 #define LOG_SERIAL Serial

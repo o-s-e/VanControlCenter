@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_h_s_v" kind="struct" prot="public">
+    <compoundname>HSV</compoundname>
+    <includes refid="_light_interface_8h" local="no">LightInterface.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_s_v_1ada777d19bc61b99f4724c8f812432a4b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSV::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="35" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_s_v_1a4e5c5ec8931afcd9dde4dc3a91bd2495" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSV::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="36" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_s_v_1ab71dd1ebe22508398b5ab3c049b85592" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSV::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="37" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="34" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="34" bodyend="38"/>
+    <listofallmembers>
+      <member refid="struct_h_s_v_1ada777d19bc61b99f4724c8f812432a4b" prot="public" virt="non-virtual"><scope>HSV</scope><name>h</name></member>
+      <member refid="struct_h_s_v_1a4e5c5ec8931afcd9dde4dc3a91bd2495" prot="public" virt="non-virtual"><scope>HSV</scope><name>s</name></member>
+      <member refid="struct_h_s_v_1ab71dd1ebe22508398b5ab3c049b85592" prot="public" virt="non-virtual"><scope>HSV</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_gps_data" kind="struct" prot="public">
+    <compoundname>GpsData</compoundname>
+    <includes refid="_wifi_interface_8h" local="no">WifiInterface.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_gps_data_1a1d1efc54d558d3050540c20f1b2f44e4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GpsData::latitude</definition>
+        <argsstring></argsstring>
+        <name>latitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="49" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_gps_data_1a9a3bdf9fc981bff7ac9c65c0107c4b3c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GpsData::longitude</definition>
+        <argsstring></argsstring>
+        <name>longitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="50" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_gps_data_1aac07b46d95442debb8cfa285dcdaf101" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GpsData::altitude</definition>
+        <argsstring></argsstring>
+        <name>altitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="51" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_gps_data_1a47032b74af20d6bb1eaef3489eefcc43" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GpsData::accuracy</definition>
+        <argsstring></argsstring>
+        <name>accuracy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="52" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_gps_data_1aaa1f5b3517e6c4e9e5d0ca2a4dacbc33" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GpsData::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="53" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_gps_data_1ab84f41386581ec5a372dfd77f07da553" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte GpsData::ack</definition>
+        <argsstring></argsstring>
+        <name>ack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="54" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="48" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="48" bodyend="55"/>
+    <listofallmembers>
+      <member refid="struct_gps_data_1a47032b74af20d6bb1eaef3489eefcc43" prot="public" virt="non-virtual"><scope>GpsData</scope><name>accuracy</name></member>
+      <member refid="struct_gps_data_1ab84f41386581ec5a372dfd77f07da553" prot="public" virt="non-virtual"><scope>GpsData</scope><name>ack</name></member>
+      <member refid="struct_gps_data_1aac07b46d95442debb8cfa285dcdaf101" prot="public" virt="non-virtual"><scope>GpsData</scope><name>altitude</name></member>
+      <member refid="struct_gps_data_1a1d1efc54d558d3050540c20f1b2f44e4" prot="public" virt="non-virtual"><scope>GpsData</scope><name>latitude</name></member>
+      <member refid="struct_gps_data_1a9a3bdf9fc981bff7ac9c65c0107c4b3c" prot="public" virt="non-virtual"><scope>GpsData</scope><name>longitude</name></member>
+      <member refid="struct_gps_data_1aaa1f5b3517e6c4e9e5d0ca2a4dacbc33" prot="public" virt="non-virtual"><scope>GpsData</scope><name>speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

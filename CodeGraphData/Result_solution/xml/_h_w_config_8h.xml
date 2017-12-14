@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_h_w_config_8h" kind="file">
+    <compoundname>HWConfig.h</compoundname>
+    <includes local="yes">arduino.h</includes>
+    <includedby refid="_can_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h</includedby>
+    <includedby refid="_debug_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</includedby>
+    <includedby refid="_heater_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.h</includedby>
+    <includedby refid="_light_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h</includedby>
+    <includedby refid="_display_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</includedby>
+    <includedby refid="_wifi_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h</includedby>
+    <incdepgraph>
+      <node id="612">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h</label>
+        <link refid="HWConfig.h"/>
+        <childnode refid="613" relation="include">
+        </childnode>
+      </node>
+      <node id="613">
+        <label>arduino.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="623">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.cpp</label>
+        <link refid="_data_logger_8cpp"/>
+      </node>
+      <node id="620">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsConfig.cpp</label>
+        <link refid="_channels_config_8cpp"/>
+      </node>
+      <node id="636">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h</label>
+        <link refid="_light_interface_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.cpp</label>
+        <link refid="_debug_form_8cpp"/>
+      </node>
+      <node id="635">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.cpp</label>
+        <link refid="_heater_interface_8cpp"/>
+      </node>
+      <node id="630">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+      </node>
+      <node id="621">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp</label>
+        <link refid="_console_form_8cpp"/>
+      </node>
+      <node id="615">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h</label>
+        <link refid="_can_interface_8h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+      <node id="627">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp</label>
+        <link refid="_temperature_controller_form_8cpp"/>
+      </node>
+      <node id="624">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h</label>
+        <link refid="_wifi_interface_8h"/>
+        <childnode refid="625" relation="include">
+        </childnode>
+      </node>
+      <node id="622">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.h</label>
+        <link refid="_data_logger_8h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="637">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp</label>
+        <link refid="_light_interface_8cpp"/>
+      </node>
+      <node id="614">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h</label>
+        <link refid="HWConfig.h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+      </node>
+      <node id="634">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.h</label>
+        <link refid="_heater_interface_8h"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.cpp</label>
+        <link refid="_can_interface_8cpp"/>
+      </node>
+      <node id="617">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+      </node>
+      <node id="626">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+      <node id="628">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.cpp</label>
+        <link refid="_wifi_interface_8cpp"/>
+      </node>
+      <node id="619">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h</label>
+        <link refid="_console_form_8h"/>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+      </node>
+      <node id="632">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.cpp</label>
+        <link refid="_display_interface_8cpp"/>
+      </node>
+      <node id="629">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp</label>
+        <link refid="_light_controller_form_8cpp"/>
+      </node>
+      <node id="631">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp</label>
+        <link refid="_general_switch_form_8cpp"/>
+      </node>
+      <node id="618">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</label>
+        <link refid="_display_interface_8h"/>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_h_w_config_8h_1ae3194e7da2cdd6aaaea261e66cf6b08f" prot="public" static="no">
+        <name>DEBUGVAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contain all the hardware definitions </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="10" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a73a4151d785c1d1661c4db083eb449b9" prot="public" static="no">
+        <name>RUN_LED</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="15" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" prot="public" static="no">
+        <name>HT_GAS_PIN</name>
+        <initializer>24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="18" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" compoundref="_heater_interface_8cpp" startline="3" endline="18">HeaterInterface::init</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" prot="public" static="no">
+        <name>HT_VENT_PIN</name>
+        <initializer>26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="19" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" compoundref="_heater_interface_8cpp" startline="3" endline="18">HeaterInterface::init</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1aa1f2d22e5ac09daf65e6c2d95562cb74" prot="public" static="no">
+        <name>HT_INPUT_PIN</name>
+        <initializer>28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="20" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" prot="public" static="no">
+        <name>HT_STATE_LED</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="21" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" compoundref="_heater_interface_8cpp" startline="3" endline="18">HeaterInterface::init</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1ad447633a1cbb7747e552e5f8a2de90c4" prot="public" static="no">
+        <name>WIFI_SERIAL</name>
+        <initializer>Serial2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="24" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_debug_form_class_1a87c5b140a08a08ee3d338a6cfad1c1f8" compoundref="_debug_form_8cpp" startline="17" endline="33">DebugFormClass::onEvent</referencedby>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1af69c24e03403f24b1c481cb3d2edf6b9" prot="public" static="no">
+        <name>WIFI_SERIAL_BAUD</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="25" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1acf8fac8bf5e827dd9846dd575bead9ea" prot="public" static="no">
+        <name>WIFI_RST_PIN</name>
+        <initializer>34</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="26" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1a591ff208573c3169621e2e6223fe24b1" compoundref="_wifi_interface_8cpp" startline="3" endline="15">WifiInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1aa7d19da927c561c5df4c2647977cca06" prot="public" static="no">
+        <name>WDT_TIMEOUT</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="29" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1ab7b4fdce7193e5c63c03d3a682716817" prot="public" static="no">
+        <name>LOG_SERIAL</name>
+        <initializer>Serial</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="32" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a5bc8d85f37b73c2b5095cff545ab5637" prot="public" static="no">
+        <name>LOG_SERIAL_BAUD</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="33" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1ad19e03bd4579a143b390c5157f37994d" prot="public" static="no">
+        <name>LCD_SERIAL</name>
+        <initializer>Serial1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="36" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a8ce3662cbf94122b85b52c56c5892c7d" prot="public" static="no">
+        <name>LCD_SERIAL_BAUD</name>
+        <initializer>200000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="37" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a68cca568baa8832cfec02df46e87c90c" prot="public" static="no">
+        <name>LCD_RESET_PIN</name>
+        <initializer>36</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="38" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1abefe9d4aaae664bb8b33d947b3f3ace6" prot="public" static="no">
+        <name>CAN_DEBUG_SERIAL</name>
+        <initializer>SerialUSB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="41" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_debug_form_class_1a87c5b140a08a08ee3d338a6cfad1c1f8" compoundref="_debug_form_8cpp" startline="17" endline="33">DebugFormClass::onEvent</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1aeea370bb8b761795d7bcc23afc44cd5f" prot="public" static="no">
+        <name>CAN_SERIAL_BAUD</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="42" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_debug_form_class_1a87c5b140a08a08ee3d338a6cfad1c1f8" compoundref="_debug_form_8cpp" startline="17" endline="33">DebugFormClass::onEvent</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a690feeefaa683ef114b219259085569c" prot="public" static="no">
+        <name>CAN_SPEED</name>
+        <initializer>CAN_BPS_125K</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="43" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a330afe7974c5b98f51ee888892c7d7cf" prot="public" static="no">
+        <name>SD_SS_PIN</name>
+        <initializer>23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="45" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1aa039288455af8a3812a35aa1e7b903e4" prot="public" static="no">
+        <name>RGB_RED</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="49" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1ab6c97468034c02fe204fd37036d9be15" prot="public" static="no">
+        <name>RGB_GREEN</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="50" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a0eff802f1ca228046476209dc01c76ad" prot="public" static="no">
+        <name>RGB_BLUE</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="51" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1ac0165a0a5be101747a734f0991fd0a35" prot="public" static="no">
+        <name>WHITE_LED</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="52" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1af0a2a51e49e6075257fc5203137531d9" prot="public" static="no">
+        <name>AWNING_LED</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="53" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_h_w_config_8h_1a9f71035fce187a3785d40b38ff138e9c" prot="public" static="no">
+        <name>WORKTOP_LED</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" line="54" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_HWCONFIG_h</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_HWCONFIG_h</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_h_w_config_8h_1ae3194e7da2cdd6aaaea261e66cf6b08f" refkind="member"><highlight class="preprocessor">#define<sp/>DEBUGVAL</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_h_w_config_8h_1a73a4151d785c1d1661c4db083eb449b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RUN_LED<sp/>6</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Heater</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HT_GAS_PIN<sp/>24</highlight></codeline>
+<codeline lineno="19" refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HT_VENT_PIN<sp/>26</highlight></codeline>
+<codeline lineno="20" refid="_h_w_config_8h_1aa1f2d22e5ac09daf65e6c2d95562cb74" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HT_INPUT_PIN<sp/>28</highlight></codeline>
+<codeline lineno="21" refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HT_STATE_LED<sp/>32</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ESP8266</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_h_w_config_8h_1ad447633a1cbb7747e552e5f8a2de90c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIFI_SERIAL<sp/>Serial2</highlight></codeline>
+<codeline lineno="25" refid="_h_w_config_8h_1af69c24e03403f24b1c481cb3d2edf6b9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WIFI_SERIAL_BAUD<sp/>115200</highlight></codeline>
+<codeline lineno="26" refid="_h_w_config_8h_1acf8fac8bf5e827dd9846dd575bead9ea" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WIFI_RST_PIN<sp/>34</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WDT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_h_w_config_8h_1aa7d19da927c561c5df4c2647977cca06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WDT_TIMEOUT<sp/>10000</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="_h_w_config_8h_1ab7b4fdce7193e5c63c03d3a682716817" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_SERIAL<sp/>Serial</highlight></codeline>
+<codeline lineno="33" refid="_h_w_config_8h_1a5bc8d85f37b73c2b5095cff545ab5637" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LOG_SERIAL_BAUD<sp/>115200</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_h_w_config_8h_1ad19e03bd4579a143b390c5157f37994d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_SERIAL<sp/>Serial1</highlight></codeline>
+<codeline lineno="37" refid="_h_w_config_8h_1a8ce3662cbf94122b85b52c56c5892c7d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LCD_SERIAL_BAUD<sp/>200000</highlight></codeline>
+<codeline lineno="38" refid="_h_w_config_8h_1a68cca568baa8832cfec02df46e87c90c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LCD_RESET_PIN<sp/>36</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_h_w_config_8h_1abefe9d4aaae664bb8b33d947b3f3ace6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_DEBUG_SERIAL<sp/>SerialUSB</highlight></codeline>
+<codeline lineno="42" refid="_h_w_config_8h_1aeea370bb8b761795d7bcc23afc44cd5f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CAN_SERIAL_BAUD<sp/>115200</highlight></codeline>
+<codeline lineno="43" refid="_h_w_config_8h_1a690feeefaa683ef114b219259085569c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CAN_SPEED<sp/>CAN_BPS_125K</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//SD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_h_w_config_8h_1a330afe7974c5b98f51ee888892c7d7cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SD_SS_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>23</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//Light</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_h_w_config_8h_1aa039288455af8a3812a35aa1e7b903e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RGB_RED<sp/>13</highlight></codeline>
+<codeline lineno="50" refid="_h_w_config_8h_1ab6c97468034c02fe204fd37036d9be15" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RGB_GREEN<sp/>5</highlight></codeline>
+<codeline lineno="51" refid="_h_w_config_8h_1a0eff802f1ca228046476209dc01c76ad" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RGB_BLUE<sp/>6</highlight></codeline>
+<codeline lineno="52" refid="_h_w_config_8h_1ac0165a0a5be101747a734f0991fd0a35" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WHITE_LED<sp/>8</highlight></codeline>
+<codeline lineno="53" refid="_h_w_config_8h_1af0a2a51e49e6075257fc5203137531d9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AWNING_LED<sp/>10</highlight></codeline>
+<codeline lineno="54" refid="_h_w_config_8h_1a9f71035fce187a3785d40b38ff138e9c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WORKTOP_LED<sp/>11</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HWConfig.h"/>
+  </compounddef>
+</doxygen>

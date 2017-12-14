@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_light_controller_form" kind="class" prot="public">
+    <compoundname>LightControllerForm</compoundname>
+    <basecompoundref refid="class_l_c_d_form" prot="public" virt="non-virtual">LCDForm</basecompoundref>
+    <includes refid="_light_controller_form_8h" local="no">LightControllerForm.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_light_controller_form_1a0e47ac572581dff6dd7b82ccfbae2d10" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LightControllerForm::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_light_controller_form_1a4163271c51eab03c4a99dd1857a51dcf" compoundref="_light_controller_form_8cpp" startline="7" endline="13">init</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">onEvent</referencedby>
+        <referencedby refid="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" compoundref="_light_controller_form_8cpp" startline="49" endline="54">updateWidgetsValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_controller_form_1a95ca2dd7dd209efbc1300b006bed104d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t LightControllerForm::roomBrightness</definition>
+        <argsstring></argsstring>
+        <name>roomBrightness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="42" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_light_controller_form_1a4163271c51eab03c4a99dd1857a51dcf" compoundref="_light_controller_form_8cpp" startline="7" endline="13">init</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">onEvent</referencedby>
+        <referencedby refid="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" compoundref="_light_controller_form_8cpp" startline="49" endline="54">updateWidgetsValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_controller_form_1ab26423ccab1f526c96cae733672f2aea" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t LightControllerForm::awningBrightness</definition>
+        <argsstring></argsstring>
+        <name>awningBrightness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_light_controller_form_1a4163271c51eab03c4a99dd1857a51dcf" compoundref="_light_controller_form_8cpp" startline="7" endline="13">init</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">onEvent</referencedby>
+        <referencedby refid="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" compoundref="_light_controller_form_8cpp" startline="49" endline="54">updateWidgetsValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_controller_form_1a8be737509e2d9018907172701d2d0fb5" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t LightControllerForm::worktopBrightness</definition>
+        <argsstring></argsstring>
+        <name>worktopBrightness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="44" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_light_controller_form_1a4163271c51eab03c4a99dd1857a51dcf" compoundref="_light_controller_form_8cpp" startline="7" endline="13">init</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">onEvent</referencedby>
+        <referencedby refid="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" compoundref="_light_controller_form_8cpp" startline="49" endline="54">updateWidgetsValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_controller_form_1a1e53067de735767301448c95e88d4ecc" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer LightControllerForm::lastStateChange</definition>
+        <argsstring></argsstring>
+        <name>lastStateChange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="48" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_light_controller_form_1a4163271c51eab03c4a99dd1857a51dcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LightControllerForm::init</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>init</name>
+        <reimplements refid="class_l_c_d_form_1a9260ad3548a69ddf72925438e3e99ed4">init</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="29" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp" bodystart="7" bodyend="13"/>
+        <references refid="class_light_controller_form_1ab26423ccab1f526c96cae733672f2aea" compoundref="_light_controller_form_8h" startline="43">awningBrightness</references>
+        <references refid="class_light_controller_form_1a0e47ac572581dff6dd7b82ccfbae2d10" compoundref="_light_controller_form_8h" startline="40">color</references>
+        <references refid="class_light_controller_form_1a95ca2dd7dd209efbc1300b006bed104d" compoundref="_light_controller_form_8h" startline="42">roomBrightness</references>
+        <references refid="class_light_controller_form_1a8be737509e2d9018907172701d2d0fb5" compoundref="_light_controller_form_8h" startline="44">worktopBrightness</references>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_light_controller_form_1aad02c706216e1b4937f13044eca2a4d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LightControllerForm::update</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>update</name>
+        <reimplements refid="class_l_c_d_form_1a587b6a2af3f0520cc36152c8bcbbd95e">update</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="31" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp" bodystart="15" bodyend="17"/>
+        <references refid="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" compoundref="_light_controller_form_8cpp" startline="49" endline="54">updateWidgetsValues</references>
+      </memberdef>
+      <memberdef kind="function" id="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LightControllerForm::onEvent</definition>
+        <argsstring>(Genie &amp;genie, genieFrame &amp;evt)</argsstring>
+        <name>onEvent</name>
+        <reimplements refid="class_l_c_d_form_1aaeca4ab2db7dc71809cfdca6afc0cc14">onEvent</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <param>
+          <type>genieFrame &amp;</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="33" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp" bodystart="19" bodyend="47"/>
+        <references refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">LightInterfaceClass::allOff</references>
+        <references refid="_light_controller_form_8h_1a071ca31a9a128df385809a4b134afa0c" compoundref="_light_controller_form_8h" startline="22">AWNING_LIGHT</references>
+        <references refid="class_light_controller_form_1ab26423ccab1f526c96cae733672f2aea" compoundref="_light_controller_form_8h" startline="43">awningBrightness</references>
+        <references refid="class_light_controller_form_1a0e47ac572581dff6dd7b82ccfbae2d10" compoundref="_light_controller_form_8h" startline="40">color</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="_display_interface_8h_1af55afb4ca34913d796d3e6ffd0bf6337" compoundref="_display_interface_8h" startline="31">LCD_TAG</references>
+        <references refid="_light_controller_form_8h_1af975aca66be393ef6117cad6078ecdc9" compoundref="_light_controller_form_8h" startline="20">LIGHT_WHEEL</references>
+        <references refid="_light_interface_8cpp_1ab4e22a5ff1242cdaba502135d79bf0b9" compoundref="_light_interface_8cpp" startline="198">lightInterface</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="_light_controller_form_8h_1a7964fa85ffa835a71a0c9ad76e7d0b00" compoundref="_light_controller_form_8h" startline="24">OFFSWITCH</references>
+        <references refid="_light_controller_form_8h_1a958c5bec51d00e67cf6f1f08f3e53048" compoundref="_light_controller_form_8h" startline="21">ROOM_LIGHT</references>
+        <references refid="class_light_controller_form_1a95ca2dd7dd209efbc1300b006bed104d" compoundref="_light_controller_form_8h" startline="42">roomBrightness</references>
+        <references refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">LightInterfaceClass::setBrightness</references>
+        <references refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</references>
+        <references refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" compoundref="logger_8cpp" startline="26" endline="29">LoggerClass::w</references>
+        <references refid="_light_controller_form_8h_1a47a331c694c695ba3fcd6287a70a24e7" compoundref="_light_controller_form_8h" startline="23">WORKTOP_LIGHT</references>
+        <references refid="class_light_controller_form_1a8be737509e2d9018907172701d2d0fb5" compoundref="_light_controller_form_8h" startline="44">worktopBrightness</references>
+      </memberdef>
+      <memberdef kind="function" id="class_light_controller_form_1a955979ef222e0bb13dac2222246b76ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int LightControllerForm::getFormIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getFormIndex</name>
+        <reimplements refid="class_l_c_d_form_1af8f72fec0e256df75eb91a5531ff554f">getFormIndex</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="36" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightControllerForm::updateWidgetsValues</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>updateWidgetsValues</name>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp" bodystart="49" bodyend="54"/>
+        <references refid="_light_controller_form_8h_1a071ca31a9a128df385809a4b134afa0c" compoundref="_light_controller_form_8h" startline="22">AWNING_LIGHT</references>
+        <references refid="class_light_controller_form_1ab26423ccab1f526c96cae733672f2aea" compoundref="_light_controller_form_8h" startline="43">awningBrightness</references>
+        <references refid="class_light_controller_form_1a0e47ac572581dff6dd7b82ccfbae2d10" compoundref="_light_controller_form_8h" startline="40">color</references>
+        <references refid="_light_controller_form_8h_1af975aca66be393ef6117cad6078ecdc9" compoundref="_light_controller_form_8h" startline="20">LIGHT_WHEEL</references>
+        <references refid="_light_controller_form_8h_1a958c5bec51d00e67cf6f1f08f3e53048" compoundref="_light_controller_form_8h" startline="21">ROOM_LIGHT</references>
+        <references refid="class_light_controller_form_1a95ca2dd7dd209efbc1300b006bed104d" compoundref="_light_controller_form_8h" startline="42">roomBrightness</references>
+        <references refid="class_l_c_d_form_1a9dc417dfde659331c4e73b30c15891aa" compoundref="_l_c_d_form_8h" startline="22" endline="24">LCDForm::updateWidget</references>
+        <references refid="_light_controller_form_8h_1a47a331c694c695ba3fcd6287a70a24e7" compoundref="_light_controller_form_8h" startline="23">WORKTOP_LIGHT</references>
+        <references refid="class_light_controller_form_1a8be737509e2d9018907172701d2d0fb5" compoundref="_light_controller_form_8h" startline="44">worktopBrightness</references>
+        <referencedby refid="class_light_controller_form_1aad02c706216e1b4937f13044eca2a4d2" compoundref="_light_controller_form_8cpp" startline="15" endline="17">update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="49">
+        <label>LCDForm</label>
+        <link refid="class_l_c_d_form"/>
+      </node>
+      <node id="48">
+        <label>LightControllerForm</label>
+        <link refid="class_light_controller_form"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="51">
+        <label>LCDForm</label>
+        <link refid="class_l_c_d_form"/>
+      </node>
+      <node id="50">
+        <label>LightControllerForm</label>
+        <link refid="class_light_controller_form"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" line="26" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h" bodystart="26" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_light_controller_form_1ab26423ccab1f526c96cae733672f2aea" prot="private" virt="non-virtual"><scope>LightControllerForm</scope><name>awningBrightness</name></member>
+      <member refid="class_light_controller_form_1a0e47ac572581dff6dd7b82ccfbae2d10" prot="private" virt="non-virtual"><scope>LightControllerForm</scope><name>color</name></member>
+      <member refid="class_light_controller_form_1a955979ef222e0bb13dac2222246b76ba" prot="public" virt="virtual"><scope>LightControllerForm</scope><name>getFormIndex</name></member>
+      <member refid="class_light_controller_form_1a4163271c51eab03c4a99dd1857a51dcf" prot="public" virt="virtual"><scope>LightControllerForm</scope><name>init</name></member>
+      <member refid="class_light_controller_form_1a1e53067de735767301448c95e88d4ecc" prot="private" virt="non-virtual"><scope>LightControllerForm</scope><name>lastStateChange</name></member>
+      <member refid="class_l_c_d_form_1a003f1f2931a8cfeddabd37e04ecaacbd" prot="public" virt="virtual"><scope>LightControllerForm</scope><name>onEnter</name></member>
+      <member refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" prot="public" virt="virtual"><scope>LightControllerForm</scope><name>onEvent</name></member>
+      <member refid="class_l_c_d_form_1a5f84666b6c8aec63cc54b1598e824410" prot="public" virt="virtual"><scope>LightControllerForm</scope><name>onExit</name></member>
+      <member refid="class_light_controller_form_1a95ca2dd7dd209efbc1300b006bed104d" prot="private" virt="non-virtual"><scope>LightControllerForm</scope><name>roomBrightness</name></member>
+      <member refid="class_light_controller_form_1aad02c706216e1b4937f13044eca2a4d2" prot="public" virt="virtual"><scope>LightControllerForm</scope><name>update</name></member>
+      <member refid="class_l_c_d_form_1aaef8550ba90eafbc170a73d734c57bac" prot="protected" virt="non-virtual"><scope>LightControllerForm</scope><name>updateString</name></member>
+      <member refid="class_l_c_d_form_1a9dc417dfde659331c4e73b30c15891aa" prot="protected" virt="non-virtual"><scope>LightControllerForm</scope><name>updateWidget</name></member>
+      <member refid="class_light_controller_form_1ab018dfcab30cbf3a7092aaac9d882652" prot="private" virt="non-virtual"><scope>LightControllerForm</scope><name>updateWidgetsValues</name></member>
+      <member refid="class_light_controller_form_1a8be737509e2d9018907172701d2d0fb5" prot="private" virt="non-virtual"><scope>LightControllerForm</scope><name>worktopBrightness</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

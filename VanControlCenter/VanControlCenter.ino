@@ -55,7 +55,7 @@ void onCanPacketReceived(CAN_FRAME &frame);
 
 // Code flag
 #define WDT_ON
-#define LCD_ON
+//#define LCD_ON
 #define DL_ON
 #define WIFI_ON
 #define SHELL_ON
@@ -90,27 +90,28 @@ void setup() {
     // Start timer to count init time
     t.start();
 
+#ifdef DL_ON
+    if (initDataLogger()) {
+        //consoleForm.println(F("Datalogger OK"));
+        Log.i(DL_TAG) << F("Datalogger OK ") << t.elapsedTime() << Endl;
+    }
+    else {
+        //consoleForm.println(F("Datalogger FAIL"));
+        Log.e(DL_TAG) << F("Datalogger FAIL") << Endl;
+    }
+#endif
+
 #ifdef LCD_ON
     displayInterface.init();
     consoleForm.println(SW_INFO);
     Log.i(INIT_TAG) << SW_INFO << Endl;
 #endif
 
-#ifdef DL_ON
-    if (initDataLogger()) {
-        consoleForm.println(F("Datalogger OK"));
-        Log.i(DL_TAG) << F("Datalogger OK ") << t.elapsedTime() << Endl;
-    }
-    else {
-        consoleForm.println(F("Datalogger FAIL"));
-        Log.e(DL_TAG) << F("Datalogger FAIL") << Endl;
-    }
-#endif
 
     //Wifi
 #ifdef WIFI_ON
     wifiInterface.init();
-    consoleForm.println(F("Wifi OK"));
+    //consoleForm.println(F("Wifi OK"));
     Log.i(WIFI_TAG) << F("Wifi OK ") << t.elapsedTime() << Endl;
 #endif
 
@@ -192,15 +193,17 @@ void loop() {
 void initPorts() {
     INIT_SERIAL(LOG_SERIAL, LOG_SERIAL_BAUD);
     INIT_SERIAL(WIFI_SERIAL, WIFI_SERIAL_BAUD);
-    canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);
-
-
-    INIT_SD(SD, SD_SS_PIN);
-    // Utils
     Log.init(&LOG_SERIAL);
 
+#ifdef SHELL_ON
+    shell.init(&LOG_SERIAL);
+#endif
+    
+    INIT_SD(SD, SD_SS_PIN);
+   
     //Canbus Initialisation
-    canInterface.init(CAN_SPEED);
+    canInterface.init(CAN_SPEED, 60, 200);
+    canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);
     canInterface.setCanEventCallBack(&onCanPacketReceived);
 
     // Heater Initialisation
@@ -213,9 +216,7 @@ void initPorts() {
     //Heater input pin interrupt Initialisation
     //attachInterrupt(digitalPinToInterrupt(HT_INPUT_PIN), heaterCallback, HIGH);
 
-#ifdef SHELL_ON
-    shell.init(&LOG_SERIAL);
-#endif
+
 }
 
 bool initDataLogger() {

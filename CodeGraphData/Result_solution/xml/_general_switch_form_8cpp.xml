@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_general_switch_form_8cpp" kind="file">
+    <compoundname>GeneralSwitchForm.cpp</compoundname>
+    <includes refid="_general_switch_form_8h" local="yes">GeneralSwitchForm.h</includes>
+    <incdepgraph>
+      <node id="491">
+        <label>LCDStringList.h</label>
+        <link refid="_l_c_d_string_list_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>LightInterface.h</label>
+        <link refid="_light_interface_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+      </node>
+      <node id="494">
+        <label>Timer.h</label>
+      </node>
+      <node id="490">
+        <label>genieArduino.h</label>
+      </node>
+      <node id="487">
+        <label>GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>CanInterface.h</label>
+        <link refid="_can_interface_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+      </node>
+      <node id="504">
+        <label>BitArray.h</label>
+      </node>
+      <node id="502">
+        <label>due_can.h</label>
+      </node>
+      <node id="508">
+        <label>HWConfig.h</label>
+        <link refid="_h_w_config_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="497">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="503">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>WProgram.h</label>
+      </node>
+      <node id="511">
+        <label>HeaterInterface.h</label>
+        <link refid="_heater_interface_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+      </node>
+      <node id="506">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+      </node>
+      <node id="500">
+        <label>DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+      </node>
+      <node id="512">
+        <label>LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+      </node>
+      <node id="489">
+        <label>LCDForm.h</label>
+        <link refid="_l_c_d_form_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="493">
+        <label>LCDStringMsg.h</label>
+        <link refid="_l_c_d_string_msg_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+      </node>
+      <node id="496">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+      </node>
+      <node id="499">
+        <label>ConsoleForm.h</label>
+        <link refid="_console_form_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+      </node>
+      <node id="509">
+        <label>arduino.h</label>
+      </node>
+      <node id="498">
+        <label>Vector.h</label>
+      </node>
+      <node id="486">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp</label>
+        <link refid="GeneralSwitchForm.cpp"/>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+      <node id="505">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+      </node>
+      <node id="495">
+        <label>DisplayInterface.h</label>
+        <link refid="_display_interface_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="499" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+      </node>
+      <node id="492">
+        <label>Utils.h</label>
+      </node>
+      <node id="507">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_general_switch_form_8cpp_1acd500d675024acfdb68d0c7ce0f25e29" prot="public" static="no" mutable="no">
+        <type><ref refid="class_general_switch_form" kindref="compound">GeneralSwitchForm</ref></type>
+        <definition>GeneralSwitchForm generalSwitchForm</definition>
+        <argsstring></argsstring>
+        <name>generalSwitchForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp" line="39" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_general_switch_form_8h" kindref="compound">GeneralSwitchForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_general_switch_form_1aa4a294b91e7255d0c5e5e6cadf9baf01" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_general_switch_form_1aa4a294b91e7255d0c5e5e6cadf9baf01" kindref="member">GeneralSwitchForm::init</ref>(Genie&amp;<sp/>genie)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Maybe<sp/>we<sp/>should<sp/>fetch<sp/>the<sp/>switch<sp/>states<sp/>from<sp/>the<sp/>channelsbuffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_general_switch_form_1a87ca0c1dbb34068a76b971aac52b05ce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_general_switch_form_1a87ca0c1dbb34068a76b971aac52b05ce" kindref="member">GeneralSwitchForm::update</ref>(Genie&amp;<sp/>genie)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_general_switch_form_1a165121943e50283194ac01ce4c087d08" kindref="member">updateWidgetsValues</ref>(genie);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_general_switch_form_1ae7e3fbcea1b729adb3b16d3d889001a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_general_switch_form_1ae7e3fbcea1b729adb3b16d3d889001a9" kindref="member">GeneralSwitchForm::onEvent</ref>(Genie&amp;<sp/>genie,<sp/>genieFrame&amp;<sp/>evt)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evt.reportObject.cmd<sp/>==<sp/>GENIE_REPORT_EVENT)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evt.reportObject.object<sp/>==<sp/>GENIE_OBJ_DIPSW)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(evt.reportObject.index)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_general_switch_form_8h_1af674371786b1c39836310dcda3d6f9fc" kindref="member">SWITCH_WATER</ref>:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" kindref="member">setValue</ref>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4cc82feb98bc458617fc2220b4254477" kindref="member">CanID::SW_WATER</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>genie.GetEventData(&amp;evt));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_general_switch_form_8h_1afc718c1fcfcf5d762545260289674333" kindref="member">SWITCH_1</ref>:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" kindref="member">setValue</ref>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a25166c12ebab7350508337700fcd0ded" kindref="member">CanID::SW_1</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>genie.GetEventData(&amp;evt));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" kindref="member">w</ref>(<ref refid="_display_interface_8h_1af55afb4ca34913d796d3e6ffd0bf6337" kindref="member">LCD_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Display<sp/>returned<sp/>a<sp/>not<sp/>used<sp/>object<sp/>id<sp/>on<sp/>the<sp/>GeneralSwitchForm:<sp/>&quot;</highlight><highlight class="normal">)&lt;&lt;<sp/>evt.reportObject.index<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_general_switch_form_1a165121943e50283194ac01ce4c087d08" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_general_switch_form_1a165121943e50283194ac01ce4c087d08" kindref="member">GeneralSwitchForm::updateWidgetsValues</ref>(Genie&amp;<sp/>genie)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_general_switch_form_8h_1acd500d675024acfdb68d0c7ce0f25e29" refkind="member"><highlight class="normal"><ref refid="class_general_switch_form" kindref="compound">GeneralSwitchForm</ref><sp/><ref refid="_general_switch_form_8cpp_1acd500d675024acfdb68d0c7ce0f25e29" kindref="member">generalSwitchForm</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp"/>
+  </compounddef>
+</doxygen>

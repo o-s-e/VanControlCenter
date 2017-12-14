@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_channels_buffer_8cpp" kind="file">
+    <compoundname>ChannelsBuffer.cpp</compoundname>
+    <includes refid="_channels_buffer_8h" local="yes">ChannelsBuffer.h</includes>
+    <incdepgraph>
+      <node id="102">
+        <label>Timer.h</label>
+      </node>
+      <node id="98">
+        <label>BitArray.h</label>
+      </node>
+      <node id="95">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsBuffer.cpp</label>
+        <link refid="ChannelsBuffer.cpp"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="96">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>WProgram.h</label>
+      </node>
+      <node id="103">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>Vector.h</label>
+      </node>
+      <node id="101">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" prot="public" static="no" mutable="no">
+        <type><ref refid="class_channels_buffer_class" kindref="compound">ChannelsBufferClass</ref></type>
+        <definition>ChannelsBufferClass channelsBuffer</definition>
+        <argsstring></argsstring>
+        <name>channelsBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsBuffer.cpp" line="185" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsBuffer.cpp" bodystart="185" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">ShellClass::channelValueCmd</referencedby>
+        <referencedby refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" compoundref="_shell_8cpp" startline="227" endline="245">ShellClass::CHbufferSet</referencedby>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_general_switch_form_1ae7e3fbcea1b729adb3b16d3d889001a9" compoundref="_general_switch_form_8cpp" startline="14" endline="31">GeneralSwitchForm::onEvent</referencedby>
+        <referencedby refid="class_temperature_controller_form_1aeeeec747874a7fc4b4379f89ad7ccf04" compoundref="_temperature_controller_form_8cpp" startline="13" endline="27">TemperatureControllerForm::onEvent</referencedby>
+        <referencedby refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">LightInterfaceClass::setBrightness</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</referencedby>
+        <referencedby refid="class_debug_form_class_1af29cbebbab4567d3463bcdcdd49e547b" compoundref="_debug_form_8cpp" startline="7" endline="15">DebugFormClass::update</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+        <referencedby refid="class_data_logger_class_1a75106f1588d60a80bf477a31ba78d7fd" compoundref="_data_logger_8cpp" startline="45" endline="82">DataLoggerClass::update</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+        <referencedby refid="class_temperature_controller_form_1ae347e189da89a0649a011449922eee03" compoundref="_temperature_controller_form_8cpp" startline="29" endline="34">TemperatureControllerForm::updateWidgetsValues</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_channels_buffer_8h" kindref="compound">ChannelsBuffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_channels_buffer_class_1aa38430f1946c626769bca6ef110e94a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1aa38430f1946c626769bca6ef110e94a0" kindref="member">ChannelsBufferClass::init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Resize<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1ac9b0b5e8af354ac715a2f6186d90a3a5" kindref="member">getChannelCount</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>.resize(size);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1a59d9ea0860f49618a16de61ef0951168" kindref="member">bufferSize</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>the<sp/>&quot;matrix&quot;<sp/>to<sp/>contain<sp/>byte-array<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint16_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channel" kindref="compound">Channel</ref><sp/>*<sp/>c<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(i);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[i].resize(c-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>());</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[i].clear();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1a59d9ea0860f49618a16de61ef0951168" kindref="member">bufferSize</ref><sp/>+=<sp/>c-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_channels_buffer_class_1a1452222217b64b22c742f3f335a4b546" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1a1452222217b64b22c742f3f335a4b546" kindref="member">ChannelsBufferClass::debug</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>LOGLN(F(</highlight><highlight class="stringliteral">&quot;===========<sp/>Channels<sp/>data<sp/>buffer:<sp/>===========&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>.getCapacity();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG(<ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(i)-&gt;<ref refid="class_channel_1a91f8121523ea48a9272abafc097f7775" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG(F(</highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[i].debug();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>LOGLN(F(</highlight><highlight class="stringliteral">&quot;========================================&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" refkind="member"><highlight class="normal">String<sp/><ref refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" kindref="member">ChannelsBufferClass::getValueAsString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>CFG<sp/>file<sp/>was<sp/>loaded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a575085155e026f424cc3663962ed767c" kindref="member">isValid</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Search<sp/>the<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a7fb0af9151f60000aefebd21c8df3b3a" kindref="member">getChannelIndex</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>channel<sp/>config<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channel" kindref="compound">Channel</ref>*<sp/>c<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(index);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Convert<sp/>to<sp/>arduino<sp/>String<sp/>obj</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="class_channel_1a1851a034e0d21f66d8679b9babd425ea" kindref="member">getDataType</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9abe157b5248c7943acc0a131f761ccb87" kindref="member">Channel::BIT_FLAG</ref>:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].toBinString(MSBFIRST);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9af10f88feb1aaad6e5f0dd95580090bf2" kindref="member">Channel::DECIMAL</ref>:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>size<sp/>&lt;=<sp/>is<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Need<sp/>this<sp/>difference<sp/>because<sp/>conversion<sp/>is<sp/>a<sp/>copy<sp/>&apos;n<sp/>paste<sp/>of<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>()<sp/>&lt;=<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(<ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].as&lt;float&gt;(),<sp/>6);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(<ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].as&lt;double&gt;(),<sp/>10);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9ad6cce5d64a24e3e61ac2ee290598bbe5" kindref="member">Channel::INTEGER</ref>:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1a8e9277f31785a2e3359bc7d8d219df7a" kindref="member">intToString</ref>(c,<sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].data());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9ab07d013738aecdec7fcd7f9df387f21b" kindref="member">Channel::U_INTEGER</ref>:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1ab54b1173138153c22d1266a4c0093f1d" kindref="member">uintToString</ref>(c,<sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].data());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9a9bc9983805a2e37c7b08105b34eabfbc" kindref="member">Channel::STRING</ref>:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].toString();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_channels_buffer_8h_1af9bb9cdc714c8327097eb266d69a3d6f" kindref="member">CHBUF_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;in<sp/>getValueAsString\t<sp/>Unknown<sp/>conversion<sp/>type<sp/>channel<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>type<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>c-&gt;<ref refid="class_channel_1a1851a034e0d21f66d8679b9babd425ea" kindref="member">getDataType</ref>()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>F(</highlight><highlight class="stringliteral">&quot;nil&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_channels_buffer_class_1a08cca9e96cd65d4f2b7e16d9fff889b1" refkind="member"><highlight class="normal">ByteBuffer<sp/><ref refid="class_channels_buffer_class_1a08cca9e96cd65d4f2b7e16d9fff889b1" kindref="member">ChannelsBufferClass::getValueAsByteArray</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>CFG<sp/>file<sp/>was<sp/>loaded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a575085155e026f424cc3663962ed767c" kindref="member">isValid</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Search<sp/>the<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a7fb0af9151f60000aefebd21c8df3b3a" kindref="member">getChannelIndex</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>a<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ByteBuffer&amp;<sp/>b<sp/>=<sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ByteBuffer(b.data(),<sp/>b.getSize());</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ByteBuffer();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" kindref="member">ChannelsBufferClass::setValue</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>byte*<sp/>data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>CFG<sp/>file<sp/>was<sp/>loaded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a575085155e026f424cc3663962ed767c" kindref="member">isValid</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Search<sp/>the<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a7fb0af9151f60000aefebd21c8df3b3a" kindref="member">getChannelIndex</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>size<sp/>received<sp/>is<sp/>not<sp/>equal<sp/>to<sp/>expected<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(index)-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" kindref="member">w</ref>(<ref refid="_channels_buffer_8h_1af9bb9cdc714c8327097eb266d69a3d6f" kindref="member">CHBUF_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;In<sp/>setValue\t<sp/>Received<sp/>size<sp/>&lt;<sp/>expected<sp/>size<sp/>for<sp/>channel<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&gt;<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(index)-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" kindref="member">w</ref>(<ref refid="_channels_buffer_8h_1af9bb9cdc714c8327097eb266d69a3d6f" kindref="member">CHBUF_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;In<sp/>setValue\t<sp/>Received<sp/>size<sp/>&gt;<sp/>expected<sp/>size<sp/>for<sp/>channel<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>size<sp/>is<sp/>&lt;=<sp/>than<sp/>the<sp/>expected<sp/>size<sp/>can<sp/>save<sp/>the<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(index)-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Clear<sp/>and<sp/>save<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].clear();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[index].append(data,<sp/>size);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Reset<sp/>ttl<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(index)-&gt;<ref refid="class_channel_1ac3e5ae4a6535161fb6f8061e9f2f0c3c" kindref="member">resetTTLTimer</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" kindref="member">w</ref>(<ref refid="_channels_buffer_8h_1af9bb9cdc714c8327097eb266d69a3d6f" kindref="member">CHBUF_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;ChannelsBuffer::setValue<sp/><sp/>unknow<sp/>packet<sp/>id<sp/>=<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_channels_buffer_class_1a32bc2bd6cec0d2a86bce0542255994e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1a32bc2bd6cec0d2a86bce0542255994e0" kindref="member">ChannelsBufferClass::isValueUpdated</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>CFG<sp/>file<sp/>was<sp/>loaded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a575085155e026f424cc3663962ed767c" kindref="member">isValid</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Search<sp/>the<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a7fb0af9151f60000aefebd21c8df3b3a" kindref="member">getChannelIndex</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>channel<sp/>TTL<sp/>timer<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(index)-&gt;<ref refid="class_channel_1ac4d842bc13a9fcae15ec8506af465582" kindref="member">hasTTLFinished</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//Assuming<sp/>CPU<sp/>is<sp/>LITTLE-ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_channels_buffer_class_1ab54b1173138153c22d1266a4c0093f1d" refkind="member"><highlight class="normal">String<sp/><ref refid="class_channels_buffer_class_1ab54b1173138153c22d1266a4c0093f1d" kindref="member">ChannelsBufferClass::uintToString</ref>(<ref refid="class_channel" kindref="compound">Channel</ref>*<sp/>channel,<sp/>byte*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>mem[8];</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[21];<sp/></highlight><highlight class="comment">//64<sp/>bit<sp/>unsigned<sp/>integer<sp/>max<sp/>digit<sp/>number<sp/>+<sp/>\0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>value;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>channel-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem[i]<sp/>=<sp/>data[i];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>channel-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>();<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>int);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem[i]<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(temp,<sp/></highlight><highlight class="stringliteral">&quot;%llu&quot;</highlight><highlight class="normal">,<sp/>*(reinterpret_cast&lt;unsigned<sp/>long<sp/>long<sp/>int*&gt;(mem)));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>+=<sp/>temp;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//Assuming<sp/>CPU<sp/>is<sp/>LITTLE-ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="class_channels_buffer_class_1a8e9277f31785a2e3359bc7d8d219df7a" refkind="member"><highlight class="normal">String<sp/><ref refid="class_channels_buffer_class_1a8e9277f31785a2e3359bc7d8d219df7a" kindref="member">ChannelsBufferClass::intToString</ref>(<ref refid="class_channel" kindref="compound">Channel</ref>*<sp/>channel,<sp/>byte*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>mem[8];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[21];<sp/></highlight><highlight class="comment">//64<sp/>bit<sp/>signed<sp/>integer<sp/>max<sp/>digit<sp/>number<sp/>+<sp/>\0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>value;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>channel-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem[i]<sp/>=<sp/>data[i];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mem[channel-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>()<sp/>-<sp/>1]<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>7))<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>channel-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>();<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>int);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem[i]<sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint64_t<sp/>i<sp/>=<sp/>channel-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>();<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>int);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem[i]<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(temp,<sp/></highlight><highlight class="stringliteral">&quot;%lld&quot;</highlight><highlight class="normal">,<sp/>*(reinterpret_cast&lt;long<sp/>long<sp/>int*&gt;(mem)));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>+=<sp/>temp;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="class_channels_buffer_class_1a4ea1bd9b22981ff5000c81785c993368" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_channels_buffer_class_1a4ea1bd9b22981ff5000c81785c993368" kindref="member">ChannelsBufferClass::sendOnStream</ref>(UARTClass*<sp/>stream)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>ID;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_channel" kindref="compound">Channel</ref>*<sp/>c;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint16_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1ac9b0b5e8af354ac715a2f6186d90a3a5" kindref="member">getChannelCount</ref>();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>the<sp/>i-nth<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(i);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ID<sp/>=<sp/>c-&gt;<ref refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" kindref="member">getID</ref>();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Send<sp/>the<sp/>can<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;write((byte*)&amp;ID,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ID));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Send<sp/>the<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;write(<ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[i].data(),<sp/><ref refid="class_channels_buffer_class_1ab3f63aec536ea67df97f1d0774dc5d3e" kindref="member">buffer</ref>[i].getCapacity());</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="_channels_buffer_8h_1acf700c7ee67371fd384d6e6c9a92b441" refkind="member"><highlight class="normal"><ref refid="class_channels_buffer_class" kindref="compound">ChannelsBufferClass</ref><sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsBuffer.cpp"/>
+  </compounddef>
+</doxygen>

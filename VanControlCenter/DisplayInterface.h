@@ -15,7 +15,6 @@
 * screen
 */
 
-#include <Button.h>
 #include <Timer.h>
 #include <Vector.h>
 #include <genieArduino.h>
@@ -32,13 +31,22 @@
 #define LCD_TAG F("LCD")
 
 // Refresh per second
-#define REFRESH_RATEO 3
+#define REFRESH_RATE 3
 
 // Max time allowed to refresh a form
 #define MAX_UPDATE_TIME 1500
 
+#define CONSOLEFORM 0
+#define LIGHTCTRLFORM 1
+#define TEMPCTRLFORM 2
+#define GENERALFORM 3
+#define DEBUGFORM 4
+
+
 class DisplayInterfaceClass {
+
 public:
+
     // Init function to call inside the setup
     void init();
 
@@ -51,13 +59,11 @@ public:
     // Return the current form
     const LCDForm *getCurrentForm() { return currentForm; }
 
-    // Function to handle the physical button to change the form
-    friend void onChangeFormButtonPress(void *data = NULL);
-
     // Function to handle the incoming event from the lcd
     friend void onEvent();
 
 private:
+
     // Indicates if the form refresh is enabled
     boolean enabled;
 
@@ -69,6 +75,9 @@ private:
 
     // Current form instance pointer
     LCDForm *currentForm;
+
+    
+
 };
 
 // Display interface instance

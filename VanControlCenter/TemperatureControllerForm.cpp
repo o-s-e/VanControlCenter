@@ -19,6 +19,8 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 
                 channelsBuffer.setValue<double>(CanID::SET_TEMP, genie.GetEventData(&evt));
                 break;
+            default: 
+                Log.w(LCD_TAG) << F("Display returned a not used object id on the TemperatureControllerForm: ") << evt.reportObject.index << Endl;
             }
         }
     }

@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_console_form_class" kind="class" prot="public">
+    <compoundname>ConsoleFormClass</compoundname>
+    <basecompoundref refid="class_l_c_d_form" prot="public" virt="non-virtual">LCDForm</basecompoundref>
+    <includes refid="_console_form_8h" local="no">ConsoleForm.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" prot="private" static="no" mutable="no">
+        <type>Genie *</type>
+        <definition>Genie* ConsoleFormClass::genie</definition>
+        <argsstring></argsstring>
+        <name>genie</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="53" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" compoundref="_console_form_8cpp" startline="25" endline="38">addText</referencedby>
+        <referencedby refid="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" compoundref="_console_form_8cpp" startline="3" endline="7">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String ConsoleFormClass::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="56" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" compoundref="_console_form_8cpp" startline="25" endline="38">addText</referencedby>
+        <referencedby refid="class_console_form_class_1a4685ac88f77641ed6dc61ae4650657bf" compoundref="_console_form_8cpp" startline="21" endline="23">clear</referencedby>
+        <referencedby refid="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" compoundref="_console_form_8cpp" startline="3" endline="7">init</referencedby>
+        <referencedby refid="class_console_form_class_1a44c5bcad7e74a677b3092acc41288532" compoundref="_console_form_8cpp" startline="13" endline="15">print</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConsoleFormClass::init</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>init</name>
+        <reimplements refid="class_l_c_d_form_1a9260ad3548a69ddf72925438e3e99ed4">init</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="34" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="3" bodyend="7"/>
+        <references refid="class_console_form_class_1a4685ac88f77641ed6dc61ae4650657bf" compoundref="_console_form_8cpp" startline="21" endline="23">clear</references>
+        <references refid="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" compoundref="_console_form_8h" startline="53">genie</references>
+        <references refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" compoundref="_console_form_8h" startline="56">text</references>
+        <references refid="_console_form_8h_1a9f31e20d2d4901e0ec1412ecabde8c3a" compoundref="_console_form_8h" startline="20">TEXT_BUFFER_SIZE</references>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_console_form_class_1af96f641cf3624052e9107246a8ee1138" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConsoleFormClass::update</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>update</name>
+        <reimplements refid="class_l_c_d_form_1a587b6a2af3f0520cc36152c8bcbbd95e">update</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="37" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_console_form_class_1a44c5bcad7e74a677b3092acc41288532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleFormClass::print</definition>
+        <argsstring>(String str)</argsstring>
+        <name>print</name>
+        <param>
+          <type>String</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="13" bodyend="15"/>
+        <references refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" compoundref="_console_form_8h" startline="56">text</references>
+      </memberdef>
+      <memberdef kind="function" id="class_console_form_class_1aba992d1f72d817ffaf3493c578976429" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleFormClass::println</definition>
+        <argsstring>(String str)</argsstring>
+        <name>println</name>
+        <param>
+          <type>String</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="17" bodyend="19"/>
+        <references refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" compoundref="_console_form_8cpp" startline="25" endline="38">addText</references>
+        <referencedby refid="class_data_logger_class_1a4754b65cfb2c5d881d38b66aa487202d" compoundref="_data_logger_8cpp" startline="97" endline="117">DataLoggerClass::createNewLogFile</referencedby>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+        <referencedby refid="class_data_logger_class_1a6918b9d1dc35581c3f2a4210426606f9" compoundref="_data_logger_8cpp" startline="3" endline="40">DataLoggerClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_console_form_class_1a4685ac88f77641ed6dc61ae4650657bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleFormClass::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="21" bodyend="23"/>
+        <references refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" compoundref="_console_form_8h" startline="56">text</references>
+        <referencedby refid="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" compoundref="_console_form_8cpp" startline="3" endline="7">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_console_form_class_1aab27249b1ba5cb5955c583e7ddf9161c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int ConsoleFormClass::getFormIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getFormIndex</name>
+        <reimplements refid="class_l_c_d_form_1af8f72fec0e256df75eb91a5531ff554f">getFormIndex</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="49" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleFormClass::addText</definition>
+        <argsstring>(String str)</argsstring>
+        <name>addText</name>
+        <param>
+          <type>String</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="59" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="25" bodyend="38"/>
+        <references refid="_console_form_8h_1a2b077b51d6be463e1adae24c01969f3c" compoundref="_console_form_8h" startline="29">CONSOLE_STR</references>
+        <references refid="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" compoundref="_console_form_8h" startline="53">genie</references>
+        <references refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" compoundref="_console_form_8h" startline="56">text</references>
+        <references refid="_console_form_8h_1a9f31e20d2d4901e0ec1412ecabde8c3a" compoundref="_console_form_8h" startline="20">TEXT_BUFFER_SIZE</references>
+        <referencedby refid="class_console_form_class_1aba992d1f72d817ffaf3493c578976429" compoundref="_console_form_8cpp" startline="17" endline="19">println</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>ConsoleFormClass</label>
+        <link refid="class_console_form_class"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>LCDForm</label>
+        <link refid="class_l_c_d_form"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12">
+        <label>ConsoleFormClass</label>
+        <link refid="class_console_form_class"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>LCDForm</label>
+        <link refid="class_l_c_d_form"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="31" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="31" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" prot="private" virt="non-virtual"><scope>ConsoleFormClass</scope><name>addText</name></member>
+      <member refid="class_console_form_class_1a4685ac88f77641ed6dc61ae4650657bf" prot="public" virt="non-virtual"><scope>ConsoleFormClass</scope><name>clear</name></member>
+      <member refid="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" prot="private" virt="non-virtual"><scope>ConsoleFormClass</scope><name>genie</name></member>
+      <member refid="class_console_form_class_1aab27249b1ba5cb5955c583e7ddf9161c" prot="public" virt="virtual"><scope>ConsoleFormClass</scope><name>getFormIndex</name></member>
+      <member refid="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" prot="public" virt="virtual"><scope>ConsoleFormClass</scope><name>init</name></member>
+      <member refid="class_l_c_d_form_1a003f1f2931a8cfeddabd37e04ecaacbd" prot="public" virt="virtual"><scope>ConsoleFormClass</scope><name>onEnter</name></member>
+      <member refid="class_l_c_d_form_1aaeca4ab2db7dc71809cfdca6afc0cc14" prot="public" virt="virtual"><scope>ConsoleFormClass</scope><name>onEvent</name></member>
+      <member refid="class_l_c_d_form_1a5f84666b6c8aec63cc54b1598e824410" prot="public" virt="virtual"><scope>ConsoleFormClass</scope><name>onExit</name></member>
+      <member refid="class_console_form_class_1a44c5bcad7e74a677b3092acc41288532" prot="public" virt="non-virtual"><scope>ConsoleFormClass</scope><name>print</name></member>
+      <member refid="class_console_form_class_1aba992d1f72d817ffaf3493c578976429" prot="public" virt="non-virtual"><scope>ConsoleFormClass</scope><name>println</name></member>
+      <member refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" prot="private" virt="non-virtual"><scope>ConsoleFormClass</scope><name>text</name></member>
+      <member refid="class_console_form_class_1af96f641cf3624052e9107246a8ee1138" prot="public" virt="virtual"><scope>ConsoleFormClass</scope><name>update</name></member>
+      <member refid="class_l_c_d_form_1aaef8550ba90eafbc170a73d734c57bac" prot="protected" virt="non-virtual"><scope>ConsoleFormClass</scope><name>updateString</name></member>
+      <member refid="class_l_c_d_form_1a9dc417dfde659331c4e73b30c15891aa" prot="protected" virt="non-virtual"><scope>ConsoleFormClass</scope><name>updateWidget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

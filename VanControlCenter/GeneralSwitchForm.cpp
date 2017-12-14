@@ -23,12 +23,12 @@ void GeneralSwitchForm::onEvent(Genie& genie, genieFrame& evt) {
                 channelsBuffer.setValue<bool>(CanID::SW_1,
                     genie.GetEventData(&evt));
                 break;
-
+            default:
+                Log.w(LCD_TAG) << F("Display returned a not used object id on the GeneralSwitchForm: ")<< evt.reportObject.index << Endl;
+                break;
             }
         }
-
     }
-
 }
 
 void GeneralSwitchForm::updateWidgetsValues(Genie& genie)

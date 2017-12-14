@@ -1,0 +1,619 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_display_interface_8h" kind="file">
+    <compoundname>DisplayInterface.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes refid="logger_8h" local="yes">logger.h</includes>
+    <includes local="no">Timer.h</includes>
+    <includes local="no">Vector.h</includes>
+    <includes local="no">genieArduino.h</includes>
+    <includes refid="_console_form_8h" local="yes">ConsoleForm.h</includes>
+    <includes refid="_debug_form_8h" local="yes">DebugForm.h</includes>
+    <includes refid="_temperature_controller_form_8h" local="yes">TemperatureControllerForm.h</includes>
+    <includes refid="_light_controller_form_8h" local="yes">LightControllerForm.h</includes>
+    <includes refid="_general_switch_form_8h" local="yes">GeneralSwitchForm.h</includes>
+    <includes refid="_h_w_config_8h" local="yes">HWConfig.h</includes>
+    <includes refid="_l_c_d_form_8h" local="yes">LCDForm.h</includes>
+    <includedby refid="_console_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h</includedby>
+    <includedby refid="_debug_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</includedby>
+    <includedby refid="_temperature_controller_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h</includedby>
+    <includedby refid="_light_controller_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h</includedby>
+    <includedby refid="_general_switch_form_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.h</includedby>
+    <includedby refid="_display_interface_8cpp" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.cpp</includedby>
+    <incdepgraph>
+      <node id="464">
+        <label>LCDStringList.h</label>
+        <link refid="_l_c_d_string_list_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>LightInterface.h</label>
+        <link refid="_light_interface_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="446">
+        <label>Timer.h</label>
+      </node>
+      <node id="448">
+        <label>genieArduino.h</label>
+      </node>
+      <node id="468">
+        <label>GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="452">
+        <label>CanInterface.h</label>
+        <link refid="_can_interface_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+      <node id="455">
+        <label>BitArray.h</label>
+      </node>
+      <node id="453">
+        <label>due_can.h</label>
+      </node>
+      <node id="459">
+        <label>HWConfig.h</label>
+        <link refid="_h_w_config_8h"/>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="454">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>WProgram.h</label>
+      </node>
+      <node id="463">
+        <label>HeaterInterface.h</label>
+        <link refid="_heater_interface_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>LCDForm.h</label>
+        <link refid="_l_c_d_form_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+      </node>
+      <node id="465">
+        <label>LCDStringMsg.h</label>
+        <link refid="_l_c_d_string_msg_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+      <node id="444">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>ConsoleForm.h</label>
+        <link refid="_console_form_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>arduino.h</label>
+      </node>
+      <node id="447">
+        <label>Vector.h</label>
+      </node>
+      <node id="456">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</label>
+        <link refid="DisplayInterface.h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="461">
+        <label>Utils.h</label>
+      </node>
+      <node id="458">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="474">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.cpp</label>
+        <link refid="_data_logger_8cpp"/>
+      </node>
+      <node id="471">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsConfig.cpp</label>
+        <link refid="_channels_config_8cpp"/>
+      </node>
+      <node id="478">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.cpp</label>
+        <link refid="_debug_form_8cpp"/>
+      </node>
+      <node id="483">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp</label>
+        <link refid="_console_form_8cpp"/>
+      </node>
+      <node id="480">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp</label>
+        <link refid="_temperature_controller_form_8cpp"/>
+      </node>
+      <node id="475">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h</label>
+        <link refid="_wifi_interface_8h"/>
+        <childnode refid="476" relation="include">
+        </childnode>
+      </node>
+      <node id="473">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.h</label>
+        <link refid="_data_logger_8h"/>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="480" relation="include">
+        </childnode>
+      </node>
+      <node id="481">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.cpp</label>
+        <link refid="_wifi_interface_8cpp"/>
+      </node>
+      <node id="470">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h</label>
+        <link refid="_console_form_8h"/>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.cpp</label>
+        <link refid="_display_interface_8cpp"/>
+      </node>
+      <node id="482">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp</label>
+        <link refid="_light_controller_form_8cpp"/>
+      </node>
+      <node id="484">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp</label>
+        <link refid="_general_switch_form_8cpp"/>
+      </node>
+      <node id="469">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</label>
+        <link refid="DisplayInterface.h"/>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_display_interface_class" prot="public">DisplayInterfaceClass</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_display_interface_8h_1af55afb4ca34913d796d3e6ffd0bf6337" prot="public" static="no">
+        <name>LCD_TAG</name>
+        <initializer>F(&quot;LCD&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This class represent a generic interface to handle different form on the lcd screen </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="31" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+        <referencedby refid="class_general_switch_form_1ae7e3fbcea1b729adb3b16d3d889001a9" compoundref="_general_switch_form_8cpp" startline="14" endline="31">GeneralSwitchForm::onEvent</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">LightControllerForm::onEvent</referencedby>
+        <referencedby refid="class_temperature_controller_form_1aeeeec747874a7fc4b4379f89ad7ccf04" compoundref="_temperature_controller_form_8cpp" startline="13" endline="27">TemperatureControllerForm::onEvent</referencedby>
+        <referencedby refid="class_display_interface_class_1a4752581d52a5e675a4ad9406204cb8a6" compoundref="_display_interface_8cpp" startline="101" endline="123">DisplayInterfaceClass::setCurrentForm</referencedby>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1abc2b684fcc127e93aee54a3a45e25a7c" prot="public" static="no">
+        <name>REFRESH_RATE</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="34" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1a48d14ab8e3861031fe8d8ebf8ced747f" prot="public" static="no">
+        <name>MAX_UPDATE_TIME</name>
+        <initializer>1500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="37" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1a55e30ad66d20fc74b4ddefc6991a504f" prot="public" static="no">
+        <name>CONSOLEFORM</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="39" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1a74d29655249dd34432d09ba422a2d508" prot="public" static="no">
+        <name>LIGHTCTRLFORM</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="40" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1ab8d6a812522f54315d907abc3f15f053" prot="public" static="no">
+        <name>TEMPCTRLFORM</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="41" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1a0547bfe5d65558071e138d725d2497bb" prot="public" static="no">
+        <name>GENERALFORM</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="42" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_display_interface_8h_1a1841e03f1ecc1b45667f0ee669d33536" prot="public" static="no">
+        <name>DEBUGFORM</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="43" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_display_interface_8h_1a2b93440c6cb5986b1092b2b5e4aada2c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_display_interface_class" kindref="compound">DisplayInterfaceClass</ref></type>
+        <definition>DisplayInterfaceClass displayInterface</definition>
+        <argsstring></argsstring>
+        <name>displayInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h" line="87" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.cpp" bodystart="125" bodyend="-1"/>
+        <referencedby refid="_display_interface_8cpp_1a4a0d34fc20ddef2d22329701e6794520" compoundref="_display_interface_8cpp" startline="3" endline="13">onEvent</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>DisplayInterface.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_DISPLAYINTERFACE_h</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_DISPLAYINTERFACE_h</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ARDUINO)<sp/>&amp;&amp;<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#include<sp/>&lt;Timer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Vector.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;genieArduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_console_form_8h" kindref="compound">ConsoleForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_debug_form_8h" kindref="compound">DebugForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_temperature_controller_form_8h" kindref="compound">TemperatureControllerForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_light_controller_form_8h" kindref="compound">LightControllerForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_general_switch_form_8h" kindref="compound">GeneralSwitchForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_h_w_config_8h" kindref="compound">HWConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_c_d_form_8h" kindref="compound">LCDForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Logger<sp/>tag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_display_interface_8h_1af55afb4ca34913d796d3e6ffd0bf6337" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_TAG<sp/>F(&quot;LCD&quot;)</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Refresh<sp/>per<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_display_interface_8h_1abc2b684fcc127e93aee54a3a45e25a7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFRESH_RATE<sp/>3</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Max<sp/>time<sp/>allowed<sp/>to<sp/>refresh<sp/>a<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_display_interface_8h_1a48d14ab8e3861031fe8d8ebf8ced747f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_UPDATE_TIME<sp/>1500</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_display_interface_8h_1a55e30ad66d20fc74b4ddefc6991a504f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSOLEFORM<sp/>0</highlight></codeline>
+<codeline lineno="40" refid="_display_interface_8h_1a74d29655249dd34432d09ba422a2d508" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LIGHTCTRLFORM<sp/>1</highlight></codeline>
+<codeline lineno="41" refid="_display_interface_8h_1ab8d6a812522f54315d907abc3f15f053" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TEMPCTRLFORM<sp/>2</highlight></codeline>
+<codeline lineno="42" refid="_display_interface_8h_1a0547bfe5d65558071e138d725d2497bb" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>GENERALFORM<sp/>3</highlight></codeline>
+<codeline lineno="43" refid="_display_interface_8h_1a1841e03f1ecc1b45667f0ee669d33536" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEBUGFORM<sp/>4</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_display_interface_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_display_interface_class" kindref="compound">DisplayInterfaceClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Init<sp/>function<sp/>to<sp/>call<sp/>inside<sp/>the<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>function<sp/>to<sp/>call<sp/>inside<sp/>the<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Change<sp/>the<sp/>current<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class_1a4752581d52a5e675a4ad9406204cb8a6" kindref="member">setCurrentForm</ref>(<ref refid="class_l_c_d_form" kindref="compound">LCDForm</ref><sp/>*<ref refid="class_display_interface_class_1ab11929bc3c48971d5c0bbcb87d4d50ad" kindref="member">currentForm</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>current<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_display_interface_class_1a761ca3cd5206bd1890e732a6c6c2ef8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_l_c_d_form" kindref="compound">LCDForm</ref><sp/>*<ref refid="class_display_interface_class_1a761ca3cd5206bd1890e732a6c6c2ef8a" kindref="member">getCurrentForm</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class_1ab11929bc3c48971d5c0bbcb87d4d50ad" kindref="member">currentForm</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>handle<sp/>the<sp/>incoming<sp/>event<sp/>from<sp/>the<sp/>lcd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class_1a4a0d34fc20ddef2d22329701e6794520" kindref="member">onEvent</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicates<sp/>if<sp/>the<sp/>form<sp/>refresh<sp/>is<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_display_interface_class_1a5d924847735951a7c4ea192c89d6d2a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class_1a5d924847735951a7c4ea192c89d6d2a7" kindref="member">enabled</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Genie<sp/>library<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_display_interface_class_1ab1ff09901cdb598b53f30ee2fa57e659" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Genie<sp/><ref refid="class_display_interface_class_1ab1ff09901cdb598b53f30ee2fa57e659" kindref="member">genie</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Refresh<sp/>form<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_display_interface_class_1ae2c886933bbcbf322e03d127190e0fa5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/><ref refid="class_display_interface_class_1ae2c886933bbcbf322e03d127190e0fa5" kindref="member">refreshTimer</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>form<sp/>instance<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_display_interface_class_1ab11929bc3c48971d5c0bbcb87d4d50ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_l_c_d_form" kindref="compound">LCDForm</ref><sp/>*<ref refid="class_display_interface_class_1ab11929bc3c48971d5c0bbcb87d4d50ad" kindref="member">currentForm</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Display<sp/>interface<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_display_interface_class" kindref="compound">DisplayInterfaceClass</ref><sp/><ref refid="_display_interface_8h_1a2b93440c6cb5986b1092b2b5e4aada2c" kindref="member">displayInterface</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h"/>
+  </compounddef>
+</doxygen>

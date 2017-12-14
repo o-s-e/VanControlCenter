@@ -31,14 +31,14 @@
 class TemperatureControllerForm : public LCDForm {
 public:
 
-    void init(Genie& genie);
+    void init(Genie& genie) override;
 
-    void update(Genie& genie);
+    void update(Genie& genie) override;
 
-    void onEvent(Genie& genie, genieFrame& evt);
+    void onEvent(Genie& genie, genieFrame& evt) override;
 
     //TODO index needs to be adapted when the UI was build
-    int getFormIndex() { return 3; }
+    int getFormIndex() override { return 3; }
 
 private:
 

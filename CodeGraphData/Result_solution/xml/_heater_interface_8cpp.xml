@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_heater_interface_8cpp" kind="file">
+    <compoundname>HeaterInterface.cpp</compoundname>
+    <includes refid="_heater_interface_8h" local="yes">HeaterInterface.h</includes>
+    <incdepgraph>
+      <node id="562">
+        <label>Timer.h</label>
+      </node>
+      <node id="559">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.cpp</label>
+        <link refid="HeaterInterface.cpp"/>
+        <childnode refid="560" relation="include">
+        </childnode>
+      </node>
+      <node id="573">
+        <label>CanInterface.h</label>
+        <link refid="_can_interface_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="574" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+      </node>
+      <node id="568">
+        <label>BitArray.h</label>
+      </node>
+      <node id="574">
+        <label>due_can.h</label>
+      </node>
+      <node id="563">
+        <label>HWConfig.h</label>
+        <link refid="_h_w_config_8h"/>
+        <childnode refid="564" relation="include">
+        </childnode>
+      </node>
+      <node id="566">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="567">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+      </node>
+      <node id="561">
+        <label>WProgram.h</label>
+      </node>
+      <node id="560">
+        <label>HeaterInterface.h</label>
+        <link refid="_heater_interface_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+      </node>
+      <node id="565">
+        <label>Logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+      </node>
+      <node id="564">
+        <label>arduino.h</label>
+      </node>
+      <node id="569">
+        <label>Vector.h</label>
+      </node>
+      <node id="570">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="575">
+        <label>Utils.h</label>
+      </node>
+      <node id="572">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_heater_interface_8cpp_1afea7fd64b75b6cfe48283401c820a001" prot="public" static="no" mutable="no">
+        <type><ref refid="class_heater_interface" kindref="compound">HeaterInterface</ref></type>
+        <definition>HeaterInterface heaterInterface</definition>
+        <argsstring></argsstring>
+        <name>heaterInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.cpp" line="140" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.cpp" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_heater_interface_8h" kindref="compound">HeaterInterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" kindref="member">HeaterInterface::init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" kindref="member">HT_GAS_PIN</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" kindref="member">HT_VENT_PIN</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" kindref="member">HT_STATE_LED</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" kindref="member">HT_GAS_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" kindref="member">HT_VENT_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" kindref="member">HT_STATE_LED</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a452ea72475365777dfff2de91e9f0c86" kindref="member">Off</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1ac38c5d78830d253ae23d531f62de9eb5" kindref="member">ledTimer</ref>.setDuration(<ref refid="_heater_interface_8h_1af959cc9a7ff74b20d9dcb0dedecfd74c" kindref="member">HT_STATE_LED_DUR</ref>).start();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1abcaa8410675bc26b88020e532ec779dc" kindref="member">lastStateUpdate</ref>.setDuration(<ref refid="_heater_interface_8h_1a68674a360e60cb9235bf9b9bdb520bab" kindref="member">HT_STATE_TTL</ref>).start();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1ae06098f9356ed1baf428461961a52691" kindref="member">heaterFaultCode</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Heater<sp/>Interface<sp/>initialized&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" kindref="member">HeaterInterface::update</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1abcaa8410675bc26b88020e532ec779dc" kindref="member">lastStateUpdate</ref>.hasFinished())<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1ad46fd0d5a2bbf3b104cf57efbe4aae41" kindref="member">getValueAs</ref>&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae7e0399b8efb7d0a5ed5fb9b8a13e6e7" kindref="member">CanID::TEMP</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>setTemp<sp/>=<sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1ad46fd0d5a2bbf3b104cf57efbe4aae41" kindref="member">getValueAs</ref>&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(<ref refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a477caa65da8810f5a3c641f3911ec107" kindref="member">CanID::SET_TEMP</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>&gt;=<sp/>setTemp)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>==<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a39b9295e811e5149acc25c51610fe5a1" kindref="member">On</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" kindref="member">cooldown</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>&lt;<sp/>setTemp)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a39b9295e811e5149acc25c51610fe5a1" kindref="member">On</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;State:<sp/>On:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>set<sp/>the<sp/>temp&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1abcaa8410675bc26b88020e532ec779dc" kindref="member">lastStateUpdate</ref>.start();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1ac38c5d78830d253ae23d531f62de9eb5" kindref="member">ledTimer</ref>.hasFinished())<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a39b9295e811e5149acc25c51610fe5a1" kindref="member">On</ref>:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>=<sp/>(<ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>+<sp/>1)<sp/>%<sp/>10;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" kindref="member">HT_STATE_LED</ref>,<sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>&lt;<sp/>5<sp/>?<sp/>HIGH<sp/>:<sp/>LOW);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" kindref="member">HT_GAS_PIN</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" kindref="member">HT_VENT_PIN</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a452ea72475365777dfff2de91e9f0c86" kindref="member">Off</ref>:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>=<sp/>!<ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" kindref="member">HT_STATE_LED</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" kindref="member">HT_GAS_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" kindref="member">HT_VENT_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a9ecd861645371cce37623238d64ca872" kindref="member">VentOnly</ref>:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>=<sp/>(<ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>+<sp/>1)<sp/>%<sp/>10;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" kindref="member">HT_STATE_LED</ref>,<sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>&lt;<sp/>20<sp/>?<sp/>HIGH<sp/>:<sp/>LOW);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" kindref="member">HT_GAS_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" kindref="member">HT_VENT_PIN</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>the<sp/>good<sp/>way,<sp/>but<sp/>it<sp/>works</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_heater_interface_8cpp_1afea7fd64b75b6cfe48283401c820a001" kindref="member">heaterInterface</ref>.<ref refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" kindref="member">cooldown</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>=<sp/>(<ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>+<sp/>1)<sp/>%<sp/>10;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1ab6cf88a89d220b005358086f23c56f33" kindref="member">HT_STATE_LED</ref>,<sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>&lt;<sp/>1<sp/>?<sp/>HIGH<sp/>:<sp/>LOW);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a7adfe94dc42865e905cdbe1a3394288f" kindref="member">HT_GAS_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="_h_w_config_8h_1a484a45278802408c968d80eb57c42440" kindref="member">HT_VENT_PIN</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1ac38c5d78830d253ae23d531f62de9eb5" kindref="member">ledTimer</ref>.start();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_heater_interface_1a6b8f3ace98bf5ab873213e31da9ddb3e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1a6b8f3ace98bf5ab873213e31da9ddb3e" kindref="member">HeaterInterface::onStateChanged</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*newStateString)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88" kindref="member">HeaterState</ref><sp/>newState;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(newStateString,<sp/><ref refid="_heater_interface_8h_1ac4b09fccb7c3c2ae4360ba6d462670dc" kindref="member">ON_STATE</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newState<sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a39b9295e811e5149acc25c51610fe5a1" kindref="member">On</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(newStateString,<sp/><ref refid="_heater_interface_8h_1a45c78a31d0a9cfbd3878e77c43e2cd6e" kindref="member">OFF_STATE</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newState<sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a452ea72475365777dfff2de91e9f0c86" kindref="member">Off</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(newStateString,<sp/><ref refid="_heater_interface_8h_1aaa8f9aec09dece672ce0f729c840fdfe" kindref="member">VENT_STATE</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newState<sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a9ecd861645371cce37623238d64ca872" kindref="member">VentOnly</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(newStateString,<sp/><ref refid="_heater_interface_8h_1a60db3d3e5c5fb314c0d698922d0b7124" kindref="member">ERROR_STATE</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newState<sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a3f886e7c0029ebd3f1b1abd974d68488" kindref="member">Error</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newState<sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a81ab518c00701b560d2a0f74d1abb2e6" kindref="member">Unknown</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newState<sp/>!=<sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1acdd5bb60ba2927327358e78add62c127" kindref="member">ledStatus</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>=<sp/>newState;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1abcaa8410675bc26b88020e532ec779dc" kindref="member">lastStateUpdate</ref>.start();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" kindref="member">HeaterInterface::cooldown</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;CooldownTimer<sp/>elapsed<sp/>time:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="class_heater_interface_1a5dbc5621641947a45131eb5fef855b56" kindref="member">cooldownTimer</ref>.elapsedTime()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;CooldownTimer<sp/>has<sp/>finished?:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="class_heater_interface_1a5dbc5621641947a45131eb5fef855b56" kindref="member">cooldownTimer</ref>.hasFinished()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>==<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a39b9295e811e5149acc25c51610fe5a1" kindref="member">On</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Colldownsquence<sp/>initiated&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a5dbc5621641947a45131eb5fef855b56" kindref="member">cooldownTimer</ref>.setDuration(<ref refid="_heater_interface_8h_1a4f7d4d798ccf1f145e5f78cc3b8f11cc" kindref="member">HT_COOLDOWN_DUR</ref>).start();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a9ecd861645371cce37623238d64ca872" kindref="member">VentOnly</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>==<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a9ecd861645371cce37623238d64ca872" kindref="member">VentOnly</ref><sp/>&amp;&amp;<sp/><ref refid="class_heater_interface_1a5dbc5621641947a45131eb5fef855b56" kindref="member">cooldownTimer</ref>.isRunning())<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;State:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;CoolDown&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>==<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a9ecd861645371cce37623238d64ca872" kindref="member">VentOnly</ref><sp/>&amp;&amp;<sp/><ref refid="class_heater_interface_1a5dbc5621641947a45131eb5fef855b56" kindref="member">cooldownTimer</ref>.hasFinished())<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;State:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Stopping<sp/>Heater&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>=<sp/><ref refid="class_heater_interface_1ac3dc4d060cb8e8565ac04a5704ab4e88a452ea72475365777dfff2de91e9f0c86" kindref="member">Off</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;State:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="class_heater_interface_1a8e4ca6581c4f3995e11ad5fc43a6a967" kindref="member">state</ref><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_heater_interface_8h_1abf14a1133c5879fd5ae57650dc4b812c" kindref="member">HT_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Undefined<sp/>State&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>One<sp/>must<sp/>adapt<sp/>the<sp/>timer,<sp/>so<sp/>that<sp/>the<sp/>interuppts<sp/>are<sp/>only<sp/>counted<sp/>from<sp/>one<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_heater_interface_1abd38a82c2f0a51277c2cd3f8c55d7543" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_heater_interface_1abd38a82c2f0a51277c2cd3f8c55d7543" kindref="member">HeaterInterface::heaterFaultCodeCallback</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1ae06098f9356ed1baf428461961a52691" kindref="member">heaterFaultCode</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="class_heater_interface_1ae06098f9356ed1baf428461961a52691" kindref="member">heaterFaultCode</ref><sp/>&lt;<sp/>12)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1ae06098f9356ed1baf428461961a52691" kindref="member">heaterFaultCode</ref><sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_heater_interface_1ae06098f9356ed1baf428461961a52691" kindref="member">heaterFaultCode</ref><sp/>==<sp/>12)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_heater_interface_1ae06098f9356ed1baf428461961a52691" kindref="member">heaterFaultCode</ref><sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="_heater_interface_8h_1afea7fd64b75b6cfe48283401c820a001" refkind="member"><highlight class="normal"><ref refid="class_heater_interface" kindref="compound">HeaterInterface</ref><sp/><ref refid="_heater_interface_8cpp_1afea7fd64b75b6cfe48283401c820a001" kindref="member">heaterInterface</ref>;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/HeaterInterface.cpp"/>
+  </compounddef>
+</doxygen>

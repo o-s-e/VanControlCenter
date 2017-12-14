@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_info_data" kind="struct" prot="public">
+    <compoundname>InfoData</compoundname>
+    <includes refid="_wifi_interface_8h" local="no">WifiInterface.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_info_data_1a443c8b1cd95a645b4b334ff5bdda449b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char InfoData::date[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="41" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_info_data_1a03a5b6d888b262a5a8d1f30e2a03d312" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char InfoData::time[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="42" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_info_data_1a653432ccd31c58c801ea8a57671d3736" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte InfoData::ack</definition>
+        <argsstring></argsstring>
+        <name>ack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h" bodystart="40" bodyend="44"/>
+    <listofallmembers>
+      <member refid="struct_info_data_1a653432ccd31c58c801ea8a57671d3736" prot="public" virt="non-virtual"><scope>InfoData</scope><name>ack</name></member>
+      <member refid="struct_info_data_1a443c8b1cd95a645b4b334ff5bdda449b" prot="public" virt="non-virtual"><scope>InfoData</scope><name>date</name></member>
+      <member refid="struct_info_data_1a03a5b6d888b262a5a8d1f30e2a03d312" prot="public" virt="non-virtual"><scope>InfoData</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

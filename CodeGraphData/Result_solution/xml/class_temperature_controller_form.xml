@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_temperature_controller_form" kind="class" prot="public">
+    <compoundname>TemperatureControllerForm</compoundname>
+    <basecompoundref refid="class_l_c_d_form" prot="public" virt="non-virtual">LCDForm</basecompoundref>
+    <includes refid="_temperature_controller_form_8h" local="no">TemperatureControllerForm.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_temperature_controller_form_1a02b9dca466c7cc6d701fc1ebae0d07e5" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer TemperatureControllerForm::lastStateChange</definition>
+        <argsstring></argsstring>
+        <name>lastStateChange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="49" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_temperature_controller_form_1a67dfb31eae60a3d9b66beb37339dc9cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TemperatureControllerForm::init</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>init</name>
+        <reimplements refid="class_l_c_d_form_1a9260ad3548a69ddf72925438e3e99ed4">init</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="34" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp" bodystart="3" bodyend="6"/>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_temperature_controller_form_1a9559443db3c0a0d05f9752c638b7a9fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TemperatureControllerForm::update</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>update</name>
+        <reimplements refid="class_l_c_d_form_1a587b6a2af3f0520cc36152c8bcbbd95e">update</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="36" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp" bodystart="8" bodyend="11"/>
+        <references refid="class_temperature_controller_form_1ae347e189da89a0649a011449922eee03" compoundref="_temperature_controller_form_8cpp" startline="29" endline="34">updateWidgetsValues</references>
+      </memberdef>
+      <memberdef kind="function" id="class_temperature_controller_form_1aeeeec747874a7fc4b4379f89ad7ccf04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TemperatureControllerForm::onEvent</definition>
+        <argsstring>(Genie &amp;genie, genieFrame &amp;evt)</argsstring>
+        <name>onEvent</name>
+        <reimplements refid="class_l_c_d_form_1aaeca4ab2db7dc71809cfdca6afc0cc14">onEvent</reimplements>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <param>
+          <type>genieFrame &amp;</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="38" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp" bodystart="13" bodyend="27"/>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="_display_interface_8h_1af55afb4ca34913d796d3e6ffd0bf6337" compoundref="_display_interface_8h" startline="31">LCD_TAG</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a477caa65da8810f5a3c641f3911ec107" compoundref="_can_interface_8h" startline="47">CanID::SET_TEMP</references>
+        <references refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</references>
+        <references refid="_temperature_controller_form_8h_1afaaae7c6ca377d05ebc34229fcd65626" compoundref="_temperature_controller_form_8h" startline="29">TEMP_GAUGE_SET</references>
+        <references refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" compoundref="logger_8cpp" startline="26" endline="29">LoggerClass::w</references>
+      </memberdef>
+      <memberdef kind="function" id="class_temperature_controller_form_1ad09ba21b4914725519fd93a0edf25088" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int TemperatureControllerForm::getFormIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getFormIndex</name>
+        <reimplements refid="class_l_c_d_form_1af8f72fec0e256df75eb91a5531ff554f">getFormIndex</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="41" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_temperature_controller_form_1ae347e189da89a0649a011449922eee03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TemperatureControllerForm::updateWidgetsValues</definition>
+        <argsstring>(Genie &amp;genie)</argsstring>
+        <name>updateWidgetsValues</name>
+        <param>
+          <type>Genie &amp;</type>
+          <declname>genie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="47" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp" bodystart="29" bodyend="34"/>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="class_channels_buffer_class_1ad46fd0d5a2bbf3b104cf57efbe4aae41" compoundref="_channels_buffer_8h" startline="39" endline="57">ChannelsBufferClass::getValueAs</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae7e0399b8efb7d0a5ed5fb9b8a13e6e7" compoundref="_can_interface_8h" startline="38">CanID::TEMP</references>
+        <references refid="_temperature_controller_form_8h_1ae2627d62e9b89c0ba1cdd024fd2e5504" compoundref="_temperature_controller_form_8h" startline="28">TEMP_GAUGE_DISP</references>
+        <references refid="class_l_c_d_form_1a9dc417dfde659331c4e73b30c15891aa" compoundref="_l_c_d_form_8h" startline="22" endline="24">LCDForm::updateWidget</references>
+        <referencedby refid="class_temperature_controller_form_1a9559443db3c0a0d05f9752c638b7a9fc" compoundref="_temperature_controller_form_8cpp" startline="8" endline="11">update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>TemperatureControllerForm</label>
+        <link refid="class_temperature_controller_form"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>LCDForm</label>
+        <link refid="class_l_c_d_form"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="68">
+        <label>TemperatureControllerForm</label>
+        <link refid="class_temperature_controller_form"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>LCDForm</label>
+        <link refid="class_l_c_d_form"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" line="31" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h" bodystart="31" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_temperature_controller_form_1ad09ba21b4914725519fd93a0edf25088" prot="public" virt="virtual"><scope>TemperatureControllerForm</scope><name>getFormIndex</name></member>
+      <member refid="class_temperature_controller_form_1a67dfb31eae60a3d9b66beb37339dc9cc" prot="public" virt="virtual"><scope>TemperatureControllerForm</scope><name>init</name></member>
+      <member refid="class_temperature_controller_form_1a02b9dca466c7cc6d701fc1ebae0d07e5" prot="private" virt="non-virtual"><scope>TemperatureControllerForm</scope><name>lastStateChange</name></member>
+      <member refid="class_l_c_d_form_1a003f1f2931a8cfeddabd37e04ecaacbd" prot="public" virt="virtual"><scope>TemperatureControllerForm</scope><name>onEnter</name></member>
+      <member refid="class_temperature_controller_form_1aeeeec747874a7fc4b4379f89ad7ccf04" prot="public" virt="virtual"><scope>TemperatureControllerForm</scope><name>onEvent</name></member>
+      <member refid="class_l_c_d_form_1a5f84666b6c8aec63cc54b1598e824410" prot="public" virt="virtual"><scope>TemperatureControllerForm</scope><name>onExit</name></member>
+      <member refid="class_temperature_controller_form_1a9559443db3c0a0d05f9752c638b7a9fc" prot="public" virt="virtual"><scope>TemperatureControllerForm</scope><name>update</name></member>
+      <member refid="class_l_c_d_form_1aaef8550ba90eafbc170a73d734c57bac" prot="protected" virt="non-virtual"><scope>TemperatureControllerForm</scope><name>updateString</name></member>
+      <member refid="class_l_c_d_form_1a9dc417dfde659331c4e73b30c15891aa" prot="protected" virt="non-virtual"><scope>TemperatureControllerForm</scope><name>updateWidget</name></member>
+      <member refid="class_temperature_controller_form_1ae347e189da89a0649a011449922eee03" prot="private" virt="non-virtual"><scope>TemperatureControllerForm</scope><name>updateWidgetsValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

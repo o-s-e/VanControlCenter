@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_shell_8h" kind="file">
+    <compoundname>Shell.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="yes">ByteBuffer.h</includes>
+    <includes refid="_channels_buffer_8h" local="yes">ChannelsBuffer.h</includes>
+    <includes refid="_channels_config_8h" local="yes">ChannelsConfig.h</includes>
+    <includes refid="logger_8h" local="yes">Logger.h</includes>
+    <includes local="no">SD.h</includes>
+    <includedby refid="_shell_8cpp" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp</includedby>
+    <incdepgraph>
+      <node id="907">
+        <label>SD.h</label>
+      </node>
+      <node id="903">
+        <label>Timer.h</label>
+      </node>
+      <node id="896">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h</label>
+        <link refid="Shell.h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="900">
+        <label>BitArray.h</label>
+      </node>
+      <node id="898">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="899">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="900" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+      </node>
+      <node id="897">
+        <label>WProgram.h</label>
+      </node>
+      <node id="904">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+      </node>
+      <node id="906">
+        <label>Logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>Vector.h</label>
+      </node>
+      <node id="902">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+      </node>
+      <node id="905">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="908">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h</label>
+        <link refid="Shell.h"/>
+        <childnode refid="909" relation="include">
+        </childnode>
+      </node>
+      <node id="909">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp</label>
+        <link refid="_shell_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_shell_command" prot="public">ShellCommand</innerclass>
+    <innerclass refid="class_shell_class" prot="public">ShellClass</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" prot="public" static="no">
+        <name>SHELL_TAG</name>
+        <initializer>F(&quot;SH&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="18" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" compoundref="_shell_8cpp" startline="66" endline="77">ShellClass::analogReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" compoundref="_shell_8cpp" startline="79" endline="93">ShellClass::analogWriteCmd</referencedby>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">ShellClass::channelValueCmd</referencedby>
+        <referencedby refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" compoundref="_shell_8cpp" startline="227" endline="245">ShellClass::CHbufferSet</referencedby>
+        <referencedby refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" compoundref="_shell_8cpp" startline="124" endline="134">ShellClass::digitalReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" compoundref="_shell_8cpp" startline="136" endline="148">ShellClass::digitalWriteCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" compoundref="_shell_8cpp" startline="29" endline="33">ShellClass::init</referencedby>
+        <referencedby refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" compoundref="_shell_8cpp" startline="247" endline="264">ShellClass::printSDTree</referencedby>
+        <referencedby refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" compoundref="_shell_8cpp" startline="151" endline="160">ShellClass::SDMkDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" compoundref="_shell_8cpp" startline="162" endline="181">ShellClass::SDOpenCmd</referencedby>
+        <referencedby refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" compoundref="_shell_8cpp" startline="183" endline="197">ShellClass::SDRmCmd</referencedby>
+        <referencedby refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" compoundref="_shell_8cpp" startline="199" endline="213">ShellClass::SDRmDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" compoundref="_shell_8cpp" startline="215" endline="225">ShellClass::SDTreeCmd</referencedby>
+        <referencedby refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" compoundref="_shell_8cpp" startline="35" endline="62">ShellClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_shell_8h_1aa95b6cfb2bcd7070bc42e5e47bbe7793" prot="public" static="no">
+        <name>SHELL_RX_BUFFER</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="20" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" compoundref="_shell_8cpp" startline="29" endline="33">ShellClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_shell_8h_1aa806eb51b1187d12a4217b3a1f4b4a2f" prot="public" static="no">
+        <name>CMDS_NUM</name>
+        <initializer>(sizeof(<ref refid="_shell_8h_1a27844f3f96d9e6d8c53d642ea585adaf" kindref="member">cmdsList</ref>) / sizeof(<ref refid="struct_shell_command" kindref="compound">ShellCommand</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="31" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" compoundref="_shell_8cpp" startline="268" endline="309">ShellClass::findCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_shell_8h_1a27844f3f96d9e6d8c53d642ea585adaf" prot="public" static="no" mutable="no">
+        <type>const PROGMEM <ref refid="struct_shell_command" kindref="compound">ShellCommand</ref></type>
+        <definition>const PROGMEM ShellCommand cmdsList[]</definition>
+        <argsstring>[]</argsstring>
+        <name>cmdsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="29" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="4" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" compoundref="_shell_8cpp" startline="268" endline="309">ShellClass::findCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_shell_8h_1a32e8217589c2bef97f7f4fbb8b309999" prot="public" static="no" mutable="no">
+        <type><ref refid="class_shell_class" kindref="compound">ShellClass</ref></type>
+        <definition>ShellClass shell</definition>
+        <argsstring></argsstring>
+        <name>shell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="66" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Shell.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_SHELL_h</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_SHELL_h</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ARDUINO)<sp/>&amp;&amp;<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ByteBuffer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_channels_buffer_8h" kindref="compound">ChannelsBuffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_channels_config_8h" kindref="compound">ChannelsConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">Logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SD.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHELL_TAG<sp/><sp/><sp/>F(&quot;SH&quot;)</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_shell_8h_1aa95b6cfb2bcd7070bc42e5e47bbe7793" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHELL_RX_BUFFER<sp/>32</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shell_class" kindref="compound">ShellClass</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="struct_shell_command" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="struct_shell_command_1abe3c132504880ed769495d6e4a05e6d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_shell_command_1abe3c132504880ed769495d6e4a05e6d2" kindref="member">cmdString</ref>[10];</highlight></codeline>
+<codeline lineno="26" refid="struct_shell_command_1a8411c9d134368b24ec75e847a057ccd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void(<ref refid="class_shell_class" kindref="compound">ShellClass</ref>::*<ref refid="struct_shell_command_1a8411c9d134368b24ec75e847a057ccd2" kindref="member">cmdFun</ref>)(String&amp;);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>PROGMEM<sp/><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref><sp/><ref refid="_shell_8h_1a27844f3f96d9e6d8c53d642ea585adaf" kindref="member">cmdsList</ref>[];</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_shell_8h_1aa806eb51b1187d12a4217b3a1f4b4a2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMDS_NUM<sp/><sp/><sp/><sp/>(sizeof(cmdsList)<sp/>/<sp/>sizeof(ShellCommand))</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_shell_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shell_class" kindref="compound">ShellClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" kindref="member">init</ref>(Stream*<sp/><ref refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" kindref="member">serialPort</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Cmds<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" kindref="member">analogReadCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" kindref="member">analogWriteCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" kindref="member">channelListCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" kindref="member">channelValueCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1ab2eba220afadfbb23092fa09964de8c7" kindref="member">channelsValuesCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" kindref="member">digitalReadCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" kindref="member">digitalWriteCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" kindref="member">SDMkDirCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" kindref="member">SDOpenCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" kindref="member">SDRmCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" kindref="member">SDRmDirCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" kindref="member">SDTreeCmd</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" kindref="member">CHbufferSet</ref>(String&amp;);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57" refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ByteBuffer<sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>;</highlight></codeline>
+<codeline lineno="58" refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Stream*<sp/><ref refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" kindref="member">serialPort</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" kindref="member">findCmd</ref>(String&amp;<sp/>line,<sp/><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref>*<sp/>cmd);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(String&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" kindref="member">printSDTree</ref>(File<sp/>dir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indent);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_shell_class" kindref="compound">ShellClass</ref><sp/><ref refid="_shell_8h_1a32e8217589c2bef97f7f4fbb8b309999" kindref="member">shell</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h"/>
+  </compounddef>
+</doxygen>

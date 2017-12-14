@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_shell_8cpp" kind="file">
+    <compoundname>Shell.cpp</compoundname>
+    <includes refid="_shell_8h" local="yes">Shell.h</includes>
+    <incdepgraph>
+      <node id="894">
+        <label>SD.h</label>
+      </node>
+      <node id="890">
+        <label>Timer.h</label>
+      </node>
+      <node id="883">
+        <label>Shell.h</label>
+        <link refid="_shell_8h"/>
+        <childnode refid="884" relation="include">
+        </childnode>
+        <childnode refid="885" relation="include">
+        </childnode>
+        <childnode refid="886" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
+      <node id="887">
+        <label>BitArray.h</label>
+      </node>
+      <node id="885">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="882">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp</label>
+        <link refid="Shell.cpp"/>
+        <childnode refid="883" relation="include">
+        </childnode>
+      </node>
+      <node id="886">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="884" relation="include">
+        </childnode>
+        <childnode refid="887" relation="include">
+        </childnode>
+        <childnode refid="885" relation="include">
+        </childnode>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+      </node>
+      <node id="884">
+        <label>WProgram.h</label>
+      </node>
+      <node id="891">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="884" relation="include">
+        </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="888" relation="include">
+        </childnode>
+      </node>
+      <node id="893">
+        <label>Logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="884" relation="include">
+        </childnode>
+        <childnode refid="885" relation="include">
+        </childnode>
+      </node>
+      <node id="888">
+        <label>Vector.h</label>
+      </node>
+      <node id="889">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="884" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+      </node>
+      <node id="892">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_shell_8cpp_1a27844f3f96d9e6d8c53d642ea585adaf" prot="public" static="no" mutable="no">
+        <type>const PROGMEM <ref refid="struct_shell_command" kindref="compound">ShellCommand</ref></type>
+        <definition>const PROGMEM ShellCommand cmdsList[]</definition>
+        <argsstring>[]</argsstring>
+        <name>cmdsList</name>
+        <initializer>= {
+    
+    { &quot;ar&quot;,			&amp;ShellClass::analogReadCmd		},	
+    { &quot;aw&quot;,			&amp;ShellClass::analogWriteCmd		},	
+
+    
+    { &quot;chbset&quot;,     &amp;ShellClass::CHbufferSet        }, 
+    { &quot;chlist&quot;,		&amp;ShellClass::channelListCmd		},	
+    { &quot;chvalue&quot;,	&amp;ShellClass::channelValueCmd	},	
+    { &quot;chvalues&quot;,	&amp;ShellClass::channelsValuesCmd	},	
+
+    
+    { &quot;dr&quot;,			&amp;ShellClass::digitalReadCmd		},	
+    { &quot;dw&quot;,			&amp;ShellClass::digitalWriteCmd	},	
+
+    
+    { &quot;sdmkdir&quot;,	&amp;ShellClass::SDMkDirCmd			},	
+    { &quot;sdopen&quot;,		&amp;ShellClass::SDOpenCmd			},	
+    { &quot;sdrm&quot;,		&amp;ShellClass::SDRmCmd			},	
+    { &quot;sdrmdir&quot;,	&amp;ShellClass::SDRmDirCmd			},	
+    { &quot;sdtree&quot;,		&amp;ShellClass::SDTreeCmd			}	
+
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" line="4" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="4" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" compoundref="_shell_8cpp" startline="268" endline="309">ShellClass::findCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_shell_8cpp_1a32e8217589c2bef97f7f4fbb8b309999" prot="public" static="no" mutable="no">
+        <type><ref refid="class_shell_class" kindref="compound">ShellClass</ref></type>
+        <definition>ShellClass shell</definition>
+        <argsstring></argsstring>
+        <name>shell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" line="326" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_shell_8h" kindref="compound">Shell.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//MUST<sp/>be<sp/>in<sp/>alphabetical<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_shell_8h_1a27844f3f96d9e6d8c53d642ea585adaf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>PROGMEM<sp/><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref><sp/><ref refid="_shell_8cpp_1a27844f3f96d9e6d8c53d642ea585adaf" kindref="member">cmdsList</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//analog<sp/>pins<sp/>cmds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;ar&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" kindref="member">ShellClass::analogReadCmd</ref><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//analogRead<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ar<sp/><sp/>&lt;pin&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;aw&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" kindref="member">ShellClass::analogWriteCmd</ref><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//analogWrite<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aw<sp/><sp/>&lt;pin&gt;<sp/><sp/><sp/>&lt;value&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//channels<sp/>cmds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;chbset&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" kindref="member">ShellClass::CHbufferSet</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/></highlight><highlight class="comment">//<sp/>set<sp/>channelbuffer<sp/>value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chbset<sp/>&lt;type&gt;<sp/>&lt;channel&gt;<sp/>&lt;value&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;chlist&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" kindref="member">ShellClass::channelListCmd</ref><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//list<sp/>all<sp/>loaded<sp/>channels<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chlist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;chvalue&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" kindref="member">ShellClass::channelValueCmd</ref><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//list<sp/>a<sp/>specific<sp/>channel<sp/>last<sp/>value<sp/><sp/><sp/><sp/>chvalue<sp/>&lt;id&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;chvalues&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1ab2eba220afadfbb23092fa09964de8c7" kindref="member">ShellClass::channelsValuesCmd</ref><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//list<sp/>all<sp/>last<sp/>channel<sp/>values<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chvalues</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//digital<sp/>pins<sp/>cmds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;dr&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" kindref="member">ShellClass::digitalReadCmd</ref><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//digitalRead<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dr<sp/><sp/>&lt;pin&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;dw&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" kindref="member">ShellClass::digitalWriteCmd</ref><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//digitalWrite<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dw<sp/><sp/>&lt;pin&gt;<sp/><sp/><sp/>&lt;value&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SD<sp/>cmds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sdmkdir&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" kindref="member">ShellClass::SDMkDirCmd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//make<sp/>a<sp/>dir<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sdmkdir<sp/>&lt;path&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sdopen&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" kindref="member">ShellClass::SDOpenCmd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//read<sp/>all<sp/>file&apos;s<sp/>content<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sdopen<sp/><sp/>&lt;path&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sdrm&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" kindref="member">ShellClass::SDRmCmd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//remove<sp/>a<sp/>file<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sdrm<sp/><sp/><sp/><sp/>&lt;path&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sdrmdir&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" kindref="member">ShellClass::SDRmDirCmd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/></highlight><highlight class="comment">//remove<sp/>a<sp/>dir<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sdrmdir<sp/>&lt;path&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sdtree&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" kindref="member">ShellClass::SDTreeCmd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="comment">//print<sp/>all<sp/>files<sp/>and<sp/>dirs<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sdtree</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" kindref="member">ShellClass::init</ref>(Stream*<sp/>serialPort)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;serialPort<sp/>=<sp/><ref refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" kindref="member">serialPort</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.resize(<ref refid="_shell_8h_1aa95b6cfb2bcd7070bc42e5e47bbe7793" kindref="member">SHELL_RX_BUFFER</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Shell<sp/>initialized&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" kindref="member">ShellClass::update</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>line;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref><sp/>cmd;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" kindref="member">serialPort</ref>-&gt;available())<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" kindref="member">serialPort</ref>-&gt;available()<sp/>&amp;&amp;<sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.getSize()<sp/>&lt;<sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.getCapacity())<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.append(<ref refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" kindref="member">serialPort</ref>-&gt;read());</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.indexOf(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line<sp/>=<sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.toString(0,<sp/>index);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line.trim();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" kindref="member">findCmd</ref>(line,<sp/>&amp;cmd)<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(this-&gt;*cmd.<ref refid="struct_shell_command_1a8411c9d134368b24ec75e847a057ccd2" kindref="member">cmdFun</ref>)(line);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>(</highlight><highlight class="stringliteral">&quot;Cmd<sp/>executed&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Command<sp/>not<sp/>found&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" kindref="member">rxBuffer</ref>.clear();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//Cmds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" kindref="member">ShellClass::analogReadCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin<sp/>=<sp/>A0<sp/>+<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>attr<sp/>=<sp/>g_APinDescription[pin].ulPinAttribute;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((attr<sp/>&amp;<sp/>PIN_ATTR_ANALOG)<sp/>!=<sp/>PIN_ATTR_ANALOG)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Pin<sp/>number<sp/>A&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>pin<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>analog<sp/>I/O<sp/>pin<sp/>for<sp/>this<sp/>board&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pin,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Readed<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>analogRead(pin)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" kindref="member">ShellClass::analogWriteCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin<sp/>=<sp/>A0<sp/>+<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>attr<sp/>=<sp/>g_APinDescription[pin].ulPinAttribute;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((attr<sp/>&amp;<sp/>PIN_ATTR_ANALOG)<sp/>!=<sp/>PIN_ATTR_ANALOG<sp/>&amp;&amp;<sp/>(attr<sp/>&amp;<sp/>PIN_ATTR_PWM)<sp/>!=<sp/>PIN_ATTR_PWM)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Pin<sp/>number<sp/>A&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>pin<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>analog<sp/>I/O<sp/>pin<sp/>for<sp/>this<sp/>board&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>analogWrite(pin,<sp/>value);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" kindref="member">ShellClass::channelListCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_channel" kindref="compound">Channel</ref>*<sp/>c;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Channel<sp/>number:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1ac9b0b5e8af354ac715a2f6186d90a3a5" kindref="member">getChannelCount</ref>()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;ID\tName\tSize\tType&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1ac9b0b5e8af354ac715a2f6186d90a3a5" kindref="member">getChannelCount</ref>();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" kindref="member">getChannelByIndex</ref>(i);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;0x&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a52d712ca29fd43f0c574e9eef162d1c3" kindref="member">Hex</ref><sp/>&lt;&lt;<sp/>c-&gt;<ref refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" kindref="member">getID</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>c-&gt;<ref refid="class_channel_1af00977d334a39bea472d84164cc305b3" kindref="member">getName</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>c-&gt;<ref refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" kindref="member">getSize</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(char)c-&gt;<ref refid="class_channel_1a1851a034e0d21f66d8679b9babd425ea" kindref="member">getDataType</ref>()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" kindref="member">ShellClass::channelValueCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_channel" kindref="compound">Channel</ref>*<sp/>c<sp/>=<sp/><ref refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" kindref="member">channelsConfig</ref>.<ref refid="class_channels_config_class_1a08d9ac862c7ec14b1b6f399851bfb4ed" kindref="member">getChannelByID</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Channel<sp/>not<sp/>found&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>c-&gt;<ref refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" kindref="member">getID</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" kindref="member">getValueAsString</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1a08cca9e96cd65d4f2b7e16d9fff889b1" kindref="member">getValueAsByteArray</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">).toHexString()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_shell_class_1ab2eba220afadfbb23092fa09964de8c7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1ab2eba220afadfbb23092fa09964de8c7" kindref="member">ShellClass::channelsValuesCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" kindref="member">ShellClass::digitalReadCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_APinDescription[pin].ulPinType<sp/>==<sp/>PIO_NOT_A_PIN)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Pin<sp/>number<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>pin<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>digital<sp/>I/O<sp/>pin<sp/>for<sp/>this<sp/>board&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pin,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Readed<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>digitalRead(pin)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" kindref="member">ShellClass::digitalWriteCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_APinDescription[pin].ulPinType<sp/>==<sp/>PIO_NOT_A_PIN)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Pin<sp/>number<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>pin<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>digital<sp/>I/O<sp/>pin<sp/>for<sp/>this<sp/>board&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(pin,<sp/>level);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" kindref="member">ShellClass::SDMkDirCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>path<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SD.mkdir(path))<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Error<sp/>creating<sp/>new<sp/>directory:<sp/>is<sp/>SD<sp/>inserted?&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" kindref="member">ShellClass::SDOpenCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>path<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SD.exists(path))<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>f<sp/>=<sp/>SD.open(path);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f.setTimeout(100);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(f)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(f.available())<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>f.readStringUntil(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f.close();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Error<sp/>opening<sp/>file&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;File<sp/>not<sp/>found&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" kindref="member">ShellClass::SDRmCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>path<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SD.exists(path))<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SD.remove(path))<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Error<sp/>deleting<sp/>file&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;File<sp/>not<sp/>found&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" kindref="member">ShellClass::SDRmDirCmd</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>path<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SD.exists(path))<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SD.rmdir(path))<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Error<sp/>deleting<sp/>directory&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Directory<sp/>not<sp/>found&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" kindref="member">ShellClass::SDTreeCmd</ref>(String&amp;)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>File<sp/>root<sp/>=<sp/>SD.open(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>root.rewindDirectory();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!root)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Error<sp/>opening<sp/>SD<sp/>root:<sp/>is<sp/>SD<sp/>inserted?&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" kindref="member">printSDTree</ref>(root,<sp/>0);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" kindref="member">ShellClass::CHbufferSet</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>type<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channel<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;i&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>value<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toInt();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" kindref="member">setValue</ref>&lt;uint8_t&gt;(channel,<sp/>value);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">nextParam</ref>(params).toDouble();</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" kindref="member">channelsBuffer</ref>.<ref refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" kindref="member">setValue</ref>&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(channel,<sp/>value);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/>F(</highlight><highlight class="stringliteral">&quot;Set<sp/>first<sp/>param<sp/>to<sp/>i<sp/>for<sp/>int<sp/>or<sp/>d<sp/>for<sp/>double&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" kindref="member">ShellClass::printSDTree</ref>(File<sp/>dir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indent)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>File<sp/>entry<sp/>=<sp/>dir.openNextFile();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(entry)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>(<ref refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" kindref="member">SHELL_TAG</ref>)<sp/>&lt;&lt;<sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" kindref="member">repeat</ref>(</highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">,<sp/>indent)<sp/>&lt;&lt;<sp/>entry.name();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entry.isDirectory())<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" kindref="member">printSDTree</ref>(entry,<sp/>indent<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>entry.size()<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry.close();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry<sp/>=<sp/>dir.openNextFile();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="comment">//Cmd<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" kindref="member">ShellClass::findCmd</ref>(String&amp;<sp/>line,<sp/><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref>*<sp/>cmd)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Binary<sp/>search<sp/>channel&apos;s<sp/>index<sp/>by<sp/>canID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>0,<sp/>d<sp/>=<sp/><ref refid="_shell_8h_1aa806eb51b1187d12a4217b3a1f4b4a2f" kindref="member">CMDS_NUM</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p,<sp/>cmp;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>line.indexOf(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>cmdLine;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Remove<sp/>\n<sp/>and<sp/>\r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>line.remove(line.indexOf(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>line.remove(line.indexOf(</highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal">),<sp/>1);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>the<sp/>cmd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>cmdLine<sp/>=<sp/>line.substring(0,<sp/>index<sp/>==<sp/>-1<sp/>?<sp/>line.length()<sp/>:<sp/>index);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Remove<sp/>cmd<sp/>string<sp/>and<sp/>leave<sp/>only<sp/>the<sp/>params</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>line.remove(0,<sp/>index<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(s<sp/>&lt;=<sp/>d)<sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>(s<sp/>+<sp/>d)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Load<sp/>cmd<sp/>from<sp/>flash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mempcpy(cmd,<sp/>&amp;<ref refid="_shell_8cpp_1a27844f3f96d9e6d8c53d642ea585adaf" kindref="member">cmdsList</ref>[p],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_shell_command" kindref="compound">ShellCommand</ref>));</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Compare<sp/>loaded<sp/>cmd<sp/>string<sp/>and<sp/>searched<sp/>cmd<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmp<sp/>=<sp/>strcmp(cmd-&gt;<ref refid="struct_shell_command_1abe3c132504880ed769495d6e4a05e6d2" kindref="member">cmdString</ref>,<sp/>cmdLine.c_str());</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Log<sp/>&lt;&lt;<sp/>Hex<sp/>&lt;&lt;<sp/>Log.array&lt;byte&gt;((byte*)line.c_str(),<sp/>line.length())<sp/>&lt;&lt;<sp/>Endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>p<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/>=<sp/>p<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>cmd<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" refkind="member"><highlight class="normal">String<sp/><ref refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" kindref="member">ShellClass::nextParam</ref>(String&amp;<sp/>params)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>params.indexOf(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>p;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>params.substring(0,<sp/>index);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>params.remove(0,<sp/>index<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>not<sp/>found<sp/>the<sp/>params<sp/>string<sp/>is<sp/>empty<sp/>or<sp/>contains<sp/>the<sp/>last<sp/>param</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>params;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="_shell_8h_1a32e8217589c2bef97f7f4fbb8b309999" refkind="member"><highlight class="normal"><ref refid="class_shell_class" kindref="compound">ShellClass</ref><sp/><ref refid="_shell_8cpp_1a32e8217589c2bef97f7f4fbb8b309999" kindref="member">shell</ref>;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp"/>
+  </compounddef>
+</doxygen>

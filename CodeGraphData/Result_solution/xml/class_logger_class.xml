@@ -1,0 +1,670 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_logger_class" kind="class" prot="public">
+    <compoundname>LoggerClass</compoundname>
+    <includes refid="logger_8h" local="no">logger.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_logger_class_1a82f623c539fb56b4792e8107787efa26" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte LoggerClass::precision</definition>
+        <argsstring></argsstring>
+        <name>precision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="77" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" compoundref="logger_8cpp" startline="3" endline="7">init</referencedby>
+        <referencedby refid="logger_8cpp_1a1ef95b39d2f4228413a8c732e892ae42" compoundref="logger_8cpp" startline="89" endline="92">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_logger_class_1a5aec1323a221c38b85930b7272fda219" compoundref="logger_8cpp" startline="9" endline="11">setDecimalPrecision</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" prot="private" static="no" mutable="no">
+        <type>UARTClass *</type>
+        <definition>UARTClass* LoggerClass::serialPort</definition>
+        <argsstring></argsstring>
+        <name>serialPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="78" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_logger_class_1a7a11071337f6fc3124ce1be5c41427bf" compoundref="logger_8cpp" startline="13" endline="20">assert</referencedby>
+        <referencedby refid="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" compoundref="logger_8cpp" startline="3" endline="7">init</referencedby>
+        <referencedby refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" compoundref="logger_8cpp" startline="59" endline="62">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_logger_class_1a66e806591ef4da80c148b764907ad862" prot="private" static="no" mutable="no">
+        <type><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63" kindref="member">LogManip</ref></type>
+        <definition>LogManip LoggerClass::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="79" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" compoundref="logger_8cpp" startline="3" endline="7">init</referencedby>
+        <referencedby refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" compoundref="logger_8cpp" startline="59" endline="62">operator&lt;&lt;</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoggerClass::init</definition>
+        <argsstring>(UARTClass *serialPort)</argsstring>
+        <name>init</name>
+        <param>
+          <type>UARTClass *</type>
+          <declname>serialPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="33" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="3" bodyend="7"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a516ce3cb332b423a1b9707352fe5cd17" compoundref="logger_8h" startline="27">Dec</references>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">mode</references>
+        <references refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" compoundref="logger_8h" startline="77">precision</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::i</definition>
+        <argsstring>(const char *tag=&quot;INFO&quot;)</argsstring>
+        <name>i</name>
+        <param>
+          <type>const char *</type>
+          <declname>tag</declname>
+          <defval>&quot;INFO&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="55" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="22" bodyend="25"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a1cd805eaf0bb58a90fe7e7e4cf6a3cdc" compoundref="logger_8h" startline="20">Info</references>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">LightInterfaceClass::allOff</referencedby>
+        <referencedby refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" compoundref="_shell_8cpp" startline="66" endline="77">ShellClass::analogReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" compoundref="_shell_8cpp" startline="79" endline="93">ShellClass::analogWriteCmd</referencedby>
+        <referencedby refid="class_logger_class_1aad451c4a8eb97a9863d74e36e06ed0d2" compoundref="logger_8h" startline="65" endline="70">array</referencedby>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">ShellClass::channelValueCmd</referencedby>
+        <referencedby refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" compoundref="_heater_interface_8cpp" startline="107" endline="130">HeaterInterface::cooldown</referencedby>
+        <referencedby refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" compoundref="_shell_8cpp" startline="124" endline="134">ShellClass::digitalReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" compoundref="_shell_8cpp" startline="136" endline="148">ShellClass::digitalWriteCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" compoundref="_shell_8cpp" startline="29" endline="33">ShellClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" compoundref="_heater_interface_8cpp" startline="3" endline="18">HeaterInterface::init</referencedby>
+        <referencedby refid="class_can_interface_class_1aeec96952fcedda6c0489e650cfda3b23" compoundref="_can_interface_8cpp" startline="3" endline="11">CanInterfaceClass::init</referencedby>
+        <referencedby refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" compoundref="_shell_8cpp" startline="247" endline="264">ShellClass::printSDTree</referencedby>
+        <referencedby refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" compoundref="logger_8cpp" startline="51" endline="56">repeat</referencedby>
+        <referencedby refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" compoundref="_shell_8cpp" startline="151" endline="160">ShellClass::SDMkDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" compoundref="_shell_8cpp" startline="162" endline="181">ShellClass::SDOpenCmd</referencedby>
+        <referencedby refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" compoundref="_shell_8cpp" startline="183" endline="197">ShellClass::SDRmCmd</referencedby>
+        <referencedby refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" compoundref="_shell_8cpp" startline="199" endline="213">ShellClass::SDRmDirCmd</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</referencedby>
+        <referencedby refid="class_display_interface_class_1a4752581d52a5e675a4ad9406204cb8a6" compoundref="_display_interface_8cpp" startline="101" endline="123">DisplayInterfaceClass::setCurrentForm</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+        <referencedby refid="class_data_logger_class_1a75106f1588d60a80bf477a31ba78d7fd" compoundref="_data_logger_8cpp" startline="45" endline="82">DataLoggerClass::update</referencedby>
+        <referencedby refid="class_can_interface_class_1ad2b930d86db497f5f18003ef43693c79" compoundref="_can_interface_8cpp" startline="13" endline="37">CanInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::w</definition>
+        <argsstring>(const char *tag=&quot;WARN&quot;)</argsstring>
+        <name>w</name>
+        <param>
+          <type>const char *</type>
+          <declname>tag</declname>
+          <defval>&quot;WARN&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="56" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="26" bodyend="29"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a48f2bb70fceb692a2dedd8cea496c44b" compoundref="logger_8h" startline="21">Warning</references>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+        <referencedby refid="class_general_switch_form_1ae7e3fbcea1b729adb3b16d3d889001a9" compoundref="_general_switch_form_8cpp" startline="14" endline="31">GeneralSwitchForm::onEvent</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">LightControllerForm::onEvent</referencedby>
+        <referencedby refid="class_temperature_controller_form_1aeeeec747874a7fc4b4379f89ad7ccf04" compoundref="_temperature_controller_form_8cpp" startline="13" endline="27">TemperatureControllerForm::onEvent</referencedby>
+        <referencedby refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">LightInterfaceClass::setBrightness</referencedby>
+        <referencedby refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</referencedby>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::e</definition>
+        <argsstring>(const char *tag=&quot;ERR&quot;)</argsstring>
+        <name>e</name>
+        <param>
+          <type>const char *</type>
+          <declname>tag</declname>
+          <defval>&quot;ERR&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="57" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="31" bodyend="34"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a4dfd42ec49d09d8c6555c218301cc30f" compoundref="logger_8h" startline="22">Error</references>
+        <referencedby refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" compoundref="_shell_8cpp" startline="66" endline="77">ShellClass::analogReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" compoundref="_shell_8cpp" startline="79" endline="93">ShellClass::analogWriteCmd</referencedby>
+        <referencedby refid="class_logger_class_1a7a11071337f6fc3124ce1be5c41427bf" compoundref="logger_8cpp" startline="13" endline="20">assert</referencedby>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">ShellClass::channelValueCmd</referencedby>
+        <referencedby refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" compoundref="_shell_8cpp" startline="227" endline="245">ShellClass::CHbufferSet</referencedby>
+        <referencedby refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" compoundref="_heater_interface_8cpp" startline="107" endline="130">HeaterInterface::cooldown</referencedby>
+        <referencedby refid="class_data_logger_class_1a4754b65cfb2c5d881d38b66aa487202d" compoundref="_data_logger_8cpp" startline="97" endline="117">DataLoggerClass::createNewLogFile</referencedby>
+        <referencedby refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" compoundref="_shell_8cpp" startline="124" endline="134">ShellClass::digitalReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" compoundref="_shell_8cpp" startline="136" endline="148">ShellClass::digitalWriteCmd</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" compoundref="_channels_buffer_8cpp" startline="29" endline="68">ChannelsBufferClass::getValueAsString</referencedby>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+        <referencedby refid="class_data_logger_class_1a6918b9d1dc35581c3f2a4210426606f9" compoundref="_data_logger_8cpp" startline="3" endline="40">DataLoggerClass::init</referencedby>
+        <referencedby refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" compoundref="_shell_8cpp" startline="151" endline="160">ShellClass::SDMkDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" compoundref="_shell_8cpp" startline="162" endline="181">ShellClass::SDOpenCmd</referencedby>
+        <referencedby refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" compoundref="_shell_8cpp" startline="183" endline="197">ShellClass::SDRmCmd</referencedby>
+        <referencedby refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" compoundref="_shell_8cpp" startline="199" endline="213">ShellClass::SDRmDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" compoundref="_shell_8cpp" startline="215" endline="225">ShellClass::SDTreeCmd</referencedby>
+        <referencedby refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" compoundref="_shell_8cpp" startline="35" endline="62">ShellClass::update</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+        <referencedby refid="class_data_logger_class_1a75106f1588d60a80bf477a31ba78d7fd" compoundref="_data_logger_8cpp" startline="45" endline="82">DataLoggerClass::update</referencedby>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a5ddc6941c032dc21f53599a8ee0a17df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::i</definition>
+        <argsstring>(const __FlashStringHelper *tag)</argsstring>
+        <name>i</name>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="59" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="36" bodyend="39"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a1cd805eaf0bb58a90fe7e7e4cf6a3cdc" compoundref="logger_8h" startline="20">Info</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a2f7ef89045112b97575e0d2b0484109c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::w</definition>
+        <argsstring>(const __FlashStringHelper *tag)</argsstring>
+        <name>w</name>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="60" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="41" bodyend="44"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a48f2bb70fceb692a2dedd8cea496c44b" compoundref="logger_8h" startline="21">Warning</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a6e6156a8f4d54c39d5a780dcb08e5a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::e</definition>
+        <argsstring>(const __FlashStringHelper *tag)</argsstring>
+        <name>e</name>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="61" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="46" bodyend="49"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a4dfd42ec49d09d8c6555c218301cc30f" compoundref="logger_8h" startline="22">Error</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a5aec1323a221c38b85930b7272fda219" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoggerClass::setDecimalPrecision</definition>
+        <argsstring>(int precision)</argsstring>
+        <name>setDecimalPrecision</name>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="63" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="9" bodyend="11"/>
+        <references refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" compoundref="logger_8h" startline="77">precision</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1aad451c4a8eb97a9863d74e36e06ed0d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; LoggerClass::array</definition>
+        <argsstring>(T *a, int size)</argsstring>
+        <name>array</name>
+        <param>
+          <type>T *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="65" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" bodystart="65" bodyend="70"/>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">i</references>
+        <referencedby refid="logger_8cpp_1afcf7350f031088225e32edcc7236351d" compoundref="logger_8cpp" startline="138" endline="143">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a8dea1707f6232542127e590a70598a08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass &amp; LoggerClass::repeat</definition>
+        <argsstring>(char c, int times)</argsstring>
+        <name>repeat</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>times</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="72" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="51" bodyend="56"/>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <referencedby refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" compoundref="_shell_8cpp" startline="247" endline="264">ShellClass::printSDTree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_class_1a7a11071337f6fc3124ce1be5c41427bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoggerClass::assert</definition>
+        <argsstring>(boolean condition, String msg)</argsstring>
+        <name>assert</name>
+        <param>
+          <type>boolean</type>
+          <declname>condition</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="74" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="13" bodyend="20"/>
+        <references refid="logger_8h_1a5c06bf0e12655d2d529ed3acbe886a97" compoundref="logger_8h" startline="14">ASSERT_TAG</references>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">serialPort</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_logger_class_1a5bf0b2115bd82493df19d1b3770d7ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, byte value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="35" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a72781ccdc3f98b80c897dcd1f7d1c28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, char value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="36" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a7dfdd88d71942f414a5f01391ea384bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, int value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="37" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a7e51db2c0acb09a96f506bf28a7d5a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, unsigned int value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="38" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a673d670456f03be53331d45ff51f2d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, long value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="39" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1abd0b1ffb39a78ce0d87c6fa45ca4710b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, unsigned long value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a1ef95b39d2f4228413a8c732e892ae42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, float value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="42" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a1cfd1e524f5a1d6d7505d0b61dcdc460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, double value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a6c967f756b40470c3f9b2014c52f16cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, const char *value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="45" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a0b0494f98f160679b4793228551254b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, String value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1adeb0dec0c881d0c9aed7ac84565f2540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, const __FlashStringHelper *value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="47" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a3b10fac896021e5ca77f2e862fe7fb65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, LogManip value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63" kindref="member">LogManip</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="50" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="114" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1a925b67c6cd99211edcee87dcb4cbdf25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, LoggerClass &amp;value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="51" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_logger_class_1abe2bb973967919e1e257a54979904c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, ByteBuffer &amp;value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>ByteBuffer &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="53" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="138" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" line="31" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.h" bodystart="31" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_logger_class_1aad451c4a8eb97a9863d74e36e06ed0d2" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>array</name></member>
+      <member refid="class_logger_class_1a7a11071337f6fc3124ce1be5c41427bf" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>assert</name></member>
+      <member refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>e</name></member>
+      <member refid="class_logger_class_1a6e6156a8f4d54c39d5a780dcb08e5a4f" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>e</name></member>
+      <member refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>i</name></member>
+      <member refid="class_logger_class_1a5ddc6941c032dc21f53599a8ee0a17df" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>i</name></member>
+      <member refid="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>init</name></member>
+      <member refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" prot="private" virt="non-virtual"><scope>LoggerClass</scope><name>mode</name></member>
+      <member refid="class_logger_class_1a5bf0b2115bd82493df19d1b3770d7ac6" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a72781ccdc3f98b80c897dcd1f7d1c28b" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a7dfdd88d71942f414a5f01391ea384bb" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a7e51db2c0acb09a96f506bf28a7d5a06" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a673d670456f03be53331d45ff51f2d5e" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1abd0b1ffb39a78ce0d87c6fa45ca4710b" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a1ef95b39d2f4228413a8c732e892ae42" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a1cfd1e524f5a1d6d7505d0b61dcdc460" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a6c967f756b40470c3f9b2014c52f16cd" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a0b0494f98f160679b4793228551254b4" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1adeb0dec0c881d0c9aed7ac84565f2540" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a3b10fac896021e5ca77f2e862fe7fb65" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a925b67c6cd99211edcee87dcb4cbdf25" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1abe2bb973967919e1e257a54979904c84" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" prot="private" virt="non-virtual"><scope>LoggerClass</scope><name>precision</name></member>
+      <member refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>repeat</name></member>
+      <member refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" prot="private" virt="non-virtual"><scope>LoggerClass</scope><name>serialPort</name></member>
+      <member refid="class_logger_class_1a5aec1323a221c38b85930b7272fda219" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>setDecimalPrecision</name></member>
+      <member refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>w</name></member>
+      <member refid="class_logger_class_1a2f7ef89045112b97575e0d2b0484109c" prot="public" virt="non-virtual"><scope>LoggerClass</scope><name>w</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

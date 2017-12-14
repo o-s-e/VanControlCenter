@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_light_interface_class" kind="class" prot="public">
+    <compoundname>LightInterfaceClass</compoundname>
+    <includes refid="_light_interface_8h" local="no">LightInterface.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_light_interface_class_1a257043e4d79c1015b80cc9705b00ba83" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_l_i_g_h_t" kindref="compound">LIGHT</ref></type>
+        <definition>LIGHT LightInterfaceClass::roomLight</definition>
+        <argsstring></argsstring>
+        <name>roomLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="59" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">allOff</referencedby>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">init</referencedby>
+        <referencedby refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">setBrightness</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_interface_class_1a32548ca3f7475df15d9cd7aee40b9fed" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_l_i_g_h_t" kindref="compound">LIGHT</ref></type>
+        <definition>LIGHT LightInterfaceClass::awningLight</definition>
+        <argsstring></argsstring>
+        <name>awningLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="60" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">allOff</referencedby>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">init</referencedby>
+        <referencedby refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">setBrightness</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_interface_class_1a17434336484c21538dd8deaa6ae34631" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_l_i_g_h_t" kindref="compound">LIGHT</ref></type>
+        <definition>LIGHT LightInterfaceClass::worktopLight</definition>
+        <argsstring></argsstring>
+        <name>worktopLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="61" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">allOff</referencedby>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">init</referencedby>
+        <referencedby refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">setBrightness</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_interface_class_1af214d4de7815d7c05e52eac129e24762" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_h_s_v" kindref="compound">HSV</ref></type>
+        <definition>HSV LightInterfaceClass::hsv</definition>
+        <argsstring></argsstring>
+        <name>hsv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="63" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">init</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">setColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_interface_class_1a6d305a68e55a66ca365ab007127ff8b4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t LightInterfaceClass::fadeAmount</definition>
+        <argsstring></argsstring>
+        <name>fadeAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="65" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">allOff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_interface_class_1ae267015b2f453f08bd527fcfe1c6026c" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer LightInterfaceClass::ledTimer</definition>
+        <argsstring></argsstring>
+        <name>ledTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="68" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">init</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_light_interface_class_1a61a6ffb72510edcf3bf37a2ccff7605c" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer LightInterfaceClass::fadeTimer</definition>
+        <argsstring></argsstring>
+        <name>fadeTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="69" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">allOff</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightInterfaceClass::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp" bodystart="7" bodyend="47"/>
+        <references refid="_h_w_config_8h_1af0a2a51e49e6075257fc5203137531d9" compoundref="_h_w_config_8h" startline="53">AWNING_LED</references>
+        <references refid="class_light_interface_class_1a32548ca3f7475df15d9cd7aee40b9fed" compoundref="_light_interface_8h" startline="60">awningLight</references>
+        <references refid="struct_l_i_g_h_t_1a8bc7f58737fd4fcd3d3de83879c3c177" compoundref="_light_interface_8h" startline="30">LIGHT::b</references>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="struct_l_i_g_h_t_1a428eb901b76352b644548ef01d114abc" compoundref="_light_interface_8h" startline="29">LIGHT::g</references>
+        <references refid="struct_h_s_v_1ada777d19bc61b99f4724c8f812432a4b" compoundref="_light_interface_8h" startline="35">HSV::h</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a95e5613c7c02bb49ee05f56536694baa" compoundref="_can_interface_8h" startline="50">CanID::HSV</references>
+        <references refid="class_light_interface_class_1af214d4de7815d7c05e52eac129e24762" compoundref="_light_interface_8h" startline="63">hsv</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="class_light_interface_class_1ae267015b2f453f08bd527fcfe1c6026c" compoundref="_light_interface_8h" startline="68">ledTimer</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" compoundref="_can_interface_8h" startline="41">CanID::LIGHT_1</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" compoundref="_can_interface_8h" startline="42">CanID::LIGHT_2</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" compoundref="_can_interface_8h" startline="43">CanID::LIGHT_3</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" compoundref="_can_interface_8h" startline="44">CanID::LIGHT_4</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" compoundref="_can_interface_8h" startline="45">CanID::LIGHT_5</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" compoundref="_can_interface_8h" startline="46">CanID::LIGHT_6</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="struct_l_i_g_h_t_1a1a74910751afdc5222f715d06b7b345c" compoundref="_light_interface_8h" startline="28">LIGHT::r</references>
+        <references refid="_h_w_config_8h_1a0eff802f1ca228046476209dc01c76ad" compoundref="_h_w_config_8h" startline="51">RGB_BLUE</references>
+        <references refid="_h_w_config_8h_1ab6c97468034c02fe204fd37036d9be15" compoundref="_h_w_config_8h" startline="50">RGB_GREEN</references>
+        <references refid="_h_w_config_8h_1aa039288455af8a3812a35aa1e7b903e4" compoundref="_h_w_config_8h" startline="49">RGB_RED</references>
+        <references refid="_light_interface_8h_1a08690c3789e22be4b2e0df6461d68927" compoundref="_light_interface_8h" startline="25">RGB_STATE_LED_DUR</references>
+        <references refid="_light_interface_8h_1a166b92a390aec20dd69b5391fb1fb17d" compoundref="_light_interface_8h" startline="23">RGB_TAG</references>
+        <references refid="class_light_interface_class_1a257043e4d79c1015b80cc9705b00ba83" compoundref="_light_interface_8h" startline="59">roomLight</references>
+        <references refid="struct_h_s_v_1a4e5c5ec8931afcd9dde4dc3a91bd2495" compoundref="_light_interface_8h" startline="36">HSV::s</references>
+        <references refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</references>
+        <references refid="struct_h_s_v_1ab71dd1ebe22508398b5ab3c049b85592" compoundref="_light_interface_8h" startline="37">HSV::v</references>
+        <references refid="struct_l_i_g_h_t_1a2d03c1c808f17091b4c9f6b44b04da3f" compoundref="_light_interface_8h" startline="31">LIGHT::w</references>
+        <references refid="_h_w_config_8h_1ac0165a0a5be101747a734f0991fd0a35" compoundref="_h_w_config_8h" startline="52">WHITE_LED</references>
+        <references refid="_h_w_config_8h_1a9f71035fce187a3785d40b38ff138e9c" compoundref="_h_w_config_8h" startline="54">WORKTOP_LED</references>
+        <references refid="class_light_interface_class_1a17434336484c21538dd8deaa6ae34631" compoundref="_light_interface_8h" startline="61">worktopLight</references>
+      </memberdef>
+      <memberdef kind="function" id="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightInterfaceClass::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp" bodystart="49" bodyend="77"/>
+        <references refid="_h_w_config_8h_1af0a2a51e49e6075257fc5203137531d9" compoundref="_h_w_config_8h" startline="53">AWNING_LED</references>
+        <references refid="class_light_interface_class_1a32548ca3f7475df15d9cd7aee40b9fed" compoundref="_light_interface_8h" startline="60">awningLight</references>
+        <references refid="struct_l_i_g_h_t_1a8bc7f58737fd4fcd3d3de83879c3c177" compoundref="_light_interface_8h" startline="30">LIGHT::b</references>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="struct_l_i_g_h_t_1a428eb901b76352b644548ef01d114abc" compoundref="_light_interface_8h" startline="29">LIGHT::g</references>
+        <references refid="class_channels_buffer_class_1ad46fd0d5a2bbf3b104cf57efbe4aae41" compoundref="_channels_buffer_8h" startline="39" endline="57">ChannelsBufferClass::getValueAs</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a95e5613c7c02bb49ee05f56536694baa" compoundref="_can_interface_8h" startline="50">CanID::HSV</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="class_light_interface_class_1ae267015b2f453f08bd527fcfe1c6026c" compoundref="_light_interface_8h" startline="68">ledTimer</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" compoundref="_can_interface_8h" startline="41">CanID::LIGHT_1</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" compoundref="_can_interface_8h" startline="42">CanID::LIGHT_2</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" compoundref="_can_interface_8h" startline="43">CanID::LIGHT_3</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" compoundref="_can_interface_8h" startline="44">CanID::LIGHT_4</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" compoundref="_can_interface_8h" startline="45">CanID::LIGHT_5</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" compoundref="_can_interface_8h" startline="46">CanID::LIGHT_6</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="struct_l_i_g_h_t_1a1a74910751afdc5222f715d06b7b345c" compoundref="_light_interface_8h" startline="28">LIGHT::r</references>
+        <references refid="_h_w_config_8h_1a0eff802f1ca228046476209dc01c76ad" compoundref="_h_w_config_8h" startline="51">RGB_BLUE</references>
+        <references refid="_h_w_config_8h_1ab6c97468034c02fe204fd37036d9be15" compoundref="_h_w_config_8h" startline="50">RGB_GREEN</references>
+        <references refid="_h_w_config_8h_1aa039288455af8a3812a35aa1e7b903e4" compoundref="_h_w_config_8h" startline="49">RGB_RED</references>
+        <references refid="_light_interface_8h_1a166b92a390aec20dd69b5391fb1fb17d" compoundref="_light_interface_8h" startline="23">RGB_TAG</references>
+        <references refid="class_light_interface_class_1a257043e4d79c1015b80cc9705b00ba83" compoundref="_light_interface_8h" startline="59">roomLight</references>
+        <references refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">setColor</references>
+        <references refid="struct_l_i_g_h_t_1a2d03c1c808f17091b4c9f6b44b04da3f" compoundref="_light_interface_8h" startline="31">LIGHT::w</references>
+        <references refid="_h_w_config_8h_1ac0165a0a5be101747a734f0991fd0a35" compoundref="_h_w_config_8h" startline="52">WHITE_LED</references>
+        <references refid="_h_w_config_8h_1a9f71035fce187a3785d40b38ff138e9c" compoundref="_h_w_config_8h" startline="54">WORKTOP_LED</references>
+        <references refid="class_light_interface_class_1a17434336484c21538dd8deaa6ae34631" compoundref="_light_interface_8h" startline="61">worktopLight</references>
+      </memberdef>
+      <memberdef kind="function" id="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightInterfaceClass::setColor</definition>
+        <argsstring>(double h)</argsstring>
+        <name>setColor</name>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="49" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp" bodystart="79" bodyend="147"/>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" compoundref="_channels_buffer_8cpp" startline="29" endline="68">ChannelsBufferClass::getValueAsString</references>
+        <references refid="struct_h_s_v_1ada777d19bc61b99f4724c8f812432a4b" compoundref="_light_interface_8h" startline="35">HSV::h</references>
+        <references refid="class_light_interface_class_1af214d4de7815d7c05e52eac129e24762" compoundref="_light_interface_8h" startline="63">hsv</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" compoundref="_can_interface_8h" startline="41">CanID::LIGHT_1</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" compoundref="_can_interface_8h" startline="42">CanID::LIGHT_2</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" compoundref="_can_interface_8h" startline="43">CanID::LIGHT_3</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_light_interface_class_1aa58fcd6407dbb18bd4e0b330b5e76a41" compoundref="_light_interface_8cpp" startline="194" endline="196">mapf</references>
+        <references refid="_light_interface_8h_1a166b92a390aec20dd69b5391fb1fb17d" compoundref="_light_interface_8h" startline="23">RGB_TAG</references>
+        <references refid="struct_h_s_v_1a4e5c5ec8931afcd9dde4dc3a91bd2495" compoundref="_light_interface_8h" startline="36">HSV::s</references>
+        <references refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</references>
+        <references refid="struct_h_s_v_1ab71dd1ebe22508398b5ab3c049b85592" compoundref="_light_interface_8h" startline="37">HSV::v</references>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">LightControllerForm::onEvent</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightInterfaceClass::setBrightness</definition>
+        <argsstring>(uint8_t brightness, uint8_t lightIndex)</argsstring>
+        <name>setBrightness</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>brightness</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>lightIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="51" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp" bodystart="149" bodyend="167"/>
+        <references refid="class_light_interface_class_1a32548ca3f7475df15d9cd7aee40b9fed" compoundref="_light_interface_8h" startline="60">awningLight</references>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" compoundref="_can_interface_8h" startline="44">CanID::LIGHT_4</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" compoundref="_can_interface_8h" startline="45">CanID::LIGHT_5</references>
+        <references refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" compoundref="_can_interface_8h" startline="46">CanID::LIGHT_6</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="_light_interface_8h_1a166b92a390aec20dd69b5391fb1fb17d" compoundref="_light_interface_8h" startline="23">RGB_TAG</references>
+        <references refid="class_light_interface_class_1a257043e4d79c1015b80cc9705b00ba83" compoundref="_light_interface_8h" startline="59">roomLight</references>
+        <references refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</references>
+        <references refid="struct_l_i_g_h_t_1a2d03c1c808f17091b4c9f6b44b04da3f" compoundref="_light_interface_8h" startline="31">LIGHT::w</references>
+        <references refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" compoundref="logger_8cpp" startline="26" endline="29">LoggerClass::w</references>
+        <references refid="class_light_interface_class_1a17434336484c21538dd8deaa6ae34631" compoundref="_light_interface_8h" startline="61">worktopLight</references>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">LightControllerForm::onEvent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightInterfaceClass::allOff</definition>
+        <argsstring>()</argsstring>
+        <name>allOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="53" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp" bodystart="169" bodyend="192"/>
+        <references refid="class_light_interface_class_1a32548ca3f7475df15d9cd7aee40b9fed" compoundref="_light_interface_8h" startline="60">awningLight</references>
+        <references refid="struct_l_i_g_h_t_1a8bc7f58737fd4fcd3d3de83879c3c177" compoundref="_light_interface_8h" startline="30">LIGHT::b</references>
+        <references refid="class_light_interface_class_1a6d305a68e55a66ca365ab007127ff8b4" compoundref="_light_interface_8h" startline="65">fadeAmount</references>
+        <references refid="class_light_interface_class_1a61a6ffb72510edcf3bf37a2ccff7605c" compoundref="_light_interface_8h" startline="69">fadeTimer</references>
+        <references refid="struct_l_i_g_h_t_1a428eb901b76352b644548ef01d114abc" compoundref="_light_interface_8h" startline="29">LIGHT::g</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="struct_l_i_g_h_t_1a1a74910751afdc5222f715d06b7b345c" compoundref="_light_interface_8h" startline="28">LIGHT::r</references>
+        <references refid="_light_interface_8h_1a166b92a390aec20dd69b5391fb1fb17d" compoundref="_light_interface_8h" startline="23">RGB_TAG</references>
+        <references refid="class_light_interface_class_1a257043e4d79c1015b80cc9705b00ba83" compoundref="_light_interface_8h" startline="59">roomLight</references>
+        <references refid="struct_l_i_g_h_t_1a2d03c1c808f17091b4c9f6b44b04da3f" compoundref="_light_interface_8h" startline="31">LIGHT::w</references>
+        <references refid="class_light_interface_class_1a17434336484c21538dd8deaa6ae34631" compoundref="_light_interface_8h" startline="61">worktopLight</references>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">LightControllerForm::onEvent</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_light_interface_class_1aa58fcd6407dbb18bd4e0b330b5e76a41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LightInterfaceClass::mapf</definition>
+        <argsstring>(double x, double in_min, double in_max, double out_min, double out_max)</argsstring>
+        <name>mapf</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>in_min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>in_max</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>out_min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>out_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="57" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.cpp" bodystart="194" bodyend="196"/>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">setColor</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="55">
+        <label>LightInterfaceClass</label>
+        <link refid="class_light_interface_class"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>worktopLight</edgelabel>
+          <edgelabel>awningLight</edgelabel>
+          <edgelabel>roomLight</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>hsv</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>HSV</label>
+        <link refid="struct_h_s_v"/>
+      </node>
+      <node id="56">
+        <label>LIGHT</label>
+        <link refid="struct_l_i_g_h_t"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightInterface.h" bodystart="40" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" prot="public" virt="non-virtual"><scope>LightInterfaceClass</scope><name>allOff</name></member>
+      <member refid="class_light_interface_class_1a32548ca3f7475df15d9cd7aee40b9fed" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>awningLight</name></member>
+      <member refid="class_light_interface_class_1a6d305a68e55a66ca365ab007127ff8b4" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>fadeAmount</name></member>
+      <member refid="class_light_interface_class_1a61a6ffb72510edcf3bf37a2ccff7605c" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>fadeTimer</name></member>
+      <member refid="class_light_interface_class_1af214d4de7815d7c05e52eac129e24762" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>hsv</name></member>
+      <member refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" prot="public" virt="non-virtual"><scope>LightInterfaceClass</scope><name>init</name></member>
+      <member refid="class_light_interface_class_1ae267015b2f453f08bd527fcfe1c6026c" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>ledTimer</name></member>
+      <member refid="class_light_interface_class_1aa58fcd6407dbb18bd4e0b330b5e76a41" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>mapf</name></member>
+      <member refid="class_light_interface_class_1a257043e4d79c1015b80cc9705b00ba83" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>roomLight</name></member>
+      <member refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" prot="public" virt="non-virtual"><scope>LightInterfaceClass</scope><name>setBrightness</name></member>
+      <member refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" prot="public" virt="non-virtual"><scope>LightInterfaceClass</scope><name>setColor</name></member>
+      <member refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" prot="public" virt="non-virtual"><scope>LightInterfaceClass</scope><name>update</name></member>
+      <member refid="class_light_interface_class_1a17434336484c21538dd8deaa6ae34631" prot="private" virt="non-virtual"><scope>LightInterfaceClass</scope><name>worktopLight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

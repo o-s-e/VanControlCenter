@@ -44,11 +44,10 @@ void LCDStringList::clear() {
 }
 
 void LCDStringList::down() {
-    int currentLine;
     //If there are almost two elements and if the last element is not the current one
     if (elementCount > 1 && currentElement < elementCount - 1) {
         //Search for the current line and remove '>'
-        currentLine = buffer.indexOf(SELECT_LINE_CHAR);
+        int currentLine = buffer.indexOf(SELECT_LINE_CHAR);
         buffer.setCharAt(currentLine, ' ');
 
         //Skip to next line
@@ -66,14 +65,14 @@ void LCDStringList::removeElement(int index) {
 }
 
 void LCDStringList::repaint() {
-    parent->WriteStr((int)widgetIndex, (char*)buffer.c_str());
+    parent->WriteStr(int(widgetIndex), const_cast<char*>(buffer.c_str()));
 }
 
 void LCDStringList::up() {
-    int current, index = 0;
+    int index = 0;
     //If there are almost two elements and if the first element is not the current one
     if (elementCount > 1 && currentElement != 0) {
-        current = buffer.indexOf(SELECT_LINE_CHAR);
+        int current = buffer.indexOf(SELECT_LINE_CHAR);
         buffer.setCharAt(current, ' ');
 
         for (int i = 0; i < currentElement - 1; i++) {

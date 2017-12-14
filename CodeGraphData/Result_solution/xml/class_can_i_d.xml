@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_can_i_d" kind="class" prot="public">
+    <compoundname>CanID</compoundname>
+    <includes refid="_can_interface_8h" local="no">CanInterface.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" prot="public" static="no">
+        <name>IDs</name>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ad733f52e6e19dc27be87f8a276ecb04a" prot="public">
+          <name>DATE</name>
+          <initializer>= 0x60</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab4e2f4aa84bfbc1145753095bd64bb9e" prot="public">
+          <name>TIME</name>
+          <initializer>= 0x61</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab7872da7394170724a174551c368e926" prot="public">
+          <name>GPS_LATITUDE</name>
+          <initializer>= 0x62</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aca65144fefa5cc38d1f4f8dba2aa202d" prot="public">
+          <name>GPS_LONGITUDE</name>
+          <initializer>= 0x63</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab6bfc090c0532522be5fff43d67e55e2" prot="public">
+          <name>GPS_ALTITUDE</name>
+          <initializer>= 0x64</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a99cb4f113fc0e7ea94851e3eec5f0e13" prot="public">
+          <name>GPS_ACCURACY</name>
+          <initializer>= 0x65</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7bf72b6a674ebc5826e8a506d4641d5c" prot="public">
+          <name>GPS_SPEED</name>
+          <initializer>= 0x66</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae7e0399b8efb7d0a5ed5fb9b8a13e6e7" prot="public">
+          <name>TEMP</name>
+          <initializer>= 0x71</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae4d83643bb8127a9a3e0e038abea1c3a" prot="public">
+          <name>HUM</name>
+          <initializer>= 0x72</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4194466e2d3e64363ac275c97ebda06d" prot="public">
+          <name>HEATER_STATUS</name>
+          <initializer>= 0x73</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" prot="public">
+          <name>LIGHT_1</name>
+          <initializer>= 0x74</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" prot="public">
+          <name>LIGHT_2</name>
+          <initializer>= 0x75</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" prot="public">
+          <name>LIGHT_3</name>
+          <initializer>= 0x76</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" prot="public">
+          <name>LIGHT_4</name>
+          <initializer>= 0x77</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" prot="public">
+          <name>LIGHT_5</name>
+          <initializer>= 0x78</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" prot="public">
+          <name>LIGHT_6</name>
+          <initializer>= 0x79</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a477caa65da8810f5a3c641f3911ec107" prot="public">
+          <name>SET_TEMP</name>
+          <initializer>= 0x80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4cc82feb98bc458617fc2220b4254477" prot="public">
+          <name>SW_WATER</name>
+          <initializer>= 0x81</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a25166c12ebab7350508337700fcd0ded" prot="public">
+          <name>SW_1</name>
+          <initializer>= 0x82</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a95e5613c7c02bb49ee05f56536694baa" prot="public">
+          <name>HSV</name>
+          <initializer>= 0x83</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="26" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="26" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class containing the external interface to the Can bus </para>    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" line="24" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/CanInterface.h" bodystart="24" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ad733f52e6e19dc27be87f8a276ecb04a" prot="public" virt="non-virtual"><scope>CanID</scope><name>DATE</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a99cb4f113fc0e7ea94851e3eec5f0e13" prot="public" virt="non-virtual"><scope>CanID</scope><name>GPS_ACCURACY</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab6bfc090c0532522be5fff43d67e55e2" prot="public" virt="non-virtual"><scope>CanID</scope><name>GPS_ALTITUDE</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab7872da7394170724a174551c368e926" prot="public" virt="non-virtual"><scope>CanID</scope><name>GPS_LATITUDE</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aca65144fefa5cc38d1f4f8dba2aa202d" prot="public" virt="non-virtual"><scope>CanID</scope><name>GPS_LONGITUDE</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7bf72b6a674ebc5826e8a506d4641d5c" prot="public" virt="non-virtual"><scope>CanID</scope><name>GPS_SPEED</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4194466e2d3e64363ac275c97ebda06d" prot="public" virt="non-virtual"><scope>CanID</scope><name>HEATER_STATUS</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a95e5613c7c02bb49ee05f56536694baa" prot="public" virt="non-virtual"><scope>CanID</scope><name>HSV</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae4d83643bb8127a9a3e0e038abea1c3a" prot="public" virt="non-virtual"><scope>CanID</scope><name>HUM</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15" prot="public" virt="non-virtual"><scope>CanID</scope><name>IDs</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a6ec86f72049035b4a073cdb3e0b87b9a" prot="public" virt="non-virtual"><scope>CanID</scope><name>LIGHT_1</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15aff7ef9c1732237190dc8b90aca9a53b2" prot="public" virt="non-virtual"><scope>CanID</scope><name>LIGHT_2</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15af2426c2a783db81ba1c441c2dea72e99" prot="public" virt="non-virtual"><scope>CanID</scope><name>LIGHT_3</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a7168416d7abe681e69c03fd64194fab3" prot="public" virt="non-virtual"><scope>CanID</scope><name>LIGHT_4</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a44daa697f8ac4b08bac8a8a92e176bf1" prot="public" virt="non-virtual"><scope>CanID</scope><name>LIGHT_5</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ac2840fec88b3c77fcb231f383206641c" prot="public" virt="non-virtual"><scope>CanID</scope><name>LIGHT_6</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a477caa65da8810f5a3c641f3911ec107" prot="public" virt="non-virtual"><scope>CanID</scope><name>SET_TEMP</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a25166c12ebab7350508337700fcd0ded" prot="public" virt="non-virtual"><scope>CanID</scope><name>SW_1</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15a4cc82feb98bc458617fc2220b4254477" prot="public" virt="non-virtual"><scope>CanID</scope><name>SW_WATER</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ae7e0399b8efb7d0a5ed5fb9b8a13e6e7" prot="public" virt="non-virtual"><scope>CanID</scope><name>TEMP</name></member>
+      <member refid="class_can_i_d_1af16576d487900fec0d246e8f7beeea15ab4e2f4aa84bfbc1145753095bd64bb9e" prot="public" virt="non-virtual"><scope>CanID</scope><name>TIME</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

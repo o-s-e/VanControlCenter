@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_console_form_8h" kind="file">
+    <compoundname>ConsoleForm.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes refid="_display_interface_8h" local="yes">DisplayInterface.h</includes>
+    <includes refid="_l_c_d_form_8h" local="yes">LCDForm.h</includes>
+    <includedby refid="_channels_config_8cpp" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsConfig.cpp</includedby>
+    <includedby refid="_display_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</includedby>
+    <includedby refid="_console_form_8cpp" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp</includedby>
+    <includedby refid="_data_logger_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.h</includedby>
+    <includedby refid="_wifi_interface_8h" local="yes">C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h</includedby>
+    <incdepgraph>
+      <node id="258">
+        <label>LCDStringList.h</label>
+        <link refid="_l_c_d_string_list_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>LightInterface.h</label>
+        <link refid="_light_interface_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>Timer.h</label>
+      </node>
+      <node id="243">
+        <label>genieArduino.h</label>
+      </node>
+      <node id="262">
+        <label>GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>CanInterface.h</label>
+        <link refid="_can_interface_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="248">
+        <label>BitArray.h</label>
+      </node>
+      <node id="246">
+        <label>due_can.h</label>
+      </node>
+      <node id="252">
+        <label>HWConfig.h</label>
+        <link refid="_h_w_config_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="247">
+        <label>ChannelsBuffer.h</label>
+        <link refid="_channels_buffer_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>WProgram.h</label>
+      </node>
+      <node id="257">
+        <label>HeaterInterface.h</label>
+        <link refid="_heater_interface_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
+        <label>ChannelsConfig.h</label>
+        <link refid="_channels_config_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>LCDForm.h</label>
+        <link refid="_l_c_d_form_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+      </node>
+      <node id="259">
+        <label>LCDStringMsg.h</label>
+        <link refid="_l_c_d_string_msg_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h</label>
+        <link refid="ConsoleForm.h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>arduino.h</label>
+      </node>
+      <node id="242">
+        <label>Vector.h</label>
+      </node>
+      <node id="249">
+        <label>Channel.h</label>
+        <link refid="_channel_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>DisplayInterface.h</label>
+        <link refid="_display_interface_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>Utils.h</label>
+      </node>
+      <node id="251">
+        <label>Configuration.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="277">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.cpp</label>
+        <link refid="_data_logger_8cpp"/>
+      </node>
+      <node id="264">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ChannelsConfig.cpp</label>
+        <link refid="_channels_config_8cpp"/>
+      </node>
+      <node id="267">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.cpp</label>
+        <link refid="_debug_form_8cpp"/>
+      </node>
+      <node id="272">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.h</label>
+        <link refid="_general_switch_form_8h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp</label>
+        <link refid="_console_form_8cpp"/>
+      </node>
+      <node id="269">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.cpp</label>
+        <link refid="_temperature_controller_form_8cpp"/>
+      </node>
+      <node id="278">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.h</label>
+        <link refid="_wifi_interface_8h"/>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DataLogger.h</label>
+        <link refid="_data_logger_8h"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DebugForm.h</label>
+        <link refid="_debug_form_8h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/TemperatureControllerForm.h</label>
+        <link refid="_temperature_controller_form_8h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.h</label>
+        <link refid="_light_controller_form_8h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="279">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/WifiInterface.cpp</label>
+        <link refid="_wifi_interface_8cpp"/>
+      </node>
+      <node id="263">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h</label>
+        <link refid="ConsoleForm.h"/>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+      </node>
+      <node id="274">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.cpp</label>
+        <link refid="_display_interface_8cpp"/>
+      </node>
+      <node id="271">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LightControllerForm.cpp</label>
+        <link refid="_light_controller_form_8cpp"/>
+      </node>
+      <node id="273">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/GeneralSwitchForm.cpp</label>
+        <link refid="_general_switch_form_8cpp"/>
+      </node>
+      <node id="265">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/DisplayInterface.h</label>
+        <link refid="_display_interface_8h"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_console_form_class" prot="public">ConsoleFormClass</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_console_form_8h_1a9f31e20d2d4901e0ec1412ecabde8c3a" prot="public" static="no">
+        <name>TEXT_BUFFER_SIZE</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Class representing the first form shown when the lcd is boot </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="20" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" compoundref="_console_form_8cpp" startline="25" endline="38">ConsoleFormClass::addText</referencedby>
+        <referencedby refid="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" compoundref="_console_form_8cpp" startline="3" endline="7">ConsoleFormClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_console_form_8h_1a6d79a234ad6a322466a959ee4bc2e4b2" prot="public" static="no">
+        <name>TEXT_COLS</name>
+        <initializer>58</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="23" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_console_form_8h_1a16ac820ff8b4821faf436e52e2c35f48" prot="public" static="no">
+        <name>TEXT_ROWS</name>
+        <initializer>22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="26" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_console_form_8h_1a2b077b51d6be463e1adae24c01969f3c" prot="public" static="no">
+        <name>CONSOLE_STR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="29" column="9" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" compoundref="_console_form_8cpp" startline="25" endline="38">ConsoleFormClass::addText</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_console_form_8h_1ab8f9834287806ca3ff67080898f663ab" prot="public" static="no" mutable="no">
+        <type><ref refid="class_console_form_class" kindref="compound">ConsoleFormClass</ref></type>
+        <definition>ConsoleFormClass consoleForm</definition>
+        <argsstring></argsstring>
+        <name>consoleForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h" line="63" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.cpp" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_data_logger_class_1a4754b65cfb2c5d881d38b66aa487202d" compoundref="_data_logger_8cpp" startline="97" endline="117">DataLoggerClass::createNewLogFile</referencedby>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+        <referencedby refid="class_data_logger_class_1a6918b9d1dc35581c3f2a4210426606f9" compoundref="_data_logger_8cpp" startline="3" endline="40">DataLoggerClass::init</referencedby>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>ConsoleForm.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CONSOLEFORM_h</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_CONSOLEFORM_h</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ARDUINO)<sp/>&amp;&amp;<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_display_interface_8h" kindref="compound">DisplayInterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_c_d_form_8h" kindref="compound">LCDForm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Console<sp/>text<sp/>max<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_console_form_8h_1a9f31e20d2d4901e0ec1412ecabde8c3a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEXT_BUFFER_SIZE<sp/>256</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Console<sp/>text<sp/>max<sp/>cols</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="_console_form_8h_1a6d79a234ad6a322466a959ee4bc2e4b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEXT_COLS<sp/>58</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Console<sp/>text<sp/>max<sp/>rows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_console_form_8h_1a16ac820ff8b4821faf436e52e2c35f48" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEXT_ROWS<sp/>22</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Console<sp/>text<sp/>string<sp/>widget<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_console_form_8h_1a2b077b51d6be463e1adae24c01969f3c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSOLE_STR<sp/>0</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_console_form_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_console_form_class" kindref="compound">ConsoleFormClass</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_l_c_d_form" kindref="compound">LCDForm</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LCDForm<sp/>abstract<sp/>method<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1a8d482980564f8fb9d1674e02016abdaa" kindref="member">init</ref>(Genie<sp/>&amp;<ref refid="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" kindref="member">genie</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LCDForm<sp/>abstract<sp/>method<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1af96f641cf3624052e9107246a8ee1138" kindref="member">update</ref>(Genie<sp/>&amp;genie);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>print<sp/>on<sp/>the<sp/>console<sp/>text<sp/>widget</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1a44c5bcad7e74a677b3092acc41288532" kindref="member">print</ref>(String<sp/>str);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>print<sp/>on<sp/>the<sp/>console<sp/>text<sp/>widget</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1aba992d1f72d817ffaf3493c578976429" kindref="member">println</ref>(String<sp/>str);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>clear<sp/>the<sp/>console<sp/>text<sp/>widget</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1a4685ac88f77641ed6dc61ae4650657bf" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LCDForm<sp/>abstract<sp/>method<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_console_form_class_1aab27249b1ba5cb5955c583e7ddf9161c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1aab27249b1ba5cb5955c583e7ddf9161c" kindref="member">getFormIndex</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Genie<sp/>instance<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Genie<sp/>*<ref refid="class_console_form_class_1a114f35227646b4087ccb7764044f15a7" kindref="member">genie</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Text<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_console_form_class_1ab702b695d6083f4786fadaa4bd3a2b81" kindref="member">text</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>add<sp/>text<sp/>to<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class_1a9dd7b26d9675c869d5f42af0f47d1fb3" kindref="member">addText</ref>(String<sp/>str);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Console<sp/>form<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_console_form_class" kindref="compound">ConsoleFormClass</ref><sp/><ref refid="_console_form_8h_1ab8f9834287806ca3ff67080898f663ab" kindref="member">consoleForm</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/ConsoleForm.h"/>
+  </compounddef>
+</doxygen>

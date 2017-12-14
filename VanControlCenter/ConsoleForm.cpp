@@ -34,7 +34,7 @@ void ConsoleFormClass::addText(String str) {
         text.concat(str);
     }
 
-    genie->WriteStr(CONSOLE_STR, (char*)text.c_str());
+    genie->WriteStr(CONSOLE_STR, const_cast<char*>(text.c_str()));
 }
 
 ConsoleFormClass consoleForm;

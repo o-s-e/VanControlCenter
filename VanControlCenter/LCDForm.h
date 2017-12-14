@@ -25,10 +25,11 @@ protected:
 
     //Function wrapper to write a string
     void updateString(Genie& genie, uint16_t wIndex, String wValue) {
-        genie.WriteStr(wIndex, (char*)wValue.c_str());
+        genie.WriteStr(wIndex, const_cast<char*>(wValue.c_str()));
     }
 
 public:
+    virtual ~LCDForm() = default;
     //Function to call to init the form
     virtual void init(Genie& genie) = 0;
 

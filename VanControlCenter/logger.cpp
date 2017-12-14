@@ -127,7 +127,7 @@ LoggerClass &operator<<(LoggerClass &log, LogManip value) {
         break;
 
     default:
-        log.serialPort->print((char)value);
+        log.serialPort->print(static_cast<char>(value));
         break;
     }
     return log;

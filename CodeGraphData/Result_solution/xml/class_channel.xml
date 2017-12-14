@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_channel" kind="class" prot="public">
+    <compoundname>Channel</compoundname>
+    <includes refid="_channel_8h" local="no">Channel.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9" prot="public" static="no">
+        <name>DataTypes</name>
+        <enumvalue id="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9abe157b5248c7943acc0a131f761ccb87" prot="public">
+          <name>BIT_FLAG</name>
+          <initializer>= &apos;B&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9ab07d013738aecdec7fcd7f9df387f21b" prot="public">
+          <name>U_INTEGER</name>
+          <initializer>= &apos;U&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9ad6cce5d64a24e3e61ac2ee290598bbe5" prot="public">
+          <name>INTEGER</name>
+          <initializer>= &apos;I&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9af10f88feb1aaad6e5f0dd95580090bf2" prot="public">
+          <name>DECIMAL</name>
+          <initializer>= &apos;D&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9a9bc9983805a2e37c7b08105b34eabfbc" prot="public">
+          <name>STRING</name>
+          <initializer>= &apos;S&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="24" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_channel_1ad4c36e177bad20399a3a852726219b8e" prot="public" static="no">
+        <name>Attr</name>
+        <enumvalue id="class_channel_1ad4c36e177bad20399a3a852726219b8eaffaec6fb36b614e8cac8038050dd6148" prot="public">
+          <name>CanID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1ad4c36e177bad20399a3a852726219b8ea4eaed163fd6fb62574f92d1c12381914" prot="public">
+          <name>Name</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1ad4c36e177bad20399a3a852726219b8ea16121b71ff09b27474ba95a676a2eaf6" prot="public">
+          <name>Size</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1ad4c36e177bad20399a3a852726219b8ea5bbbd9585f8d8fd08876fdaf9abce958" prot="public">
+          <name>Type</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_channel_1ad4c36e177bad20399a3a852726219b8ea20032c4cdde271ccc51f5a3f17bfcc97" prot="public">
+          <name>ATTR_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="33" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_channel_1a91f8121523ea48a9272abafc097f7775" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String Channel::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="56" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_channels_buffer_class_1a1452222217b64b22c742f3f335a4b546" compoundref="_channels_buffer_8cpp" startline="19" endline="27">ChannelsBufferClass::debug</referencedby>
+        <referencedby refid="class_channel_1af00977d334a39bea472d84164cc305b3" compoundref="_channel_8cpp" startline="35" endline="37">getName</referencedby>
+        <referencedby refid="class_channel_1a0cd9ac195655e1cbdf8585e1c6a6d2ba" compoundref="_channel_8cpp" startline="19" endline="21">setName</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_channel_1afdba0041163a8c56b37828a6348550b8" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte Channel::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="61" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" compoundref="_channel_8cpp" startline="23" endline="25">getSize</referencedby>
+        <referencedby refid="class_channel_1a5c8c64bcedff5df3581241b413bfe52f" compoundref="_channel_8cpp" startline="7" endline="9">setSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1ad5223ad64bd8801e58ca932790a873a2" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short Channel::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="64" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" compoundref="_channel_8cpp" startline="27" endline="29">getID</referencedby>
+        <referencedby refid="class_channel_1ac080aaf56dcb26e2cc6820919aca3285" compoundref="_channel_8cpp" startline="11" endline="13">setID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1acf500cba4df52de022d2c7e6279f8f32" prot="private" static="no" mutable="no">
+        <type><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9" kindref="member">DataTypes</ref></type>
+        <definition>DataTypes Channel::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="67" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_channel_1a1851a034e0d21f66d8679b9babd425ea" compoundref="_channel_8cpp" startline="31" endline="33">getDataType</referencedby>
+        <referencedby refid="class_channel_1a391d2c880ced0aa7dc8e6e3e2cd3074c" compoundref="_channel_8cpp" startline="15" endline="17">setDataType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1ab3ba8a2bfd7383a8ce066ff760d64b3a" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer Channel::ttlTimer</definition>
+        <argsstring></argsstring>
+        <name>ttlTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="73" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_channel_1af2b4b16288cbb2c592b1e0f6486c2430" compoundref="_channel_8cpp" startline="3" endline="5">Channel</referencedby>
+        <referencedby refid="class_channel_1ac4d842bc13a9fcae15ec8506af465582" compoundref="_channel_8cpp" startline="43" endline="45">hasTTLFinished</referencedby>
+        <referencedby refid="class_channel_1ac3e5ae4a6535161fb6f8061e9f2f0c3c" compoundref="_channel_8cpp" startline="39" endline="41">resetTTLTimer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_channel_1af2b4b16288cbb2c592b1e0f6486c2430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Channel::Channel</definition>
+        <argsstring>()</argsstring>
+        <name>Channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="35" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="3" bodyend="5"/>
+        <references refid="_channel_8h_1afd123a18911aea15e648e1898f16c188" compoundref="_channel_8h" startline="19">CH_BUFFER_TTL</references>
+        <references refid="class_channel_1ab3ba8a2bfd7383a8ce066ff760d64b3a" compoundref="_channel_8h" startline="73">ttlTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a5c8c64bcedff5df3581241b413bfe52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setSize</definition>
+        <argsstring>(byte size)</argsstring>
+        <name>setSize</name>
+        <param>
+          <type>byte</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="38" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="7" bodyend="9"/>
+        <references refid="class_channel_1afdba0041163a8c56b37828a6348550b8" compoundref="_channel_8h" startline="61">size</references>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1ac080aaf56dcb26e2cc6820919aca3285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setID</definition>
+        <argsstring>(unsigned short ID)</argsstring>
+        <name>setID</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="39" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="11" bodyend="13"/>
+        <references refid="class_channel_1ad5223ad64bd8801e58ca932790a873a2" compoundref="_channel_8h" startline="64">ID</references>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a391d2c880ced0aa7dc8e6e3e2cd3074c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setDataType</definition>
+        <argsstring>(DataTypes type)</argsstring>
+        <name>setDataType</name>
+        <param>
+          <type><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9" kindref="member">DataTypes</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="15" bodyend="17"/>
+        <references refid="class_channel_1acf500cba4df52de022d2c7e6279f8f32" compoundref="_channel_8h" startline="67">type</references>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a0cd9ac195655e1cbdf8585e1c6a6d2ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setName</definition>
+        <argsstring>(String name)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="41" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="19" bodyend="21"/>
+        <references refid="class_channel_1a91f8121523ea48a9272abafc097f7775" compoundref="_channel_8h" startline="56">name</references>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte Channel::getSize</definition>
+        <argsstring>()</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="44" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="23" bodyend="25"/>
+        <references refid="class_channel_1afdba0041163a8c56b37828a6348550b8" compoundref="_channel_8h" startline="61">size</references>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_channels_config_class_1af21b629e6eab4bf8ac9979d54f92106b" compoundref="_channels_config_8cpp" startline="34" endline="45">ChannelsConfigClass::debug</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" compoundref="_channels_buffer_8cpp" startline="29" endline="68">ChannelsBufferClass::getValueAsString</referencedby>
+        <referencedby refid="class_channels_buffer_class_1aa38430f1946c626769bca6ef110e94a0" compoundref="_channels_buffer_8cpp" startline="3" endline="17">ChannelsBufferClass::init</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a8e9277f31785a2e3359bc7d8d219df7a" compoundref="_channels_buffer_8cpp" startline="146" endline="169">ChannelsBufferClass::intToString</referencedby>
+        <referencedby refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</referencedby>
+        <referencedby refid="class_channels_buffer_class_1ab54b1173138153c22d1266a4c0093f1d" compoundref="_channels_buffer_8cpp" startline="127" endline="143">ChannelsBufferClass::uintToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a5c332725fe6d70aa3a6c06433324e988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short Channel::getID</definition>
+        <argsstring>()</argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="45" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="27" bodyend="29"/>
+        <references refid="class_channel_1ad5223ad64bd8801e58ca932790a873a2" compoundref="_channel_8h" startline="64">ID</references>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">ShellClass::channelValueCmd</referencedby>
+        <referencedby refid="class_data_logger_class_1a4754b65cfb2c5d881d38b66aa487202d" compoundref="_data_logger_8cpp" startline="97" endline="117">DataLoggerClass::createNewLogFile</referencedby>
+        <referencedby refid="class_channels_config_class_1af21b629e6eab4bf8ac9979d54f92106b" compoundref="_channels_config_8cpp" startline="34" endline="45">ChannelsConfigClass::debug</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a4ea1bd9b22981ff5000c81785c993368" compoundref="_channels_buffer_8cpp" startline="171" endline="183">ChannelsBufferClass::sendOnStream</referencedby>
+        <referencedby refid="class_data_logger_class_1a75106f1588d60a80bf477a31ba78d7fd" compoundref="_data_logger_8cpp" startline="45" endline="82">DataLoggerClass::update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a1851a034e0d21f66d8679b9babd425ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9" kindref="member">DataTypes</ref></type>
+        <definition>Channel::DataTypes Channel::getDataType</definition>
+        <argsstring>()</argsstring>
+        <name>getDataType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="31" bodyend="33"/>
+        <references refid="class_channel_1acf500cba4df52de022d2c7e6279f8f32" compoundref="_channel_8h" startline="67">type</references>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_channels_config_class_1af21b629e6eab4bf8ac9979d54f92106b" compoundref="_channels_config_8cpp" startline="34" endline="45">ChannelsConfigClass::debug</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" compoundref="_channels_buffer_8cpp" startline="29" endline="68">ChannelsBufferClass::getValueAsString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1af00977d334a39bea472d84164cc305b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Channel::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="47" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="35" bodyend="37"/>
+        <references refid="class_channel_1a91f8121523ea48a9272abafc097f7775" compoundref="_channel_8h" startline="56">name</references>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_data_logger_class_1a4754b65cfb2c5d881d38b66aa487202d" compoundref="_data_logger_8cpp" startline="97" endline="117">DataLoggerClass::createNewLogFile</referencedby>
+        <referencedby refid="class_channels_config_class_1af21b629e6eab4bf8ac9979d54f92106b" compoundref="_channels_config_8cpp" startline="34" endline="45">ChannelsConfigClass::debug</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1ac3e5ae4a6535161fb6f8061e9f2f0c3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::resetTTLTimer</definition>
+        <argsstring>()</argsstring>
+        <name>resetTTLTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="50" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="39" bodyend="41"/>
+        <references refid="class_channel_1ab3ba8a2bfd7383a8ce066ff760d64b3a" compoundref="_channel_8h" startline="73">ttlTimer</references>
+        <referencedby refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1ac4d842bc13a9fcae15ec8506af465582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Channel::hasTTLFinished</definition>
+        <argsstring>()</argsstring>
+        <name>hasTTLFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="52" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.cpp" bodystart="43" bodyend="45"/>
+        <references refid="class_channel_1ab3ba8a2bfd7383a8ce066ff760d64b3a" compoundref="_channel_8h" startline="73">ttlTimer</references>
+        <referencedby refid="class_channels_buffer_class_1ad46fd0d5a2bbf3b104cf57efbe4aae41" compoundref="_channels_buffer_8h" startline="39" endline="57">ChannelsBufferClass::getValueAs</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a32bc2bd6cec0d2a86bce0542255994e0" compoundref="_channels_buffer_8cpp" startline="113" endline="124">ChannelsBufferClass::isValueUpdated</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" line="21" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Channel.h" bodystart="21" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_channel_1ad4c36e177bad20399a3a852726219b8e" prot="public" virt="non-virtual"><scope>Channel</scope><name>Attr</name></member>
+      <member refid="class_channel_1ad4c36e177bad20399a3a852726219b8ea20032c4cdde271ccc51f5a3f17bfcc97" prot="public" virt="non-virtual"><scope>Channel</scope><name>ATTR_COUNT</name></member>
+      <member refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9abe157b5248c7943acc0a131f761ccb87" prot="public" virt="non-virtual"><scope>Channel</scope><name>BIT_FLAG</name></member>
+      <member refid="class_channel_1ad4c36e177bad20399a3a852726219b8eaffaec6fb36b614e8cac8038050dd6148" prot="public" virt="non-virtual"><scope>Channel</scope><name>CanID</name></member>
+      <member refid="class_channel_1af2b4b16288cbb2c592b1e0f6486c2430" prot="public" virt="non-virtual"><scope>Channel</scope><name>Channel</name></member>
+      <member refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9" prot="public" virt="non-virtual"><scope>Channel</scope><name>DataTypes</name></member>
+      <member refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9af10f88feb1aaad6e5f0dd95580090bf2" prot="public" virt="non-virtual"><scope>Channel</scope><name>DECIMAL</name></member>
+      <member refid="class_channel_1a1851a034e0d21f66d8679b9babd425ea" prot="public" virt="non-virtual"><scope>Channel</scope><name>getDataType</name></member>
+      <member refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" prot="public" virt="non-virtual"><scope>Channel</scope><name>getID</name></member>
+      <member refid="class_channel_1af00977d334a39bea472d84164cc305b3" prot="public" virt="non-virtual"><scope>Channel</scope><name>getName</name></member>
+      <member refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" prot="public" virt="non-virtual"><scope>Channel</scope><name>getSize</name></member>
+      <member refid="class_channel_1ac4d842bc13a9fcae15ec8506af465582" prot="public" virt="non-virtual"><scope>Channel</scope><name>hasTTLFinished</name></member>
+      <member refid="class_channel_1ad5223ad64bd8801e58ca932790a873a2" prot="private" virt="non-virtual"><scope>Channel</scope><name>ID</name></member>
+      <member refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9ad6cce5d64a24e3e61ac2ee290598bbe5" prot="public" virt="non-virtual"><scope>Channel</scope><name>INTEGER</name></member>
+      <member refid="class_channel_1a91f8121523ea48a9272abafc097f7775" prot="public" virt="non-virtual"><scope>Channel</scope><name>name</name></member>
+      <member refid="class_channel_1ad4c36e177bad20399a3a852726219b8ea4eaed163fd6fb62574f92d1c12381914" prot="public" virt="non-virtual"><scope>Channel</scope><name>Name</name></member>
+      <member refid="class_channel_1ac3e5ae4a6535161fb6f8061e9f2f0c3c" prot="public" virt="non-virtual"><scope>Channel</scope><name>resetTTLTimer</name></member>
+      <member refid="class_channel_1a391d2c880ced0aa7dc8e6e3e2cd3074c" prot="public" virt="non-virtual"><scope>Channel</scope><name>setDataType</name></member>
+      <member refid="class_channel_1ac080aaf56dcb26e2cc6820919aca3285" prot="public" virt="non-virtual"><scope>Channel</scope><name>setID</name></member>
+      <member refid="class_channel_1a0cd9ac195655e1cbdf8585e1c6a6d2ba" prot="public" virt="non-virtual"><scope>Channel</scope><name>setName</name></member>
+      <member refid="class_channel_1a5c8c64bcedff5df3581241b413bfe52f" prot="public" virt="non-virtual"><scope>Channel</scope><name>setSize</name></member>
+      <member refid="class_channel_1afdba0041163a8c56b37828a6348550b8" prot="private" virt="non-virtual"><scope>Channel</scope><name>size</name></member>
+      <member refid="class_channel_1ad4c36e177bad20399a3a852726219b8ea16121b71ff09b27474ba95a676a2eaf6" prot="public" virt="non-virtual"><scope>Channel</scope><name>Size</name></member>
+      <member refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9a9bc9983805a2e37c7b08105b34eabfbc" prot="public" virt="non-virtual"><scope>Channel</scope><name>STRING</name></member>
+      <member refid="class_channel_1ab3ba8a2bfd7383a8ce066ff760d64b3a" prot="private" virt="non-virtual"><scope>Channel</scope><name>ttlTimer</name></member>
+      <member refid="class_channel_1ad4c36e177bad20399a3a852726219b8ea5bbbd9585f8d8fd08876fdaf9abce958" prot="public" virt="non-virtual"><scope>Channel</scope><name>Type</name></member>
+      <member refid="class_channel_1acf500cba4df52de022d2c7e6279f8f32" prot="private" virt="non-virtual"><scope>Channel</scope><name>type</name></member>
+      <member refid="class_channel_1a0336bf9b59947708ff6b8a3b58a11ee9ab07d013738aecdec7fcd7f9df387f21b" prot="public" virt="non-virtual"><scope>Channel</scope><name>U_INTEGER</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

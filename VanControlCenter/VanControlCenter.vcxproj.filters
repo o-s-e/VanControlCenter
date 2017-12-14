@@ -57,7 +57,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="VanControlCenter.ino" />
     <None Include="CfgFiles\CHANNELS.CFG">
       <Filter>Resource Files</Filter>
     </None>
@@ -132,6 +131,7 @@
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VanControlCenter.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Shell.cpp">

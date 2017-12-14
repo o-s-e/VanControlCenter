@@ -19,11 +19,8 @@ void HeaterInterface::init() {
 
 void HeaterInterface::update() {
     if (lastStateUpdate.hasFinished()) {
-        double temp, setTemp;
-
-
-        temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
-        setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
+        double temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
+        double setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
 
         if (temp >= setTemp) {
             if (state == On) {
@@ -132,7 +129,7 @@ void HeaterInterface::cooldown() {
 
 }
 
-//TODO: One must adapt the timer, so that the interuppts are only counted from one cycle
+//TODO: One must adapt the timer, so that the interupts are only counted from one cycle
 void HeaterInterface::heaterFaultCodeCallback() {
     if (heaterFaultCode > 0 && heaterFaultCode < 12)
         heaterFaultCode += 1;

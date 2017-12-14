@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="logger_8cpp" kind="file">
+    <compoundname>logger.cpp</compoundname>
+    <includes refid="logger_8h" local="yes">logger.h</includes>
+    <incdepgraph>
+      <node id="843">
+        <label>C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp</label>
+        <link refid="logger.cpp"/>
+        <childnode refid="844" relation="include">
+        </childnode>
+      </node>
+      <node id="846">
+        <label>ByteBuffer.h</label>
+      </node>
+      <node id="845">
+        <label>WProgram.h</label>
+      </node>
+      <node id="844">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" prot="public" static="no" mutable="no">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref></type>
+        <definition>LoggerClass Log</definition>
+        <argsstring></argsstring>
+        <name>Log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="145" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="145" bodyend="-1"/>
+        <referencedby refid="class_light_interface_class_1a07f173117bd32339e7bdcfd424573303" compoundref="_light_interface_8cpp" startline="169" endline="192">LightInterfaceClass::allOff</referencedby>
+        <referencedby refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" compoundref="_shell_8cpp" startline="66" endline="77">ShellClass::analogReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" compoundref="_shell_8cpp" startline="79" endline="93">ShellClass::analogWriteCmd</referencedby>
+        <referencedby refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" compoundref="_shell_8cpp" startline="96" endline="106">ShellClass::channelListCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">ShellClass::channelValueCmd</referencedby>
+        <referencedby refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" compoundref="_shell_8cpp" startline="227" endline="245">ShellClass::CHbufferSet</referencedby>
+        <referencedby refid="class_heater_interface_1a5b45a8c687455657c2c52fe876f8fb42" compoundref="_heater_interface_8cpp" startline="107" endline="130">HeaterInterface::cooldown</referencedby>
+        <referencedby refid="class_data_logger_class_1a4754b65cfb2c5d881d38b66aa487202d" compoundref="_data_logger_8cpp" startline="97" endline="117">DataLoggerClass::createNewLogFile</referencedby>
+        <referencedby refid="class_channels_config_class_1af21b629e6eab4bf8ac9979d54f92106b" compoundref="_channels_config_8cpp" startline="34" endline="45">ChannelsConfigClass::debug</referencedby>
+        <referencedby refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" compoundref="_shell_8cpp" startline="124" endline="134">ShellClass::digitalReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" compoundref="_shell_8cpp" startline="136" endline="148">ShellClass::digitalWriteCmd</referencedby>
+        <referencedby refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" compoundref="_channels_buffer_8cpp" startline="29" endline="68">ChannelsBufferClass::getValueAsString</referencedby>
+        <referencedby refid="class_channels_config_class_1a09ca927d1af0466081e03e0d579f7867" compoundref="_channels_config_8cpp" startline="4" endline="32">ChannelsConfigClass::init</referencedby>
+        <referencedby refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" compoundref="_shell_8cpp" startline="29" endline="33">ShellClass::init</referencedby>
+        <referencedby refid="class_light_interface_class_1a837f8c9a1dd40aa185667035bfa79281" compoundref="_light_interface_8cpp" startline="7" endline="47">LightInterfaceClass::init</referencedby>
+        <referencedby refid="class_heater_interface_1a2111eeb159aa606f6d621fd85412f64c" compoundref="_heater_interface_8cpp" startline="3" endline="18">HeaterInterface::init</referencedby>
+        <referencedby refid="class_data_logger_class_1a6918b9d1dc35581c3f2a4210426606f9" compoundref="_data_logger_8cpp" startline="3" endline="40">DataLoggerClass::init</referencedby>
+        <referencedby refid="class_display_interface_class_1a5d2ae84ef1a10f38a28f20c6cf8ce4e1" compoundref="_display_interface_8cpp" startline="15" endline="58">DisplayInterfaceClass::init</referencedby>
+        <referencedby refid="class_can_interface_class_1aeec96952fcedda6c0489e650cfda3b23" compoundref="_can_interface_8cpp" startline="3" endline="11">CanInterfaceClass::init</referencedby>
+        <referencedby refid="class_light_controller_form_1a778a72e6ea952e3947154959edde61d8" compoundref="_light_controller_form_8cpp" startline="19" endline="47">LightControllerForm::onEvent</referencedby>
+        <referencedby refid="class_general_switch_form_1ae7e3fbcea1b729adb3b16d3d889001a9" compoundref="_general_switch_form_8cpp" startline="14" endline="31">GeneralSwitchForm::onEvent</referencedby>
+        <referencedby refid="class_temperature_controller_form_1aeeeec747874a7fc4b4379f89ad7ccf04" compoundref="_temperature_controller_form_8cpp" startline="13" endline="27">TemperatureControllerForm::onEvent</referencedby>
+        <referencedby refid="logger_8cpp_1afcf7350f031088225e32edcc7236351d" compoundref="logger_8cpp" startline="138" endline="143">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" compoundref="_shell_8cpp" startline="247" endline="264">ShellClass::printSDTree</referencedby>
+        <referencedby refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" compoundref="logger_8cpp" startline="51" endline="56">LoggerClass::repeat</referencedby>
+        <referencedby refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" compoundref="_shell_8cpp" startline="151" endline="160">ShellClass::SDMkDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" compoundref="_shell_8cpp" startline="162" endline="181">ShellClass::SDOpenCmd</referencedby>
+        <referencedby refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" compoundref="_shell_8cpp" startline="183" endline="197">ShellClass::SDRmCmd</referencedby>
+        <referencedby refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" compoundref="_shell_8cpp" startline="199" endline="213">ShellClass::SDRmDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" compoundref="_shell_8cpp" startline="215" endline="225">ShellClass::SDTreeCmd</referencedby>
+        <referencedby refid="class_light_interface_class_1a5d66711ad664de1a6c7babc96eb79a20" compoundref="_light_interface_8cpp" startline="149" endline="167">LightInterfaceClass::setBrightness</referencedby>
+        <referencedby refid="class_light_interface_class_1aacca0765541f1d189f4ca00bc9c63b44" compoundref="_light_interface_8cpp" startline="79" endline="147">LightInterfaceClass::setColor</referencedby>
+        <referencedby refid="class_display_interface_class_1a4752581d52a5e675a4ad9406204cb8a6" compoundref="_display_interface_8cpp" startline="101" endline="123">DisplayInterfaceClass::setCurrentForm</referencedby>
+        <referencedby refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</referencedby>
+        <referencedby refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" compoundref="_shell_8cpp" startline="35" endline="62">ShellClass::update</referencedby>
+        <referencedby refid="class_heater_interface_1a238a9fc5648d0d1f0575b37b446347ca" compoundref="_heater_interface_8cpp" startline="20" endline="79">HeaterInterface::update</referencedby>
+        <referencedby refid="class_data_logger_class_1a75106f1588d60a80bf477a31ba78d7fd" compoundref="_data_logger_8cpp" startline="45" endline="82">DataLoggerClass::update</referencedby>
+        <referencedby refid="class_light_interface_class_1a851df45694c31a6b214d670df98558c7" compoundref="_light_interface_8cpp" startline="49" endline="77">LightInterfaceClass::update</referencedby>
+        <referencedby refid="class_display_interface_class_1ae0458d5ce89eedb60f29dbd1a4a312f0" compoundref="_display_interface_8cpp" startline="60" endline="99">DisplayInterfaceClass::update</referencedby>
+        <referencedby refid="class_wifi_interface_class_1aae13ace578d33f7fff425aa4c3ee8337" compoundref="_wifi_interface_8cpp" startline="17" endline="110">WifiInterfaceClass::update</referencedby>
+        <referencedby refid="class_can_interface_class_1ad2b930d86db497f5f18003ef43693c79" compoundref="_can_interface_8cpp" startline="13" endline="37">CanInterfaceClass::update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, byte value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="59" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="59" bodyend="62"/>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a72781ccdc3f98b80c897dcd1f7d1c28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, char value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="64" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="64" bodyend="67"/>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a7dfdd88d71942f414a5f01391ea384bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, int value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="69" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="69" bodyend="72"/>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a7e51db2c0acb09a96f506bf28a7d5a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, unsigned int value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="74" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="74" bodyend="77"/>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a673d670456f03be53331d45ff51f2d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, long value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="79" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="79" bodyend="82"/>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1abd0b1ffb39a78ce0d87c6fa45ca4710b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, unsigned long value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="84" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="84" bodyend="87"/>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a1ef95b39d2f4228413a8c732e892ae42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, float value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="89" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="89" bodyend="92"/>
+        <references refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" compoundref="logger_8h" startline="77">LoggerClass::precision</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a1cfd1e524f5a1d6d7505d0b61dcdc460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, double value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="94" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="94" bodyend="97"/>
+        <references refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" compoundref="logger_8h" startline="77">LoggerClass::precision</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a6c967f756b40470c3f9b2014c52f16cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, const char *value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="99" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="99" bodyend="102"/>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a0b0494f98f160679b4793228551254b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, String value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="104" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="104" bodyend="107"/>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1adeb0dec0c881d0c9aed7ac84565f2540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, const __FlashStringHelper *value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="109" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="109" bodyend="112"/>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a3b10fac896021e5ca77f2e862fe7fb65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, LogManip value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63" kindref="member">LogManip</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="114" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="114" bodyend="134"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63af63676e4d22f0e184202ea660a0bc62a" compoundref="logger_8h" startline="25">Bin</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a516ce3cb332b423a1b9707352fe5cd17" compoundref="logger_8h" startline="27">Dec</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a52d712ca29fd43f0c574e9eef162d1c3" compoundref="logger_8h" startline="28">Hex</references>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a3fa258f3bb2deccc3595e22fd129e1d9" compoundref="logger_8h" startline="26">Oct</references>
+        <references refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" compoundref="logger_8h" startline="78">LoggerClass::serialPort</references>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1a925b67c6cd99211edcee87dcb4cbdf25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, LoggerClass &amp;value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="136" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="logger_8cpp_1afcf7350f031088225e32edcc7236351d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+        <definition>LoggerClass&amp; operator&lt;&lt;</definition>
+        <argsstring>(LoggerClass &amp;log, ByteBuffer &amp;b)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_logger_class" kindref="compound">LoggerClass</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>ByteBuffer &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" line="138" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp" bodystart="138" bodyend="143"/>
+        <references refid="class_logger_class_1aad451c4a8eb97a9863d74e36e06ed0d2" compoundref="logger_8h" startline="65" endline="70">LoggerClass::array</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a52d712ca29fd43f0c574e9eef162d1c3" compoundref="logger_8h" startline="28">Hex</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" compoundref="logger_8h" startline="79">LoggerClass::mode</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_logger_class_1a11449aaeea2633f583c415ee46f0edbf" kindref="member">LoggerClass::init</ref>(UARTClass<sp/>*serialPort)<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;serialPort<sp/>=<sp/><ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref><sp/>=<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a516ce3cb332b423a1b9707352fe5cd17" kindref="member">Dec</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" kindref="member">precision</ref><sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_logger_class_1a5aec1323a221c38b85930b7272fda219" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_logger_class_1a5aec1323a221c38b85930b7272fda219" kindref="member">LoggerClass::setDecimalPrecision</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>precision)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;precision<sp/>=<sp/><ref refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" kindref="member">precision</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_logger_class_1a7a11071337f6fc3124ce1be5c41427bf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_logger_class_1a7a11071337f6fc3124ce1be5c41427bf" kindref="member">LoggerClass::assert</ref>(</highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>condition,<sp/>String<sp/>msg)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!condition)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">e</ref>(<ref refid="logger_8h_1a5c06bf0e12655d2d529ed3acbe886a97" kindref="member">ASSERT_TAG</ref>)<sp/>&lt;&lt;<sp/>msg<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;flush();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">LoggerClass::i</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>(*this)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a1cd805eaf0bb58a90fe7e7e4cf6a3cdc" kindref="member">Info</ref><sp/>&lt;&lt;<sp/>tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26" refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" kindref="member">LoggerClass::w</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>(*this)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a48f2bb70fceb692a2dedd8cea496c44b" kindref="member">Warning</ref><sp/>&lt;&lt;<sp/>tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">LoggerClass::e</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>(*this)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a4dfd42ec49d09d8c6555c218301cc30f" kindref="member">Error</ref><sp/>&lt;&lt;<sp/>tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_logger_class_1a5ddc6941c032dc21f53599a8ee0a17df" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">LoggerClass::i</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__FlashStringHelper<sp/>*tag)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>(*this)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a1cd805eaf0bb58a90fe7e7e4cf6a3cdc" kindref="member">Info</ref><sp/>&lt;&lt;<sp/>tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_logger_class_1a2f7ef89045112b97575e0d2b0484109c" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1af3d5928bc3cc6a48ed64973bede5caa2" kindref="member">LoggerClass::w</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__FlashStringHelper<sp/>*tag)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>(*this)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a48f2bb70fceb692a2dedd8cea496c44b" kindref="member">Warning</ref><sp/>&lt;&lt;<sp/>tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_logger_class_1a6e6156a8f4d54c39d5a780dcb08e5a4f" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" kindref="member">LoggerClass::e</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__FlashStringHelper<sp/>*tag)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>(*this)<sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a4dfd42ec49d09d8c6555c218301cc30f" kindref="member">Error</ref><sp/>&lt;&lt;<sp/>tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" kindref="member">LoggerClass::repeat</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>times)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref><sp/>=<sp/>0;<sp/><ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref><sp/>&lt;<sp/>times;<sp/><ref refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" kindref="member">i</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref><sp/>&lt;&lt;<sp/>c;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Print</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/>byte<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="logger_8cpp_1a72781ccdc3f98b80c897dcd1f7d1c28b" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="logger_8cpp_1a7dfdd88d71942f414a5f01391ea384bb" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="logger_8cpp_1a7e51db2c0acb09a96f506bf28a7d5a06" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="logger_8cpp_1a673d670456f03be53331d45ff51f2d5e" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="logger_8cpp_1abd0b1ffb39a78ce0d87c6fa45ca4710b" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="logger_8cpp_1a1ef95b39d2f4228413a8c732e892ae42" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" kindref="member">precision</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="logger_8cpp_1a1cfd1e524f5a1d6d7505d0b61dcdc460" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value,<sp/>log.<ref refid="class_logger_class_1a82f623c539fb56b4792e8107787efa26" kindref="member">precision</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="logger_8cpp_1a6c967f756b40470c3f9b2014c52f16cd" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="logger_8cpp_1a0b0494f98f160679b4793228551254b4" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/>String<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="logger_8cpp_1adeb0dec0c881d0c9aed7ac84565f2540" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__FlashStringHelper<sp/>*value)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print(value);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="logger_8cpp_1a3b10fac896021e5ca77f2e862fe7fb65" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63" kindref="member">LogManip</ref><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(value)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" kindref="member">Endl</ref>:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref><sp/>=<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a516ce3cb332b423a1b9707352fe5cd17" kindref="member">Dec</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;println();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;flush();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63af63676e4d22f0e184202ea660a0bc62a" kindref="member">Bin</ref>:</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a3fa258f3bb2deccc3595e22fd129e1d9" kindref="member">Oct</ref>:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a516ce3cb332b423a1b9707352fe5cd17" kindref="member">Dec</ref>:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a52d712ca29fd43f0c574e9eef162d1c3" kindref="member">Hex</ref>:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="class_logger_class_1aee0f074a941e152e55e9fd0f93825bbf" kindref="member">serialPort</ref>-&gt;print((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)value);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="logger_8cpp_1a925b67c6cd99211edcee87dcb4cbdf25" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;value)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;<sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="logger_8cpp_1afcf7350f031088225e32edcc7236351d" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;<ref refid="logger_8cpp_1a5bf0b2115bd82493df19d1b3770d7ac6" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/>&amp;log,<sp/>ByteBuffer<sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63" kindref="member">LogManip</ref><sp/>prevLogMode<sp/>=<sp/>log.<ref refid="class_logger_class_1a66e806591ef4da80c148b764907ad862" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref><sp/>&lt;&lt;<sp/><ref refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a52d712ca29fd43f0c574e9eef162d1c3" kindref="member">Hex</ref><sp/>&lt;&lt;<sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>.<ref refid="class_logger_class_1aad451c4a8eb97a9863d74e36e06ed0d2" kindref="member">array</ref>&lt;byte&gt;(b.data(),<sp/>b.getSize())<sp/>&lt;&lt;<sp/>prevLogMode;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="logger_8h_1ab741d4d7eac8d06dd385f0fdda3995fd" refkind="member"><highlight class="normal"><ref refid="class_logger_class" kindref="compound">LoggerClass</ref><sp/><ref refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" kindref="member">Log</ref>;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/logger.cpp"/>
+  </compounddef>
+</doxygen>

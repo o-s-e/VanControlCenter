@@ -13,14 +13,14 @@ void CanInterfaceClass::init(int canSpeed, unsigned short minID, unsigned short 
 void CanInterfaceClass::update() {
     //If a frame is available
     if (Can0.available()) {
-        Log.i(CAN_TAG) << F("Can0 available");
+        Log.i(CAN_TAG) << F("Can0 available") << Endl;
         //Read
         Can0.read(frame);
 
         //If the callback is set
         if (canEvent != NULL) {
             //Invoke the callback
-            Log.i(CAN_TAG) << F("Can0 callback is set");
+            Log.i(CAN_TAG) << F("Can0 callback is set") << Endl;
 
             canEvent(frame);
         }
@@ -89,7 +89,7 @@ void CanInterfaceClass::writePacketOnDebugSerial(CAN_FRAME& packet) {
         debugSerial->write(packet.id >> 8);
         debugSerial->write(packet.id);
         debugSerial->write(packet.length);
-        debugSerial->write((byte*)packet.data.bytes, packet.length);
+        debugSerial->write(static_cast<byte*>(packet.data.bytes), packet.length);
     }
 }
 
@@ -105,19 +105,18 @@ void CanInterfaceClass::readFromDebugSerial() {
 void CanInterfaceClass::parseSerialDebugCmd() {
     //Parse debug command
     int index = rxBuffer.indexOf(CAN_MSG_HEADER);
-    unsigned short id, size;
 
     //CMD Packet ->  CMD + Size + Command + Data	Size = sizeof(Command) + sizeof(data)
     if (index != -1) {
         index += sizeof(CAN_MSG_HEADER) - 1;
 
         if (rxBuffer.getSize() > index + 3) {
-            id = ((rxBuffer[index] & 0xFF) << 8) | (rxBuffer[index + 1] & 0xFF);
-            size = rxBuffer[index + 2] & 0xFF;
+            unsigned short id = ((rxBuffer[index] & 0xFF) << 8) | (rxBuffer[index + 1] & 0xFF);
+            unsigned short size = rxBuffer[index + 2] & 0xFF;
             index += 3;
 
             if (rxBuffer.getSize() >= index + size) {
-                send((CanID::IDs)id, &rxBuffer[index], size);
+                send(CanID::IDs(id), &rxBuffer[index], size);
 
                 //test
                 frame.id = id;
@@ -134,18 +133,15 @@ void CanInterfaceClass::parseSerialDebugCmd() {
 
 //Stream
 CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size) {
-    byte ack;
-    int r, q;
     Timer timeOut;
-    CAN_FRAME frame;
 
     //Open the stream over can
     canInterface.send(canID, (byte*)openStreamCmd, strlen(openStreamCmd));
 
     //Needed packets to send
-    q = size / 8;
-    r = size % 8;
-    ack = getAck(buffer, size);
+    int q = size / 8;
+    int r = size % 8;
+    byte ack = getAck(buffer, size);
 
     //LOGLN(size);
     //LOG_ARR(buffer, size, HEX);
@@ -170,15 +166,15 @@ CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* o
 
     while (!timeOut.hasFinished()) {
         //Read all response frame
-        frame = canInterface.read();
+        CAN_FRAME frame = canInterface.read();
         //If the packet has the stream id
         if (frame.id == canID) {
             //if response is OK
-            if (strcmp((const char*)frame.data.bytes, OK_CMD) == 0) {
+            if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), OK_CMD) == 0) {
                 return SUCCES;
             }
             //if response is ERROR
-            else if (strcmp((const char*)frame.data.bytes, ERROR_CMD) == 0) {
+            else if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), ERROR_CMD) == 0) {
                 return ERROR;
             }
         }
@@ -188,10 +184,8 @@ CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* o
 }
 
 CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int expectedBytes) {
-    byte ack;
-    int memIndex;
     Timer timeOut;
-    CAN_FRAME frame;
+     
 
     //Open the stream over can
     canInterface.send(canID, (byte*)openStreamCmd, strlen(openStreamCmd));
@@ -199,14 +193,14 @@ CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const 
     //Set timeout timer
     timeOut.setDuration(CMD_TIMEOUT).start();
 
-    memIndex = 0;
+    int memIndex = 0;
     //Wait for can packet
     while (!timeOut.hasFinished() && memIndex < expectedBytes) {
-        frame = canInterface.read();
+        CAN_FRAME frame = canInterface.read();
         //Read responses
         if (frame.id == canID) {
             //On error
-            if (strcmp((const char*)frame.data.bytes, ERROR_CMD) == 0) {
+            if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), ERROR_CMD) == 0) {
                 return ERROR;
             }
             //Save data in the buffer
@@ -227,7 +221,7 @@ CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const 
     while (!timeOut.hasFinished()) {
         frame = canInterface.read();
         if (frame.id == canID && frame.length == 1) {
-            ack = frame.data.bytes[0];
+            byte ack = frame.data.bytes[0];
             if (ack != getAck(buffer, expectedBytes)) {
                 //LOGLN((int)ack);
                 //LOGLN((int)getAck(buffer, expectedBytes))

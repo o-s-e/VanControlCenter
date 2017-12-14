@@ -24,21 +24,24 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
                 //Get the angle value to set the color
                 color = genie.GetEventData(&evt);
                 lightInterface.setColor(color);
-
+                break;
             case ROOM_LIGHT:
                 roomBrightness = genie.GetEventData(&evt);
                 lightInterface.setBrightness(roomBrightness, ROOM_LIGHT);
-
+                break;
             case AWNING_LIGHT:
                 awningBrightness = genie.GetEventData(&evt);
                 lightInterface.setBrightness(awningBrightness, AWNING_LIGHT);
-
+                break;
             case WORKTOP_LIGHT:
                 worktopBrightness = genie.GetEventData(&evt);
                 lightInterface.setBrightness(worktopBrightness, WORKTOP_LIGHT);
-
+                break;
             case OFFSWITCH:
                 lightInterface.allOff();
+                break;
+            default: 
+                Log.w(LCD_TAG) << F("Display returned a not used object id on the LightControllerForm: ") << evt.reportObject.index << Endl;
             }
         }
     }

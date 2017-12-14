@@ -25,7 +25,7 @@ const String& LCDStringMsg::getMessage() {
 }
 
 void LCDStringMsg::repaint() {
-    parent->WriteStr(widgetIndex, (char*)buffer.c_str());
+    parent->WriteStr(widgetIndex, const_cast<char*>(buffer.c_str()));
 }
 
 void LCDStringMsg::setMessage(String str) {

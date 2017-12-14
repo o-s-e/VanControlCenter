@@ -95,7 +95,7 @@ void LightInterfaceClass::setColor(double h) {
         hh = hsv.h;
         if (hh >= 360.0) hh = 0.0;
         hh /= 60.0;
-        i = (long)hh;
+        i = static_cast<long>(hh);
         ff = hh - i;
         p = hsv.v * (1.0 - hsv.s);
         q = hsv.v * (1.0 - (hsv.s * ff));
@@ -151,16 +151,22 @@ void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) 
         //TODO Check if roomlight needs to be replaced with the channelbuffer equivalent
     case 1:
         if (roomLight.w != brightness) {
-            channelsBuffer.setValue<uint8_t>(CanID::LIGHT_4, brightness);;
+            channelsBuffer.setValue<uint8_t>(CanID::LIGHT_4, brightness);
         }
+        break;
     case 2:
         if (awningLight.w != brightness) {
-            channelsBuffer.setValue<uint8_t>(CanID::LIGHT_5, brightness);;;
+            channelsBuffer.setValue<uint8_t>(CanID::LIGHT_5, brightness);
         }
+        break;
     case 3:
         if (worktopLight.w != brightness) {
-            channelsBuffer.setValue<uint8_t>(CanID::LIGHT_6, brightness);;;
+            channelsBuffer.setValue<uint8_t>(CanID::LIGHT_6, brightness);
         }
+        break;
+    default: 
+        Log.w(RGB_TAG) << F("not used lightIndex on the LightInterface: ") << lightIndex << Endl;
+        break;
     }
 }
 

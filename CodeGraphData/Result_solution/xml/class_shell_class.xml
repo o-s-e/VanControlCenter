@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_shell_class" kind="class" prot="public">
+    <compoundname>ShellClass</compoundname>
+    <includes refid="_shell_8h" local="no">Shell.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" prot="private" static="no" mutable="no">
+        <type>ByteBuffer</type>
+        <definition>ByteBuffer ShellClass::rxBuffer</definition>
+        <argsstring></argsstring>
+        <name>rxBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="57" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" compoundref="_shell_8cpp" startline="29" endline="33">init</referencedby>
+        <referencedby refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" compoundref="_shell_8cpp" startline="35" endline="62">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" prot="private" static="no" mutable="no">
+        <type>Stream *</type>
+        <definition>Stream* ShellClass::serialPort</definition>
+        <argsstring></argsstring>
+        <name>serialPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="58" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" compoundref="_shell_8cpp" startline="29" endline="33">init</referencedby>
+        <referencedby refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" compoundref="_shell_8cpp" startline="35" endline="62">update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::init</definition>
+        <argsstring>(Stream *serialPort)</argsstring>
+        <name>init</name>
+        <param>
+          <type>Stream *</type>
+          <declname>serialPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="35" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="29" bodyend="33"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" compoundref="_shell_8h" startline="57">rxBuffer</references>
+        <references refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" compoundref="_shell_8h" startline="58">serialPort</references>
+        <references refid="_shell_8h_1aa95b6cfb2bcd7070bc42e5e47bbe7793" compoundref="_shell_8h" startline="20">SHELL_RX_BUFFER</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="36" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="35" bodyend="62"/>
+        <references refid="struct_shell_command_1a8411c9d134368b24ec75e847a057ccd2" compoundref="_shell_8h" startline="26">ShellCommand::cmdFun</references>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" compoundref="_shell_8cpp" startline="268" endline="309">findCmd</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" compoundref="_shell_8h" startline="57">rxBuffer</references>
+        <references refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" compoundref="_shell_8h" startline="58">serialPort</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::analogReadCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>analogReadCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="39" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="66" bodyend="77"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a5e413adde63e628131f01df3f290eb24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::analogWriteCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>analogWriteCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="79" bodyend="93"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::channelListCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>channelListCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="42" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="96" bodyend="106"/>
+        <references refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" compoundref="_channels_config_8cpp" startline="80">channelsConfig</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_channels_config_class_1aaa004fa353101a7237cdd785c04f9c79" compoundref="_channels_config_8cpp" startline="73" endline="78">ChannelsConfigClass::getChannelByIndex</references>
+        <references refid="class_channels_config_class_1ac9b0b5e8af354ac715a2f6186d90a3a5" compoundref="_channels_config_8h" startline="41" endline="41">ChannelsConfigClass::getChannelCount</references>
+        <references refid="class_channel_1a1851a034e0d21f66d8679b9babd425ea" compoundref="_channel_8cpp" startline="31" endline="33">Channel::getDataType</references>
+        <references refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" compoundref="_channel_8cpp" startline="27" endline="29">Channel::getID</references>
+        <references refid="class_channel_1af00977d334a39bea472d84164cc305b3" compoundref="_channel_8cpp" startline="35" endline="37">Channel::getName</references>
+        <references refid="class_channel_1ac6daacb687d1933d1030cc5341edd8f2" compoundref="_channel_8cpp" startline="23" endline="25">Channel::getSize</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a52d712ca29fd43f0c574e9eef162d1c3" compoundref="logger_8h" startline="28">Hex</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::channelValueCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>channelValueCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="108" bodyend="118"/>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="_channels_config_8cpp_1a0ce4f520bb6b60a1cdbbcbe939dead3f" compoundref="_channels_config_8cpp" startline="80">channelsConfig</references>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_channels_config_class_1a08d9ac862c7ec14b1b6f399851bfb4ed" compoundref="_channels_config_8cpp" startline="47" endline="49">ChannelsConfigClass::getChannelByID</references>
+        <references refid="class_channel_1a5c332725fe6d70aa3a6c06433324e988" compoundref="_channel_8cpp" startline="27" endline="29">Channel::getID</references>
+        <references refid="class_channels_buffer_class_1a08cca9e96cd65d4f2b7e16d9fff889b1" compoundref="_channels_buffer_8cpp" startline="70" endline="82">ChannelsBufferClass::getValueAsByteArray</references>
+        <references refid="class_channels_buffer_class_1a667e480cb34939c2f832dc6e3d1b07be" compoundref="_channels_buffer_8cpp" startline="29" endline="68">ChannelsBufferClass::getValueAsString</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1ab2eba220afadfbb23092fa09964de8c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::channelsValuesCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>channelsValuesCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="44" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="120" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::digitalReadCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>digitalReadCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="124" bodyend="134"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::digitalWriteCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>digitalWriteCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="47" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="136" bodyend="148"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::SDMkDirCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>SDMkDirCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="49" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="151" bodyend="160"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::SDOpenCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>SDOpenCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="50" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="162" bodyend="181"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1aedd68cff18ece785448ef4255cee5940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::SDRmCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>SDRmCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="51" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="183" bodyend="197"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::SDRmDirCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>SDRmDirCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="52" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="199" bodyend="213"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::SDTreeCmd</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>SDTreeCmd</name>
+        <param>
+          <type>String &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="53" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="215" bodyend="225"/>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" compoundref="_shell_8cpp" startline="247" endline="264">printSDTree</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::CHbufferSet</definition>
+        <argsstring>(String &amp;)</argsstring>
+        <name>CHbufferSet</name>
+        <param>
+          <type>String &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="54" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="227" bodyend="245"/>
+        <references refid="_channels_buffer_8cpp_1acf700c7ee67371fd384d6e6c9a92b441" compoundref="_channels_buffer_8cpp" startline="185">channelsBuffer</references>
+        <references refid="class_logger_class_1a45cb9f76184a22c3ca36b568663017e0" compoundref="logger_8cpp" startline="31" endline="34">LoggerClass::e</references>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" compoundref="_shell_8cpp" startline="311" endline="322">nextParam</references>
+        <references refid="class_channels_buffer_class_1ac8644221d397ed000774299a98a5ac52" compoundref="_channels_buffer_8cpp" startline="84" endline="111">ChannelsBufferClass::setValue</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ShellClass::findCmd</definition>
+        <argsstring>(String &amp;line, ShellCommand *cmd)</argsstring>
+        <name>findCmd</name>
+        <param>
+          <type>String &amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_shell_command" kindref="compound">ShellCommand</ref> *</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="60" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="268" bodyend="309"/>
+        <references refid="_shell_8h_1aa806eb51b1187d12a4217b3a1f4b4a2f" compoundref="_shell_8h" startline="31">CMDS_NUM</references>
+        <references refid="_shell_8cpp_1a27844f3f96d9e6d8c53d642ea585adaf" compoundref="_shell_8cpp" startline="4">cmdsList</references>
+        <references refid="struct_shell_command_1abe3c132504880ed769495d6e4a05e6d2" compoundref="_shell_8h" startline="25">ShellCommand::cmdString</references>
+        <referencedby refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" compoundref="_shell_8cpp" startline="35" endline="62">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String ShellClass::nextParam</definition>
+        <argsstring>(String &amp;params)</argsstring>
+        <name>nextParam</name>
+        <param>
+          <type>String &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="61" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="311" bodyend="322"/>
+        <referencedby refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" compoundref="_shell_8cpp" startline="66" endline="77">analogReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" compoundref="_shell_8cpp" startline="79" endline="93">analogWriteCmd</referencedby>
+        <referencedby refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" compoundref="_shell_8cpp" startline="108" endline="118">channelValueCmd</referencedby>
+        <referencedby refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" compoundref="_shell_8cpp" startline="227" endline="245">CHbufferSet</referencedby>
+        <referencedby refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" compoundref="_shell_8cpp" startline="124" endline="134">digitalReadCmd</referencedby>
+        <referencedby refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" compoundref="_shell_8cpp" startline="136" endline="148">digitalWriteCmd</referencedby>
+        <referencedby refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" compoundref="_shell_8cpp" startline="151" endline="160">SDMkDirCmd</referencedby>
+        <referencedby refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" compoundref="_shell_8cpp" startline="162" endline="181">SDOpenCmd</referencedby>
+        <referencedby refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" compoundref="_shell_8cpp" startline="183" endline="197">SDRmCmd</referencedby>
+        <referencedby refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" compoundref="_shell_8cpp" startline="199" endline="213">SDRmDirCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShellClass::printSDTree</definition>
+        <argsstring>(File dir, int indent)</argsstring>
+        <name>printSDTree</name>
+        <param>
+          <type>File</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="63" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.cpp" bodystart="247" bodyend="264"/>
+        <references refid="logger_8h_1a8b61bb91083737b96d0b3b27d580bd63a118a7d989968e11a33b264ab35507dca" compoundref="logger_8h" startline="17">Endl</references>
+        <references refid="class_logger_class_1ac26d7cd726ff22b4457f3c5d3da1fe74" compoundref="logger_8cpp" startline="22" endline="25">LoggerClass::i</references>
+        <references refid="logger_8cpp_1ab741d4d7eac8d06dd385f0fdda3995fd" compoundref="logger_8cpp" startline="145">Log</references>
+        <references refid="class_logger_class_1a8dea1707f6232542127e590a70598a08" compoundref="logger_8cpp" startline="51" endline="56">LoggerClass::repeat</references>
+        <references refid="_shell_8h_1a05461a5b92acaf5afe957ecf983fa7e9" compoundref="_shell_8h" startline="18">SHELL_TAG</references>
+        <referencedby refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" compoundref="_shell_8cpp" startline="215" endline="225">SDTreeCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" line="33" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/Shell.h" bodystart="33" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_shell_class_1a330f13f5723d31127d6f1b79757b00d7" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>analogReadCmd</name></member>
+      <member refid="class_shell_class_1a5e413adde63e628131f01df3f290eb24" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>analogWriteCmd</name></member>
+      <member refid="class_shell_class_1a2c7662f6cbcc7afa61e453c130fc4acf" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>channelListCmd</name></member>
+      <member refid="class_shell_class_1ab2eba220afadfbb23092fa09964de8c7" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>channelsValuesCmd</name></member>
+      <member refid="class_shell_class_1a7e05c5c75da740b7535deb4bcd39d454" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>channelValueCmd</name></member>
+      <member refid="class_shell_class_1ab0703c019cb32d5e87bc310b63198b4a" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>CHbufferSet</name></member>
+      <member refid="class_shell_class_1a4090826d8eaa9d7fd2a66e46bfaba5a1" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>digitalReadCmd</name></member>
+      <member refid="class_shell_class_1a833050647c698ed1cc6b8a2497efeec0" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>digitalWriteCmd</name></member>
+      <member refid="class_shell_class_1ad17535ad8aaa13d6e98aab593ed26757" prot="private" virt="non-virtual"><scope>ShellClass</scope><name>findCmd</name></member>
+      <member refid="class_shell_class_1a7b6468110eb52d4a17ed4c92ff6332d1" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>init</name></member>
+      <member refid="class_shell_class_1a176b701a7029dc50c51fe7b5335f3464" prot="private" virt="non-virtual"><scope>ShellClass</scope><name>nextParam</name></member>
+      <member refid="class_shell_class_1aee076b2b0026fc02354e7fc4294ce998" prot="private" virt="non-virtual"><scope>ShellClass</scope><name>printSDTree</name></member>
+      <member refid="class_shell_class_1a14d0c951f25ffc3eab6d4c1766913e98" prot="private" virt="non-virtual"><scope>ShellClass</scope><name>rxBuffer</name></member>
+      <member refid="class_shell_class_1afe7c3a569efdea7032b408f1e0da0358" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>SDMkDirCmd</name></member>
+      <member refid="class_shell_class_1a0788d3e960404d9c98f4c0ec1352b3dc" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>SDOpenCmd</name></member>
+      <member refid="class_shell_class_1aedd68cff18ece785448ef4255cee5940" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>SDRmCmd</name></member>
+      <member refid="class_shell_class_1a40d068073b3ea0619c15c5872bfb23a9" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>SDRmDirCmd</name></member>
+      <member refid="class_shell_class_1abc0b59f43a54189a2fcd26717bf0f408" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>SDTreeCmd</name></member>
+      <member refid="class_shell_class_1a07d52df170006443c07bc60f789ef7b3" prot="private" virt="non-virtual"><scope>ShellClass</scope><name>serialPort</name></member>
+      <member refid="class_shell_class_1a9ff5874a19dc1afb3d21e51687150966" prot="public" virt="non-virtual"><scope>ShellClass</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

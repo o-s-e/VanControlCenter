@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_l_c_d_string_list" kind="class" prot="public">
+    <compoundname>LCDStringList</compoundname>
+    <includes refid="_l_c_d_string_list_8h" local="no">LCDStringList.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char LCDStringList::currentElement</definition>
+        <argsstring></argsstring>
+        <name>currentElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="59" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_l_c_d_string_list_1a363b864c43ea4513119d34f3ee50eef5" compoundref="_l_c_d_string_list_8cpp" startline="11" endline="25">addElement</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a955f256708582fbbccf0d42c587d86d9" compoundref="_l_c_d_string_list_8cpp" startline="27" endline="44">clear</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1aae4e1101a0ab626e8b5a5913ff2df700" compoundref="_l_c_d_string_list_8cpp" startline="46" endline="62">down</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a7d1a3a24a6a7b52a39a68369eb288c1e" compoundref="_l_c_d_string_list_8cpp" startline="97" endline="99">getCurrentElement</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" compoundref="_l_c_d_string_list_8cpp" startline="3" endline="9">init</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a96a81e16197e643f37a1da467e8393c6" compoundref="_l_c_d_string_list_8cpp" startline="72" endline="95">up</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_c_d_string_list_1ae66c3179e0ecda0c92f7199dc6d346b4" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte LCDStringList::widgetIndex</definition>
+        <argsstring></argsstring>
+        <name>widgetIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="62" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_l_c_d_string_list_1a3939665a3b66944eba24d2ca8955c0a7" compoundref="_l_c_d_string_list_8cpp" startline="101" endline="103">getWidgetIndex</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" compoundref="_l_c_d_string_list_8cpp" startline="3" endline="9">init</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" compoundref="_l_c_d_string_list_8cpp" startline="68" endline="70">repaint</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte LCDStringList::elementCount</definition>
+        <argsstring></argsstring>
+        <name>elementCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="65" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_l_c_d_string_list_1a363b864c43ea4513119d34f3ee50eef5" compoundref="_l_c_d_string_list_8cpp" startline="11" endline="25">addElement</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a955f256708582fbbccf0d42c587d86d9" compoundref="_l_c_d_string_list_8cpp" startline="27" endline="44">clear</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1aae4e1101a0ab626e8b5a5913ff2df700" compoundref="_l_c_d_string_list_8cpp" startline="46" endline="62">down</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a166aa91c6a8cb52fdd8cbd47f796772d" compoundref="_l_c_d_string_list_8cpp" startline="105" endline="107">getElementCount</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" compoundref="_l_c_d_string_list_8cpp" startline="3" endline="9">init</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a96a81e16197e643f37a1da467e8393c6" compoundref="_l_c_d_string_list_8cpp" startline="72" endline="95">up</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String LCDStringList::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="68" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_l_c_d_string_list_1a363b864c43ea4513119d34f3ee50eef5" compoundref="_l_c_d_string_list_8cpp" startline="11" endline="25">addElement</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a955f256708582fbbccf0d42c587d86d9" compoundref="_l_c_d_string_list_8cpp" startline="27" endline="44">clear</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1aae4e1101a0ab626e8b5a5913ff2df700" compoundref="_l_c_d_string_list_8cpp" startline="46" endline="62">down</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" compoundref="_l_c_d_string_list_8cpp" startline="3" endline="9">init</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" compoundref="_l_c_d_string_list_8cpp" startline="68" endline="70">repaint</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a96a81e16197e643f37a1da467e8393c6" compoundref="_l_c_d_string_list_8cpp" startline="72" endline="95">up</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_c_d_string_list_1a27d288a5cd7fb50ff9f5f94260d43dc6" prot="private" static="no" mutable="no">
+        <type>Genie *</type>
+        <definition>Genie* LCDStringList::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="71" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" compoundref="_l_c_d_string_list_8cpp" startline="3" endline="9">init</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" compoundref="_l_c_d_string_list_8cpp" startline="68" endline="70">repaint</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::init</definition>
+        <argsstring>(byte index, int maxSize, Genie *parent)</argsstring>
+        <name>init</name>
+        <param>
+          <type>byte</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxSize</declname>
+        </param>
+        <param>
+          <type>Genie *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="28" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="3" bodyend="9"/>
+        <references refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" compoundref="_l_c_d_string_list_8h" startline="68">buffer</references>
+        <references refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" compoundref="_l_c_d_string_list_8h" startline="59">currentElement</references>
+        <references refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" compoundref="_l_c_d_string_list_8h" startline="65">elementCount</references>
+        <references refid="class_l_c_d_string_list_1a27d288a5cd7fb50ff9f5f94260d43dc6" compoundref="_l_c_d_string_list_8h" startline="71">parent</references>
+        <references refid="class_l_c_d_string_list_1ae66c3179e0ecda0c92f7199dc6d346b4" compoundref="_l_c_d_string_list_8h" startline="62">widgetIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a96a81e16197e643f37a1da467e8393c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::up</definition>
+        <argsstring>()</argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="31" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="72" bodyend="95"/>
+        <references refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" compoundref="_l_c_d_string_list_8h" startline="68">buffer</references>
+        <references refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" compoundref="_l_c_d_string_list_8h" startline="59">currentElement</references>
+        <references refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" compoundref="_l_c_d_string_list_8h" startline="65">elementCount</references>
+        <references refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" compoundref="_l_c_d_string_list_8cpp" startline="68" endline="70">repaint</references>
+        <references refid="_l_c_d_string_list_8h_1a582dcac1971c1c868dc0022952193a27" compoundref="_l_c_d_string_list_8h" startline="21">SELECT_LINE_CHAR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1aae4e1101a0ab626e8b5a5913ff2df700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::down</definition>
+        <argsstring>()</argsstring>
+        <name>down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="34" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="46" bodyend="62"/>
+        <references refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" compoundref="_l_c_d_string_list_8h" startline="68">buffer</references>
+        <references refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" compoundref="_l_c_d_string_list_8h" startline="59">currentElement</references>
+        <references refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" compoundref="_l_c_d_string_list_8h" startline="65">elementCount</references>
+        <references refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" compoundref="_l_c_d_string_list_8cpp" startline="68" endline="70">repaint</references>
+        <references refid="_l_c_d_string_list_8h_1a582dcac1971c1c868dc0022952193a27" compoundref="_l_c_d_string_list_8h" startline="21">SELECT_LINE_CHAR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a955f256708582fbbccf0d42c587d86d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="37" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="27" bodyend="44"/>
+        <references refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" compoundref="_l_c_d_string_list_8h" startline="68">buffer</references>
+        <references refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" compoundref="_l_c_d_string_list_8h" startline="59">currentElement</references>
+        <references refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" compoundref="_l_c_d_string_list_8h" startline="65">elementCount</references>
+        <references refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" compoundref="_l_c_d_string_list_8cpp" startline="68" endline="70">repaint</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a363b864c43ea4513119d34f3ee50eef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::addElement</definition>
+        <argsstring>(String elem)</argsstring>
+        <name>addElement</name>
+        <param>
+          <type>String</type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="40" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="11" bodyend="25"/>
+        <references refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" compoundref="_l_c_d_string_list_8h" startline="68">buffer</references>
+        <references refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" compoundref="_l_c_d_string_list_8h" startline="59">currentElement</references>
+        <references refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" compoundref="_l_c_d_string_list_8h" startline="65">elementCount</references>
+        <references refid="_l_c_d_string_list_8h_1a582dcac1971c1c868dc0022952193a27" compoundref="_l_c_d_string_list_8h" startline="21">SELECT_LINE_CHAR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a01fd3d750867d9204afebfa104afa4e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::removeElement</definition>
+        <argsstring>(int index)</argsstring>
+        <name>removeElement</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="43" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a7d1a3a24a6a7b52a39a68369eb288c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LCDStringList::getCurrentElement</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="46" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="97" bodyend="99"/>
+        <references refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" compoundref="_l_c_d_string_list_8h" startline="59">currentElement</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a3939665a3b66944eba24d2ca8955c0a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LCDStringList::getWidgetIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getWidgetIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="49" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="101" bodyend="103"/>
+        <references refid="class_l_c_d_string_list_1ae66c3179e0ecda0c92f7199dc6d346b4" compoundref="_l_c_d_string_list_8h" startline="62">widgetIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1a166aa91c6a8cb52fdd8cbd47f796772d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LCDStringList::getElementCount</definition>
+        <argsstring>()</argsstring>
+        <name>getElementCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="52" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="105" bodyend="107"/>
+        <references refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" compoundref="_l_c_d_string_list_8h" startline="65">elementCount</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDStringList::repaint</definition>
+        <argsstring>()</argsstring>
+        <name>repaint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="55" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.cpp" bodystart="68" bodyend="70"/>
+        <references refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" compoundref="_l_c_d_string_list_8h" startline="68">buffer</references>
+        <references refid="class_l_c_d_string_list_1a27d288a5cd7fb50ff9f5f94260d43dc6" compoundref="_l_c_d_string_list_8h" startline="71">parent</references>
+        <references refid="class_l_c_d_string_list_1ae66c3179e0ecda0c92f7199dc6d346b4" compoundref="_l_c_d_string_list_8h" startline="62">widgetIndex</references>
+        <referencedby refid="class_l_c_d_string_list_1a955f256708582fbbccf0d42c587d86d9" compoundref="_l_c_d_string_list_8cpp" startline="27" endline="44">clear</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1aae4e1101a0ab626e8b5a5913ff2df700" compoundref="_l_c_d_string_list_8cpp" startline="46" endline="62">down</referencedby>
+        <referencedby refid="class_l_c_d_string_list_1a96a81e16197e643f37a1da467e8393c6" compoundref="_l_c_d_string_list_8cpp" startline="72" endline="95">up</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" line="23" column="1" bodyfile="C:/Users/ovsteenb/Documents/Visual Studio 2017/Projects/VanControlCenter/VanControlCenter/LCDStringList.h" bodystart="23" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_l_c_d_string_list_1a363b864c43ea4513119d34f3ee50eef5" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>addElement</name></member>
+      <member refid="class_l_c_d_string_list_1a5ca4220d8818cb1cdce47a55663edd28" prot="private" virt="non-virtual"><scope>LCDStringList</scope><name>buffer</name></member>
+      <member refid="class_l_c_d_string_list_1a955f256708582fbbccf0d42c587d86d9" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>clear</name></member>
+      <member refid="class_l_c_d_string_list_1ad01e2e2e05e5a59b444c6a170422e3d2" prot="private" virt="non-virtual"><scope>LCDStringList</scope><name>currentElement</name></member>
+      <member refid="class_l_c_d_string_list_1aae4e1101a0ab626e8b5a5913ff2df700" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>down</name></member>
+      <member refid="class_l_c_d_string_list_1a61bdf484164e91fc021bf12dd52a5030" prot="private" virt="non-virtual"><scope>LCDStringList</scope><name>elementCount</name></member>
+      <member refid="class_l_c_d_string_list_1a7d1a3a24a6a7b52a39a68369eb288c1e" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>getCurrentElement</name></member>
+      <member refid="class_l_c_d_string_list_1a166aa91c6a8cb52fdd8cbd47f796772d" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>getElementCount</name></member>
+      <member refid="class_l_c_d_string_list_1a3939665a3b66944eba24d2ca8955c0a7" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>getWidgetIndex</name></member>
+      <member refid="class_l_c_d_string_list_1a7e001aab073dff63d8e38ecff1577f23" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>init</name></member>
+      <member refid="class_l_c_d_string_list_1a27d288a5cd7fb50ff9f5f94260d43dc6" prot="private" virt="non-virtual"><scope>LCDStringList</scope><name>parent</name></member>
+      <member refid="class_l_c_d_string_list_1a01fd3d750867d9204afebfa104afa4e9" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>removeElement</name></member>
+      <member refid="class_l_c_d_string_list_1ad53626328a310738acf33e5ca26ed8f7" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>repaint</name></member>
+      <member refid="class_l_c_d_string_list_1a96a81e16197e643f37a1da467e8393c6" prot="public" virt="non-virtual"><scope>LCDStringList</scope><name>up</name></member>
+      <member refid="class_l_c_d_string_list_1ae66c3179e0ecda0c92f7199dc6d346b4" prot="private" virt="non-virtual"><scope>LCDStringList</scope><name>widgetIndex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
