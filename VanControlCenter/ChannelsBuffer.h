@@ -1,7 +1,7 @@
 // ChannelsBuffer.h
 
-#ifndef _CHANNELSBUFFER_h
-#define _CHANNELSBUFFER_h
+#ifndef CHANNELSBUFFER_H
+#define CHANNELSBUFFER_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -44,10 +44,10 @@ public:
             //Search the channel
             int index = channelsConfig.getChannelIndex(id);
             //If channel exists and its TTL is still valid
-            if (index != -1 && !channelsConfig.getChannelByIndex(index)->hasTTLFinished())
+            if (index != -1 && !channelsConfig.getChannelByIndex(index)->hasTtlFinished())
             {
                 //Return the converted value
-                return buffer[index].as<T>();
+                return buffer_[index].as<T>();
             }
 
 
@@ -69,7 +69,7 @@ public:
             if (index != -1)
             {
                 //Return the converted value
-                return buffer[index].as<T>();
+                return buffer_[index].as<T>();
             }
         }
         //Else return NAN
@@ -103,14 +103,14 @@ public:
     void sendOnStream(UARTClass *stream);
 
     //Return the buffer size in byte
-    unsigned short getBufferSize() { return bufferSize; }
+    unsigned short getBufferSize() { return bufferSize_; }
 
 private:
     //Buffer size
-    unsigned short bufferSize;
+    unsigned short bufferSize_;
 
     //Vector containing a ByteBuffer instance for each channel
-    Vector<ByteBuffer> buffer;
+    Vector<ByteBuffer> buffer_;
 
     //Function to convert an unsigned integer to string
     String uintToString(Channel *channel, byte *data);

@@ -1,7 +1,7 @@
 // TemperatureControllerForm.h
 
-#ifndef _TEMERATURECONTROLLERFORM_h
-#define _TEMERATURECONTROLLERFORM_h
+#ifndef TEMERATURECONTROLLERFORM_H
+#define TEMERATURECONTROLLERFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -28,7 +28,7 @@
 #define TEMP_GAUGE_DISP 0
 #define TEMP_GAUGE_SET 1
 
-class TemperatureControllerForm : public LCDForm {
+class TemperatureControllerForm : public LcdForm {
 public:
 
     void init(Genie& genie) override;
@@ -46,7 +46,7 @@ private:
 
     void updateWidgetsValues(Genie& genie);
 
-    Timer lastStateChange;
+    Timer lastStateChange_;
 };
 
 extern TemperatureControllerForm temperatureControllerForm;

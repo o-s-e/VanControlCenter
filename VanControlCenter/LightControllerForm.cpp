@@ -6,10 +6,10 @@
 
 void LightControllerForm::init(Genie& genie) {
     //TODO compare with channelbuffer
-    color = 0; // 0-360
-    roomBrightness = 0; // 0-255
-    awningBrightness = 0;
-    worktopBrightness = 0;
+    color_ = 0; // 0-360
+    roomBrightness_ = 0; // 0-255
+    awningBrightness_ = 0;
+    worktopBrightness_ = 0;
 }
 
 void LightControllerForm::update(Genie& genie) {
@@ -22,20 +22,20 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
             switch (evt.reportObject.index) {
             case LIGHT_WHEEL:
                 //Get the angle value to set the color
-                color = genie.GetEventData(&evt);
-                lightInterface.setColor(color);
+                color_ = genie.GetEventData(&evt);
+                lightInterface.setColor(color_);
                 break;
             case ROOM_LIGHT:
-                roomBrightness = genie.GetEventData(&evt);
-                lightInterface.setBrightness(roomBrightness, ROOM_LIGHT);
+                roomBrightness_ = genie.GetEventData(&evt);
+                lightInterface.setBrightness(roomBrightness_, ROOM_LIGHT);
                 break;
             case AWNING_LIGHT:
-                awningBrightness = genie.GetEventData(&evt);
-                lightInterface.setBrightness(awningBrightness, AWNING_LIGHT);
+                awningBrightness_ = genie.GetEventData(&evt);
+                lightInterface.setBrightness(awningBrightness_, AWNING_LIGHT);
                 break;
             case WORKTOP_LIGHT:
-                worktopBrightness = genie.GetEventData(&evt);
-                lightInterface.setBrightness(worktopBrightness, WORKTOP_LIGHT);
+                worktopBrightness_ = genie.GetEventData(&evt);
+                lightInterface.setBrightness(worktopBrightness_, WORKTOP_LIGHT);
                 break;
             case OFFSWITCH:
                 lightInterface.allOff();
@@ -48,10 +48,10 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 }
 
 void LightControllerForm::updateWidgetsValues(Genie& genie) {
-    updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_WHEEL, color);
-    updateWidget(genie, GENIE_OBJ_USERIMAGES, ROOM_LIGHT, roomBrightness);
-    updateWidget(genie, GENIE_OBJ_USERIMAGES, AWNING_LIGHT, awningBrightness);
-    updateWidget(genie, GENIE_OBJ_USERIMAGES, WORKTOP_LIGHT, worktopBrightness);
+    updateWidget(genie, GENIE_OBJ_USERIMAGES, LIGHT_WHEEL, color_);
+    updateWidget(genie, GENIE_OBJ_USERIMAGES, ROOM_LIGHT, roomBrightness_);
+    updateWidget(genie, GENIE_OBJ_USERIMAGES, AWNING_LIGHT, awningBrightness_);
+    updateWidget(genie, GENIE_OBJ_USERIMAGES, WORKTOP_LIGHT, worktopBrightness_);
 }
 
 LightControllerForm lightControllerForm;

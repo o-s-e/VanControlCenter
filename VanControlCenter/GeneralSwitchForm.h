@@ -1,7 +1,7 @@
 // GeneralSwitchForm.h
 
-#ifndef _GENERALSWITCHFORM_h
-#define _GENERALSWITCHFORM_h
+#ifndef GENERALSWITCHFORM_H
+#define GENERALSWITCHFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -23,7 +23,7 @@
 #define SWITCH_WATER 0
 #define SWITCH_1 1
 
-class GeneralSwitchForm : public LCDForm {
+class GeneralSwitchForm : public LcdForm {
 public:
 
     void init(Genie& genie) override;
@@ -41,7 +41,7 @@ private:
 
     void updateWidgetsValues(Genie& genie);
 
-    Timer lastStateChange;
+    Timer lastStateChange_;
 };
 extern GeneralSwitchForm generalSwitchForm;
 

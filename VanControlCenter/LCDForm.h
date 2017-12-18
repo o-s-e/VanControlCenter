@@ -1,7 +1,7 @@
 // LCDForm.h
 
-#ifndef _LCDFORM_h
-#define _LCDFORM_h
+#ifndef LCDFORM_H
+#define LCDFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -15,7 +15,7 @@
 
 #include <genieArduino.h>
 
-class LCDForm {
+class LcdForm {
 protected:
 
     //Function wrapper to write a value on a widget
@@ -29,7 +29,7 @@ protected:
     }
 
 public:
-    virtual ~LCDForm() = default;
+    virtual ~LcdForm() = default;
     //Function to call to init the form
     virtual void init(Genie& genie) = 0;
 

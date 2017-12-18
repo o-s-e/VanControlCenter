@@ -29,7 +29,7 @@ public:
     void debug();
 
     //Get the channel by its id. Return NULL if a channel with can id equals to id is not present
-    Channel* getChannelByID(unsigned short id);
+    Channel* getChannelById(unsigned short id);
 
     //Get the channel by its array index
     Channel* getChannelByIndex(int index);
@@ -38,17 +38,17 @@ public:
     int getChannelIndex(unsigned short id);
 
     //Get the channels count
-    int getChannelCount() { return channels.getSize(); }
+    int getChannelCount() { return channels_.getSize(); }
 
     //Return true if the cfg parsing was successful else return false
-    boolean isValid() { return valid; }
+    boolean isValid() { return valid_; }
 
 private:
     //True if the cfg parsing was successful else false
-    boolean valid;
+    boolean valid_;
 
     //Vector containing all the loaded channells
-    Vector<Channel*> channels;
+    Vector<Channel*> channels_;
 };
 
 //Channels config instance

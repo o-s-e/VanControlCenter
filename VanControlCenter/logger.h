@@ -1,7 +1,7 @@
 // Logger.h
 
-#ifndef _LOGGER_h
-#define _LOGGER_h
+#ifndef LOGGER_H
+#define LOGGER_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -74,9 +74,9 @@ public:
     void assert(boolean condition, String msg);
 
 private:
-    byte precision;
-    UARTClass *serialPort;
-    LogManip mode;
+    byte precision_;
+    UARTClass *serialPort_;
+    LogManip mode_;
 };
 
 extern LoggerClass Log;

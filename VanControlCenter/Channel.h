@@ -1,7 +1,7 @@
 // Channel.h
 
-#ifndef _CHANNEL_h
-#define _CHANNEL_h
+#ifndef CHANNEL_H
+#define CHANNEL_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -30,13 +30,13 @@ public:
     };
 
     // CFG file attributes
-    enum Attr : byte { CanID, Name, Size, Type, ATTR_COUNT };
+    enum Attr : byte { CAN_ID, NAME, SIZE, TYPE, ATTR_COUNT };
 
     Channel();
 
     // Setters
     void setSize(byte size);
-    void setID(unsigned short ID);
+    void setId(unsigned short id);
     void setDataType(DataTypes type);
     void setName(String name);
 
@@ -47,9 +47,9 @@ public:
     String getName();
 
     // Reset TTL timer
-    void resetTTLTimer();
+    void resetTtlTimer();
     // Check if the TTL timer has finished
-    bool hasTTLFinished();
+    bool hasTtlFinished();
 
     // Associated channel name
 
@@ -57,17 +57,17 @@ public:
 
 private:
     // CAN packet size
-    byte size;
+    byte size_;
 
     // CAN packet ID
-    unsigned short ID;
+    unsigned short id_;
 
     // CAN packet data type
-    DataTypes type;
+    DataTypes type_;
 
     // TTL timer (time-to-live), if has not finished the last channel value is
     // still valid
-    Timer ttlTimer;
+    Timer ttlTimer_;
 };
 
 #endif

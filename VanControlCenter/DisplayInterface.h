@@ -54,10 +54,10 @@ public:
     void update();
 
     // Change the current form
-    void setCurrentForm(LCDForm *currentForm);
+    void setCurrentForm(LcdForm *currentForm);
 
     // Return the current form
-    const LCDForm *getCurrentForm() { return currentForm; }
+    const LcdForm *getCurrentForm() { return currentForm_; }
 
     // Function to handle the incoming event from the lcd
     friend void onEvent();
@@ -65,18 +65,16 @@ public:
 private:
 
     // Indicates if the form refresh is enabled
-    boolean enabled;
+    boolean enabled_;
 
     // Genie library instance
-    Genie genie;
+    Genie genie_;
 
     // Refresh form timer
-    Timer refreshTimer;
+    Timer refreshTimer_;
 
     // Current form instance pointer
-    LCDForm *currentForm;
-
-    
+    LcdForm *currentForm_;
 
 };
 

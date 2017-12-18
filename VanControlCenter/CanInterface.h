@@ -21,7 +21,7 @@
 #include "Utils.h"
 
 //Class containing an enum with all the CanID constants hard-coded
-class CanID {
+class CanId {
 public:
     enum IDs : unsigned short {
         //BMS
@@ -80,7 +80,7 @@ public:
 
 //Enum containing the possible results of a can stream
 enum CanStreamResult {
-    SUCCES,
+    SUCCESS,
     ERROR,
     TIMEOUT,
     WRONG_ACK,
@@ -88,18 +88,18 @@ enum CanStreamResult {
 };
 
 //Received can packet callback typedef
-typedef void(*CanEventHandler)(CAN_FRAME&);
+typedef void(*canEventHandler)(CAN_FRAME&);
 
 class CanInterfaceClass {
 public:
     //Function to call in the setup
-    void init(int canSpeed, unsigned short minID = 0, unsigned short maxID = 2048);
+    void init(int canSpeed, unsigned short minId = 0, unsigned short maxId = 2048);
 
     //Fucntion to call in the loop
     void update();
 
     //Set the function to call when a new packet is received
-    void setCanEventCallBack(CanEventHandler);
+    void setCanEventCallBack(canEventHandler);
 
     //Remove the callback
     void removeCanEventCallBack();
@@ -111,29 +111,29 @@ public:
     CAN_FRAME& read();
 
     //Send a packet through the can bus
-    void send(CanID::IDs id, byte* data, byte size);
+    void send(CanId::IDs id, byte* data, byte size);
 
     //Stream a byte array over can
-    CanStreamResult streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size);
+    CanStreamResult streamOverCan(CanId::IDs canId, const char* openStreamCmd, byte* buffer, int size);
 
     //Wait for a byte array stream over can
-    CanStreamResult waitForStreamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int expectedBytes);
+    CanStreamResult waitForStreamOverCan(CanId::IDs canId, const char* openStreamCmd, byte* buffer, int expectedBytes);
 
     //Set the debug serial port for the can analyzer
     void setCanDebugSerial(Stream* debugSerial);
 
 private:
     //Debug serial pointer
-    Stream* debugSerial;
+    Stream* debugSerial_;
 
     //Can packet
-    CAN_FRAME frame;
+    CAN_FRAME frame_;
 
     //Can analyzer receive buffer
-    ByteBuffer rxBuffer;
+    ByteBuffer rxBuffer_;
 
     //Packet received callback
-    CanEventHandler canEvent;
+    canEventHandler canEvent_;
 
     //Debug
     //Send a packet to the can analyzer

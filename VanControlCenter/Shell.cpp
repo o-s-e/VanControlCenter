@@ -7,7 +7,7 @@ const PROGMEM ShellCommand cmdsList[] = {
     { "aw",			&ShellClass::analogWriteCmd		},	//analogWrite							aw	<pin>	<value>
 
     //channels cmds
-    { "chbset",     &ShellClass::CHbufferSet        }, // set channelbuffer value                       chbset <type> <channel> <value>
+    { "chbset",     &ShellClass::cHbufferSet        }, // set channelbuffer value                       chbset <type> <channel> <value>
     { "chlist",		&ShellClass::channelListCmd		},	//list all loaded channels				chlist
     { "chvalue",	&ShellClass::channelValueCmd	},	//list a specific channel last value	chvalue <id>
     { "chvalues",	&ShellClass::channelsValuesCmd	},	//list all last channel values			chvalues
@@ -17,18 +17,18 @@ const PROGMEM ShellCommand cmdsList[] = {
     { "dw",			&ShellClass::digitalWriteCmd	},	//digitalWrite							dw	<pin>	<value>
 
     //SD cmds
-    { "sdmkdir",	&ShellClass::SDMkDirCmd			},	//make a dir							sdmkdir <path>
-    { "sdopen",		&ShellClass::SDOpenCmd			},	//read all file's content				sdopen	<path>
-    { "sdrm",		&ShellClass::SDRmCmd			},	//remove a file							sdrm	<path>
-    { "sdrmdir",	&ShellClass::SDRmDirCmd			},	//remove a dir							sdrmdir	<path>
-    { "sdtree",		&ShellClass::SDTreeCmd			}	//print all files and dirs				sdtree
+    { "sdmkdir",	&ShellClass::sdMkDirCmd			},	//make a dir							sdmkdir <path>
+    { "sdopen",		&ShellClass::sdOpenCmd			},	//read all file's content				sdopen	<path>
+    { "sdrm",		&ShellClass::sdRmCmd			},	//remove a file							sdrm	<path>
+    { "sdrmdir",	&ShellClass::sdRmDirCmd			},	//remove a dir							sdrmdir	<path>
+    { "sdtree",		&ShellClass::sdTreeCmd			}	//print all files and dirs				sdtree
 
 
 };
 
 void ShellClass::init(Stream* serialPort) {
-    this->serialPort = serialPort;
-    this->rxBuffer.resize(SHELL_RX_BUFFER);
+    this->serialPort_ = serialPort;
+    this->rxBuffer_.resize(SHELL_RX_BUFFER);
     Log.i(SHELL_TAG) << F("Shell initialized") << Endl;
 }
 
@@ -38,14 +38,14 @@ void ShellClass::update() {
     String line;
     ShellCommand cmd;
 
-    if (serialPort->available()) {
-        while (serialPort->available() && rxBuffer.getSize() < rxBuffer.getCapacity()) {
-            rxBuffer.append(serialPort->read());
+    if (serialPort_->available()) {
+        while (serialPort_->available() && rxBuffer_.getSize() < rxBuffer_.getCapacity()) {
+            rxBuffer_.append(serialPort_->read());
         }
 
-        index = rxBuffer.indexOf('\n');
+        index = rxBuffer_.indexOf('\n');
         if (index != -1) {
-            line = rxBuffer.toString(0, index);
+            line = rxBuffer_.toString(0, index);
             line.trim();
 
             if (findCmd(line, &cmd) != -1) {
@@ -56,7 +56,7 @@ void ShellClass::update() {
                 Log.e(SHELL_TAG) << F("Command not found") << Endl;
             }
 
-            rxBuffer.clear();
+            rxBuffer_.clear();
         }
     }
 }
@@ -101,13 +101,13 @@ void ShellClass::channelListCmd(String& params) {
 
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
         c = channelsConfig.getChannelByIndex(i);
-        Log.i(SHELL_TAG) << F("0x") << Hex << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << static_cast<char>(c->getDataType()) << Endl;
+        Log.i(SHELL_TAG) << "  " << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << static_cast<char>(c->getDataType()) << Endl;
     }
 }
 
 void ShellClass::channelValueCmd(String& params) {
     int id = nextParam(params).toInt();
-    Channel* c = channelsConfig.getChannelByID(id);
+    Channel* c = channelsConfig.getChannelById(id);
 
     if (c == NULL) {
         Log.e(SHELL_TAG) << F("Channel not found") << Endl;
@@ -148,7 +148,7 @@ void ShellClass::digitalWriteCmd(String& params) {
 }
 
 //S
-void ShellClass::SDMkDirCmd(String& params) {
+void ShellClass::sdMkDirCmd(String& params) {
     String path = nextParam(params);
 
     if (SD.mkdir(path)) {
@@ -159,7 +159,7 @@ void ShellClass::SDMkDirCmd(String& params) {
     }
 }
 
-void ShellClass::SDOpenCmd(String& params) {
+void ShellClass::sdOpenCmd(String& params) {
     String path = nextParam(params);
 
     if (SD.exists(path)) {
@@ -180,7 +180,7 @@ void ShellClass::SDOpenCmd(String& params) {
     }
 }
 
-void ShellClass::SDRmCmd(String& params) {
+void ShellClass::sdRmCmd(String& params) {
     String path = nextParam(params);
 
     if (SD.exists(path)) {
@@ -196,7 +196,7 @@ void ShellClass::SDRmCmd(String& params) {
     }
 }
 
-void ShellClass::SDRmDirCmd(String& params) {
+void ShellClass::sdRmDirCmd(String& params) {
     String path = nextParam(params);
 
     if (SD.exists(path)) {
@@ -212,7 +212,7 @@ void ShellClass::SDRmDirCmd(String& params) {
     }
 }
 
-void ShellClass::SDTreeCmd(String&) {
+void ShellClass::sdTreeCmd(String&) {
     File root = SD.open("/");
     root.rewindDirectory();
 
@@ -220,11 +220,11 @@ void ShellClass::SDTreeCmd(String&) {
         Log.e(SHELL_TAG) << F("Error opening SD root: is SD inserted?") << Endl;
     }
     else {
-        printSDTree(root, 0);
+        printSdTree(root, 0);
     }
 }
 
-void ShellClass::CHbufferSet(String& params) {
+void ShellClass::cHbufferSet(String& params) {
     String type = nextParam(params);
     int channel = nextParam(params).toInt();
 
@@ -244,7 +244,7 @@ void ShellClass::CHbufferSet(String& params) {
 
 }
 
-void ShellClass::printSDTree(File dir, int indent) {
+void ShellClass::printSdTree(File dir, int indent) {
     File entry = dir.openNextFile();
 
     while (entry) {
@@ -252,7 +252,7 @@ void ShellClass::printSDTree(File dir, int indent) {
 
         if (entry.isDirectory()) {
             Log << '/' << Endl;
-            printSDTree(entry, indent + 1);
+            printSdTree(entry, indent + 1);
         }
         else {
             Log << '\t' << entry.size() << Endl;

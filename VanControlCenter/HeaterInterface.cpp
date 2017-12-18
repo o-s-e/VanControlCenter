@@ -8,28 +8,28 @@ void HeaterInterface::init() {
     digitalWrite(HT_GAS_PIN, LOW);
     digitalWrite(HT_VENT_PIN, LOW);
     digitalWrite(HT_STATE_LED, LOW);
-    state = Off;
-    ledTimer.setDuration(HT_STATE_LED_DUR).start();
-    lastStateUpdate.setDuration(HT_STATE_TTL).start();
+    state_ = OFF;
+    ledTimer_.setDuration(HT_STATE_LED_DUR).start();
+    lastStateUpdate_.setDuration(HT_STATE_TTL).start();
 
-    heaterFaultCode = 1;
+    heaterFaultCode_ = 1;
 
     Log.i(HT_TAG) << F("Heater Interface initialized") << Endl;
 }
 
 void HeaterInterface::update() {
-    if (lastStateUpdate.hasFinished()) {
-        double temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
-        double setTemp = channelsBuffer.getValueAs<double>(CanID::SET_TEMP);
+    if (lastStateUpdate_.hasFinished()) {
+        double temp = channelsBuffer.getValueAs<double>(CanId::TEMP);
+        double setTemp = channelsBuffer.getValueAs<double>(CanId::SET_TEMP);
 
         if (temp >= setTemp) {
-            if (state == On) {
+            if (state_ == ON) {
                 cooldown();
             }
         }
         else if (temp < setTemp) {
-            state = On;
-            Log.i(HT_TAG) << F("State: On: ") << state << Endl;
+            state_ = ON;
+            Log.i(HT_TAG) << F("State: On: ") << state_ << Endl;
 
         }
         else {
@@ -37,27 +37,27 @@ void HeaterInterface::update() {
             Log.e(HT_TAG) << F("Could not set the temp") << Endl;
         }
 
-        lastStateUpdate.start();
+        lastStateUpdate_.start();
     }
-    if (ledTimer.hasFinished()) {
-        switch (state) {
-        case On:
-            ledStatus = (ledStatus + 1) % 10;
-            digitalWrite(HT_STATE_LED, ledStatus < 5 ? HIGH : LOW);
+    if (ledTimer_.hasFinished()) {
+        switch (state_) {
+        case ON:
+            ledStatus_ = (ledStatus_ + 1) % 10;
+            digitalWrite(HT_STATE_LED, ledStatus_ < 5 ? HIGH : LOW);
             digitalWrite(HT_GAS_PIN, HIGH);
             digitalWrite(HT_VENT_PIN, HIGH);
             break;
 
-        case Off:
-            ledStatus = !ledStatus;
+        case OFF:
+            ledStatus_ = !ledStatus_;
             digitalWrite(HT_STATE_LED, LOW);
             digitalWrite(HT_GAS_PIN, LOW);
             digitalWrite(HT_VENT_PIN, LOW);
             break;
 
-        case VentOnly:
-            ledStatus = (ledStatus + 1) % 10;
-            digitalWrite(HT_STATE_LED, ledStatus < 20 ? HIGH : LOW);
+        case VENT_ONLY:
+            ledStatus_ = (ledStatus_ + 1) % 10;
+            digitalWrite(HT_STATE_LED, ledStatus_ < 20 ? HIGH : LOW);
             digitalWrite(HT_GAS_PIN, LOW);
             digitalWrite(HT_VENT_PIN, HIGH);
             // not the good way, but it works
@@ -65,14 +65,14 @@ void HeaterInterface::update() {
             break;
 
         default:
-            ledStatus = (ledStatus + 1) % 10;
-            digitalWrite(HT_STATE_LED, ledStatus < 1 ? HIGH : LOW);
+            ledStatus_ = (ledStatus_ + 1) % 10;
+            digitalWrite(HT_STATE_LED, ledStatus_ < 1 ? HIGH : LOW);
             digitalWrite(HT_GAS_PIN, LOW);
             digitalWrite(HT_VENT_PIN, LOW);
             break;
         }
 
-        ledTimer.start();
+        ledTimer_.start();
 
     }
 
@@ -82,48 +82,48 @@ void HeaterInterface::onStateChanged(const char *newStateString) {
     HeaterState newState;
 
     if (strcmp(newStateString, ON_STATE) == 0) {
-        newState = On;
+        newState = ON;
     }
     else if (strcmp(newStateString, OFF_STATE) == 0) {
-        newState = Off;
+        newState = OFF;
     }
     else if (strcmp(newStateString, VENT_STATE) == 0) {
-        newState = VentOnly;
+        newState = VENT_ONLY;
     }
     else if (strcmp(newStateString, ERROR_STATE) == 0) {
-        newState = Error;
+        newState = ERROR;
     }
     else {
-        newState = Unknown;
+        newState = UNKNOWN;
     }
 
-    if (newState != state) {
-        ledStatus = 0;
-        state = newState;
+    if (newState != state_) {
+        ledStatus_ = 0;
+        state_ = newState;
     }
-    lastStateUpdate.start();
+    lastStateUpdate_.start();
 }
 
 void HeaterInterface::cooldown() {
-    Log.i(HT_TAG) << F("CooldownTimer elapsed time: ") << cooldownTimer.elapsedTime() << Endl;
-    Log.i(HT_TAG) << F("CooldownTimer has finished?: ") << cooldownTimer.hasFinished() << Endl;
-    if (state == On) {
+    Log.i(HT_TAG) << F("CooldownTimer elapsed time: ") << cooldownTimer_.elapsedTime() << Endl;
+    Log.i(HT_TAG) << F("CooldownTimer has finished?: ") << cooldownTimer_.hasFinished() << Endl;
+    if (state_ == ON) {
         Log.i(HT_TAG) << F("Colldownsquence initiated") << Endl;
-        cooldownTimer.setDuration(HT_COOLDOWN_DUR).start();
-        state = VentOnly;
+        cooldownTimer_.setDuration(HT_COOLDOWN_DUR).start();
+        state_ = VENT_ONLY;
     }
-    else if (state == VentOnly && cooldownTimer.isRunning()) {
+    else if (state_ == VENT_ONLY && cooldownTimer_.isRunning()) {
 
-        Log.i(HT_TAG) << F("State: ") << state << Endl;
+        Log.i(HT_TAG) << F("State: ") << state_ << Endl;
         Log.i(HT_TAG) << F("CoolDown") << Endl;
     }
-    else if (state == VentOnly && cooldownTimer.hasFinished()) {
-        Log.i(HT_TAG) << F("State: ") << state << Endl;
+    else if (state_ == VENT_ONLY && cooldownTimer_.hasFinished()) {
+        Log.i(HT_TAG) << F("State: ") << state_ << Endl;
         Log.i(HT_TAG) << F("Stopping Heater") << Endl;
-        state = Off;
+        state_ = OFF;
     }
     else {
-        Log.i(HT_TAG) << F("State: ") << state << Endl;
+        Log.i(HT_TAG) << F("State: ") << state_ << Endl;
         Log.e(HT_TAG) << F("Undefined State") << Endl;
     }
 
@@ -131,10 +131,10 @@ void HeaterInterface::cooldown() {
 
 //TODO: One must adapt the timer, so that the interupts are only counted from one cycle
 void HeaterInterface::heaterFaultCodeCallback() {
-    if (heaterFaultCode > 0 && heaterFaultCode < 12)
-        heaterFaultCode += 1;
-    else if (heaterFaultCode == 12)
-        heaterFaultCode = 12;
+    if (heaterFaultCode_ > 0 && heaterFaultCode_ < 12)
+        heaterFaultCode_ += 1;
+    else if (heaterFaultCode_ == 12)
+        heaterFaultCode_ = 12;
 }
 
 HeaterInterface heaterInterface;

@@ -1,7 +1,7 @@
 // LCDStringList.h
 
-#ifndef _LCDSTRINGLIST_h
-#define _LCDSTRINGLIST_h
+#ifndef LCDSTRINGLIST_H
+#define LCDSTRINGLIST_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -20,7 +20,7 @@
 //Char to use as selector
 #define SELECT_LINE_CHAR	'>'
 
-class LCDStringList {
+class LcdStringList {
 public:
     //Function to init the StringList
     //Index is the widget index in ViSi
@@ -56,19 +56,19 @@ public:
 
 private:
     //Current item index
-    char currentElement;
+    char currentElement_;
 
     //Widget index in ViSi
-    byte widgetIndex;
+    byte widgetIndex_;
 
     //Items count
-    byte elementCount;
+    byte elementCount_;
 
     //String buffer
-    String buffer;
+    String buffer_;
 
     //Genie instance pointer
-    Genie* parent;
+    Genie* parent_;
 };
 
 #endif

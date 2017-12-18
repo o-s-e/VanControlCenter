@@ -1,7 +1,7 @@
 // LCDStringMsg.h
 
-#ifndef _LCDSTRINGMSG_h
-#define _LCDSTRINGMSG_h
+#ifndef LCDSTRINGMSG_H
+#define LCDSTRINGMSG_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -17,7 +17,7 @@
 
 #include "Utils.h"
 
-class LCDStringMsg {
+class LcdStringMsg {
 public:
     //Function to init.
     //Index is the ViSi editor string widget index
@@ -38,13 +38,13 @@ public:
 
 private:
     //Widget ViSi index
-    byte widgetIndex;
+    byte widgetIndex_;
 
     //String message
-    String buffer;
+    String buffer_;
 
     //Genie instance pointer
-    Genie* parent;
+    Genie* parent_;
 };
 
 #endif

@@ -5,9 +5,9 @@ void DebugFormClass::init(Genie &genie) {
 }
 
 void DebugFormClass::update(Genie &genie) {
-    if (channelsBuffer.isValueUpdated(CanID::HEATER_STATUS)) {
+    if (channelsBuffer.isValueUpdated(CanId::HEATER_STATUS)) {
         updateString(genie, HEATER_STATUS_STRING,
-            channelsBuffer.getValueAsString(CanID::HEATER_STATUS));
+            channelsBuffer.getValueAsString(CanId::HEATER_STATUS));
     }
     else {
         updateString(genie, HEATER_STATUS_STRING, F("---"));
@@ -29,6 +29,8 @@ void DebugFormClass::onEvent(Genie& genie, genieFrame& evt) {
         canInterface.setCanDebugSerial(&WIFI_SERIAL);
         //  telemetryInterface.setLogSerial(NULL);
         break;
+    default: 
+        ;
     }
 }
 

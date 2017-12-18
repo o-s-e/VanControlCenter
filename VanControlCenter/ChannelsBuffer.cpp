@@ -3,28 +3,28 @@
 void ChannelsBufferClass::init() {
     //Resize the buffer
     int size = channelsConfig.getChannelCount();
-    buffer.resize(size);
+    buffer_.resize(size);
 
 
-    bufferSize = 0;
+    bufferSize_ = 0;
     //Create the "matrix" to contain byte-array data
 
     for (uint16_t i = 0; i < size; i++) {
 
         Channel * c = channelsConfig.getChannelByIndex(i);
-        buffer[i].resize(c->getSize());
-        buffer[i].clear();
+        buffer_[i].resize(c->getSize());
+        buffer_[i].clear();
 
-        bufferSize += c->getSize();
+        bufferSize_ += c->getSize();
     }
 }
 
 void ChannelsBufferClass::debug() {
     LOGLN(F("=========== Channels data buffer: ==========="));
-    for (int i = 0; i < buffer.getCapacity(); i++) {
+    for (int i = 0; i < buffer_.getCapacity(); i++) {
         LOG(channelsConfig.getChannelByIndex(i)->name);
         LOG(F(": "));
-        buffer[i].debug();
+        buffer_[i].debug();
     }
     LOGLN(F("========================================"));
 }
@@ -41,24 +41,24 @@ String ChannelsBufferClass::getValueAsString(const unsigned short id) {
             //Convert to arduino String obj
             switch (c->getDataType()) {
             case Channel::BIT_FLAG:
-                return buffer[index].toBinString(MSBFIRST);
+                return buffer_[index].toBinString(MSBFIRST);
 
             case Channel::DECIMAL:
                 //If size <= is float
                 //Need this difference because conversion is a copy 'n paste of memory
                 if (c->getSize() <= 4) {
-                    return String(buffer[index].as<float>(), 6);
+                    return String(buffer_[index].as<float>(), 6);
                 }
-                return String(buffer[index].as<double>(), 10);
+                return String(buffer_[index].as<double>(), 10);
 
             case Channel::INTEGER:
-                return intToString(c, buffer[index].data());
+                return intToString(c, buffer_[index].data());
 
             case Channel::U_INTEGER:
-                return uintToString(c, buffer[index].data());
+                return uintToString(c, buffer_[index].data());
 
             case Channel::STRING:
-                return buffer[index].toString();
+                return buffer_[index].toString();
 
             default:
                 Log.e(CHBUF_TAG) << F("in getValueAsString\t Unknown conversion type channel ") << id << F(" to type ") << c->getDataType() << Endl;
@@ -76,7 +76,7 @@ ByteBuffer ChannelsBufferClass::getValueAsByteArray(unsigned short id) {
         int index = channelsConfig.getChannelIndex(id);
         //Return a copy
         if (index != -1) {
-            ByteBuffer& b = buffer[index];
+            ByteBuffer& b = buffer_[index];
             return ByteBuffer(b.data(), b.getSize());
         }
     }
@@ -100,10 +100,10 @@ void ChannelsBufferClass::setValue(unsigned short id, byte* data, unsigned short
             //If size is <= than the expected size can save the value
             if (size <= channelsConfig.getChannelByIndex(index)->getSize()) {
                 //Clear and save data
-                buffer[index].clear();
-                buffer[index].append(data, size);
+                buffer_[index].clear();
+                buffer_[index].append(data, size);
                 //Reset ttl timer
-                channelsConfig.getChannelByIndex(index)->resetTTLTimer();
+                channelsConfig.getChannelByIndex(index)->resetTtlTimer();
             }
         }
         else {
@@ -119,7 +119,7 @@ boolean ChannelsBufferClass::isValueUpdated(unsigned short id) {
         int index = channelsConfig.getChannelIndex(id);
         if (index != -1) {
             //Return channel TTL timer status
-            return !channelsConfig.getChannelByIndex(index)->hasTTLFinished();
+            return !channelsConfig.getChannelByIndex(index)->hasTtlFinished();
         }
     }
     return false;
@@ -180,7 +180,7 @@ void ChannelsBufferClass::sendOnStream(UARTClass* stream) {
         //Send the can id
         stream->write(reinterpret_cast<byte*>(&ID), sizeof(ID));
         //Send the data
-        stream->write(buffer[i].data(), buffer[i].getCapacity());
+        stream->write(buffer_[i].data(), buffer_[i].getCapacity());
     }
 }
 

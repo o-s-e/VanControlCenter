@@ -1,8 +1,8 @@
 #include "ConsoleForm.h"
 
 void ConsoleFormClass::init(Genie &genie) {
-    this->genie = &genie;
-    text.reserve(TEXT_BUFFER_SIZE);
+    this->genie_ = &genie;
+    text_.reserve(TEXT_BUFFER_SIZE);
     clear();
 }
 
@@ -11,7 +11,7 @@ void ConsoleFormClass::update(Genie &genie) {
 }
 
 void ConsoleFormClass::print(String str) {
-    text.concat(str);
+    text_.concat(str);
 }
 
 void ConsoleFormClass::println(String str) {
@@ -19,22 +19,22 @@ void ConsoleFormClass::println(String str) {
 }
 
 void ConsoleFormClass::clear() {
-    text = "";
+    text_ = "";
 }
 
 void ConsoleFormClass::addText(String str) {
-    int index = text.indexOf("\n");
+    int index = text_.indexOf("\n");
     //Remove first lines until there is enough space for the new text
     //Create a sort of scroll-up effect, like real shell
     if (str.length() < TEXT_BUFFER_SIZE) {
-        while (text.length() + str.length() >= TEXT_BUFFER_SIZE) {
-            text.remove(0, index == -1 ? text.length() : index);
-            index = text.indexOf("\n");
+        while (text_.length() + str.length() >= TEXT_BUFFER_SIZE) {
+            text_.remove(0, index == -1 ? text_.length() : index);
+            index = text_.indexOf("\n");
         }
-        text.concat(str);
+        text_.concat(str);
     }
 
-    genie->WriteStr(CONSOLE_STR, const_cast<char*>(text.c_str()));
+    genie_->WriteStr(CONSOLE_STR, const_cast<char*>(text_.c_str()));
 }
 
 ConsoleFormClass consoleForm;

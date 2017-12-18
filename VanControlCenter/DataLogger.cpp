@@ -26,11 +26,11 @@ void DataLoggerClass::init() {
             consoleForm.println(F("Loading Datalogger default config"));
             Log.e(DL_TAG) << F("Loading Datalogger default config") << Endl;
 
-            logFileName = LOG_FILE_FOLDER;
-            logFileName += DEFAULT_LOG_NAME;
+            logFileName_ = LOG_FILE_FOLDER;
+            logFileName_ += DEFAULT_LOG_NAME;
             createNewLogFile();
 
-            logTimer.setDuration(1000 / DEFAULT_SAMPLE_PER_S).start();
+            logTimer_.setDuration(1000 / DEFAULT_SAMPLE_PER_S).start();
         }
     }
 }
@@ -38,10 +38,10 @@ void DataLoggerClass::init() {
 
 void DataLoggerClass::update() {
     //If it's time to log!
-    if (channelsConfig.isValid() && logTimer.hasFinished()) {
-        if (SD.exists(logFileName)) {
+    if (channelsConfig.isValid() && logTimer_.hasFinished()) {
+        if (SD.exists(logFileName_)) {
             //Open file
-            File logFile = SD.open(logFileName, O_WRITE);
+            File logFile = SD.open(logFileName_, O_WRITE);
             //Print them all
             if (logFile) {
                 for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
@@ -71,17 +71,17 @@ void DataLoggerClass::update() {
         }
 
         //Restart log timer
-        logTimer.start();
+        logTimer_.start();
     }
 }
 
 void DataLoggerClass::updateCfg(Configuration& cfg) {
     //Build new log file name
-    logFileName = LOG_FILE_FOLDER;
-    logFileName += cfg[LOG_FILE_NAME].asString() + cfg[LOG_FILE_NUM].asString() + cfg[LOG_FILE_FORMAT].asString();
+    logFileName_ = LOG_FILE_FOLDER;
+    logFileName_ += cfg[LOG_FILE_NAME].asString() + cfg[LOG_FILE_NUM].asString() + cfg[LOG_FILE_FORMAT].asString();
 
     //Set log-timer
-    logTimer.setDuration(1000 / cfg[SAMPLE_PER_SECOND].asInt()).start();
+    logTimer_.setDuration(1000 / cfg[SAMPLE_PER_SECOND].asInt()).start();
 
     //Save next log file name-index
     cfg.setValue(LOG_FILE_NUM, cfg[LOG_FILE_NUM].asInt() + 1);
@@ -89,7 +89,7 @@ void DataLoggerClass::updateCfg(Configuration& cfg) {
 }
 
 void DataLoggerClass::createNewLogFile() {
-    File logFile = SD.open(logFileName, O_WRITE | O_CREAT);
+    File logFile = SD.open(logFileName_, O_WRITE | O_CREAT);
 
     //Check if the file is opened correctly
     while (!logFile) {
@@ -98,7 +98,7 @@ void DataLoggerClass::createNewLogFile() {
         Log.e(DL_TAG) << F("Error creating log file! Trying again...") << Endl;
 
         delay(1000);
-        logFile = SD.open(logFileName, O_WRITE | O_CREAT);
+        logFile = SD.open(logFileName_, O_WRITE | O_CREAT);
     }
 
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {

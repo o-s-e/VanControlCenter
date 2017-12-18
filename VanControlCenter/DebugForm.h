@@ -1,7 +1,7 @@
 // DebugForm.h
 
-#ifndef _DEBUGFORM_h
-#define _DEBUGFORM_h
+#ifndef DEBUGFORM_H
+#define DEBUGFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -35,7 +35,7 @@
 #define BATTERY_V_DIGITS 6
 #define BMS_DEBUG_BUTTON 14
 
-class DebugFormClass : public LCDForm {
+class DebugFormClass : public LcdForm {
 public:
     // LCDForm abstract method implementation
     void init(Genie &genie) override;
@@ -49,8 +49,6 @@ public:
 
     // LCDForm abstract method implementation
     int getFormIndex() override { return 5; }
-
-private:
 };
 
 // Debug form instance

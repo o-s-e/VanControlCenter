@@ -198,9 +198,9 @@ void initPorts() {
 #ifdef SHELL_ON
     shell.init(&LOG_SERIAL);
 #endif
-    
+
     INIT_SD(SD, SD_SS_PIN);
-   
+
     //Canbus Initialisation
     canInterface.init(CAN_SPEED, 60, 200);
     canInterface.setCanDebugSerial(&CAN_DEBUG_SERIAL);

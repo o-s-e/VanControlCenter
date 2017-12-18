@@ -16,11 +16,11 @@ void GeneralSwitchForm::onEvent(Genie& genie, genieFrame& evt) {
         if (evt.reportObject.object == GENIE_OBJ_DIPSW) {
             switch (evt.reportObject.index) {
             case SWITCH_WATER:
-                channelsBuffer.setValue<bool>(CanID::SW_WATER,
+                channelsBuffer.setValue<bool>(CanId::SW_WATER,
                     genie.GetEventData(&evt));
                 break;
             case SWITCH_1:
-                channelsBuffer.setValue<bool>(CanID::SW_1,
+                channelsBuffer.setValue<bool>(CanId::SW_1,
                     genie.GetEventData(&evt));
                 break;
             default:

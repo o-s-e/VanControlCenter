@@ -1,7 +1,7 @@
 // Shell.h
 
-#ifndef _SHELL_h
-#define _SHELL_h
+#ifndef SHELL_H
+#define SHELL_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -46,21 +46,21 @@ public:
     void digitalReadCmd(String&);
     void digitalWriteCmd(String&);
 
-    void SDMkDirCmd(String&);
-    void SDOpenCmd(String&);
-    void SDRmCmd(String&);
-    void SDRmDirCmd(String&);
-    void SDTreeCmd(String&);
-    void CHbufferSet(String&);
+    void sdMkDirCmd(String&);
+    void sdOpenCmd(String&);
+    void sdRmCmd(String&);
+    void sdRmDirCmd(String&);
+    void sdTreeCmd(String&);
+    void cHbufferSet(String&);
 
 private:
-    ByteBuffer rxBuffer;
-    Stream* serialPort;
+    ByteBuffer rxBuffer_;
+    Stream* serialPort_;
 
     int findCmd(String& line, ShellCommand* cmd);
     String nextParam(String& params);
 
-    void printSDTree(File dir, int indent);
+    void printSdTree(File dir, int indent);
 };
 
 extern ShellClass shell;

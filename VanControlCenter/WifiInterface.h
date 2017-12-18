@@ -1,7 +1,7 @@
 // WifiInterface.h
 
-#ifndef _WIFIINTERFACE_h
-#define _WIFIINTERFACE_h
+#ifndef WIFIINTERFACE_H
+#define WIFIINTERFACE_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -37,35 +37,35 @@
 
 //Struct containing the infos sent by the esp8266
 #pragma pack(push, 1)
-typedef struct InfoData {
+using infoData = struct InfoData {
     char date[8];
     char time[8];
     byte ack;
-}InfoData;
+};
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct GpsData {
+using gpsData = struct GpsData {
     double latitude;
     double longitude;
     double altitude;
     double accuracy;
     double speed;
     byte ack;
-}GpsData;
+};
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct TempData {
+using tempData = struct TempData {
     byte status;
     double temp;
     double hum;
     byte ack;
-}TempData;
+};
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct LightData {
+using lightData = struct LightData {
     uint8_t light1;
     uint8_t light2;
     uint8_t light3;
@@ -73,11 +73,11 @@ typedef struct LightData {
     uint8_t light5;
     uint8_t light6;
     byte ack;
-}LightData;
+};
 #pragma pack(pop)
 
 //Events handler
-typedef void(*GpsDataHandler)(const GpsData&);
+using gpsDataHandler = void(*)(const gpsData&);
 
 class WifiInterfaceClass {
 public:
@@ -88,7 +88,7 @@ public:
     void update();
 
     //Set the callback to invoke when a gps packet arrived
-    void setGpsDataHandler(GpsDataHandler);
+    void setGpsDataHandler(gpsDataHandler);
 
 private:
     //Cfg file properties
@@ -97,16 +97,16 @@ private:
     };
 
     //Last received packets
-    InfoData info;
-    GpsData gps;
-    TempData temp;
-    LightData light;
+    infoData info_;
+    gpsData gps_;
+    tempData temp_;
+    lightData light_;
 
     //RX byte buffer
-    ByteBuffer rxBuffer;
+    ByteBuffer rxBuffer_;
 
     //Gps callback
-    GpsDataHandler gpsHandler;
+    gpsDataHandler gpsHandler_;
 
     //Parse incoming packets
     boolean parsePacket(const char* header, byte* buffer, int size);

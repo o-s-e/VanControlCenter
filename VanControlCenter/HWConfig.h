@@ -1,5 +1,5 @@
-#ifndef _HWCONFIG_h
-#define _HWCONFIG_h
+#ifndef HWCONFIG_H
+#define HWCONFIG_H
 
 #include "arduino.h"
 

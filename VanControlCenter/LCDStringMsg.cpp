@@ -1,15 +1,15 @@
 #include "LCDStringMsg.h"
 
-void LCDStringMsg::init(byte widgetIndex, Genie* parent) {
-    this->widgetIndex = widgetIndex;
-    this->parent = parent;
+void LcdStringMsg::init(byte widgetIndex, Genie* parent) {
+    this->widgetIndex_ = widgetIndex;
+    this->parent_ = parent;
 }
 
-void LCDStringMsg::clear() {
+void LcdStringMsg::clear() {
     //Replace all char except \n with with space
-    for (uint16_t i = 0; i < buffer.length(); i++) {
-        if (buffer.charAt(i) != '\n') {
-            buffer.setCharAt(i, ' ');
+    for (uint16_t i = 0; i < buffer_.length(); i++) {
+        if (buffer_.charAt(i) != '\n') {
+            buffer_.setCharAt(i, ' ');
         }
     }
 
@@ -17,25 +17,25 @@ void LCDStringMsg::clear() {
     repaint();
 
     //Clear the buffer
-    buffer.remove(0, buffer.length());
+    buffer_.remove(0, buffer_.length());
 }
 
-const String& LCDStringMsg::getMessage() {
-    return buffer;
+const String& LcdStringMsg::getMessage() {
+    return buffer_;
 }
 
-void LCDStringMsg::repaint() {
-    parent->WriteStr(widgetIndex, const_cast<char*>(buffer.c_str()));
+void LcdStringMsg::repaint() {
+    parent_->WriteStr(widgetIndex_, const_cast<char*>(buffer_.c_str()));
 }
 
-void LCDStringMsg::setMessage(String str) {
+void LcdStringMsg::setMessage(String str) {
     clear();
-    buffer += str;
+    buffer_ += str;
     repaint();
 }
 
-void LCDStringMsg::setMessage(const char* str) {
+void LcdStringMsg::setMessage(const char* str) {
     clear();
-    buffer += str;
+    buffer_ += str;
     repaint();
 }

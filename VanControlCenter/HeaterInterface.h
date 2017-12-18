@@ -1,5 +1,5 @@
-#ifndef HeaterInterface_h
-#define HeaterInterface_h
+#ifndef HEATER_INTERFACE_H
+#define HEATER_INTERFACE_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -37,7 +37,7 @@ public:
     // constructor
 
     // Enum containing the Heater state
-    enum HeaterState : byte { Off, On, VentOnly, Unknown, Error };
+    enum HeaterState : byte { OFF, ON, VENT_ONLY, UNKNOWN, ERROR };
 
     void init();
 
@@ -47,7 +47,7 @@ public:
     void onStateChanged(const char *state);
 
     // Return the current state
-    HeaterState getState() { return state; }
+    HeaterState getState() { return state_; }
 
     void heaterFaultCodeCallback();
 
@@ -55,22 +55,22 @@ private:
 
     void cooldown();
 
-    uint8_t heaterFaultCode;
+    uint8_t heaterFaultCode_;
 
     // Heater led status
-    byte ledStatus;
+    byte ledStatus_;
 
     // Current Temperature Controller state
-    HeaterState state;
+    HeaterState state_;
 
 
     // TempCtrl state TTL timer
-    Timer lastStateUpdate;
+    Timer lastStateUpdate_;
 
     // TempCtrl state LED timer
-    Timer ledTimer;
+    Timer ledTimer_;
 
-    Timer cooldownTimer;
+    Timer cooldownTimer_;
 };
 
 extern HeaterInterface heaterInterface;

@@ -55,10 +55,10 @@ private:
     };
 
     //Current log file name
-    String logFileName;
+    String logFileName_;
 
     //When the timer has finished it time to log
-    Timer logTimer;
+    Timer logTimer_;
 
     //Function to update the cfg file with the next log file to create
     void updateCfg(Configuration& cfg);

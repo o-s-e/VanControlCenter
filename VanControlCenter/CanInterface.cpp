@@ -1,12 +1,12 @@
 #include "CanInterface.h"
 
-void CanInterfaceClass::init(int canSpeed, unsigned short minID, unsigned short maxID) {
+void CanInterfaceClass::init(int canSpeed, unsigned short minId, unsigned short maxId) {
     Can0.begin(canSpeed);
-    Can0.watchForRange(minID, maxID);
+    Can0.watchForRange(minId, maxId);
 
-    debugSerial = NULL;
-    canEvent = NULL;
-    rxBuffer.resize(DEBUG_RX_BUFFER_SIZE);
+    debugSerial_ = NULL;
+    canEvent_ = NULL;
+    rxBuffer_.resize(DEBUG_RX_BUFFER_SIZE);
     Log.i(CAN_TAG) << F("Can0 interface initialized") << Endl;
 }
 
@@ -15,22 +15,22 @@ void CanInterfaceClass::update() {
     if (Can0.available()) {
         Log.i(CAN_TAG) << F("Can0 available") << Endl;
         //Read
-        Can0.read(frame);
+        Can0.read(frame_);
 
         //If the callback is set
-        if (canEvent != NULL) {
+        if (canEvent_ != NULL) {
             //Invoke the callback
             Log.i(CAN_TAG) << F("Can0 callback is set") << Endl;
 
-            canEvent(frame);
+            canEvent_(frame_);
         }
 
         //Send the packet to the can analyzer
-        writePacketOnDebugSerial(frame);
+        writePacketOnDebugSerial(frame_);
     }
 
     //If the can analyzer has sent packet, then read and parse
-    if (debugSerial != NULL) {
+    if (debugSerial_ != NULL) {
         readFromDebugSerial();
         parseSerialDebugCmd();
     }
@@ -44,122 +44,122 @@ int CanInterfaceClass::available() {
 CAN_FRAME& CanInterfaceClass::read() {
     //Return next available can frame
     if (Can0.available()) {
-        Can0.read(frame);
+        Can0.read(frame_);
 
         //Echo
-        writePacketOnDebugSerial(frame);
+        writePacketOnDebugSerial(frame_);
     }
     else {
         //Invalid frame if nothing available
-        frame.id = 0;
-        frame.length = 0;
+        frame_.id = 0;
+        frame_.length = 0;
     }
-    return frame;
+    return frame_;
 }
 
-void CanInterfaceClass::send(CanID::IDs id, byte* data, byte size) {
+void CanInterfaceClass::send(CanId::IDs id, byte* data, byte size) {
     //Send frame over can
-    frame.id = id;
-    frame.length = size;
-    memcpy(frame.data.bytes, data, size);
-    Can0.sendFrame(frame);
+    frame_.id = id;
+    frame_.length = size;
+    memcpy(frame_.data.bytes, data, size);
+    Can0.sendFrame(frame_);
 
     //Echo
-    writePacketOnDebugSerial(frame);
+    writePacketOnDebugSerial(frame_);
 }
 
 //Event
-void CanInterfaceClass::setCanEventCallBack(CanEventHandler cb) {
-    this->canEvent = cb;
+void CanInterfaceClass::setCanEventCallBack(canEventHandler cb) {
+    this->canEvent_ = cb;
 }
 
 void CanInterfaceClass::removeCanEventCallBack() {
-    this->canEvent = NULL;
+    this->canEvent_ = NULL;
 }
 
 //Debug
 void CanInterfaceClass::setCanDebugSerial(Stream* debugSerial) {
     //Attach interrupt for Can Debug
-    this->debugSerial = debugSerial;
+    this->debugSerial_ = debugSerial;
 }
 
 void CanInterfaceClass::writePacketOnDebugSerial(CAN_FRAME& packet) {
-    if (debugSerial != NULL) {
-        debugSerial->print(CAD_MSG_HEADER);
-        debugSerial->write(packet.id >> 8);
-        debugSerial->write(packet.id);
-        debugSerial->write(packet.length);
-        debugSerial->write(static_cast<byte*>(packet.data.bytes), packet.length);
+    if (debugSerial_ != NULL) {
+        debugSerial_->print(CAD_MSG_HEADER);
+        debugSerial_->write(packet.id >> 8);
+        debugSerial_->write(packet.id);
+        debugSerial_->write(packet.length);
+        debugSerial_->write(static_cast<byte*>(packet.data.bytes), packet.length);
     }
 }
 
 void CanInterfaceClass::readFromDebugSerial() {
     //Read from debug Serial
-    if (debugSerial->available()) {
-        while (debugSerial->available() && rxBuffer.getSize() < rxBuffer.getCapacity()) {
-            rxBuffer.append(debugSerial->read());
+    if (debugSerial_->available()) {
+        while (debugSerial_->available() && rxBuffer_.getSize() < rxBuffer_.getCapacity()) {
+            rxBuffer_.append(debugSerial_->read());
         }
     }
 }
 
 void CanInterfaceClass::parseSerialDebugCmd() {
     //Parse debug command
-    int index = rxBuffer.indexOf(CAN_MSG_HEADER);
+    int index = rxBuffer_.indexOf(CAN_MSG_HEADER);
 
     //CMD Packet ->  CMD + Size + Command + Data	Size = sizeof(Command) + sizeof(data)
     if (index != -1) {
         index += sizeof(CAN_MSG_HEADER) - 1;
 
-        if (rxBuffer.getSize() > index + 3) {
-            unsigned short id = ((rxBuffer[index] & 0xFF) << 8) | (rxBuffer[index + 1] & 0xFF);
-            unsigned short size = rxBuffer[index + 2] & 0xFF;
+        if (rxBuffer_.getSize() > index + 3) {
+            unsigned short id = ((rxBuffer_[index] & 0xFF) << 8) | (rxBuffer_[index + 1] & 0xFF);
+            unsigned short size = rxBuffer_[index + 2] & 0xFF;
             index += 3;
 
-            if (rxBuffer.getSize() >= index + size) {
-                send(CanID::IDs(id), &rxBuffer[index], size);
+            if (rxBuffer_.getSize() >= index + size) {
+                send(CanId::IDs(id), &rxBuffer_[index], size);
 
                 //test
-                frame.id = id;
-                frame.length = size;
-                memcpy(frame.data.bytes, &rxBuffer[index], size);
-                canEvent(frame);
+                frame_.id = id;
+                frame_.length = size;
+                memcpy(frame_.data.bytes, &rxBuffer_[index], size);
+                canEvent_(frame_);
                 //////////////
 
-                rxBuffer.remove(0, index + size);
+                rxBuffer_.remove(0, index + size);
             }
         }
     }
 }
 
-//Stream
-CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int size) {
+
+CanStreamResult CanInterfaceClass::streamOverCan(CanId::IDs canId, const char* openStreamCmd, byte* buffer, int size) {
     Timer timeOut;
 
     //Open the stream over can
-    canInterface.send(canID, (byte*)openStreamCmd, strlen(openStreamCmd));
+    canInterface.send(canId, (byte*)openStreamCmd, strlen(openStreamCmd));
 
     //Needed packets to send
     int q = size / 8;
     int r = size % 8;
     byte ack = getAck(buffer, size);
 
-    //LOGLN(size);
-    //LOG_ARR(buffer, size, HEX);
+    LOGLN(size);
+    LOG_ARR(buffer, size, HEX);
 
     //Send packets
     for (int i = 0; i < q; i++) {
-        canInterface.send(canID, buffer + i * 8, 8);
+        canInterface.send(canId, buffer + i * 8, 8);
         delay(PACKET_DELAY);
     }
 
     //Send remaining bytes
     if (r != 0) {
-        canInterface.send(canID, buffer + q * 8, r);
+        canInterface.send(canId, buffer + q * 8, r);
         delay(PACKET_DELAY);
     }
 
     //Send ack
-    canInterface.send(canID, &ack, 1);
+    canInterface.send(canId, &ack, 1);
 
     //Init timeout timer
     timeOut.setDuration(CMD_TIMEOUT).start();
@@ -168,10 +168,10 @@ CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* o
         //Read all response frame
         CAN_FRAME frame = canInterface.read();
         //If the packet has the stream id
-        if (frame.id == canID) {
+        if (frame.id == canId) {
             //if response is OK
             if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), OK_CMD) == 0) {
-                return SUCCES;
+                return SUCCESS;
             }
             //if response is ERROR
             else if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), ERROR_CMD) == 0) {
@@ -179,16 +179,15 @@ CanStreamResult CanInterfaceClass::streamOverCan(CanID::IDs canID, const char* o
             }
         }
     }
-
     return TIMEOUT;
 }
 
-CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const char* openStreamCmd, byte* buffer, int expectedBytes) {
+CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanId::IDs canId, const char* openStreamCmd, byte* buffer, int expectedBytes) {
     Timer timeOut;
-     
+
 
     //Open the stream over can
-    canInterface.send(canID, (byte*)openStreamCmd, strlen(openStreamCmd));
+    canInterface.send(canId, (byte*)openStreamCmd, strlen(openStreamCmd));
 
     //Set timeout timer
     timeOut.setDuration(CMD_TIMEOUT).start();
@@ -198,7 +197,7 @@ CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const 
     while (!timeOut.hasFinished() && memIndex < expectedBytes) {
         CAN_FRAME frame = canInterface.read();
         //Read responses
-        if (frame.id == canID) {
+        if (frame.id == canId) {
             //On error
             if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), ERROR_CMD) == 0) {
                 return ERROR;
@@ -219,18 +218,17 @@ CanStreamResult CanInterfaceClass::waitForStreamOverCan(CanID::IDs canID, const 
     }
     //Wait for ack
     while (!timeOut.hasFinished()) {
-        frame = canInterface.read();
-        if (frame.id == canID && frame.length == 1) {
-            byte ack = frame.data.bytes[0];
+        frame_ = canInterface.read();
+        if (frame_.id == canId && frame_.length == 1) {
+            byte ack = frame_.data.bytes[0];
             if (ack != getAck(buffer, expectedBytes)) {
                 //LOGLN((int)ack);
                 //LOGLN((int)getAck(buffer, expectedBytes))
                 return WRONG_ACK;
             }
-            return SUCCES;
+            return SUCCESS;
         }
     }
-
     return TIMEOUT;
 }
 

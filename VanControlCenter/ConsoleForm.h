@@ -28,7 +28,7 @@
 // Console text string widget index
 #define CONSOLE_STR 0
 
-class ConsoleFormClass : public LCDForm {
+class ConsoleFormClass : public LcdForm {
 public:
     // LCDForm abstract method implementation
     void init(Genie &genie) override;
@@ -50,10 +50,10 @@ public:
 
 private:
     // Genie instance pointer
-    Genie *genie;
+    Genie *genie_;
 
     // Text buffer
-    String text;
+    String text_;
 
     // Function to add text to the buffer
     void addText(String str);

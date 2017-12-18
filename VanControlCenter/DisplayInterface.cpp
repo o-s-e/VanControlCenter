@@ -3,12 +3,12 @@
 void onEvent() {
     genieFrame evt;
     // Get the next pending event
-    displayInterface.genie.DequeueEvent(&evt);
+    displayInterface.genie_.DequeueEvent(&evt);
 
     // If current form is valid
-    if (displayInterface.currentForm != NULL) {
+    if (displayInterface.currentForm_ != NULL) {
         // Redirect the screen event on the current form invoking onEvent method
-        displayInterface.currentForm->onEvent(displayInterface.genie, evt);
+        displayInterface.currentForm_->onEvent(displayInterface.genie_, evt);
     }
 }
 
@@ -16,13 +16,13 @@ void DisplayInterfaceClass::init() {
 
     // Init the serial comunication
     INIT_SERIAL(LCD_SERIAL, LCD_SERIAL_BAUD);
-    while (!genie.Begin(LCD_SERIAL)) {
+    while (!genie_.Begin(LCD_SERIAL)) {
         Log.w(LCD_TAG) << F("Display not initialized") << Endl;
     }
-    if (genie.online()) {
+    if (genie_.online()) {
         Log.w(LCD_TAG) << F("Display online") << Endl;
     }
-    genie.debug(LOG_SERIAL, 6);
+    genie_.debug(LOG_SERIAL, 6);
 
     // Reset the LCD
     pinMode(LCD_RESET_PIN, OUTPUT);
@@ -33,33 +33,33 @@ void DisplayInterfaceClass::init() {
 
 
     // Attach event handler method
-    genie.AttachEventHandler(&onEvent);
+    genie_.AttachEventHandler(&onEvent);
 
     // set Brightness
-    genie.WriteContrast(10);
+    genie_.WriteContrast(10);
 
     // Init forms
-    consoleForm.init(genie);
+    consoleForm.init(genie_);
     //debugForm.init(genie);
-    temperatureControllerForm.init(genie);
-    lightControllerForm.init(genie);
-    generalSwitchForm.init(genie);
-    currentForm = &consoleForm;
+    temperatureControllerForm.init(genie_);
+    lightControllerForm.init(genie_);
+    generalSwitchForm.init(genie_);
+    currentForm_ = &consoleForm;
 
     // Refresh rate for the update method
-    refreshTimer.setDuration(1000 / REFRESH_RATE).start();
+    refreshTimer_.setDuration(1000 / REFRESH_RATE).start();
 
-    enabled = true;
+    enabled_ = true;
 }
 
 void DisplayInterfaceClass::update() {
 
     // Update events
-    genie.DoEvents();
+    genie_.DoEvents();
 
     // If it's refresh time then update current form
 
-    switch (genie.form()) {
+    switch (genie_.form()) {
     case CONSOLEFORM:
         setCurrentForm(&consoleForm);
         break;
@@ -77,50 +77,50 @@ void DisplayInterfaceClass::update() {
         break;
     default:
         setCurrentForm(&consoleForm);
-        Log.w(LCD_TAG) << F("default form called: ") << genie.form() << Endl;
+        Log.w(LCD_TAG) << F("default form called: ") << genie_.form() << Endl;
         break;
     }
 
-    if (enabled && refreshTimer.hasFinished()) {
-        if (currentForm != NULL) {
-            currentForm->update(genie);
+    if (enabled_ && refreshTimer_.hasFinished()) {
+        if (currentForm_ != NULL) {
+            currentForm_->update(genie_);
         }
 
         // If the refresh time is high disable the future updates. Probably the
         //screen froze or shut down
 
-        if (refreshTimer.elapsedTime() > MAX_UPDATE_TIME) {
-            enabled = false;
+        if (refreshTimer_.elapsedTime() > MAX_UPDATE_TIME) {
+            enabled_ = false;
             Log.w(LCD_TAG) << F("Disabled LCD updates") << Endl;
         }
 
 
-        refreshTimer.start();
+        refreshTimer_.start();
     }
 }
 
-void DisplayInterfaceClass::setCurrentForm(LCDForm *currentForm) {
+void DisplayInterfaceClass::setCurrentForm(LcdForm *currentForm) {
 
     const char *formTitles[] = { "ConsoleForm", "LightcontrollerForm", "TemperatureControllerForm", "GeneralForm", "DebugForm" };
 
     // If current form is not null invoke onExit method
     if (currentForm != NULL) {
-        this->currentForm->onExit(genie);
+        this->currentForm_->onExit(genie_);
     }
 
-    this->currentForm = currentForm;
+    this->currentForm_ = currentForm;
 
     if (currentForm != NULL) {
         // Activate next form
-        genie.form(currentForm->getFormIndex());
+        genie_.form(currentForm->getFormIndex());
         // Invoke new current form onEnter method
-        currentForm->onEnter(genie);
+        currentForm->onEnter(genie_);
         // Update new current form
-        currentForm->update(genie);
+        currentForm->update(genie_);
         // Restart refresh timer
-        refreshTimer.start();
+        refreshTimer_.start();
     }
-    Log.i(LCD_TAG) << F("Current display form set to: ") << formTitles[genie.form()] << Endl;
+    Log.i(LCD_TAG) << F("Current display form set to: ") << formTitles[genie_.form()] << Endl;
 }
 
 DisplayInterfaceClass displayInterface;

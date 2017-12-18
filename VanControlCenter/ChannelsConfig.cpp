@@ -9,59 +9,59 @@ boolean ChannelsConfigClass::init() {
     if (cfg.loadFromFile(CHANNELS_CFG_FILE) == FILE_VALID) {
         Log << F("Channels.cfg is valid") << Endl;
         // Resize channel vector
-        channels.resize(cfg.getPropertyCount() / Channel::ATTR_COUNT);
+        channels_.resize(cfg.getPropertyCount() / Channel::ATTR_COUNT);
         // Load cfg data
         for (int i = 0; i < cfg.getPropertyCount(); i += Channel::ATTR_COUNT) {
             c = new Channel;
-            c->setID(cfg[i + Channel::CanID].asInt());
-            c->setName(cfg[i + Channel::Name].asString());
-            c->setSize(cfg[i + Channel::Size].asInt());
+            c->setId(cfg[i + Channel::CAN_ID].asInt());
+            c->setName(cfg[i + Channel::NAME].asString());
+            c->setSize(cfg[i + Channel::SIZE].asInt());
             c->setDataType(
-                static_cast<Channel::DataTypes>(cfg[i + Channel::Type].asChar()));
+                static_cast<Channel::DataTypes>(cfg[i + Channel::TYPE].asChar()));
 
-            channels.append(c);
+            channels_.append(c);
         }
 
-        valid = true;
+        valid_ = true;
     }
     else {
-        consoleForm.println(cfg.getErrorMsg());
+        // consoleForm.println(cfg.getErrorMsg());
         Log.e(CHBUF_TAG) << cfg.getErrorMsg() << Endl;
-        valid = false;
+        valid_ = false;
     }
 
-    return valid;
+    return valid_;
 }
 
 void ChannelsConfigClass::debug() {
     Channel *c;
 
     Log << F("========== Channels loaded config: ==========") << Endl;
-    Log << F("Channels: ") << channels.getSize() << Endl;
-    for (int i = 0; i < channels.getSize(); i++) {
-        c = channels[i];
-        Log << c->getID() << "  " << c->getName() << "  " << (char)c->getDataType()
-            << "  " << (int)c->getSize() << Endl;
+    Log << F("Channels: ") << channels_.getSize() << Endl;
+    for (int i = 0; i < channels_.getSize(); i++) {
+        c = channels_[i];
+        Log << c->getID() << "  " << c->getName() << "  " << static_cast<char>(c->getDataType())
+            << "  " << static_cast<int>(c->getSize()) << Endl;
     }
     Log << F("========================================") << Endl;;
 }
 
-Channel *ChannelsConfigClass::getChannelByID(unsigned short id) {
+Channel *ChannelsConfigClass::getChannelById(unsigned short id) {
     return getChannelByIndex(getChannelIndex(id));
 }
 
 int ChannelsConfigClass::getChannelIndex(unsigned short id) {
     // Binary search channel's index by canID
-    int s = 0, d = channels.getSize() - 1;
+    int s = 0, d = channels_.getSize() - 1;
     int p;
 
     while (s <= d) {
         p = (s + d) / 2;
 
-        if (channels[p]->getID() == id) {
+        if (channels_[p]->getID() == id) {
             return p;
         }
-        else if (id > channels[p]->getID()) {
+        else if (id > channels_[p]->getID()) {
             s = p + 1;
         }
         else {
@@ -73,8 +73,8 @@ int ChannelsConfigClass::getChannelIndex(unsigned short id) {
 }
 
 Channel *ChannelsConfigClass::getChannelByIndex(int index) {
-    if (index != -1 && index < channels.getSize()) {
-        return channels[index];
+    if (index != -1 && index < channels_.getSize()) {
+        return channels_[index];
     }
     return NULL;
 }

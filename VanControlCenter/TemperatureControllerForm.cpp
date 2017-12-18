@@ -17,7 +17,7 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
             case TEMP_GAUGE_SET:
                 // Get the temp from the slider, but only store it in an instace variable, so we can set it later on the update function run
 
-                channelsBuffer.setValue<double>(CanID::SET_TEMP, genie.GetEventData(&evt));
+                channelsBuffer.setValue<double>(CanId::SET_TEMP, genie.GetEventData(&evt));
                 break;
             default: 
                 Log.w(LCD_TAG) << F("Display returned a not used object id on the TemperatureControllerForm: ") << evt.reportObject.index << Endl;
@@ -28,7 +28,7 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 
 void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
     //First we get the latest temp fronm the canbus buffer, then we call the heaterinterface on the value and update the view.
-    double temp = channelsBuffer.getValueAs<double>(CanID::TEMP);
+    double temp = channelsBuffer.getValueAs<double>(CanId::TEMP);
 
     updateWidget(genie, GENIE_OBJ_GAUGE, TEMP_GAUGE_DISP, temp);
 }

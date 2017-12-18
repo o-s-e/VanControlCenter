@@ -1,7 +1,7 @@
 // LightControllerForm.h
 
-#ifndef _LIGHTCONTROLLERFORM_h
-#define _LIGHTCONTROLLERFORM_h
+#ifndef LIGHTCONTROLLERFORM_H
+#define LIGHTCONTROLLERFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -23,7 +23,7 @@
 #define WORKTOP_LIGHT 2
 #define OFFSWITCH 4
 
-class LightControllerForm : public LCDForm {
+class LightControllerForm : public LcdForm {
 public:
 
     void init(Genie& genie) override;
@@ -37,15 +37,15 @@ public:
 
 private:
 
-    double color;
+    double color_;
 
-    uint8_t roomBrightness;
-    uint8_t awningBrightness;
-    uint8_t worktopBrightness;
+    uint8_t roomBrightness_;
+    uint8_t awningBrightness_;
+    uint8_t worktopBrightness_;
 
     void updateWidgetsValues(Genie& genie);
 
-    Timer lastStateChange;
+    Timer lastStateChange_;
 };
 
 extern LightControllerForm lightControllerForm;
