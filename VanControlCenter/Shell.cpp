@@ -298,7 +298,7 @@ int ShellClass::findCmd(String& line, ShellCommand* cmd) {
 
             return p;
         }
-        else if (cmp < 0) {
+        if (cmp < 0) {
             s = p + 1;
         }
         else {

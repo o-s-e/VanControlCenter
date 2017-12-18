@@ -142,7 +142,8 @@ void LightInterfaceClass::setColor(double h) {
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_2, mapf(g, 0, 1, 0, 255));
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_3, mapf(b, 0, 1, 0, 255));
 
-    Log.i(RGB_TAG) << F("rgb: ") << channelsBuffer.getValueAsString(CanId::LIGHT_1) << F("|") << channelsBuffer.getValueAsString(CanId::LIGHT_2) << F("|") << channelsBuffer.getValueAsString(CanId::LIGHT_3) << Endl;
+    Log.i(RGB_TAG) << F("rgb: ") << channelsBuffer.getValueAsString(CanId::LIGHT_1) << F("|") << channelsBuffer.
+        getValueAsString(CanId::LIGHT_2) << F("|") << channelsBuffer.getValueAsString(CanId::LIGHT_3) << Endl;
 }
 
 void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) {

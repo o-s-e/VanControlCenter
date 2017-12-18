@@ -43,7 +43,7 @@ void ChannelsConfigClass::debug() {
         Log << c->getID() << "  " << c->getName() << "  " << static_cast<char>(c->getDataType())
             << "  " << static_cast<int>(c->getSize()) << Endl;
     }
-    Log << F("========================================") << Endl;;
+    Log << F("========================================") << Endl;
 }
 
 Channel* ChannelsConfigClass::getChannelById(unsigned short id) {
@@ -61,7 +61,7 @@ int ChannelsConfigClass::getChannelIndex(unsigned short id) {
         if (channels_[p]->getID() == id) {
             return p;
         }
-        else if (id > channels_[p]->getID()) {
+        if (id > channels_[p]->getID()) {
             s = p + 1;
         }
         else {
