@@ -1,12 +1,12 @@
 #include "ConsoleForm.h"
 
-void ConsoleFormClass::init(Genie &genie) {
+void ConsoleFormClass::init(Genie& genie) {
     this->genie_ = &genie;
     text_.reserve(TEXT_BUFFER_SIZE);
     clear();
 }
 
-void ConsoleFormClass::update(Genie &genie) {
+void ConsoleFormClass::update(Genie& genie) {
     //Nothing to do here
 }
 

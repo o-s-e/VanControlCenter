@@ -1,12 +1,10 @@
 #include "TemperatureControllerForm.h"
 
-void TemperatureControllerForm::init(Genie& genie)
-{
+void TemperatureControllerForm::init(Genie& genie) {
     //Initialize the temperature quiete high, so that the heater does not start by accident
 }
 
-void TemperatureControllerForm::update(Genie& genie)
-{
+void TemperatureControllerForm::update(Genie& genie) {
     updateWidgetsValues(genie);
 }
 
@@ -19,8 +17,9 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 
                 channelsBuffer.setValue<double>(CanId::SET_TEMP, genie.GetEventData(&evt));
                 break;
-            default: 
-                Log.w(LCD_TAG) << F("Display returned a not used object id on the TemperatureControllerForm: ") << evt.reportObject.index << Endl;
+            default:
+                Log.w(LCD_TAG) << F("Display returned a not used object id on the TemperatureControllerForm: ") << evt.
+                    reportObject.index << Endl;
             }
         }
     }

@@ -128,10 +128,10 @@
     <ClInclude Include="GeneralSwitchForm.h">
       <Filter>Header Files\Display\Form</Filter>
     </ClInclude>
+    <ClInclude Include="VanControlCenter.ino" />
     <ClInclude Include="__vm\.VanControlCenter.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VanControlCenter.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Shell.cpp">

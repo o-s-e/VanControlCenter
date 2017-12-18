@@ -3,25 +3,26 @@
 //MUST be in alphabetical order
 const PROGMEM ShellCommand cmdsList[] = {
     //analog pins cmds
-    { "ar",			&ShellClass::analogReadCmd		},	//analogRead							ar	<pin>
-    { "aw",			&ShellClass::analogWriteCmd		},	//analogWrite							aw	<pin>	<value>
+    {"ar", &ShellClass::analogReadCmd}, //analogRead							ar	<pin>
+    {"aw", &ShellClass::analogWriteCmd}, //analogWrite							aw	<pin>	<value>
 
     //channels cmds
-    { "chbset",     &ShellClass::cHbufferSet        }, // set channelbuffer value                       chbset <type> <channel> <value>
-    { "chlist",		&ShellClass::channelListCmd		},	//list all loaded channels				chlist
-    { "chvalue",	&ShellClass::channelValueCmd	},	//list a specific channel last value	chvalue <id>
-    { "chvalues",	&ShellClass::channelsValuesCmd	},	//list all last channel values			chvalues
+    {"chbset", &ShellClass::cHbufferSet},
+    // set channelbuffer value                       chbset <type> <channel> <value>
+    {"chlist", &ShellClass::channelListCmd}, //list all loaded channels				chlist
+    {"chvalue", &ShellClass::channelValueCmd}, //list a specific channel last value	chvalue <id>
+    {"chvalues", &ShellClass::channelsValuesCmd}, //list all last channel values			chvalues
 
     //digital pins cmds
-    { "dr",			&ShellClass::digitalReadCmd		},	//digitalRead							dr	<pin>
-    { "dw",			&ShellClass::digitalWriteCmd	},	//digitalWrite							dw	<pin>	<value>
+    {"dr", &ShellClass::digitalReadCmd}, //digitalRead							dr	<pin>
+    {"dw", &ShellClass::digitalWriteCmd}, //digitalWrite							dw	<pin>	<value>
 
     //SD cmds
-    { "sdmkdir",	&ShellClass::sdMkDirCmd			},	//make a dir							sdmkdir <path>
-    { "sdopen",		&ShellClass::sdOpenCmd			},	//read all file's content				sdopen	<path>
-    { "sdrm",		&ShellClass::sdRmCmd			},	//remove a file							sdrm	<path>
-    { "sdrmdir",	&ShellClass::sdRmDirCmd			},	//remove a dir							sdrmdir	<path>
-    { "sdtree",		&ShellClass::sdTreeCmd			}	//print all files and dirs				sdtree
+    {"sdmkdir", &ShellClass::sdMkDirCmd}, //make a dir							sdmkdir <path>
+    {"sdopen", &ShellClass::sdOpenCmd}, //read all file's content				sdopen	<path>
+    {"sdrm", &ShellClass::sdRmCmd}, //remove a file							sdrm	<path>
+    {"sdrmdir", &ShellClass::sdRmDirCmd}, //remove a dir							sdrmdir	<path>
+    {"sdtree", &ShellClass::sdTreeCmd} //print all files and dirs				sdtree
 
 
 };
@@ -49,7 +50,7 @@ void ShellClass::update() {
             line.trim();
 
             if (findCmd(line, &cmd) != -1) {
-                (this->*cmd.cmdFun)(line);
+                (this ->* cmd.cmdFun)(line);
                 Log.e(SHELL_TAG) << ("Cmd executed") << Endl;
             }
             else {
@@ -101,7 +102,8 @@ void ShellClass::channelListCmd(String& params) {
 
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
         c = channelsConfig.getChannelByIndex(i);
-        Log.i(SHELL_TAG) << "  " << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << static_cast<char>(c->getDataType()) << Endl;
+        Log.i(SHELL_TAG) << "  " << c->getID() << "\t" << c->getName() << "\t" << c->getSize() << "\t" << static_cast<
+            char>(c->getDataType()) << Endl;
     }
 }
 
@@ -113,12 +115,12 @@ void ShellClass::channelValueCmd(String& params) {
         Log.e(SHELL_TAG) << F("Channel not found") << Endl;
     }
     else {
-        Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.getValueAsByteArray(id).toHexString() << Endl;
+        Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.
+            getValueAsByteArray(id).toHexString() << Endl;
     }
 }
 
-void ShellClass::channelsValuesCmd(String& params) {
-}
+void ShellClass::channelsValuesCmd(String& params) {}
 
 //D
 void ShellClass::digitalReadCmd(String& params) {
@@ -320,7 +322,6 @@ String ShellClass::nextParam(String& params) {
     //if not found the params string is empty or contains the last param
     return params;
 }
-
 
 
 ShellClass shell;

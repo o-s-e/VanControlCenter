@@ -38,14 +38,14 @@
 class DebugFormClass : public LcdForm {
 public:
     // LCDForm abstract method implementation
-    void init(Genie &genie) override;
+    void init(Genie& genie) override;
 
     // LCDForm abstract method implementation
-    void update(Genie &genie) override;
+    void update(Genie& genie) override;
 
     // LCDForm abstract method implementation
     // Handle the press of the touch screen
-    void onEvent(Genie &genie, genieFrame &evt) override;
+    void onEvent(Genie& genie, genieFrame& evt) override;
 
     // LCDForm abstract method implementation
     int getFormIndex() override { return 5; }

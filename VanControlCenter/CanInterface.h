@@ -27,17 +27,27 @@ public:
         //BMS
 
         //Wifi
-        DATE = 0x60,			//Date dd/mm/yy
-        TIME = 0x61,			//Time hh:MM:ss
-        GPS_LATITUDE = 0x62,	//Latitude
-        GPS_LONGITUDE = 0x63,	//Longitude
-        GPS_ALTITUDE = 0x64,	//Altitude
-        GPS_ACCURACY = 0x65,	//Accuracy radius
-        GPS_SPEED = 0x66,		//GPS valid flag
+        DATE = 0x60,
+        //Date dd/mm/yy
+        TIME = 0x61,
+        //Time hh:MM:ss
+        GPS_LATITUDE = 0x62,
+        //Latitude
+        GPS_LONGITUDE = 0x63,
+        //Longitude
+        GPS_ALTITUDE = 0x64,
+        //Altitude
+        GPS_ACCURACY = 0x65,
+        //Accuracy radius
+        GPS_SPEED = 0x66,
+        //GPS valid flag
 
-        TEMP = 0x71,			//Temperature Sensor Temp
-        HUM = 0x72,			//Temperature Sensor Humidity
-        HEATER_STATUS = 0x73, // Heater state
+        TEMP = 0x71,
+        //Temperature Sensor Temp
+        HUM = 0x72,
+        //Temperature Sensor Humidity
+        HEATER_STATUS = 0x73,
+        // Heater state
         LIGHT_1 = 0x74,
         LIGHT_2 = 0x75,
         LIGHT_3 = 0x76,
@@ -88,7 +98,7 @@ enum CanStreamResult {
 };
 
 //Received can packet callback typedef
-typedef void(*canEventHandler)(CAN_FRAME&);
+typedef void (*canEventHandler)(CAN_FRAME&);
 
 class CanInterfaceClass {
 public:

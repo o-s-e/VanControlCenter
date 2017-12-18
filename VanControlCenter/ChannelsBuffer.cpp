@@ -11,7 +11,7 @@ void ChannelsBufferClass::init() {
 
     for (uint16_t i = 0; i < size; i++) {
 
-        Channel * c = channelsConfig.getChannelByIndex(i);
+        Channel* c = channelsConfig.getChannelByIndex(i);
         buffer_[i].resize(c->getSize());
         buffer_[i].clear();
 
@@ -61,7 +61,8 @@ String ChannelsBufferClass::getValueAsString(const unsigned short id) {
                 return buffer_[index].toString();
 
             default:
-                Log.e(CHBUF_TAG) << F("in getValueAsString\t Unknown conversion type channel ") << id << F(" to type ") << c->getDataType() << Endl;
+                Log.e(CHBUF_TAG) << F("in getValueAsString\t Unknown conversion type channel ") << id << F(" to type ")
+                    << c->getDataType() << Endl;
             }
         }
     }

@@ -43,7 +43,7 @@ private:
 
     Timer lastStateChange_;
 };
+
 extern GeneralSwitchForm generalSwitchForm;
 
 #endif
-

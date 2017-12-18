@@ -82,16 +82,15 @@ void LightInterfaceClass::setColor(double h) {
     hsv_.v = 0.5;
     Log.i(RGB_TAG) << F("hsv: ") << hsv_.h << F("|0.5|0.5") << Endl;
 
-    double      hh, p, q, t, ff, r, g, b;
-    long        i;
+    double hh, p, q, t, ff, r, g, b;
+    long i;
 
     if (hsv_.s <= 0.0) {
         r = hsv_.v;
         g = hsv_.v;
         b = hsv_.v;
     }
-    else
-    {
+    else {
         hh = hsv_.h;
         if (hh >= 360.0) hh = 0.0;
         hh /= 60.0;

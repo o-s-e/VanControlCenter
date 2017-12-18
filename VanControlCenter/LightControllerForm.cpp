@@ -40,8 +40,9 @@ void LightControllerForm::onEvent(Genie& genie, genieFrame& evt) {
             case OFFSWITCH:
                 lightInterface.allOff();
                 break;
-            default: 
-                Log.w(LCD_TAG) << F("Display returned a not used object id on the LightControllerForm: ") << evt.reportObject.index << Endl;
+            default:
+                Log.w(LCD_TAG) << F("Display returned a not used object id on the LightControllerForm: ") << evt.
+                    reportObject.index << Endl;
             }
         }
     }

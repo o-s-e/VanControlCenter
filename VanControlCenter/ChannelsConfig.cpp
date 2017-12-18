@@ -3,7 +3,7 @@
 
 boolean ChannelsConfigClass::init() {
     Log << F("Load channels.cfg") << Endl;
-    Channel *c;
+    Channel* c;
     Configuration cfg;
     // Load cfg file
     if (cfg.loadFromFile(CHANNELS_CFG_FILE) == FILE_VALID) {
@@ -34,7 +34,7 @@ boolean ChannelsConfigClass::init() {
 }
 
 void ChannelsConfigClass::debug() {
-    Channel *c;
+    Channel* c;
 
     Log << F("========== Channels loaded config: ==========") << Endl;
     Log << F("Channels: ") << channels_.getSize() << Endl;
@@ -46,7 +46,7 @@ void ChannelsConfigClass::debug() {
     Log << F("========================================") << Endl;;
 }
 
-Channel *ChannelsConfigClass::getChannelById(unsigned short id) {
+Channel* ChannelsConfigClass::getChannelById(unsigned short id) {
     return getChannelByIndex(getChannelIndex(id));
 }
 
@@ -72,7 +72,7 @@ int ChannelsConfigClass::getChannelIndex(unsigned short id) {
     return -1;
 }
 
-Channel *ChannelsConfigClass::getChannelByIndex(int index) {
+Channel* ChannelsConfigClass::getChannelByIndex(int index) {
     if (index != -1 && index < channels_.getSize()) {
         return channels_[index];
     }

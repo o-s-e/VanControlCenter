@@ -88,6 +88,7 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <ClInclude Include="__vm\.VanControlCenter.vsarduino.h" />
     <None Include="CfgFiles\CHANNELS.CFG" />
     <None Include="CfgFiles\DATALOG.CFG" />
     <ClInclude Include="VanControlCenter.ino">
@@ -116,7 +117,6 @@
     <ClInclude Include="Shell.h" />
     <ClInclude Include="TemperatureControllerForm.h" />
     <ClInclude Include="WifiInterface.h" />
-    <ClInclude Include="__vm\.VanControlCenter.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CanInterface.cpp" />

@@ -24,8 +24,7 @@
 //Logger tag
 #define CHBUF_TAG F("CHBUF")
 
-class ChannelsBufferClass
-{
+class ChannelsBufferClass {
 public:
     //Init function to call inside the setup
     void init();
@@ -36,16 +35,13 @@ public:
     //Template function which return the lastest channel values if the TTL is valid, else return a default value
     //Example:		int a = channelBuffer.getValueAs<int>(0x60, 0);
     template <typename T>
-    T getValueAs(unsigned short id, T defaultValue)
-    {
+    T getValueAs(unsigned short id, T defaultValue) {
         //If CFG file was loaded
-        if (channelsConfig.isValid())
-        {
+        if (channelsConfig.isValid()) {
             //Search the channel
             int index = channelsConfig.getChannelIndex(id);
             //If channel exists and its TTL is still valid
-            if (index != -1 && !channelsConfig.getChannelByIndex(index)->hasTtlFinished())
-            {
+            if (index != -1 && !channelsConfig.getChannelByIndex(index)->hasTtlFinished()) {
                 //Return the converted value
                 return buffer_[index].as<T>();
             }
@@ -58,22 +54,19 @@ public:
 
     //Template function which return the lastest channel values
     template <typename T>
-    T getValueAs(unsigned short id)
-    {
+    T getValueAs(unsigned short id) {
         //If CFG file was loaded
-        if (channelsConfig.isValid())
-        {
+        if (channelsConfig.isValid()) {
             //Search the channel
             int index = channelsConfig.getChannelIndex(id);
             //If channel exists
-            if (index != -1)
-            {
+            if (index != -1) {
                 //Return the converted value
                 return buffer_[index].as<T>();
             }
         }
         //Else return NAN
-       // Log.e(CHBUF_TAG) << F("could not get value for channel: ") << id << Endl;
+        // Log.e(CHBUF_TAG) << F("could not get value for channel: ") << id << Endl;
         return NAN;
 
     }
@@ -88,19 +81,18 @@ public:
     boolean isValueUpdated(unsigned short id);
 
     //Set the lastest value associated to a channel
-    void setValue(unsigned short id, byte *data, unsigned short size);
+    void setValue(unsigned short id, byte* data, unsigned short size);
 
     //Template function which template set the lastest value associated to a channel
     //Example:		channelBuffer.setValue<int>(0x60, 10);
     template <typename T>
     //T setValue. Changed to return void.
-    void setValue(unsigned short id, T value)
-    {
+    void setValue(unsigned short id, T value) {
         setValue(id, reinterpret_cast<byte *>(&value), sizeof(T));
     }
 
     //Send all buffer data on a serial port in the format	ID(2 byte) Data(n byte)
-    void sendOnStream(UARTClass *stream);
+    void sendOnStream(UARTClass* stream);
 
     //Return the buffer size in byte
     unsigned short getBufferSize() { return bufferSize_; }
@@ -113,10 +105,10 @@ private:
     Vector<ByteBuffer> buffer_;
 
     //Function to convert an unsigned integer to string
-    String uintToString(Channel *channel, byte *data);
+    String uintToString(Channel* channel, byte* data);
 
     //Function to convert a signed integer to string
-    String intToString(Channel *channel, byte *data);
+    String intToString(Channel* channel, byte* data);
 };
 
 extern ChannelsBufferClass channelsBuffer;

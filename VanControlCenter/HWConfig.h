@@ -39,7 +39,7 @@
 #define CAN_DEBUG_SERIAL SerialUSB
 #define CAN_SERIAL_BAUD 115200
 #define CAN_SPEED CAN_BPS_125K
- //SD
+//SD
 #define SD_SS_PIN					23
 
 //Light

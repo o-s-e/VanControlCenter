@@ -78,7 +78,7 @@ void HeaterInterface::update() {
 
 }
 
-void HeaterInterface::onStateChanged(const char *newStateString) {
+void HeaterInterface::onStateChanged(const char* newStateString) {
     HeaterState newState;
 
     if (strcmp(newStateString, ON_STATE) == 0) {

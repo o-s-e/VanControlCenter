@@ -32,9 +32,9 @@ using light = struct Light {
 };
 
 using hsv = struct Hsv {
-    double h;       // angle in degrees
-    double s;       // a fraction between 0 and 1 we use a static 0.5
-    double v;       // a fraction between 0 and 1 we use a static 0.5
+    double h; // angle in degrees
+    double s; // a fraction between 0 and 1 we use a static 0.5
+    double v; // a fraction between 0 and 1 we use a static 0.5
 };
 
 class LightInterfaceClass {

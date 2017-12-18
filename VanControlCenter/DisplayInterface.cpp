@@ -99,9 +99,11 @@ void DisplayInterfaceClass::update() {
     }
 }
 
-void DisplayInterfaceClass::setCurrentForm(LcdForm *currentForm) {
+void DisplayInterfaceClass::setCurrentForm(LcdForm* currentForm) {
 
-    const char *formTitles[] = { "ConsoleForm", "LightcontrollerForm", "TemperatureControllerForm", "GeneralForm", "DebugForm" };
+    const char* formTitles[] = {
+        "ConsoleForm", "LightcontrollerForm", "TemperatureControllerForm", "GeneralForm", "DebugForm"
+    };
 
     // If current form is not null invoke onExit method
     if (currentForm != NULL) {

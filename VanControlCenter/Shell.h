@@ -23,7 +23,7 @@ class ShellClass;
 
 struct ShellCommand {
     char cmdString[10];
-    void(ShellClass::*cmdFun)(String&);
+    void (ShellClass::*cmdFun)(String&);
 };
 
 extern const PROGMEM ShellCommand cmdsList[];

@@ -44,7 +44,7 @@ public:
     // Function to call in the loop
     void update();
     // function to call when we set a new state by LCD or Web
-    void onStateChanged(const char *state);
+    void onStateChanged(const char* state);
 
     // Return the current state
     HeaterState getState() { return state_; }

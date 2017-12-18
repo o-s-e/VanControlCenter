@@ -1,10 +1,10 @@
 #include "LCDStringList.h"
 
 void LcdStringList::init(byte widgetIndex, int maxSize, Genie* parent) {
-    this->widgetIndex_ = widgetIndex;	//LCD widget index
-    this->currentElement_ = -1;	//No elements
-    this->elementCount_ = 0;		//No elements
-    this->buffer_.reserve(maxSize);	//Reserve buffer
+    this->widgetIndex_ = widgetIndex; //LCD widget index
+    this->currentElement_ = -1; //No elements
+    this->elementCount_ = 0; //No elements
+    this->buffer_.reserve(maxSize); //Reserve buffer
     this->parent_ = parent;
 }
 

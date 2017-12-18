@@ -54,10 +54,10 @@ public:
     void update();
 
     // Change the current form
-    void setCurrentForm(LcdForm *currentForm);
+    void setCurrentForm(LcdForm* currentForm);
 
     // Return the current form
-    const LcdForm *getCurrentForm() { return currentForm_; }
+    const LcdForm* getCurrentForm() { return currentForm_; }
 
     // Function to handle the incoming event from the lcd
     friend void onEvent();
@@ -74,7 +74,7 @@ private:
     Timer refreshTimer_;
 
     // Current form instance pointer
-    LcdForm *currentForm_;
+    LcdForm* currentForm_;
 
 };
 

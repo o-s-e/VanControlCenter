@@ -31,10 +31,10 @@
 class ConsoleFormClass : public LcdForm {
 public:
     // LCDForm abstract method implementation
-    void init(Genie &genie) override;
+    void init(Genie& genie) override;
 
     // LCDForm abstract method implementation
-    void update(Genie &genie) override;
+    void update(Genie& genie) override;
 
     // Function to print on the console text widget
     void print(String str);
@@ -50,7 +50,7 @@ public:
 
 private:
     // Genie instance pointer
-    Genie *genie_;
+    Genie* genie_;
 
     // Text buffer
     String text_;

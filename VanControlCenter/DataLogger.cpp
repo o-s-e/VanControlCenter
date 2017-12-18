@@ -45,7 +45,7 @@ void DataLoggerClass::update() {
             //Print them all
             if (logFile) {
                 for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
-                    Channel * channel = channelsConfig.getChannelByIndex(i);
+                    Channel* channel = channelsConfig.getChannelByIndex(i);
                     if (channelsBuffer.isValueUpdated(channel->getID())) {
                         logFile.print(
                             channelsBuffer.getValueAsString(channel->getID())
@@ -102,7 +102,7 @@ void DataLoggerClass::createNewLogFile() {
     }
 
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
-        Channel * c = channelsConfig.getChannelByIndex(i);
+        Channel* c = channelsConfig.getChannelByIndex(i);
         logFile.print(c->getName());
         logFile.print(F(" (0x"));
         logFile.print(c->getID(), HEX);
