@@ -8,7 +8,7 @@ void LcdStringList::init(byte widgetIndex, int maxSize, Genie* parent) {
     this->parent_ = parent;
 }
 
-void LcdStringList::addElement(String elem) {
+void LcdStringList::addElement(const String& elem) {
     //If no elements set the first selected
     if (elementCount_ == 0) {
         currentElement_ = 0;

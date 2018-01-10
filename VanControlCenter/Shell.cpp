@@ -37,7 +37,7 @@ void ShellClass::update() {
 
     int index;
     String line;
-    ShellCommand cmd;
+    ShellCommand cmd{};
 
     if (serialPort_->available()) {
         while (serialPort_->available() && rxBuffer_.getSize() < rxBuffer_.getCapacity()) {

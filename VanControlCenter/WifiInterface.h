@@ -4,7 +4,7 @@
 #define WIFIINTERFACE_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -97,16 +97,16 @@ private:
     };
 
     //Last received packets
-    infoData info_;
-    gpsData gps_;
-    tempData temp_;
-    lightData light_;
+    infoData info_{};
+    gpsData gps_{};
+    tempData temp_{};
+    lightData light_{};
 
     //RX byte buffer
     ByteBuffer rxBuffer_;
 
     //Gps callback
-    gpsDataHandler gpsHandler_;
+    gpsDataHandler gpsHandler_{};
 
     //Parse incoming packets
     boolean parsePacket(const char* header, byte* buffer, int size);

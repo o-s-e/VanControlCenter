@@ -1,7 +1,7 @@
 #ifndef HWCONFIG_H
 #define HWCONFIG_H
 
-#include "arduino.h"
+#include "Arduino.h"
 
 /**
 * Contain all the hardware definitions

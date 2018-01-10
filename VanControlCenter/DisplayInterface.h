@@ -4,7 +4,7 @@
 #define _DISPLAYINTERFACE_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #include "logger.h"
@@ -65,7 +65,7 @@ public:
 private:
 
     // Indicates if the form refresh is enabled
-    boolean enabled_;
+    boolean enabled_{};
 
     // Genie library instance
     Genie genie_;
@@ -74,7 +74,7 @@ private:
     Timer refreshTimer_;
 
     // Current form instance pointer
-    LcdForm* currentForm_;
+    LcdForm* currentForm_{};
 
 };
 

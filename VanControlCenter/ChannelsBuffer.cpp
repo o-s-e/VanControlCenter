@@ -127,7 +127,7 @@ boolean ChannelsBufferClass::isValueUpdated(unsigned short id) {
 }
 
 //Assuming CPU is LITTLE-ENDIAN
-String ChannelsBufferClass::uintToString(Channel* channel, byte* data) {
+String ChannelsBufferClass::uintToString(Channel* channel, const byte* data) {
     byte mem[8];
     char temp[21]; //64 bit unsigned integer max digit number + \0
     String value;
@@ -146,7 +146,7 @@ String ChannelsBufferClass::uintToString(Channel* channel, byte* data) {
 }
 
 //Assuming CPU is LITTLE-ENDIAN
-String ChannelsBufferClass::intToString(Channel* channel, byte* data) {
+String ChannelsBufferClass::intToString(Channel* channel, const byte* data) {
     byte mem[8];
     char temp[21]; //64 bit signed integer max digit number + \0
     String value;

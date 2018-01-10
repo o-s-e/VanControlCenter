@@ -4,7 +4,7 @@
 #define _CONSOLEFORM_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -37,10 +37,10 @@ public:
     void update(Genie& genie) override;
 
     // Function to print on the console text widget
-    void print(String str);
+    void print(const String& str);
 
     // Function to print on the console text widget
-    void println(String str);
+    void println(const String& str);
 
     // Function to clear the console text widget
     void clear();
@@ -50,13 +50,13 @@ public:
 
 private:
     // Genie instance pointer
-    Genie* genie_;
+    Genie* genie_{};
 
     // Text buffer
     String text_;
 
     // Function to add text to the buffer
-    void addText(String str);
+    void addText(const String& str);
 };
 
 // Console form instance

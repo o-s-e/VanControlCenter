@@ -4,7 +4,7 @@
 #define LCDSTRINGLIST_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -25,7 +25,7 @@ public:
     //Function to init the StringList
     //Index is the widget index in ViSi
     //MaxSize is the max number of chars
-    void init(byte index, int maxSize, Genie* parent);
+    void init(byte widgetIndex, int maxSize, Genie* parent);
 
     //Move the selector up of one position
     void up();
@@ -37,7 +37,7 @@ public:
     void clear();
 
     //Add new string item
-    void addElement(String elem);
+    void addElement(const String& elem);
 
     //Remove an item by the index
     void removeElement(int index);
@@ -56,19 +56,19 @@ public:
 
 private:
     //Current item index
-    char currentElement_;
+    char currentElement_ = 0;
 
     //Widget index in ViSi
-    byte widgetIndex_;
+    byte widgetIndex_ = 0;
 
     //Items count
-    byte elementCount_;
+    byte elementCount_ = 0;
 
     //String buffer
     String buffer_;
 
     //Genie instance pointer
-    Genie* parent_;
+    Genie* parent_ = nullptr;
 };
 
 #endif

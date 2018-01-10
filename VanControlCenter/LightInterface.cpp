@@ -76,7 +76,7 @@ void LightInterfaceClass::update() {
     }
 }
 
-void LightInterfaceClass::setColor(double h) {
+void LightInterfaceClass::setColor(uint_fast8_t h) {
     hsv_.h = h;
     hsv_.s = 0.5;
     hsv_.v = 0.5;
@@ -91,7 +91,7 @@ void LightInterfaceClass::setColor(double h) {
         b = hsv_.v;
     }
     else {
-        hh = hsv_.h;
+        hh = static_cast<double>(hsv_.h);
         if (hh >= 360.0) hh = 0.0;
         hh /= 60.0;
         i = static_cast<long>(hh);

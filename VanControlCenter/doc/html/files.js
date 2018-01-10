@@ -1,0 +1,46 @@
+var files =
+[
+    [ "CanInterface.cpp", "_can_interface_8cpp.html", "_can_interface_8cpp" ],
+    [ "CanInterface.h", "_can_interface_8h.html", "_can_interface_8h" ],
+    [ "Channel.cpp", "_channel_8cpp.html", null ],
+    [ "Channel.h", "_channel_8h.html", "_channel_8h" ],
+    [ "ChannelsBuffer.cpp", "_channels_buffer_8cpp.html", "_channels_buffer_8cpp" ],
+    [ "ChannelsBuffer.h", "_channels_buffer_8h.html", "_channels_buffer_8h" ],
+    [ "ChannelsConfig.cpp", "_channels_config_8cpp.html", "_channels_config_8cpp" ],
+    [ "ChannelsConfig.h", "_channels_config_8h.html", "_channels_config_8h" ],
+    [ "ConsoleForm.cpp", "_console_form_8cpp.html", "_console_form_8cpp" ],
+    [ "ConsoleForm.h", "_console_form_8h.html", "_console_form_8h" ],
+    [ "DataLogger.cpp", "_data_logger_8cpp.html", "_data_logger_8cpp" ],
+    [ "DataLogger.h", "_data_logger_8h.html", "_data_logger_8h" ],
+    [ "DebugForm.cpp", "_debug_form_8cpp.html", "_debug_form_8cpp" ],
+    [ "DebugForm.h", "_debug_form_8h.html", "_debug_form_8h" ],
+    [ "DisplayInterface.cpp", "_display_interface_8cpp.html", "_display_interface_8cpp" ],
+    [ "DisplayInterface.h", "_display_interface_8h.html", "_display_interface_8h" ],
+    [ "GeneralSwitchForm.cpp", "_general_switch_form_8cpp.html", "_general_switch_form_8cpp" ],
+    [ "GeneralSwitchForm.h", "_general_switch_form_8h.html", "_general_switch_form_8h" ],
+    [ "HeaterInterface.cpp", "_heater_interface_8cpp.html", "_heater_interface_8cpp" ],
+    [ "HeaterInterface.h", "_heater_interface_8h.html", "_heater_interface_8h" ],
+    [ "HWConfig.h", "_h_w_config_8h.html", "_h_w_config_8h" ],
+    [ "LCDForm.h", "_l_c_d_form_8h.html", [
+      [ "LcdForm", "class_lcd_form.html", "class_lcd_form" ]
+    ] ],
+    [ "LCDStringList.cpp", "_l_c_d_string_list_8cpp.html", null ],
+    [ "LCDStringList.h", "_l_c_d_string_list_8h.html", "_l_c_d_string_list_8h" ],
+    [ "LCDStringMsg.cpp", "_l_c_d_string_msg_8cpp.html", null ],
+    [ "LCDStringMsg.h", "_l_c_d_string_msg_8h.html", [
+      [ "LcdStringMsg", "class_lcd_string_msg.html", "class_lcd_string_msg" ]
+    ] ],
+    [ "LightControllerForm.cpp", "_light_controller_form_8cpp.html", "_light_controller_form_8cpp" ],
+    [ "LightControllerForm.h", "_light_controller_form_8h.html", "_light_controller_form_8h" ],
+    [ "LightInterface.cpp", "_light_interface_8cpp.html", "_light_interface_8cpp" ],
+    [ "LightInterface.h", "_light_interface_8h.html", "_light_interface_8h" ],
+    [ "logger.cpp", "logger_8cpp.html", "logger_8cpp" ],
+    [ "logger.h", "logger_8h.html", "logger_8h" ],
+    [ "resource.h", "resource_8h.html", null ],
+    [ "Shell.cpp", "_shell_8cpp.html", "_shell_8cpp" ],
+    [ "Shell.h", "_shell_8h.html", "_shell_8h" ],
+    [ "TemperatureControllerForm.cpp", "_temperature_controller_form_8cpp.html", "_temperature_controller_form_8cpp" ],
+    [ "TemperatureControllerForm.h", "_temperature_controller_form_8h.html", "_temperature_controller_form_8h" ],
+    [ "WifiInterface.cpp", "_wifi_interface_8cpp.html", "_wifi_interface_8cpp" ],
+    [ "WifiInterface.h", "_wifi_interface_8h.html", "_wifi_interface_8h" ]
+];

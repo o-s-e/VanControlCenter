@@ -4,7 +4,7 @@
 #define SHELL_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -12,7 +12,7 @@
 #include "ByteBuffer.h"
 #include "ChannelsBuffer.h"
 #include "ChannelsConfig.h"
-#include "Logger.h"
+#include "logger.h"
 #include <SD.h>
 
 #define SHELL_TAG	F("SH")
@@ -55,7 +55,7 @@ public:
 
 private:
     ByteBuffer rxBuffer_;
-    Stream* serialPort_;
+    Stream* serialPort_{};
 
     int findCmd(String& line, ShellCommand* cmd);
     String nextParam(String& params);

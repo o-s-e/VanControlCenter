@@ -19,8 +19,8 @@ void HeaterInterface::init() {
 
 void HeaterInterface::update() {
     if (lastStateUpdate_.hasFinished()) {
-        double temp = channelsBuffer.getValueAs<double>(CanId::TEMP);
-        double setTemp = channelsBuffer.getValueAs<double>(CanId::SET_TEMP);
+        auto temp = channelsBuffer.getValueAs<double>(CanId::TEMP);
+        auto setTemp = channelsBuffer.getValueAs<double>(CanId::SET_TEMP);
 
         if (temp >= setTemp) {
             if (state_ == ON) {

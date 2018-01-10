@@ -4,7 +4,7 @@
 #define LIGHTCONTROLLERFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -37,11 +37,11 @@ public:
 
 private:
 
-    double color_;
+    double color_{};
 
-    uint8_t roomBrightness_;
-    uint8_t awningBrightness_;
-    uint8_t worktopBrightness_;
+    uint8_t roomBrightness_{};
+    uint8_t awningBrightness_{};
+    uint8_t worktopBrightness_{};
 
     void updateWidgetsValues(Genie& genie);
 

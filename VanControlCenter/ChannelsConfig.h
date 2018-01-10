@@ -4,7 +4,7 @@
 #define _CHANNELSCONFIG_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -45,7 +45,7 @@ public:
 
 private:
     //True if the cfg parsing was successful else false
-    boolean valid_;
+    boolean valid_{};
 
     //Vector containing all the loaded channells
     Vector<Channel*> channels_;

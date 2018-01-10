@@ -4,7 +4,7 @@
 #define LCDFORM_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -24,17 +24,17 @@ protected:
     }
 
     //Function wrapper to write a string
-    void updateString(Genie& genie, uint16_t wIndex, String wValue) {
+    void updateString(Genie& genie, uint16_t wIndex, const String& wValue) {
         genie.WriteStr(wIndex, const_cast<char*>(wValue.c_str()));
     }
 
 public:
-    virtual ~LcdForm() = default;
+    virtual ~LcdForm();
     //Function to call to init the form
-    virtual void init(Genie& genie) = 0;
+    virtual void init(Genie& genie);
 
     //Function called when the form is updated
-    virtual void update(Genie& genie) = 0;
+    virtual void update(Genie& genie);
 
     //Function called when an event is received from the lcd
     virtual void onEvent(Genie& genie, genieFrame& evt) {}
@@ -46,7 +46,11 @@ public:
     virtual void onExit(Genie& genie) {}
 
     //Get form index in ViSi
-    virtual int getFormIndex() = 0;
+    virtual int getFormIndex();
 };
 
+inline LcdForm::~LcdForm() = default;
+inline void LcdForm::init(Genie& genie) {}
+inline void LcdForm::update(Genie& genie) {}
+inline int LcdForm::getFormIndex() { return 0; }
 #endif

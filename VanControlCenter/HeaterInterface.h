@@ -2,7 +2,7 @@
 #define HEATER_INTERFACE_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -14,7 +14,7 @@
 */
 
 #include "HWConfig.h"
-#include "Logger.h"
+#include "logger.h"
 #include "ChannelsBuffer.h"
 #include "CanInterface.h"
 
@@ -44,7 +44,7 @@ public:
     // Function to call in the loop
     void update();
     // function to call when we set a new state by LCD or Web
-    void onStateChanged(const char* state);
+    void onStateChanged(const char* newStateString);
 
     // Return the current state
     HeaterState getState() { return state_; }
@@ -55,13 +55,13 @@ private:
 
     void cooldown();
 
-    uint8_t heaterFaultCode_;
+    uint8_t heaterFaultCode_{};
 
     // Heater led status
-    byte ledStatus_;
+    byte ledStatus_{};
 
     // Current Temperature Controller state
-    HeaterState state_;
+    HeaterState state_ = OFF;
 
 
     // TempCtrl state TTL timer

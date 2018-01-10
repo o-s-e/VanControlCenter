@@ -28,7 +28,7 @@ void LcdStringMsg::repaint() {
     parent_->WriteStr(widgetIndex_, const_cast<char*>(buffer_.c_str()));
 }
 
-void LcdStringMsg::setMessage(String str) {
+void LcdStringMsg::setMessage(const String& str) {
     clear();
     buffer_ += str;
     repaint();

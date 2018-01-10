@@ -4,14 +4,14 @@
 #define LIGHTINTERFACE_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
 
 #include "HWConfig.h"
 #include <Timer.h>
-#include "Logger.h"
+#include "logger.h"
 #include "ChannelsBuffer.h"
 #include "CanInterface.h"
 
@@ -32,12 +32,12 @@ using light = struct Light {
 };
 
 using hsv = struct Hsv {
-    double h; // angle in degrees
+    uint_fast8_t h; // angle in degrees
     double s; // a fraction between 0 and 1 we use a static 0.5
     double v; // a fraction between 0 and 1 we use a static 0.5
 };
 
-class LightInterfaceClass {
+class LightInterfaceClass {  // NOLINT
 public:
     //Function to call in the setup
     void init();
@@ -46,7 +46,7 @@ public:
     void update();
 
     // Sets the Hue(value between 0 and 360)
-    void setColor(double h);
+    void setColor(uint_fast8_t h);
 
     void setBrightness(uint8_t brightness, uint8_t lightIndex);
 
@@ -62,7 +62,7 @@ private:
 
     hsv hsv_;
 
-    uint8_t fadeAmount_;
+    uint8_t fadeAmount_ = 0;
 
     // LightCtrl refresh LED timer
     Timer ledTimer_;

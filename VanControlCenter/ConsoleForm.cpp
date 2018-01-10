@@ -10,11 +10,11 @@ void ConsoleFormClass::update(Genie& genie) {
     //Nothing to do here
 }
 
-void ConsoleFormClass::print(String str) {
+void ConsoleFormClass::print(const String& str) {
     text_.concat(str);
 }
 
-void ConsoleFormClass::println(String str) {
+void ConsoleFormClass::println(const String& str) {
     addText(str + "\n");
 }
 
@@ -22,7 +22,7 @@ void ConsoleFormClass::clear() {
     text_ = "";
 }
 
-void ConsoleFormClass::addText(String str) {
+void ConsoleFormClass::addText(const String& str) {
     int index = text_.indexOf("\n");
     //Remove first lines until there is enough space for the new text
     //Create a sort of scroll-up effect, like real shell

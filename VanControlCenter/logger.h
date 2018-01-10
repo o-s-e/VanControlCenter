@@ -43,7 +43,7 @@ public:
     friend LoggerClass& operator<<(LoggerClass& log, double value);
 
     friend LoggerClass& operator<<(LoggerClass& log, const char* value);
-    friend LoggerClass& operator<<(LoggerClass& log, String value);
+    friend LoggerClass& operator<<(LoggerClass& log, const String& value);
     friend LoggerClass& operator<<(LoggerClass& log,
                                    const __FlashStringHelper* value);
 
@@ -75,9 +75,9 @@ public:
     void assert(boolean condition, String msg);
 
 private:
-    byte precision_;
-    UARTClass* serialPort_;
-    LogManip mode_;
+    byte precision_ = 0;
+    UARTClass* serialPort_ = nullptr;
+    LogManip mode_ = Info;
 };
 
 extern LoggerClass Log;

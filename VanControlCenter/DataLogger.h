@@ -4,7 +4,7 @@
 #define _DATALOGGER_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -16,11 +16,11 @@
 #include <Configuration.h>
 #include <Timer.h>
 
-#include "CANInterface.h"
+#include "CanInterface.h"
 #include "ChannelsBuffer.h"
 #include "ChannelsConfig.h"
 #include "ConsoleForm.h"
-#include "Logger.h"
+#include "logger.h"
 
 //Logger tag
 #define DL_TAG	F("DL")

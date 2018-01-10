@@ -4,7 +4,7 @@
 #define CHANNELSBUFFER_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -15,7 +15,7 @@
 
 #include "Channel.h"
 #include "ChannelsConfig.h"
-#include "Logger.h"
+#include "logger.h"
 
 /**
 * Class containing a buffer with all the lastest CAN packets value for each channel
@@ -99,16 +99,16 @@ public:
 
 private:
     //Buffer size
-    unsigned short bufferSize_;
+    unsigned short bufferSize_{};
 
     //Vector containing a ByteBuffer instance for each channel
     Vector<ByteBuffer> buffer_;
 
     //Function to convert an unsigned integer to string
-    String uintToString(Channel* channel, byte* data);
+    String uintToString(Channel* channel, const byte* data);
 
     //Function to convert a signed integer to string
-    String intToString(Channel* channel, byte* data);
+    String intToString(Channel* channel, const byte* data);
 };
 
 extern ChannelsBufferClass channelsBuffer;

@@ -27,7 +27,7 @@ void TemperatureControllerForm::onEvent(Genie& genie, genieFrame& evt) {
 
 void TemperatureControllerForm::updateWidgetsValues(Genie& genie) {
     //First we get the latest temp fronm the canbus buffer, then we call the heaterinterface on the value and update the view.
-    double temp = channelsBuffer.getValueAs<double>(CanId::TEMP);
+    auto temp = channelsBuffer.getValueAs<double>(CanId::TEMP);
 
     updateWidget(genie, GENIE_OBJ_GAUGE, TEMP_GAUGE_DISP, temp);
 }

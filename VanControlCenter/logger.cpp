@@ -14,7 +14,7 @@ void LoggerClass::assert(boolean condition, String msg) {
     if (!condition) {
         this->e(ASSERT_TAG) << msg << Endl;
         serialPort_->flush();
-        while (1);
+        while (true);
     }
 }
 
@@ -101,7 +101,7 @@ LoggerClass& operator<<(LoggerClass& log, const char* value) {
     return log;
 }
 
-LoggerClass& operator<<(LoggerClass& log, String value) {
+LoggerClass& operator<<(LoggerClass& log, const String& value) {
     log.serialPort_->print(value);
     return log;
 }

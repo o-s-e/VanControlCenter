@@ -1,7 +1,7 @@
 #include "DisplayInterface.h"
 
 void onEvent() {
-    genieFrame evt;
+    genieFrame evt{};
     // Get the next pending event
     displayInterface.genie_.DequeueEvent(&evt);
 

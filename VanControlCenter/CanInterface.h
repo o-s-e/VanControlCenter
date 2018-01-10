@@ -4,7 +4,7 @@
 #define _CANINTERFACE_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -134,7 +134,7 @@ public:
 
 private:
     //Debug serial pointer
-    Stream* debugSerial_;
+    Stream* debugSerial_ = nullptr;
 
     //Can packet
     CAN_FRAME frame_;
@@ -143,7 +143,7 @@ private:
     ByteBuffer rxBuffer_;
 
     //Packet received callback
-    canEventHandler canEvent_;
+    canEventHandler canEvent_ = nullptr;
 
     //Debug
     //Send a packet to the can analyzer
