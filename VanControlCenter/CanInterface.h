@@ -23,7 +23,7 @@
 //Class containing an enum with all the CanID constants hard-coded
 class CanId {
 public:
-    enum IDs : unsigned short {
+    enum IDs : uint_fast16_t {
         //BMS
 
         //Wifi
@@ -103,7 +103,7 @@ typedef void (*canEventHandler)(CAN_FRAME&);
 class CanInterfaceClass {
 public:
     //Function to call in the setup
-    void init(int canSpeed, unsigned short minId = 0, unsigned short maxId = 2048);
+    void init(uint_fast32_t canSpeed, uint_fast16_t minId = 0, uint_fast16_t maxId = 2048);
 
     //Fucntion to call in the loop
     void update();
@@ -137,7 +137,7 @@ private:
     Stream* debugSerial_ = nullptr;
 
     //Can packet
-    CAN_FRAME frame_;
+    CAN_FRAME frame_{};
 
     //Can analyzer receive buffer
     ByteBuffer rxBuffer_;

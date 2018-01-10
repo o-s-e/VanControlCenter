@@ -120,9 +120,16 @@ void ShellClass::channelValueCmd(String& params) {
     }
 }
 
-void ShellClass::channelsValuesCmd(String& params) {}
+void ShellClass::channelsValuesCmd(String& params) {
+    Channel* c;
+    for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
+        c = channelsConfig.getChannelByIndex(i);
+        int id = c->getID();
+        Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.
+            getValueAsByteArray(id).toHexString() << Endl;
+    }
+}
 
-//D
 void ShellClass::digitalReadCmd(String& params) {
     int pin = nextParam(params).toInt();
 
@@ -232,13 +239,18 @@ void ShellClass::cHbufferSet(String& params) {
 
     if (type == "i") {
 
-        uint8_t value = nextParam(params).toInt();
-        channelsBuffer.setValue<uint8_t>(channel, value);
+        unsigned int value = nextParam(params).toInt();
+        channelsBuffer.setValue<unsigned int>(channel, value);
     }
     else if (type == "d") {
 
         double value = nextParam(params).toDouble();
         channelsBuffer.setValue<double>(channel, value);
+    }
+    else if (type == "u") {
+
+        uint_fast8_t value = nextParam(params).toDouble();
+        channelsBuffer.setValue<uint_fast8_t>(channel, value);
     }
     else {
         Log.e(SHELL_TAG) << F("Set first param to i for int or d for double") << Endl;

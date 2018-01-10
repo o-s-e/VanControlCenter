@@ -11,7 +11,7 @@ void DataLoggerClass::init() {
     }
     else {
         //Error on loading, searching a backup
-        consoleForm.println(F("No valid Datalogger cfg file found"));
+        //consoleForm.println(F("No valid Datalogger cfg file found"));
         Log.e(DL_TAG) << F("No valid Datalogger cfg file found") << Endl;
 
         if (cfg.loadFromBackup() == FILE_VALID) {
@@ -20,10 +20,10 @@ void DataLoggerClass::init() {
         }
         else {
             //No valid backup, load default values
-            consoleForm.println(F("No valid backup found"));
+            //consoleForm.println(F("No valid backup found"));
             Log.e(DL_TAG) << F("No valid backup found") << Endl;
 
-            consoleForm.println(F("Loading Datalogger default config"));
+            //consoleForm.println(F("Loading Datalogger default config"));
             Log.e(DL_TAG) << F("Loading Datalogger default config") << Endl;
 
             logFileName_ = LOG_FILE_FOLDER;
@@ -94,7 +94,7 @@ void DataLoggerClass::createNewLogFile() {
     //Check if the file is opened correctly
     while (!logFile) {
 
-        consoleForm.println(F("Error creating log file! Trying again..."));
+        //consoleForm.println(F("Error creating log file! Trying again..."));
         Log.e(DL_TAG) << F("Error creating log file! Trying again...") << Endl;
 
         delay(1000);

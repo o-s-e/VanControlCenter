@@ -21,7 +21,7 @@ void LightInterfaceClass::init() {
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, 0);
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, 0);
 
-    channelsBuffer.setValue<uint8_t>(CanId::HSV, 0);
+    channelsBuffer.setValue<unsigned int>(CanId::HSV, 0);
 
     hsv_.h = 0;
     hsv_.s = 0;
@@ -51,9 +51,9 @@ void LightInterfaceClass::update() {
 
         //debug hook
 
-        if (channelsBuffer.getValueAs<double>(CanId::HSV) > 0) {
-            Log.i(RGB_TAG) << F("hsv debug value set: ") << Endl;
-            setColor(channelsBuffer.getValueAs<double>(CanId::HSV));
+        if (channelsBuffer.getValueAs<unsigned int>(CanId::HSV) > 0) {
+            Log.i(RGB_TAG) << F("hsv debug value set: ") << channelsBuffer.getValueAs<unsigned int>(CanId::HSV) << Endl;
+            setColor(channelsBuffer.getValueAs<unsigned int>(CanId::HSV));
         }
 
 
@@ -76,7 +76,8 @@ void LightInterfaceClass::update() {
     }
 }
 
-void LightInterfaceClass::setColor(uint_fast8_t h) {
+void LightInterfaceClass::setColor(unsigned int h) {
+    Serial.println(h);
     hsv_.h = h;
     hsv_.s = 0.5;
     hsv_.v = 0.5;
@@ -101,38 +102,38 @@ void LightInterfaceClass::setColor(uint_fast8_t h) {
         t = hsv_.v * (1.0 - (hsv_.s * (1.0 - ff)));
 
         switch (i) {
-        case 0:
-            r = hsv_.v;
-            g = t;
-            b = p;
-            break;
+            case 0:
+                r = hsv_.v;
+                g = t;
+                b = p;
+                break;
 
-        case 1:
-            r = q;
-            g = hsv_.v;
-            b = p;
-            break;
-        case 2:
-            r = p;
-            g = hsv_.v;
-            b = t;
-            break;
-        case 3:
-            r = p;
-            g = q;
-            b = hsv_.v;
-            break;
-        case 4:
-            r = t;
-            g = p;
-            b = hsv_.v;
-            break;
-        case 5:
-        default:
-            r = hsv_.v;
-            g = p;
-            b = q;
-            break;
+            case 1:
+                r = q;
+                g = hsv_.v;
+                b = p;
+                break;
+            case 2:
+                r = p;
+                g = hsv_.v;
+                b = t;
+                break;
+            case 3:
+                r = p;
+                g = q;
+                b = hsv_.v;
+                break;
+            case 4:
+                r = t;
+                g = p;
+                b = hsv_.v;
+                break;
+            case 5:
+            default:
+                r = hsv_.v;
+                g = p;
+                b = q;
+                break;
         }
     }
     Log.i(RGB_TAG) << F("tiny rgb: ") << r << F("|") << g << F("|") << b << Endl;
@@ -149,24 +150,24 @@ void LightInterfaceClass::setColor(uint_fast8_t h) {
 void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) {
     switch (lightIndex) {
         //TODO Check if roomlight needs to be replaced with the channelbuffer equivalent
-    case 1:
-        if (roomLight_.w != brightness) {
-            channelsBuffer.setValue<uint8_t>(CanId::LIGHT_4, brightness);
-        }
-        break;
-    case 2:
-        if (awningLight_.w != brightness) {
-            channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, brightness);
-        }
-        break;
-    case 3:
-        if (worktopLight_.w != brightness) {
-            channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, brightness);
-        }
-        break;
-    default:
-        Log.w(RGB_TAG) << F("not used lightIndex on the LightInterface: ") << lightIndex << Endl;
-        break;
+        case 1:
+            if (roomLight_.w != brightness) {
+                channelsBuffer.setValue<uint8_t>(CanId::LIGHT_4, brightness);
+            }
+            break;
+        case 2:
+            if (awningLight_.w != brightness) {
+                channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, brightness);
+            }
+            break;
+        case 3:
+            if (worktopLight_.w != brightness) {
+                channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, brightness);
+            }
+            break;
+        default:
+            Log.w(RGB_TAG) << F("not used lightIndex on the LightInterface: ") << lightIndex << Endl;
+            break;
     }
 }
 

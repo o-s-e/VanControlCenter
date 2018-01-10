@@ -1,6 +1,6 @@
 #include "CanInterface.h"
 
-void CanInterfaceClass::init(int canSpeed, unsigned short minId, unsigned short maxId) {
+void CanInterfaceClass::init(uint_fast32_t canSpeed, uint_fast16_t minId, uint_fast16_t maxId) {
     Can0.begin(canSpeed);
     Can0.watchForRange(minId, maxId);
 

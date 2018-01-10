@@ -32,7 +32,7 @@ using light = struct Light {
 };
 
 using hsv = struct Hsv {
-    uint_fast8_t h; // angle in degrees
+    unsigned int h; // angle in degrees
     double s; // a fraction between 0 and 1 we use a static 0.5
     double v; // a fraction between 0 and 1 we use a static 0.5
 };
@@ -46,7 +46,7 @@ public:
     void update();
 
     // Sets the Hue(value between 0 and 360)
-    void setColor(uint_fast8_t h);
+    void setColor(unsigned int h);
 
     void setBrightness(uint8_t brightness, uint8_t lightIndex);
 
