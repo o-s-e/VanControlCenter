@@ -71,6 +71,7 @@ void HeaterInterface::update() {
             digitalWrite(HT_VENT_PIN, LOW);
             break;
         }
+        channelsBuffer.setValue<uint8_t>(CanId::HEATER_STATUS, state_);
 
         ledTimer_.start();
 

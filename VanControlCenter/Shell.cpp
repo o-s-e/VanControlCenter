@@ -50,7 +50,7 @@ void ShellClass::update() {
             line.trim();
 
             if (findCmd(line, &cmd) != -1) {
-                (this ->* cmd.cmdFun)(line);
+                (this->*cmd.cmdFun)(line);
                 Log.e(SHELL_TAG) << ("Cmd executed") << Endl;
             }
             else {
@@ -116,7 +116,8 @@ void ShellClass::channelValueCmd(String& params) {
     }
     else {
         Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.
-            getValueAsByteArray(id).toHexString() << Endl;
+                                                                                                 getValueAsByteArray(id)
+                                                                                                 .toHexString() << Endl;
     }
 }
 
@@ -124,10 +125,10 @@ void ShellClass::channelsValuesCmd(String& params) {
     Channel* c;
     for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
         c = channelsConfig.getChannelByIndex(i);
-        int id = c->getID();
-        Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.
-            getValueAsByteArray(id).toHexString() << Endl;
+        Log.i(SHELL_TAG) << c->getName() << "\t" << channelsBuffer.getValueAsString(c->getID()) <<
+            Endl;
     }
+    LOGLN(F("========================================"));
 }
 
 void ShellClass::digitalReadCmd(String& params) {
@@ -249,8 +250,8 @@ void ShellClass::cHbufferSet(String& params) {
     }
     else if (type == "u") {
 
-        uint_fast8_t value = nextParam(params).toDouble();
-        channelsBuffer.setValue<uint_fast8_t>(channel, value);
+        uint8_t value = nextParam(params).toDouble();
+        channelsBuffer.setValue<uint8_t>(channel, value);
     }
     else {
         Log.e(SHELL_TAG) << F("Set first param to i for int or d for double") << Endl;

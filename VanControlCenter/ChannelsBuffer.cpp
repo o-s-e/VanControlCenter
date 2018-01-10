@@ -92,10 +92,12 @@ void ChannelsBufferClass::setValue(unsigned short id, byte* data, unsigned short
         if (index != -1) {
             //If size received is not equal to expected size
             if (size < channelsConfig.getChannelByIndex(index)->getSize()) {
-                Log.w(CHBUF_TAG) << F("In setValue\t Received size < expected size for channel ") << id << Endl;
+                Log.w(CHBUF_TAG) << F("In setValue\t Received size ") << size << F(" < expected size for channel ") <<
+                    id << F(" but expected ") << channelsConfig.getChannelByIndex(index)->getSize() << Endl;
             }
             else if (size > channelsConfig.getChannelByIndex(index)->getSize()) {
-                Log.w(CHBUF_TAG) << F("In setValue\t Received size > expected size for channel ") << id << Endl;
+                Log.w(CHBUF_TAG) << F("In setValue\t Received size ") << size << F(" > expected size for channel ") <<
+                    id << F(" but expected ") << channelsConfig.getChannelByIndex(index)->getSize() << Endl;
             }
 
             //If size is <= than the expected size can save the value

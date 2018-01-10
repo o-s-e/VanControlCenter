@@ -51,9 +51,18 @@ void LightInterfaceClass::update() {
 
         //debug hook
 
-        if (channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) > 0) {
-            Log.i(RGB_TAG) << F("hsv debug value set: ") << channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) << Endl;
+        if (channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) > 0 && channelsBuffer.getValueAs<uint_fast16_t
+        >(CanId::HSV) <= 360) {
+            Log.i(RGB_TAG) << F("hsv debug value set: ") << channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) <<
+                Endl;
             setColor(channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV));
+        }
+        else if (channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) == 361) {
+            allOff();
+        }
+        else {
+            setColor(0);
+
         }
 
 
@@ -77,11 +86,9 @@ void LightInterfaceClass::update() {
 }
 
 void LightInterfaceClass::setColor(uint_fast16_t h) {
-    Serial.println(h);
     hsv_.h = h;
     hsv_.s = 0.5;
     hsv_.v = 0.5;
-    Log.i(RGB_TAG) << F("hsv: ") << hsv_.h << F("|0.5|0.5") << Endl;
 
     double hh, p, q, t, ff, r, g, b;
     long i;
@@ -102,101 +109,87 @@ void LightInterfaceClass::setColor(uint_fast16_t h) {
         t = hsv_.v * (1.0 - (hsv_.s * (1.0 - ff)));
 
         switch (i) {
-            case 0:
-                r = hsv_.v;
-                g = t;
-                b = p;
-                break;
+        case 0:
+            r = hsv_.v;
+            g = t;
+            b = p;
+            break;
 
-            case 1:
-                r = q;
-                g = hsv_.v;
-                b = p;
-                break;
-            case 2:
-                r = p;
-                g = hsv_.v;
-                b = t;
-                break;
-            case 3:
-                r = p;
-                g = q;
-                b = hsv_.v;
-                break;
-            case 4:
-                r = t;
-                g = p;
-                b = hsv_.v;
-                break;
-            case 5:
-            default:
-                r = hsv_.v;
-                g = p;
-                b = q;
-                break;
+        case 1:
+            r = q;
+            g = hsv_.v;
+            b = p;
+            break;
+        case 2:
+            r = p;
+            g = hsv_.v;
+            b = t;
+            break;
+        case 3:
+            r = p;
+            g = q;
+            b = hsv_.v;
+            break;
+        case 4:
+            r = t;
+            g = p;
+            b = hsv_.v;
+            break;
+        case 5:
+        default:
+            r = hsv_.v;
+            g = p;
+            b = q;
+            break;
         }
     }
-    Log.i(RGB_TAG) << F("tiny rgb: ") << r << F("|") << g << F("|") << b << Endl;
-
     // map the values from a 0-1 fraction to a byte
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_1, mapf(r, 0, 1, 0, 255));
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_2, mapf(g, 0, 1, 0, 255));
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_3, mapf(b, 0, 1, 0, 255));
 
-    Log.i(RGB_TAG) << F("rgb: ") << channelsBuffer.getValueAsString(CanId::LIGHT_1) << F("|") << channelsBuffer.
-        getValueAsString(CanId::LIGHT_2) << F("|") << channelsBuffer.getValueAsString(CanId::LIGHT_3) << Endl;
 }
 
 void LightInterfaceClass::setBrightness(uint8_t brightness, uint8_t lightIndex) {
     switch (lightIndex) {
         //TODO Check if roomlight needs to be replaced with the channelbuffer equivalent
-        case 1:
-            if (roomLight_.w != brightness) {
-                channelsBuffer.setValue<uint8_t>(CanId::LIGHT_4, brightness);
-            }
-            break;
-        case 2:
-            if (awningLight_.w != brightness) {
-                channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, brightness);
-            }
-            break;
-        case 3:
-            if (worktopLight_.w != brightness) {
-                channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, brightness);
-            }
-            break;
-        default:
-            Log.w(RGB_TAG) << F("not used lightIndex on the LightInterface: ") << lightIndex << Endl;
-            break;
+    case 1:
+        if (roomLight_.w != brightness) {
+            channelsBuffer.setValue<uint8_t>(CanId::LIGHT_4, brightness);
+        }
+        break;
+    case 2:
+        if (awningLight_.w != brightness) {
+            channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, brightness);
+        }
+        break;
+    case 3:
+        if (worktopLight_.w != brightness) {
+            channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, brightness);
+        }
+        break;
+    default:
+        Log.w(RGB_TAG) << F("not used lightIndex on the LightInterface: ") << lightIndex << Endl;
+        break;
     }
 }
 
 void LightInterfaceClass::allOff() {
-    fadeAmount_ = 5;
-    fadeTimer_.setDuration(500).start();
-    if (fadeTimer_.hasFinished()) {
-        roomLight_.r = -fadeAmount_;
-        roomLight_.g = -fadeAmount_;
-        roomLight_.b = -fadeAmount_;
-        roomLight_.w = -fadeAmount_;
-        awningLight_.w = -fadeAmount_;
-        worktopLight_.w = -fadeAmount_;
-        if (roomLight_.w <= 0 &&
-            roomLight_.r <= 0 &&
-            roomLight_.g <= 0 &&
-            roomLight_.b <= 0 &&
-            awningLight_.w <= 0 &&
-            worktopLight_.w <= 0) {
-            Log.i(RGB_TAG) << F("all light are off");
-        }
-        else {
-            fadeTimer_.start();
-        }
-    }
+    Log.i(RGB_TAG) << F("all light are shutting down") << Endl;
+
+    channelsBuffer.setValue<uint8_t>(CanId::LIGHT_1, 0);
+    channelsBuffer.setValue<uint8_t>(CanId::LIGHT_2, 0);
+    channelsBuffer.setValue<uint8_t>(CanId::LIGHT_3, 0);
+    channelsBuffer.setValue<uint8_t>(CanId::LIGHT_4, 0);
+    channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, 0);
+    channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, 0);
+
+    Log.i(RGB_TAG) << F("all light are off") << Endl;
 }
 
-double LightInterfaceClass::mapf(double x, double in_min, double in_max, double out_min, double out_max) {
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+
+uint8_t LightInterfaceClass::mapf(double x, double in_min, double in_max, double out_min, double out_max) {
+    return static_cast<uint8_t>((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
 }
 
 LightInterfaceClass lightInterface;
