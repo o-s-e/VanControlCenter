@@ -173,8 +173,8 @@ CanStreamResult CanInterfaceClass::streamOverCan(CanId::IDs canId, const char* o
             if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), OK_CMD) == 0) {
                 return SUCCESS;
             }
-                //if response is ERROR
-            else if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), ERROR_CMD) == 0) {
+            //if response is ERROR
+            if (strcmp(reinterpret_cast<const char*>(frame.data.bytes), ERROR_CMD) == 0) {
                 return ERROR;
             }
         }
