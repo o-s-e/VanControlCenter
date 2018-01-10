@@ -23,7 +23,7 @@ void ConsoleFormClass::clear() {
 }
 
 void ConsoleFormClass::addText(const String& str) {
-    int index = text_.indexOf("\n");
+    uint_fast16_t index = text_.indexOf("\n");
     //Remove first lines until there is enough space for the new text
     //Create a sort of scroll-up effect, like real shell
     if (str.length() < TEXT_BUFFER_SIZE) {

@@ -37,7 +37,7 @@ public:
 
 private:
 
-    double color_{};
+    uint_fast16_t color_{};
 
     uint8_t roomBrightness_{};
     uint8_t awningBrightness_{};

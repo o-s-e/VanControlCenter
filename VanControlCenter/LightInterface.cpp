@@ -21,7 +21,7 @@ void LightInterfaceClass::init() {
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_5, 0);
     channelsBuffer.setValue<uint8_t>(CanId::LIGHT_6, 0);
 
-    channelsBuffer.setValue<unsigned int>(CanId::HSV, 0);
+    channelsBuffer.setValue<uint_fast16_t>(CanId::HSV, 0);
 
     hsv_.h = 0;
     hsv_.s = 0;
@@ -51,9 +51,9 @@ void LightInterfaceClass::update() {
 
         //debug hook
 
-        if (channelsBuffer.getValueAs<unsigned int>(CanId::HSV) > 0) {
-            Log.i(RGB_TAG) << F("hsv debug value set: ") << channelsBuffer.getValueAs<unsigned int>(CanId::HSV) << Endl;
-            setColor(channelsBuffer.getValueAs<unsigned int>(CanId::HSV));
+        if (channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) > 0) {
+            Log.i(RGB_TAG) << F("hsv debug value set: ") << channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV) << Endl;
+            setColor(channelsBuffer.getValueAs<uint_fast16_t>(CanId::HSV));
         }
 
 
@@ -76,7 +76,7 @@ void LightInterfaceClass::update() {
     }
 }
 
-void LightInterfaceClass::setColor(unsigned int h) {
+void LightInterfaceClass::setColor(uint_fast16_t h) {
     Serial.println(h);
     hsv_.h = h;
     hsv_.s = 0.5;
