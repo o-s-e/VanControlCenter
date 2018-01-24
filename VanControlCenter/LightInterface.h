@@ -37,7 +37,8 @@ using hsv = struct Hsv {
     double v; // a fraction between 0 and 1 we use a static 0.5
 };
 
-class LightInterfaceClass {  // NOLINT
+class LightInterfaceClass {
+    // NOLINT
 public:
     //Function to call in the setup
     void init();
@@ -46,7 +47,7 @@ public:
     void update();
 
     // Sets the Hue(value between 0 and 360)
-    void setColor( uint_fast16_t h);
+    void setColor(uint_fast16_t h);
 
     void setBrightness(uint8_t brightness, uint8_t lightIndex);
 
@@ -56,17 +57,14 @@ private:
 
     uint8_t mapf(double x, double in_min, double in_max, double out_min, double out_max);
 
-    light roomLight_;
-    light awningLight_;
-    light worktopLight_;
+    light roomLight_{};
+    light awningLight_{};
+    light worktopLight_{};
 
-    hsv hsv_;
-
-    uint8_t fadeAmount_ = 0;
+    hsv hsv_{};
 
     // LightCtrl refresh LED timer
     Timer ledTimer_;
-    Timer fadeTimer_;
 };
 
 extern LightInterfaceClass lightInterface;

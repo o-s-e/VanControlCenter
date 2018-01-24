@@ -5,11 +5,11 @@ Depends
 end
 Options
     Genie
-    Speed                        115200
+    Speed                        9600
     Checksum                     No
     ResponseSize                 2
     Multidrop                    No
-    Destination                  2
+    Destination                  1
     DestBank                     1
     MainForm                     0
     SndBuf                       0

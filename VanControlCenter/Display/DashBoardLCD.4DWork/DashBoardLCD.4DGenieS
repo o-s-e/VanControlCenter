@@ -1,7 +1,7 @@
 #platform "Gen4-uLCD-50DCT-CLB"
 
 
-// generated 02-Jan-18 12:59:16
+// generated 13-Jan-18 15:24:50
 
 #MODE FLASHBANK_1
 
@@ -501,7 +501,7 @@ func main()
     hstrings := file_Open("DASHBO~1.txf", 'r') ; // Open handle to access uSD strings, uncomment if required
     // init comms
     com_Init(comRX,CMDLenMAX,0);
-    com_SetBaud(COM0,11520);
+    com_SetBaud(COM0,960);
     com_TXbuffer(comTX, 100, 0);
     // tag 'real' objects
     for (i := 0; i <= MaxTotObjects; i++)

@@ -26,7 +26,8 @@ public:
         U_INTEGER = 'U',
         INTEGER = 'I',
         DECIMAL = 'D',
-        STRING = 'S'
+        STRING = 'S',
+        BOOL = 'O'
     };
 
     // CFG file attributes

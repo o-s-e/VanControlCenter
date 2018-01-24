@@ -10,7 +10,7 @@ void LoggerClass::setDecimalPrecision(int precision) {
     this->precision_ = precision;
 }
 
-void LoggerClass::assert(boolean condition, String msg) {
+void LoggerClass::assert(boolean condition, const String& msg) {
     if (!condition) {
         this->e(ASSERT_TAG) << msg << Endl;
         serialPort_->flush();

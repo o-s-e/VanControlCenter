@@ -116,19 +116,14 @@ void ShellClass::channelValueCmd(String& params) {
     }
     else {
         Log.i(SHELL_TAG) << c->getID() << "\t" << channelsBuffer.getValueAsString(id) << "\t" << channelsBuffer.
-                                                                                                 getValueAsByteArray(id)
-                                                                                                 .toHexString() << Endl;
+            getValueAsByteArray(id)
+            .toHexString() << Endl;
     }
 }
 
 void ShellClass::channelsValuesCmd(String& params) {
-    Channel* c;
-    for (int i = 0; i < channelsConfig.getChannelCount(); i++) {
-        c = channelsConfig.getChannelByIndex(i);
-        Log.i(SHELL_TAG) << c->getName() << "\t" << channelsBuffer.getValueAsString(c->getID()) <<
-            Endl;
-    }
-    LOGLN(F("========================================"));
+    (channelsBuffer.debug());
+
 }
 
 void ShellClass::digitalReadCmd(String& params) {

@@ -55,7 +55,7 @@ void onCanPacketReceived(CAN_FRAME &frame);
 
 // Code flag
 #define WDT_ON
-//#define LCD_ON
+#define LCD_ON
 #define DL_ON
 #define WIFI_ON
 #define SHELL_ON

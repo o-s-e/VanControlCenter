@@ -19,7 +19,7 @@
 #define HT_STATE_LED 32
 
 // ESP8266
-#define WIFI_SERIAL Serial2
+#define WIFI_SERIAL Serial1
 #define WIFI_SERIAL_BAUD 115200
 #define WIFI_RST_PIN 34
 
@@ -31,8 +31,8 @@
 #define LOG_SERIAL_BAUD 115200
 
 // LCD
-#define LCD_SERIAL Serial1
-#define LCD_SERIAL_BAUD 200000
+#define LCD_SERIAL Serial2
+#define LCD_SERIAL_BAUD 9600
 #define LCD_RESET_PIN 36
 
 // CAN
@@ -44,11 +44,11 @@
 
 //Light
 
-#define RGB_RED 13
-#define RGB_GREEN 5
-#define RGB_BLUE 6
-#define WHITE_LED 8
-#define AWNING_LED 10
-#define WORKTOP_LED 11
+#define RGB_RED 10
+#define RGB_GREEN 11
+#define RGB_BLUE 12
+#define WHITE_LED 9
+#define AWNING_LED 8
+#define WORKTOP_LED 7
 
 #endif

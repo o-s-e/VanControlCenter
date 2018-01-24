@@ -5199,7 +5199,7 @@ file C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\Diablo16_Functions
 005193  000099        
 005194  000002        
 005195  000003        
-005196  000004  // generated 02-Jan-18 12:59:16
+005196  000004  // generated 13-Jan-18 15:24:50
 005197  000005        
 005198  000006  #MODE FLASHBANK_1
 005199  000007        
@@ -5388,7 +5388,7 @@ file C:\Users\ovsteenb\Documents\Visual Studio 2017\Projects\VanControlCenter\Va
 
 005375  000014  #inherit "DashBoardLCDConst.inc"
 005376  000014  #inherit "DashBoardLCDConst.inc"
-005377  000001  // File generated 02-Jan-18 12:59:15
+005377  000001  // File generated 13-Jan-18 15:24:48
 005378  000002  // Warning! This is a generated file, any manual changes will be
 005379  000003  // lost during the next generation.
 005380  000004        
@@ -6792,7 +6792,7 @@ file C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\CLPrintStrings.inc
 006776  000501      hstrings := file_Open("DASHBO~1.txf", 'r') ; // Open handle to access uSD strings, uncomment if required
 006777  000502      // init comms
 006778  000503      com_Init(comRX,CMDLenMAX,0);
-006779  000504      com_SetBaud(COM0,11520);
+006779  000504      com_SetBaud(COM0,960);
 006780  000505      com_TXbuffer(comTX, 100, 0);
 006781  000506      // tag 'real' objects
 006782  000507      for (i := 0; i <= MaxTotObjects; i++)

@@ -4,7 +4,7 @@
 #define LOGGER_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
-#include "arduino.h"
+#include "Arduino.h"
 #else
 #include "WProgram.h"
 #endif
@@ -72,7 +72,7 @@ public:
 
     LoggerClass& repeat(char c, int times);
 
-    void assert(boolean condition, String msg);
+    void assert(boolean condition, const String& msg);
 
 private:
     byte precision_ = 0;

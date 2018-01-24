@@ -59,6 +59,8 @@ String ChannelsBufferClass::getValueAsString(const unsigned short id) {
 
             case Channel::STRING:
                 return buffer_[index].toString();
+            case Channel::BOOL:
+                return buffer_[index].toString();
 
             default:
                 Log.e(CHBUF_TAG) << F("in getValueAsString\t Unknown conversion type channel ") << id << F(" to type ")

@@ -14,29 +14,27 @@ void onEvent() {
 
 void DisplayInterfaceClass::init() {
 
+
+    genie_.AttachEventHandler(&onEvent);
+
     // Init the serial comunication
     INIT_SERIAL(LCD_SERIAL, LCD_SERIAL_BAUD);
-    while (!genie_.Begin(LCD_SERIAL)) {
-        Log.w(LCD_TAG) << F("Display not initialized") << Endl;
-    }
+    genie_.Begin(LCD_SERIAL);
+    genie_.debug(LOG_SERIAL, 2);
+
     if (genie_.online()) {
         Log.w(LCD_TAG) << F("Display online") << Endl;
+        genie_.WriteContrast(10);
     }
-    genie_.debug(LOG_SERIAL, 6);
+
 
     // Reset the LCD
-    pinMode(LCD_RESET_PIN, OUTPUT);
-    digitalWrite(LCD_RESET_PIN, LOW);
-    delay(100);
-    digitalWrite(LCD_RESET_PIN, HIGH);
-    delay(4500);
 
 
     // Attach event handler method
-    genie_.AttachEventHandler(&onEvent);
 
     // set Brightness
-    genie_.WriteContrast(10);
+
 
     // Init forms
     consoleForm.init(genie_);
