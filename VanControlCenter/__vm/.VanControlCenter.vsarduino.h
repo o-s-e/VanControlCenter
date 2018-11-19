@@ -1,5 +1,5 @@
 /* 
-	Editor: http://www.visualmicro.com
+	Editor: https://www.visualmicro.com/
 			visual micro and the arduino ide ignore this code during compilation. this code is automatically maintained by visualmicro, manual changes to this file will be overwritten
 			the contents of the Visual Micro sketch sub folder can be deleted prior to publishing a project
 			all non-arduino files created by visual micro and all visual studio project or solution files can be freely deleted and are not required to compile a sketch (do not delete your own code!).
@@ -15,7 +15,7 @@
 #define _VMDEBUG 1
 #define printf iprintf
 #define F_CPU 84000000L
-#define ARDUINO 10803
+#define ARDUINO 10900
 #define ARDUINO_SAM_DUE
 #define ARDUINO_ARCH_SAM
 #define __SAM3X8E__
@@ -51,7 +51,7 @@ extern "C" void __cxa_pure_virtual() {;}
 	#include "sam3xa.h"
 #endif
 
-#include <Arduino.h>
+#include <arduino.h>
 #include <pins_arduino.h> 
 #include <variant.h> 
 #include <variant.cpp> 

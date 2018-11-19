@@ -239,10 +239,10 @@ bool initDataLogger() {
 //}
 
 void onCanPacketReceived(CAN_FRAME &frame) {
-    Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(frame.data.bytes, frame.length) << Endl;
+    Log.i(CAN_TAG) << F("Received ") << frame.id << " " << frame.length << " " << Hex << Log.array<byte>(
+        frame.data.bytes, frame.length) << Endl;
 
     channelsBuffer.setValue(frame.id, frame.data.bytes, frame.length);
 
-    switch (frame.id) {
-    }
+    switch (frame.id) { }
 }

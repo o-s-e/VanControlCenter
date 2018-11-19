@@ -53,6 +53,8 @@ public:
 
     void allOff();
 
+    void fade();
+
 private:
 
     uint8_t mapf(double x, double in_min, double in_max, double out_min, double out_max);

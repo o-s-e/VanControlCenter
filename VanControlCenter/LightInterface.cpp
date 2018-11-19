@@ -187,6 +187,9 @@ void LightInterfaceClass::allOff() {
     Log.i(RGB_TAG) << F("all light are off") << Endl;
 }
 
+void LightInterfaceClass::fade()       {
+}
+
 
 uint8_t LightInterfaceClass::mapf(double x, double in_min, double in_max, double out_min, double out_max) {
     return static_cast<uint8_t>((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
